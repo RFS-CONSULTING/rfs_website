@@ -28,7 +28,9 @@ Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
 Route::get('/apropos',[homeController::class,'aboutus'])->name('aboutus');
 Route::get('/equipe',[homeController::class,'team'])->name('team');
 Route::get('/realisations',[homeController::class,'realisations'])->name('realisations');
-Route::get('/contacts',[homeController::class,'contacts'])->name('contacts');
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

@@ -64,7 +64,7 @@
             <span class="fs-sm"><span class="text-primary fw-semibold">10K+</span> étudiants sont déjà avec nous</span>
           </div>
         </div>
-        <div class="col-lg-7">
+        <div class="col-lg-7 d-none d-lg-block">
 
           <!-- Parallax gfx -->
           <div class="parallax mx-auto me-lg-0" style="max-width: 648px;">
@@ -545,9 +545,9 @@
 
       <!-- Parallax patterns -->
       <div class="position-absolute top-0 start-0 w-100 h-100" data-jarallax-element="-60">
-        <img src="/assets/img/pattern-1.svg" class="position-absolute top-0 start-100 translate-middle ms-n4" alt="Pattern">
-        <img src="/assets/img/pattern-2.svg" class="position-absolute top-50 start-0 mt-n5 ms-n5" alt="Pattern">
-        <img src="/assets/img/pattern-3.svg" class="position-absolute top-100 start-100 translate-middle ms-n5 mt-n5" alt="Pattern">
+        <img src="/assets/img/landing/pattern-1.svg" class="position-absolute top-0 start-100 translate-middle ms-n4" alt="Pattern">
+        <img src="/assets/img/landing/pattern-2.svg" class="position-absolute top-50 start-0 mt-n5 ms-n5" alt="Pattern">
+        <img src="/assets/img/landing/pattern-3.svg" class="position-absolute top-100 start-100 translate-middle ms-n5 mt-n5" alt="Pattern">
       </div>
 
       <div class="row justify-content-center position-relative zindex-2 py-lg-4">

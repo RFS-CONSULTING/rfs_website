@@ -11,7 +11,7 @@
               <span class="text-gradient-primary">En plus de la science,</span> <span class="text-gradient-primary">maitrisez les outils</span>
             </h1>
             <div class="d-md-flex align-items-md-start">
-              <a href="#" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Travailler avec nous</a>
+              <a href="{{ route('contact')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Travailler avec nous</a>
               <p class="d-lg-block  d-none mb-0 ps-md-3">RFS Consulting offre des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p>
             </div>
           </div>
@@ -166,9 +166,9 @@
 
    <!-- Video showcase -->
    <section class="container py-5 ">
-    <h2 class="h1 pb-3 container  ">Qui sommes-nous ?</h2>
+    <h2 class="h1 pb-3  ">Qui sommes-nous ?</h2>
 
-    <div class="container row align-items-center pb-2 ">
+    <div class="row align-items-center pb-2 ">
       <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
         <ul class="list-unstyled pb-4 mb-0">
           <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
