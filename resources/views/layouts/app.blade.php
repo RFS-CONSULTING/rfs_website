@@ -24,10 +24,10 @@
     <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
     <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" media="screen" href="/assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
-
+    <!-- Styles -->
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
-
+    
     @livewireStyles
     <!-- Page loading styles -->
     <style>

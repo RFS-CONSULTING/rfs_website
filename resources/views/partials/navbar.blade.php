@@ -56,7 +56,7 @@
           <ul class="navbar-nav  m-2">
             <li class="nav-item dropdown ">
               @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                  <img src="{{ Auth::user()->profile_photo_url }}" class="d-block rounded-circle" width="40" alt="{{ Auth::user()->name }}">
+                  <img src="{{ Auth::user()->profile_photo_url }}" class="d-block rounded-circle" width="35" alt="{{ Auth::user()->name }}">
 
                   {{-- <button class="flex text-sm border-2 border-transparent rounded-circle focus:outline-none focus:border-gray-300 transition">
                       <img class="h-8 w-8 rounded-circle object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="" />
@@ -73,16 +73,15 @@
                   </span>
               @endif
               <ul class="dropdown-menu px-4">
-                <div class="block  py-2 text-xs text-gray-400">
+                {{-- <li class="block  py-2 text-xs text-gray-400">
                     {{ __('Manage Account') }}
-                </div>
-                <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li>
+                </li> --}}
+                {{-- <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li>
                
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                 <li><a href="{{ route('api-tokens.index') }}" class="dropdown-item">{{ __('API Tokens') }}</a></li>
-                @endif
+                @endif --}}
 
-                <div class="border-t border-gray-100"></div>
                 <li>
                   <form method="POST" action="{{ route('logout') }}">
                     @csrf 

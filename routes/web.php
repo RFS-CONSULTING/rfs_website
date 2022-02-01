@@ -4,6 +4,7 @@ use App\Http\Controllers\FormationController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SocialiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +40,11 @@ Route::get('/contact', function(){
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+
+// La redirection vers le provider
+Route::get("redirect/{provider}", [SocialiteController::class, 'redirect'])->name('socialite.redirect');
+
+// Le callback du provider
+Route::get("callback/{provider}", [SocialiteController::class, 'callback'])->name('socialite.callback');
