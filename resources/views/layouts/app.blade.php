@@ -11,22 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png"  href="assets/favicon/favicon.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png"  href="/assets/favicon/favicon.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
 
     @livewireStyles
     <!-- Page loading styles -->
@@ -175,7 +175,7 @@
               <div class="row pb-5">
                 <div class="col-lg-4 col-md-6">
                   <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                    <img src="assets/img/logo.png" width="47" alt="Silicon">
+                    <img src="/assets/img/logo.png" width="47" alt="Silicon">
                     RFS Consulting
                   </div>
                   <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.</p>
@@ -185,11 +185,13 @@
                   <div id="footer-links" class="row">
                     <div class="col-lg-4">
                       <h6 class="mb-2">
-                        <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                        <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Liens utiles</a>
                       </h6>
                       <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
                         <ul class="nav flex-column pb-lg-1 mb-lg-3">
-                          <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                          <li class="nav-item"><a href="{{ route('home')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Accueil</a></li>
+                          <li class="nav-item"><a href="{{ route('formation.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Formations</a></li>
+
                         </ul>
                     </div>
                   </div>
@@ -214,17 +216,18 @@
       </a>
 
         <!-- Vendor Scripts -->
-      <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-      <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
-      <script src="assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
-      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
-      <script src="assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
-      <script src="assets/vendor/%40lottiefiles/lottie-player/dist/lottie-player.js"></script>
-      <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+      <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+      <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+      <script src="/assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
+      <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="/assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+      <script src="/assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+      <script src="/assets/vendor/%40lottiefiles/lottie-player/dist/lottie-player.js"></script>
+      <script src="/assets/vendor/cleave.js/dist/cleave.min.js"></script>
+      <script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
       <!-- Main Theme Script -->
-      <script src="assets/js/theme.min.js"></script>
+      <script src="/assets/js/theme.min.js"></script>
     </div>
 
     @stack('modals')

@@ -1,9 +1,9 @@
      <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
+      <header class="px-md-4 header navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
         <div class="container px-3">
           <a href="{{ route('home')}}" class="navbar-brand pe-5">
-            <img src="assets/img/logo.png" width="50" alt="Logo RFS Consulting">
+            <img src="/assets/img/logo.png" width="50" alt="Logo RFS Consulting">
             
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -15,14 +15,11 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Accueil</a>
+                  <a href="{{ route('home')}}" class="{{ request()->routeIs('home') ? 'active ' : '' }} nav-link">Accueil</a>
                 </li>
-                
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Formations</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Sig et Cartographie  </a></li>
-                  </ul>
+     
+                <li class="nav-item">
+                  <a href="{{ route('formation.index') }}" class="{{ request()->routeIs('formation.*') ? 'active' : '' }} nav-link">Formations</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">Blog</a>
