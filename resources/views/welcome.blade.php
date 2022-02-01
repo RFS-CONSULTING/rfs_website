@@ -1,7 +1,7 @@
 <x-app-layout>
   <!-- Hero -->
-  <section class=" container d-none d-lg-block jarallax position-relative d-flex align-items-center py-5 bg-light mb-5 " style="background-image: url(assets/img/landing/hero-bg.png);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
-    <div class="container position-relative zindex-5 ">
+  <section class="container d-none d-lg-block jarallax position-relative d-flex align-items-center py-5 bg-light mb-5 " style="background-image: url(assets/img/landing/hero-bg.png);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+    <div class="position-relative zindex-5 ">
       <div class="row justify-content-md-start justify-content-center pt-0">
         <div class="col-md-8 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
           <div class="">
@@ -103,21 +103,21 @@
       <!-- Services -->
   <section class="container bg-secondary pb-md-2 pb-lg-5" id="services">
     <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
-    <div class="container pb-4 pt-5">
+    <div class=" pb-4 pt-5">
       <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Nos services</h2>
       <div class="row align-items-center pb-5 mb-lg-2">
         <div class="col-md-8 text-center text-md-start">
-          <p class="fs-lg text-muted mb-md-0">Nous offrons des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p>
+          <p class=" text-muted mb-md-0">Nous offrons des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p>
         </div>
-        <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
-          <a href="services.html" class="btn btn-outline-primary btn-lg">Voir tous nos services</a>
-        </div>
+        {{-- <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+          <a href="{{ route('service.show', 'test')}}" class="btn btn-outline-primary btn-lg">Voir tous nos services</a>
+        </div> --}}
       </div>
       <div class="row row-cols-1 row-cols-md-2">
 
         <!-- Item -->
         <div class="col py-4 my-2 my-sm-3">
-          <a href="services-single.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
             <div class="card-body pt-3">
               <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
                 <img src="assets/img/services/cms.svg" class="d-block m-1" width="40" alt="Icon">
@@ -133,13 +133,13 @@
 
         <!-- Item -->
         <div class="col py-4 my-2 my-sm-3">
-          <a href="services-single.html" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body pt-3">
               <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
                 <img src="assets/img/services/rocket.svg" class="d-block m-1" width="40" alt="Icon">
               </div>
               <h2 class="h4 d-inline-flex align-items-center">
-                Formations professionnelles
+                Renforcement des capacités
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
               <p class="fs-sm text-body mb-0">Id eget blandit sapien cras massa lectus lorem placerat. Quam dolor commodo fermentum bibendum dictumst. Risus pretium eget at viverra eget. Sit neque adipiscing malesuada blandit justo, quam.</p>
@@ -166,7 +166,7 @@
 
    <!-- Video showcase -->
    <section class="container py-5 ">
-    <h2 class="h1 pb-3  ">Qui sommes-nous ?</h2>
+    <h2 class="h1 pb-3 text-center text-md-start  ">Qui sommes-nous ?</h2>
 
     <div class="row align-items-center pb-2 ">
       <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
@@ -200,7 +200,7 @@
 
     <!-- Testimonials -->
     <section class="bg-secondary">
-      <h2 class="h1 pb-3 container  pt-5">Ce qu'ils ont dit sur nous</h2>
+      <h2 class="h1 pb-3 container text-center text-md-start  pt-5">Ce qu'ils ont dit sur nous</h2>
       <div class="px-2 px-sm-0">
         <div class="swiper" data-swiper-options='{
           "slidesPerView": 1,
@@ -437,9 +437,9 @@
  <!-- Partners -->
  <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
   <div class="row  pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
-    <div class="container">
-      <h2 class="h1 mb-4">Nos partenaires</h2>
-      <p class="fs-lg text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+    <div class="">
+      <h2 class="h1 mb-4 text-center text-md-start">Nos partenaires</h2>
+      <p class=" text-muted mb-0 text-center text-md-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
     </div>
   </div>
   <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{

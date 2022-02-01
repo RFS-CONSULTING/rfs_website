@@ -3,6 +3,7 @@
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,9 @@ Route::get('/all-formations',[FormationController::class,'getAll'])->name('forma
 
 Route::get('/posts',[PostController::class,'index'])->name('post.index');
 Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
+
+Route::get('/services',[ServiceController::class,'index'])->name('service.index');
+
 
 Route::get('/apropos',[homeController::class,'aboutus'])->name('aboutus');
 Route::get('/equipe',[homeController::class,'team'])->name('team');
