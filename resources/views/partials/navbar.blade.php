@@ -19,10 +19,10 @@
                 </li>
      
                 <li class="nav-item">
-                  <a href="{{ route('formation.index') }}" class="{{ request()->routeIs('formation.*') ? 'active' : '' }} nav-link">Formations</a>
+                  <a href="{{ route('formation.index') }}" class="{{ request()->routeIs('formation.index') ? 'active' : '' }} nav-link">Formations</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Blog</a>
+                  <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
                 </li>
             
                 <li class="nav-item">

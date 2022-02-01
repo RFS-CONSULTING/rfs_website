@@ -191,6 +191,7 @@
                         <ul class="nav flex-column pb-lg-1 mb-lg-3">
                           <li class="nav-item"><a href="{{ route('home')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Accueil</a></li>
                           <li class="nav-item"><a href="{{ route('formation.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Formations</a></li>
+                          <li class="nav-item"><a href="{{ route('post.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
 
                         </ul>
                     </div>

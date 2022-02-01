@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,10 @@ Route::get('/',[homeController::class,'index'])->name('home');
 
 Route::get('/formations',[FormationController::class,'index'])->name('formation.index');
 Route::get('/formation/{slug}',[FormationController::class,'show'])->name('formation.show');
-
 Route::get('/all-formations',[FormationController::class,'getAll'])->name('formation.all');
+
+Route::get('/posts',[PostController::class,'index'])->name('post.index');
+Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
 
 Route::get('/apropos',[homeController::class,'aboutus'])->name('aboutus');
 Route::get('/equipe',[homeController::class,'team'])->name('team');
