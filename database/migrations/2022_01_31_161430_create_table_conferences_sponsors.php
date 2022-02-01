@@ -15,8 +15,8 @@ class CreateTableConferencesSponsors extends Migration
     {
         Schema::create('conferences_sponsors', function (Blueprint $table) {
             $table->id();
-            $table->integer('sponsors_id');
-            $table->integer('conferences_id');
+            $table->integer('sponsor_id');
+            $table->integer('conference_id');
             $table->timestamps();
         });
     }

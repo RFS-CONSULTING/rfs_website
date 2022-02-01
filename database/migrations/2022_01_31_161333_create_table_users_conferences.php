@@ -15,8 +15,8 @@ class CreateTableUsersConferences extends Migration
     {
         Schema::create('users_conferences', function (Blueprint $table) {
             $table->id();
-            $table->integer('users_id');
-            $table->integer('conferences_id');
+            $table->integer('user_id');
+            $table->integer('conference_id');
             $table->timestamps();
         });
     }

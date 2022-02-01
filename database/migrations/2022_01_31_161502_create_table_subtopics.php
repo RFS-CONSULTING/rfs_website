@@ -15,8 +15,8 @@ class CreateTableSubtopics extends Migration
     {
         Schema::create('subtopics', function (Blueprint $table) {
             $table->id();
-            $table->integer('conferences_id');
-            $table->string("subtopics");
+            $table->integer('conference_id');
+            $table->string("subtopic");
             $table->string('description');
             $table->timestamps();
         });

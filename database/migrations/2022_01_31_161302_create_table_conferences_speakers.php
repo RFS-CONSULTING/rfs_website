@@ -15,8 +15,8 @@ class CreateTableConferencesSpeakers extends Migration
     {
         Schema::create('conferences_speakers', function (Blueprint $table) {
             $table->id();
-            $table->integer('conferences_id');
-            $table->integer('speakers_id');
+            $table->integer('conference_id');
+            $table->integer('speaker_id');
             // $table->timestamps();
         });
     }
