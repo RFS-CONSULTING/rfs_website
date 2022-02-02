@@ -108,8 +108,13 @@
       }
     </style>
 
-    <!-- Theme mode -->
+        <!-- Theme mode -->
+        <!-- Scripts -->
     <script>
+     
+  </script> 
+
+    {{-- <script>
       let mode = window.localStorage.getItem('mode'),
           root = document.getElementsByTagName('html')[0];
       if (mode !== undefined && mode === 'dark') {
@@ -117,7 +122,7 @@
       } else {
           root.classList.remove('dark-mode');
       }
-    </script>
+    </script> --}}
 
     <!-- Page loading scripts -->
     <script>
@@ -139,12 +144,13 @@
   <body class="font-sans antialiased">
     <!-- Body -->
     <!-- Page loading spinner -->
-    {{-- <div class="page-loading active">
+    <div class="page-loading active">
         <div class="page-loading-inner">
-            <div class="page-spinner"></div>
-            <span>Loading...</span>
+            {{-- <div class="page-spinner"></div>
+            <span>Loading...</span> --}}
+            <img src="/assets/img/logo.svg"  />
         </div>
-    </div> --}}
+    </div>
 
 
   <!-- Page wrapper for sticky footer -->
