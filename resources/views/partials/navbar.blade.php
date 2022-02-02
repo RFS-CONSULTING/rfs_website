@@ -53,7 +53,7 @@
             </div>  
           @endguest
           @auth
-          <ul class="navbar-nav  m-2">
+          <ul class="navbar-nav  d-lg-none m-2">
             <li class="nav-item d-flex align-items-center border-top pt-2">
               @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                   <img src="{{ Auth::user()->profile_photo_url }}" class="d-block rounded-circle" width="35" alt="{{ Auth::user()->name }}">
