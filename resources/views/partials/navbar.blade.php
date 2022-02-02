@@ -44,16 +44,61 @@
                
               </ul>
             </div>
+          @guest
             <div class="offcanvas-footer border-top">
               <a href="{{ route('login')}}" class="btn btn-primary w-100" >
                 <i class="bx bx-user fs-5 lh-1 me-1"></i>
-                &nbsp;Connexion
+                &nbsp;Connexion 
               </a>
-            </div>      
-          </div>
-
+            </div>  
+          @endguest
           @auth
           <ul class="navbar-nav  m-2">
+            <li class="nav-item d-flex align-items-center border-top pt-2">
+              @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                  <img src="{{ Auth::user()->profile_photo_url }}" class="d-block rounded-circle" width="35" alt="{{ Auth::user()->name }}">
+
+                  {{-- <button class="flex text-sm border-2 border-transparent rounded-circle focus:outline-none focus:border-gray-300 transition">
+                      <img class="h-8 w-8 rounded-circle object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="" />
+                  </button> --}}
+              @else
+                  <span class="inline-flex rounded-md">
+                      <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                          {{ Auth::user()->name }}
+
+                          <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                          </svg>
+                      </button>
+                  </span>
+              @endif
+              <span class="ms-2">{{ Auth::user()->name }}</span>
+
+              {{-- <ul class="dropdown-menu px-4"> --}}
+                {{-- <li class="block  py-2 text-xs text-gray-400">
+                    {{ __('Manage Account') }}
+                </li> --}}
+                {{-- <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li>
+               
+                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                <li><a href="{{ route('api-tokens.index') }}" class="dropdown-item">{{ __('API Tokens') }}</a></li>
+                @endif --}}
+
+                {{-- <li>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf 
+                  <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                  this.closest('form').submit();">{{ __('Log Out') }}</a></li>
+                </form>
+                <li> --}}
+              {{-- </ul> --}}
+            </li>
+          </ul>
+          @endauth
+          </div>
+          
+          @auth
+          <ul class="navbar-nav  m-2 d-none d-lg-inline-flex">
             <li class="nav-item dropdown ">
               @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                   <img src="{{ Auth::user()->profile_photo_url }}" class="d-block rounded-circle" width="35" alt="{{ Auth::user()->name }}">
@@ -92,7 +137,6 @@
               </ul>
             </li>
           </ul>
-           
           @endauth
 
           <div class="form-check  pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
