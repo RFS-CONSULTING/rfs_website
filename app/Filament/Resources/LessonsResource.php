@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\LessonsResource\Pages;
 use App\Filament\Resources\LessonsResource\RelationManagers;
+use App\Models\Formation;
 use App\Models\Lessons;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -21,8 +22,10 @@ class LessonsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('formations_id')
-                    ->required(),
+                Forms\Components\Select::make('formations_id')
+                ->label('Formation')
+                ->options(Formation::all()->pluck('title', 'id'))
+                ->searchable(),
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),

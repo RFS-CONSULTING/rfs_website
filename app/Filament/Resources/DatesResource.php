@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DatesResource\Pages;
 use App\Filament\Resources\DatesResource\RelationManagers;
+use App\Models\Conferences;
 use App\Models\Dates;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -21,8 +22,10 @@ class DatesResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('conferences_id')
-                    ->required(),
+                Forms\Components\Select::make('conference_id')
+                ->label('Conference')
+                ->options(Conferences::all()->pluck('topic', 'id'))
+                ->searchable(),
                 Forms\Components\DatePicker::make('date')
                     ->required(),
             ]);

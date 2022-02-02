@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\AuthorsResource\Pages;
 use App\Filament\Resources\AuthorsResource\RelationManagers;
 use App\Models\Authors;
+use Filament\Facades\Filament;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -32,11 +33,9 @@ class AuthorsResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
-                    ->required()
+                    ->required() 
                     ->maxLength(255),
-                Forms\Components\TextInput::make('profile_photo_path')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('profile_photo_path')->image(),
             ]);
     }
 

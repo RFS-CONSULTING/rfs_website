@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Formations extends Model
+class Formation extends Model
 {
     use HasFactory;
 
     protected $table = "formations";
 
     protected $fillable = ['title','description','instructor_id',
-    'nb_hours','nb_articles','downloadable_resources','is_certified',
+    'nb_hours','nb_articles','downloadable_ressources','is_certified',
     'actual_price','original_price','slug','keywords','image_path'];
 }

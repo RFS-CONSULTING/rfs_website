@@ -4,7 +4,8 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\FormationsResource\Pages;
 use App\Filament\Resources\FormationsResource\RelationManagers;
-use App\Models\Formations;
+use App\Models\Formation;
+use App\Models\Instructors;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +14,7 @@ use Filament\Tables;
 
 class FormationsResource extends Resource
 {
-    protected static ?string $model = Formations::class;
+    protected static ?string $model = Formation::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -27,8 +28,10 @@ class FormationsResource extends Resource
                 Forms\Components\TextInput::make('description')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('instructor_id')
-                    ->required(),
+                Forms\Components\Select::make('instructor_id')
+                    ->label('Instructor')
+                    ->options(Instructors::all()->pluck('name', 'id'))
+                    ->searchable(),
                 Forms\Components\TextInput::make('nb_hours')
                     ->required(),
                 Forms\Components\TextInput::make('nb_articles')
@@ -47,9 +50,8 @@ class FormationsResource extends Resource
                 Forms\Components\TextInput::make('keywords')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('image_path')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('image_path')
+                    ->image(),
             ]);
     }
 

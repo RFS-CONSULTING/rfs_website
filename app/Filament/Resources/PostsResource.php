@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostsResource\Pages;
 use App\Filament\Resources\PostsResource\RelationManagers;
+use App\Models\Authors;
 use App\Models\Posts;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -24,20 +25,20 @@ class PostsResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('content')
-                    ->required()
-                    ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('author_id')
-                    ->required(),
+                Forms\Components\Select::make('author_id')
+                    ->label('Author')
+                    ->options(Authors::all()->pluck('name', 'id'))
+                    ->searchable(),
                 Forms\Components\TextInput::make('keywords')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('image_path')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('image_path')
+                    ->image(),
+                Forms\Components\MarkdownEditor::make('content')
+                    ->required(),
             ]);
     }
 

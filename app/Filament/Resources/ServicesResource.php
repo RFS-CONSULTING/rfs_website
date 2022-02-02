@@ -30,9 +30,8 @@ class ServicesResource extends Resource
                 Forms\Components\TextInput::make('keywords')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('image_path')
-                    ->required()
-                    ->maxLength(255),
+                    Forms\Components\FileUpload::make('image_path')
+                    ->image(),
             ]);
     }
 

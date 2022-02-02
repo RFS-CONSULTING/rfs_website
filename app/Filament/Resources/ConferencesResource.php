@@ -38,9 +38,8 @@ class ConferencesResource extends Resource
                 Forms\Components\TextInput::make('link_highlights_videos')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('image_path')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('image_path')
+                    ->image(),
                 Forms\Components\TextInput::make('gif_link')
                     ->required()
                     ->maxLength(255),

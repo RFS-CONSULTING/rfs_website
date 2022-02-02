@@ -12,5 +12,5 @@ class Conferences extends Model
     protected $table = "conferences";
 
     protected $fillable = ['topic','location','date','hours',
-    'description','link_hightlights_video','image_path','gif_link','ticket_price'];
+    'description','link_highlights_videos','image_path','gif_link','ticket_price'];
 }
