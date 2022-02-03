@@ -9,8 +9,8 @@
     <div class="container position-relative zindex-2 py-lg-4">
       <div class="row">
         <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
-          <h1 class="display-3 mb-4">Devenez un <span class="text-primary">incontournable</span><br/> en cartographie</h1>
-          <p class=" mb-5">Apprenez les secrets indispensables qui vous permettront de concevoir de carte topographique, géologique, géographique, …même si vous êtes nul en cartographie</p>
+          <h1 class="display-3 mb-4">Developpez votre <span class="text-primary">maitrîse</span><br/>des outils numériques.</h1>
+          <p class=" mb-5">Apprenez les secrets indispensables qui vous permettrons de mieux manipuler les outils numérique pour la collecte,analyse et representations des données géospatial et formez vous dans la maitrîse des langages informatique. </p>
 
           <!-- Desktop form -->
           <form class="d-none d-sm-flex mb-5">

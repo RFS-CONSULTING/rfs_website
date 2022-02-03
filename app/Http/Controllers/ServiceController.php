@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Services;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -14,7 +15,8 @@ class ServiceController extends Controller
     public function index()
     {
         //
-        return view('services.index');
+        $services = Services::all();
+        return view('services.index',['services'=>$services]);
 
     }
 

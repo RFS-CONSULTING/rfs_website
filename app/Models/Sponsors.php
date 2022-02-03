@@ -10,4 +10,6 @@ class Sponsors extends Model
     use HasFactory;
 
     protected $table = "sponsors";
+
+    protected $fillable = ['name','logo'];
 }

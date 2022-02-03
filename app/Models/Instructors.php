@@ -11,4 +11,7 @@ class Instructors extends Model
 
 
     protected $table = "instructors";
+
+    protected $fillable = ['name','email','job','description',
+    'facebook_link','whatsapp_link','linkedin_link','twitter_link'];
 }

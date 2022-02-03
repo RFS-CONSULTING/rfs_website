@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Posts;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,7 +15,8 @@ class PostController extends Controller
     public function index()
     {
         //
-        return view('posts.index');
+        $posts = Posts::orderBy('created_at','desc')->get();
+        return view('posts.index',['posts'=>$posts]);
 
     }
 
@@ -42,12 +44,13 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         //
+        $post = Posts::where('slug',$slug)->get();
         return view('posts.show');
 
     }

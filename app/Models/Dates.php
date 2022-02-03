@@ -10,4 +10,6 @@ class Dates extends Model
     use HasFactory;
 
     protected $table = "dates";
+
+    protected $fillable = ['conference_id','date'];
 }
