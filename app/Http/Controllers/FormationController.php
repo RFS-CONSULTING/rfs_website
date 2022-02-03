@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Formation;
 use Illuminate\Http\Request;
 
 class FormationController extends Controller
@@ -14,13 +15,15 @@ class FormationController extends Controller
     public function index()
     {
         //
-        return view('formations.index');
+        $formations = Formation::orderBy('created_at','desc')->limit(5)->get();
+        return view('formations.index',['formations'=>$formations]);
     }
 
     public function getAll()
     {
         //
-        return view('formations.all');
+        $formations = Formation::paginate(6);
+        return view('formations.all',['formations'=>$formations]);
     }
 
     /**
@@ -47,13 +50,14 @@ class FormationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         //
-        return view('formations.show');
+        $formation = Formation::where('slug',$slug)->get();
+        return view('formations.show',['formation'=>$formation]);
 
     }
 
