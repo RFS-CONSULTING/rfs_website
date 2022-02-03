@@ -29,13 +29,11 @@ Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
 
 Route::get('/services',[ServiceController::class,'index'])->name('service.index');
 
-
 Route::get('/apropos',[homeController::class,'aboutus'])->name('aboutus');
 Route::get('/equipe',[homeController::class,'team'])->name('team');
 Route::get('/realisations',[homeController::class,'realisations'])->name('realisations');
-Route::get('/contact', function(){
-    return view('contact');
-})->name('contact');
+Route::get('/contact', [homeController::class,'contacts'])->name('contact');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
