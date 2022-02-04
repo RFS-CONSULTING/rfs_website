@@ -18,6 +18,7 @@ class CreateTableTestimonials extends Migration
             $table->string('witness');
             $table->string('job');
             $table->string('message');
+            $table->string('image_url');
             $table->timestamps();
         });
     }

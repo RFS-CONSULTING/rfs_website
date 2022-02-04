@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormationController;
-use App\Http\Controllers\homeController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SocialiteController;
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[homeController::class,'index'])->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::get('/formations',[FormationController::class,'index'])->name('formation.index');
 Route::get('/formation/{slug}',[FormationController::class,'show'])->name('formation.show');

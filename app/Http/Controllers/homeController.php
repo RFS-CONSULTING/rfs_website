@@ -3,13 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Service;
+use App\Models\Testimonial;
+use App\Models\Sponsor;
 
 class homeController extends Controller
 {
     
     public function index()
     {
-        return view('welcome');
+        $services = Service::all();
+        $testimonials = Testimonial::all();
+        $sponsors = Sponsor::all();
+
+        return view('welcome',[
+            'services'=>$services,
+            'testimonials' => $testimonials,
+            'sponsors' => $sponsors,
+        ]);
     }
 
     public function aboutus()

@@ -105,7 +105,7 @@
     <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
     <div class=" pb-4 pt-5">
       <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Nos services</h2>
-      <div class="row align-items-center pb-5 mb-lg-2">
+      <div class="row align-items-center  mb-lg-2">
         <div class="col-md-8 text-center text-md-start">
           <p class=" text-muted mb-md-0">Nous offrons des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p>
         </div>
@@ -114,44 +114,27 @@
         </div> --}}
       </div>
       <div class="row row-cols-1 row-cols-md-2">
-
         <!-- Item -->
-        <div class="col py-4 my-2 my-sm-3">
-          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
-            <div class="card-body pt-3">
-              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
-                <img src="assets/img/services/cms.svg" class="d-block m-1" width="40" alt="Icon">
-              </div>
+        @foreach ($services as $service)
+        <div class="col py-4  ">
+          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
               <h2 class="h4 d-inline-flex align-items-center">
-                Consultance
+                {{ $service->name}}
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
-              <p class="fs-sm text-body mb-0">Nisi, dis sed cursus eget pellentesque mattis. Odio eu proin aliquam a. Semper bibendum tellus non tellus, facilisi dignissim in quam massa. Aliquam, feugiat ut cum tellus, sit. Quis consectetur gravida ac ac lectus cursus egestas.</p>
+              <p class="fs-sm text-body mb-0">{{ $service->description }}</p>
             </div>
           </a>
         </div>
-
-        <!-- Item -->
-        <div class="col py-4 my-2 my-sm-3">
-          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
-            <div class="card-body pt-3">
-              <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
-                <img src="assets/img/services/rocket.svg" class="d-block m-1" width="40" alt="Icon">
-              </div>
-              <h2 class="h4 d-inline-flex align-items-center">
-                Renforcement des capacités
-                <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
-              </h2>
-              <p class="fs-sm text-body mb-0">Id eget blandit sapien cras massa lectus lorem placerat. Quam dolor commodo fermentum bibendum dictumst. Risus pretium eget at viverra eget. Sit neque adipiscing malesuada blandit justo, quam.</p>
-            </div>
-          </a>
-        </div>
+        @endforeach
+       
 
       </div>
     </div>
   </section>
 
-  <!-- COVID banner -->
+  <!--  banner -->
   <section class=" bg-primary">
     <div class="container shadow-sm ">
       <div class=" row">
@@ -167,7 +150,6 @@
    <!-- Video showcase -->
    <section class="container py-5 ">
     <h2 class="h1 pb-3 text-center text-md-start  ">Qui sommes-nous ?</h2>
-
     <div class="row align-items-center pb-2 ">
       <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
         <ul class="list-unstyled pb-4 mb-0">
@@ -198,241 +180,68 @@
     </div>
   </section>
 
-    <!-- Testimonials -->
-    <section class="bg-secondary">
-      <h2 class="h1 pb-3 container text-center text-md-start  pt-5">Ce qu'ils ont dit sur nous</h2>
-      <div class="px-2 px-sm-0">
-        <div class="swiper" data-swiper-options='{
-          "slidesPerView": 1,
-          "centeredSlides": true,
-          "spaceBetween": 8,
-          "loop": true,
-          "pagination": {
-            "el": ".swiper-pagination",
-            "clickable": true
+  <!-- Testimonials -->
+  <section class="bg-secondary">
+    <h2 class="h1 pb-3 container text-center text-md-start  pt-5">Ce qu'ils ont dit sur nous</h2>
+    <div class="px-2 px-sm-0">
+      <div class="swiper" data-swiper-options='{
+        "slidesPerView": 1,
+        "centeredSlides": true,
+        "spaceBetween": 8,
+        "loop": true,
+        "pagination": {
+          "el": ".swiper-pagination",
+          "clickable": true
+        },
+        "breakpoints": {
+          "500": {
+            "slidesPerView": 2,
+            "spaceBetween": 24
           },
-          "breakpoints": {
-            "500": {
-              "slidesPerView": 2,
-              "spaceBetween": 24
-            },
-            "1000": {
-              "slidesPerView": 4,
-              "spaceBetween": 24
-            },
-            "1500": {
-              "slidesPerView": 6,
-              "spaceBetween": 24
-            }
+          "1000": {
+            "slidesPerView": 4,
+            "spaceBetween": 24
+          },
+          "1500": {
+            "slidesPerView": 6,
+            "spaceBetween": 24
           }
-        }'>
-          <div class="swiper-wrapper p-0">
+        }
+      }'>
+        <div class="swiper-wrapper p-0">
 
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                  </div>
+          <!-- Item -->
+          @foreach ($testimonials as $testimonial)
+          <div class="swiper-slide h-auto pt-4">
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">{{ $testimonial->message }}</p>
+                </blockquote>
+             
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img src="{{ 'storage/'.$testimonial->image_url}}" width="48" class="rounded-circle" alt="{{ $testimonial->witness }}">
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">{{ $testimonial->witness }}</h6>
+                  <span class="fs-xs text-muted">{{ $testimonial->job }}</span>
                 </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/42.png" width="48" class="rounded-circle" alt="Fannie Summers">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Fannie Summers</h6>
-                    <span class="fs-xs text-muted">Designer</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
+              </figcaption>
+            </figure>
+          </div> 
+          @endforeach
+         
 
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Phasellus luctus nisi id orci condimentum, at cursus nisl vestibulum. Orci varius natoque penatibus et magnis dis parturient montes.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                  </div>
-                </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/43.png" width="48" class="rounded-circle" alt="Robert Fox">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Robert Fox</h6>
-                    <span class="fs-xs text-muted">QA Engineer</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum odio, bibendum ornare mi at, efficitur urna.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                  </div>
-                </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/44.png" width="48" class="rounded-circle" alt="Annette Black">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Annette Black</h6>
-                    <span class="fs-xs text-muted">Project Manager</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Etiam augue ante, imperdiet et nunc sed, bibendum faucibus est. Suspendisse egestas facilisis erat eu eleifend.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                  </div>
-                </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/45.png" width="48" class="rounded-circle" alt="Jerome Bell">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Jerome Bell</h6>
-                    <span class="fs-xs text-muted">Developer</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Nulla volutpat consectetur congue egestas egestas uni suspendisse blandit parturient.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                  </div>
-                </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/42.png" width="48" class="rounded-circle" alt="Jenny Wilson">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Jenny Wilson</h6>
-                    <span class="fs-xs text-muted">Marketing</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Pellentesque finibus congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                  </div>
-                </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/46.png" width="48" class="rounded-circle" alt="Albert Flores">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Albert Flores</h6>
-                    <span class="fs-xs text-muted">PR Director</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pt-4">
-              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                    <i class="bx bxs-quote-left"></i>
-                  </span>
-                  <blockquote class="card-body pb-3 mb-0">
-                    <p class="mb-0">Vivamus iaculis facilisis pretium. Pellentesque vitae mi odio. Donec imperdiet pellentesque ipsum quis pharetra. Nullam dolor sem.</p>
-                  </blockquote>
-                  <div class="card-footer border-0 text-nowrap pt-0">
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bxs-star text-warning"></i>
-                    <i class="bx bx-star text-muted opacity-75"></i>
-                  </div>
-                </div>
-                <figcaption class="d-flex align-items-center ps-4 pt-4">
-                  <img src="assets/img/avatar/47.png" width="48" class="rounded-circle" alt="Cameron Williamson">
-                  <div class="ps-3">
-                    <h6 class="fs-sm fw-semibold mb-0">Wade Warren</h6>
-                    <span class="fs-xs text-muted">Illustrator</span>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <!-- Pagination (bullets) -->
-          <div class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5"></div>
         </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5"></div>
       </div>
-    </section>
-
-
-
+    </div>
+  </section>
 
  <!-- Partners -->
  <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
@@ -473,84 +282,25 @@
     <div class="swiper-wrapper">
 
       <!-- Item -->
+      @foreach ($sponsors as $sponsor)
       <div class="swiper-slide py-3">
         <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
           <div class="card-body">
-            <img src="assets/img/brands/google.svg" class="d-block mx-auto" alt="Google">
+            <img src="{{ 'storage/'.$sponsor->logo}}" class="d-block mx-auto" alt="{{ $sponsor->name}}">
           </div>
         </a>
       </div>
+      @endforeach
+      
 
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/zoom.svg" class="d-block mx-auto" alt="Zoom">
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/slack.svg" class="d-block mx-auto" alt="Slack">
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/gmail.svg" class="d-block mx-auto" alt="Gmail">
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/trello.svg" class="d-block mx-auto" alt="Trello">
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/mailchimp.svg" class="d-block mx-auto" alt="Mailchimp">
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/dropbox.svg" class="d-block mx-auto" alt="Dropbox">
-          </div>
-        </a>
-      </div>
-
-      <!-- Item -->
-      <div class="swiper-slide py-3">
-        <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
-            <img src="assets/img/brands/evernote.svg" class="d-block mx-auto" alt="Evernote">
-          </div>
-        </a>
-      </div>
     </div>
 
     <!-- Pagination (bullets) -->
     <div class="swiper-pagination position-relative pt-3 mt-4"></div>
   </div>
-  <div class="text-center my-3 mt-xl-n2">
+  {{-- <div class="text-center my-3 mt-xl-n2">
     <a href="#" class="btn btn-primary">Voir tous nos partenaires</a>
-  </div>
+  </div> --}}
 </section>
 
 

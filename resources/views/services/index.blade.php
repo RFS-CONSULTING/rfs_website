@@ -13,49 +13,29 @@
      </section>
 
       <!-- Page title + Image -->
+      @foreach ($services as $service)
       <section class="container mb-5 ">
         <div class="row ">
-          <div class=" col-md-6 order-md-2 text-center text-md-start mb-4 ">
-            <h2 class="mb-4">Consultance</h2>
-            <p class=" d-md-none d-lg-block ">Id eget blandit sapien cras massa lectus lorem placerat. Quam dolor commodo fermentum bibendum dictumst. Risus pretium eget at viverra eget. Sit neque adipiscing malesuada blandit justo, quam.</p>
-            <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary ">Nous contacter</a>
+          <div class=" col-md-8 order-md-2 text-center text-md-start mb-4 ">
+            <h2 class="mb-4">{{ $service->name }}</h2>
+            <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
+            {{-- <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary ">Nous contacter</a> --}}
           </div>
-          <div class="col-md-6 order-md-1">
+          <div class="col-md-4 order-md-1">
             <div class="position-relative rounded-3 overflow-hidden">
               <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-                <a href="https://www.youtube.com/watch?v=UtV5iQUJ9_I" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+                <a href="{{'https://www.youtube.com/watch?v='.$service->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
                   <i class="bx bx-play"></i>
                 </a>
               </div>
               <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-              <img src="assets/img/landing/video-cover.jpg" alt="Cover image">
+              <img src="{{'storage/'.$service->image_path}}" alt="{{ $service->name }}">
             </div>
           </div>
         </div>
       </section>
-
-       <!-- Page title + Image -->
-       <section class="container  mb-5 ">
-        <div class="row  ">
-          <div class="col-md-6 text-center text-md-start mb-4">
-            
-            <h2 class="mb-4">Encadrement scientifique</h2>
-            <p class=" d-md-none d-lg-block">Id eget blandit sapien cras massa lectus lorem placerat. Quam dolor commodo fermentum bibendum dictumst. Risus pretium eget at viverra eget. Sit neque adipiscing malesuada blandit justo, quam.</p>
-            <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary ">Nous contacter</a>
-          </div>
-          <div class="col-md-6 order-md-1">
-              <div class="position-relative rounded-3 overflow-hidden">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-                  <a href="https://www.youtube.com/watch?v=UtV5iQUJ9_I" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
-                    <i class="bx bx-play"></i>
-                  </a>
-                </div>
-                <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-                <img src="assets/img/landing/video-cover.jpg" alt="Cover image">
-              </div>
-          </div>
-        </div>
-      </section>
+      @endforeach
+     
 
 
       <!-- Services -->

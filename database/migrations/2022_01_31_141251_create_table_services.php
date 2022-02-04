@@ -19,6 +19,7 @@ class CreateTableServices extends Migration
             $table->string('description');
             $table->string('keywords');
             $table->string('image_path');
+            $table->string('video_youtube');
             $table->timestamps();
         });
     }

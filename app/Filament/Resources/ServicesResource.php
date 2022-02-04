@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ServicesResource\Pages;
 use App\Filament\Resources\ServicesResource\RelationManagers;
-use App\Models\Services;
+use App\Models\Service;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +13,7 @@ use Filament\Tables;
 
 class ServicesResource extends Resource
 {
-    protected static ?string $model = Services::class;
+    protected static ?string $model = Service::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -30,8 +30,11 @@ class ServicesResource extends Resource
                 Forms\Components\TextInput::make('keywords')
                     ->required()
                     ->maxLength(255),
-                    Forms\Components\FileUpload::make('image_path')
+                Forms\Components\FileUpload::make('image_path')
                     ->image(),
+                Forms\Components\TextInput::make('video_youtube')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 

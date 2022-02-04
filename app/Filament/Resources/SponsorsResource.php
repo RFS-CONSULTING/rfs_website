@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SponsorsResource\Pages;
 use App\Filament\Resources\SponsorsResource\RelationManagers;
-use App\Models\Sponsors;
+use App\Models\Sponsor;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +13,7 @@ use Filament\Tables;
 
 class SponsorsResource extends Resource
 {
-    protected static ?string $model = Sponsors::class;
+    protected static ?string $model = Sponsor::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -24,9 +24,9 @@ class SponsorsResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('logo')
-                    ->required()
-                    ->maxLength(255),
+
+                Forms\Components\FileUpload::make('logo')->image(),
+
             ]);
     }
 
