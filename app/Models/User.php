@@ -58,4 +58,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function canAccessFilament(): bool
+    {
+        return $this->isAdmin == 1;
+        //  return $this->isAdmin == 0;
+
+    }
 }
