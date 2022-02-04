@@ -7,7 +7,7 @@ use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\Sponsor;
 
-class homeController extends Controller
+class HomeController extends Controller
 {
     
     public function index()
