@@ -48,7 +48,7 @@
                     </h4>
                     <p class="mb-0 fs-sm">{{ $conference->description }}</p>
                     <div class="h-0 w-0 overflow-hidden" style="height:0px">
-                          <a href="{{'https://www.youtube.com/watch?'.$conference->link_highlights_videos}}" class="btn-video stretched-link " data-bs-toggle="video">
+                          <a href="{{'https://www.youtube.com/watch?v='.$conference->link_highlights_videos}}" class="btn-video stretched-link " data-bs-toggle="video">
                           </a>
                       </div>
                   </div>
