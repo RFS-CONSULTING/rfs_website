@@ -34,7 +34,9 @@ Route::get('/services',[ServiceController::class,'index'])->name('service.index'
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/equipe',[HomeController::class,'team'])->name('team');
 Route::get('/realisations',[HomeController::class,'realisations'])->name('realisations');
-Route::get('/contact', [HomeController::class,'contacts'])->name('contact');
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
