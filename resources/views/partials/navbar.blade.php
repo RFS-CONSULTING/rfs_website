@@ -26,7 +26,7 @@
                 </li>
             
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Conferences</a>
+                  <a href=" {{ route('conference.index')}} " class="{{ request()->routeIs('conference.index') ? 'active' : '' }} nav-link"">Conferences</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">Formateur</a>

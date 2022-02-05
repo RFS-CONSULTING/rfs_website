@@ -371,7 +371,7 @@
 
   <!-- What you get (Icon boxes) -->
   <section class="container pt-1 pt-xl-3 pb-5">
-    <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">Ce que vous obtenez</h2>
+    <h2 class="h1 text-center pb-3 pb-md-0 mb-md-5">Ce que vous obtiendrez</h2>
     <div class="swiper swiper-nav-onhover mt-n3 mx-n2" data-swiper-options='{
       "slidesPerView": 1,
       "spaceBetween": 8,
@@ -398,7 +398,7 @@
                 <img src="/assets/img/landing/icons/01.svg" class="position-relative zindex-2" width="32" alt="Icon">
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
-              <h3 class="h5 pb-1 mb-2">Cours vidéo en ligne</h3>
+              <h3 class="h5 pb-1 mb-2">Séance en direct avec le formateur</h3>
               <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing tristique dictum vitae elementum neque.</p>
             </div>
           </div>
@@ -412,7 +412,7 @@
                 <img src="/assets/img/landing/icons/02.svg" class="position-relative zindex-2" width="32" alt="Icon">
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
-              <h3 class="h5 pb-1 mb-2">Apprentissage basé sur le mentorat</h3>
+              <h3 class="h5 pb-1 mb-2">Apprentissage basé sur les modules : Tutoriels (vidéo et pdf)</h3>
               <p class="mb-0">Ac dapibus lacus, malesuada ridiculus donec condimentum nunc vestibulum. Mi feugiat tellus faucibus fermentum mattis ultrices.</p>
             </div>
           </div>
@@ -427,7 +427,7 @@
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
               <h3 class="h5 pb-1 mb-2">Accès à vie</h3>
-              <p class="mb-0">Donec interdum risus convallis tristique quis elit. Sapien turpis enim, viverra cursus facilisis dignissim condimentum.</p>
+              <p class="mb-0"> 1.Participation gratuite à nos visioconférences sur les SIG et développement durable<br/> 2.Participation gratuite aux moments d'échanges sur les nouvelles versions de logiciels</p>
             </div>
           </div>
         </div>

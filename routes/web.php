@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SocialiteController;
+use App\Http\Controllers\ConferenceController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +34,10 @@ Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
 Route::get('/services',[ServiceController::class,'index'])->name('service.index');
 
 Route::get('/about',[AboutController::class,'index'])->name('about');
+
+Route::get('/conferences',[ConferenceController::class,'index'])->name('conference.index');
+Route::get('/conference/{slug}',[ConferenceController::class,'show'])->name('conference.show');
+
 Route::get('/equipe',[HomeController::class,'team'])->name('team');
 Route::get('/realisations',[HomeController::class,'realisations'])->name('realisations');
 Route::get('/contact', function(){

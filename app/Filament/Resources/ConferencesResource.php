@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ConferencesResource\Pages;
 use App\Filament\Resources\ConferencesResource\RelationManagers;
-use App\Models\Conferences;
+use App\Models\Conference;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +13,7 @@ use Filament\Tables;
 
 class ConferencesResource extends Resource
 {
-    protected static ?string $model = Conferences::class;
+    protected static ?string $model = Conference::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 

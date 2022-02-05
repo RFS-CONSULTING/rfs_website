@@ -20,9 +20,9 @@ class CreateTableConferences extends Migration
             $table->date('date');
             $table->string('hours');
             $table->string('description');
-            $table->string('link_highlights_videos');
+            $table->string('link_highlights_videos')->nullable();
             $table->string('image_path');
-            $table->string('gif_link');
+            $table->string('gif_link')->nullable();
             $table->string('ticket_price');
             $table->timestamps();
         });
