@@ -206,7 +206,7 @@
               </div>
             </div>
             <p class="fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
-              <span class="text-light opacity-50">&copy; Tous droits réservés </span>
+              <span class="text-light opacity-50">RFS Consulting 2022 &copy; Tous droits réservés </span>
             </p>
           </div>
           </footer>
