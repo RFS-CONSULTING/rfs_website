@@ -9,11 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-<<<<<<< HEAD
 use Filament\Models\Contracts\FilamentUser;
-=======
-use Filament\Models\Contracts\FilamentUser; 
->>>>>>> e720228b4786d993bb63c108a49f07e9d10bf7aa
+
 class User extends Authenticatable implements FilamentUser
 {
     use HasApiTokens;
@@ -65,8 +62,8 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessFilament(): bool
     {
-        // return $this->isAdmin == 1;
-         return $this->isAdmin == 0;
+        return $this->isAdmin == 1;
+        //  return $this->isAdmin == 0;
 
     }
 }
