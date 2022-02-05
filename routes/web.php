@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SocialiteController;
@@ -29,10 +31,10 @@ Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
 
 Route::get('/services',[ServiceController::class,'index'])->name('service.index');
 
-Route::get('/apropos',[homeController::class,'aboutus'])->name('aboutus');
-Route::get('/equipe',[homeController::class,'team'])->name('team');
-Route::get('/realisations',[homeController::class,'realisations'])->name('realisations');
-Route::get('/contact', [homeController::class,'contacts'])->name('contact');
+Route::get('/about',[AboutController::class,'index'])->name('about');
+Route::get('/equipe',[HomeController::class,'team'])->name('team');
+Route::get('/realisations',[HomeController::class,'realisations'])->name('realisations');
+Route::get('/contact', [HomeController::class,'contacts'])->name('contact');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

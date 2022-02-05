@@ -161,7 +161,7 @@
           
         
         </ul>
-        <a href="#" class="btn btn-primary w-100 w-md-auto">
+        <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
           En savoir plus
           <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
         </a>
