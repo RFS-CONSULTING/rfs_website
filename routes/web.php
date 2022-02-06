@@ -11,7 +11,9 @@ use App\Http\Controllers\FormationController;
 use App\Http\Controllers\SocialiteController;
 
 use App\Http\Controllers\ConferenceController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,9 +74,14 @@ Route::get('/equipe',[HomeController::class,'team'])->name('team');
 
 // Contact 
 
-Route::get('/contact', function(){
-    return view('contact');
-})->name('contact');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.create');
+
+
+// newsletters
+
+Route::post('/newsletter',[NewsletterController::class,'store'])->name('newsletter.store');
+
 
 // jetstream|sanctum 
 

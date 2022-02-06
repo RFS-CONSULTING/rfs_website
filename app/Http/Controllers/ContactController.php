@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Instructors;
 use Illuminate\Http\Request;
 
-class InstructorController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        return view('instructors.index');
+        return view('contact');
     }
 
     /**
@@ -25,7 +24,6 @@ class InstructorController extends Controller
     public function create()
     {
         //
-        return view('instructors.create');
     }
 
     /**
@@ -37,31 +35,6 @@ class InstructorController extends Controller
     public function store(Request $request)
     {
         //
-
-        $validates = $request->validate([
-            'name'=>'required',
-            'email'=>'required|email',
-            'job'=>'required',
-            'description'=>'required',
-            'facebook_link'=>'required',
-            'whatsapp_link'=>'required',
-            'linkedin_link'=>'required',
-            'twitter_link'=>'required',
-        ], [
-            'name.required'=>'fiield is required',
-            'email.required'=>'fiield is required',
-            'email.email'=>'field must be email',
-            'job.required'=>'fiield is required',
-            'description.required'=>'fiield is required',
-            'facebook_link.required'=>'fiield is required',
-            'whatsapp_link.required'=>'fiield is required',
-            'linkedin_link.required'=>'fiield is required',
-            'twitter_link.required'=>'fiield is required',
-        ]);
-
-        $instructor = Instructors::create($validates);
-
-        return back()->with('success','your acount creation request has mad successfuly');
     }
 
     /**
