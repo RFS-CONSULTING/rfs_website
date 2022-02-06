@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
@@ -30,6 +31,9 @@ Route::get('/all-formations',[FormationController::class,'getAll'])->name('forma
 
 Route::get('/posts',[PostController::class,'index'])->name('post.index');
 Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
+
+Route::post('/comment',[CommentsController::class,'store'])->name('comment.store');
+Route::get('/comment/{postId}',[CommentsController::class,'show'])->name('comment.show');
 
 Route::get('/services',[ServiceController::class,'index'])->name('service.index');
 
