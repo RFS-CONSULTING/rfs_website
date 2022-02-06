@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Posts;
-use App\Models\Comments;
+use App\Models\Instructors;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Validator;
 
-class PostController extends Controller
+class InstructorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
-        $posts = Posts::orderBy('created_at','desc')->get();
-        return view('posts.index',['posts'=>$posts]);
-
+        return view('instructors.index');
     }
 
     /**
@@ -30,6 +25,7 @@ class PostController extends Controller
     public function create()
     {
         //
+        return view('instructors.create');
     }
 
     /**
@@ -41,19 +37,42 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
+        $validates = $request->validate([
+            'name'=>'required',
+            'email'=>'required|email',
+            'job'=>'required',
+            'description'=>'required',
+            'facebook_link'=>'required',
+            'whatsapp_link'=>'required',
+            'linkedin_link'=>'required',
+            'twitter_link'=>'required',
+        ], [
+            'name.required'=>'fiield is required',
+            'email.required'=>'fiield is required',
+            'email.email'=>'field must be email',
+            'job.required'=>'fiield is required',
+            'description.required'=>'fiield is required',
+            'facebook_link.required'=>'fiield is required',
+            'whatsapp_link.required'=>'fiield is required',
+            'linkedin_link.required'=>'fiield is required',
+            'twitter_link.required'=>'fiield is required',
+        ]);
+
+        $instructor = Instructors::create($validates);
+
+        return back()->with('success','your acount creation request has mad successfuly');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $slug
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug,Request $request)
+    public function show($id)
     {
-        $post = Posts::where('slug',$slug)->firstOrFail();
-        $comments = Comments::where('post_id',$post->id)->get();
-        return view('posts.show', ['post'=>$post,'comments'=>$comments]);
+        //
     }
 
     /**

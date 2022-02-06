@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Posts;
 use App\Models\Comments;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Auth;
 
-class PostController extends Controller
+class CommentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,6 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Posts::orderBy('created_at','desc')->get();
-        return view('posts.index',['posts'=>$posts]);
-
     }
 
     /**
@@ -41,19 +37,35 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $user = Auth::user();
+
+        $validatedData = $request->validate([
+            'guest_name' => 'required',
+            'email' => 'required|email',
+            'messaage'=>'required'
+        ], [
+            'guest_name.required' => 'Name is required',
+            'email.required' => 'Email is required',
+            'message.required' => 'Message is required'
+        ]);
+
+        $comments = Comments::create($validatedData);
+    
+        return back()->with('success', 'Comments created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $slug
+     * @param  int  $postId
      * @return \Illuminate\Http\Response
      */
-    public function show($slug,Request $request)
+    public function show($postId)
     {
-        $post = Posts::where('slug',$slug)->firstOrFail();
-        $comments = Comments::where('post_id',$post->id)->get();
-        return view('posts.show', ['post'=>$post,'comments'=>$comments]);
+        // $postId = intval($postId);
+        // $comments = Comments::where('post_id',$postId)->get();
+
+        // return json
     }
 
     /**

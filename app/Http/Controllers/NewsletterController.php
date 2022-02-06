@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Posts;
-use App\Models\Comments;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Validator;
 
-class PostController extends Controller
+class NewsletterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +14,6 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Posts::orderBy('created_at','desc')->get();
-        return view('posts.index',['posts'=>$posts]);
-
     }
 
     /**
@@ -46,14 +40,12 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $slug
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug,Request $request)
+    public function show($id)
     {
-        $post = Posts::where('slug',$slug)->firstOrFail();
-        $comments = Comments::where('post_id',$post->id)->get();
-        return view('posts.show', ['post'=>$post,'comments'=>$comments]);
+        //
     }
 
     /**

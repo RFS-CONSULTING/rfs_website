@@ -1,15 +1,19 @@
 <?php
 
-use App\Http\Controllers\FormationController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\AboutController;
 
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\FormationController;
 use App\Http\Controllers\SocialiteController;
-use App\Http\Controllers\ConferenceController;
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConferenceController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,26 +28,62 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 
+// formations
+
 Route::get('/formations',[FormationController::class,'index'])->name('formation.index');
 Route::get('/formation/{slug}',[FormationController::class,'show'])->name('formation.show');
 Route::get('/all-formations',[FormationController::class,'getAll'])->name('formation.all');
 
+// Posts
+
 Route::get('/posts',[PostController::class,'index'])->name('post.index');
 Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
 
-Route::get('/services',[ServiceController::class,'index'])->name('service.index');
+// comments 
 
-Route::get('/about',[AboutController::class,'index'])->name('about');
+Route::post('/comment',[CommentsController::class,'store'])->name('comment.store');
+Route::get('/comment/{postId}',[CommentsController::class,'show'])->name('comment.show');
+
+// Instructor 
+
+Route::get('/instructors',[InstructorController::class,'index'])->name('instructor.index');
+Route::get('/instructor/{id}',[InstructorController::class,'show'])->name('instructor.show');
+Route::get('/instructor/create',[InstructorController::class,'create'])->name('instructor.create');
+Route::post('/instructor/store',[InstructorController::class,'store'])->name('instructor.store');
+
+// Conference 
 
 Route::get('/conferences',[ConferenceController::class,'index'])->name('conference.index');
 Route::get('/conference/{slug}',[ConferenceController::class,'show'])->name('conference.show');
 
-Route::get('/equipe',[HomeController::class,'team'])->name('team');
-Route::get('/realisations',[HomeController::class,'realisations'])->name('realisations');
-Route::get('/contact', function(){
-    return view('contact');
-})->name('contact');
+// services
 
+Route::get('/services',[ServiceController::class,'index'])->name('service.index');
+
+// Realisations 
+
+Route::get('/realisations',[HomeController::class,'realisations'])->name('realisations');
+
+// about 
+
+Route::get('/about',[AboutController::class,'index'])->name('about');
+
+
+// Team
+Route::get('/equipe',[HomeController::class,'team'])->name('team');
+
+// Contact 
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.create');
+
+
+// newsletters
+
+Route::post('/newsletter',[NewsletterController::class,'store'])->name('newsletter.store');
+
+
+// jetstream|sanctum 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

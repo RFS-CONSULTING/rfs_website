@@ -29,7 +29,7 @@
                   <a href=" {{ route('conference.index')}} " class="{{ request()->routeIs('conference.index') ? 'active' : '' }} nav-link"">Conferences</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Formateur</a>
+                  <a href="{{ route('instructor.index')}}" class="nav-link">Formateur</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
