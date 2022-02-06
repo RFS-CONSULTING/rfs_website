@@ -65,7 +65,7 @@
             <!-- Map -->
             <div class="col-md-6 offset-xl-1">
               <div class="d-flex flex-column h-100 shadow-sm rounded-3 overflow-hidden">
-                <iframe class="d-block h-100" src="https://maps.google.com/maps?q=RFS%20consulting&t=&z=17&ie=UTF8&iwloc=&output=embed" style="border: 0; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="d-block h-100"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.392682239128!2d15.32543962755995!3d-4.337155541769343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3799b8914037%3A0x371fac9a53c8814c!2sRFS%20CONSULTING!5e0!3m2!1sfr!2ssg!4v1644153017116!5m2!1sfr!2ssg" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
             </div>
           </div>
@@ -75,34 +75,7 @@
           <!-- Contact form -->
           <div class="bg-secondary rounded-3 py-5  ">
             <div class="container-fluid">
-              <form class="needs-validation row justify-content-center py-lg-3 py-xl-4" novalidate>
-                <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11">
-                  <h2 class="h1 pb-lg-1 mb-4">Laissez-nous un message</h2>
-                  <p class="fs-lg text-muted pb-lg-1 mb-4">Avez-vous un projet en tête? Pour demander un devis, contactez-nous directement ou remplissez le formulaire et faites-nous savoir comment nous pouvons vous aider.</p>
-                  <div class="row">
-                    <div class="col-sm-6 mb-4">
-                      <label for="name" class="form-label fs-base">Nom complet</label>
-                      <input type="text" id="name" class="form-control form-control-lg" required>
-                      <div class="invalid-feedback">S'il vous plaît entrez votre nom!</div>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <label for="email" class="form-label fs-base">Adresse e-mail</label>
-                      <input type="email" id="email" class="form-control form-control-lg" required>
-                      <div class="invalid-feedback">Veuillez fournir une adresse email valide!</div>
-                    </div>
-                    <div class="col-12 mb-4">
-                      <label for="message" class="form-label fs-base">Message</label>
-                      <textarea id="message" class="form-control form-control-lg" rows="4" required></textarea>
-                      <div class="invalid-feedback">Veuillez écrire votre message!</div>
-                    </div>
-                  </div>
-                  <div class="form-check mb-4">
-                    <input type="checkbox" id="terms" class="form-check-input" required>
-                    <label for="terms" class="form-check-label fs-base">J'accepte les <a href="#">Termes &amp; Conditions</a></label>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-lg shadow-primary">Envoyer le message</button>  
-                </div>
-              </form>
+              @livewire('contact')
             </div>
           </div>
         </section>

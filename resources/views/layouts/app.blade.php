@@ -188,8 +188,8 @@
                       <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
                         <ul class="nav flex-column pb-lg-1 mb-lg-3">
                           <li class="nav-item"><a href="{{ route('home')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Accueil</a></li>
-                          <li class="nav-item"><a href="{{ route('formation.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Formations</a></li>
-                          <li class="nav-item"><a href="{{ route('post.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
+                          {{-- <li class="nav-item"><a href="{{ route('formation.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Formations</a></li> --}}
+                          {{-- <li class="nav-item"><a href="{{ route('post.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li> --}}
                           <li class="nav-item"><a href="{{ route('contact')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Nous contacter</a></li>
                           <li class="nav-item"><a href="{{ route('service.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
                           <li class="nav-item"><a href="{{ route('about')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">A propos de nous</a></li>

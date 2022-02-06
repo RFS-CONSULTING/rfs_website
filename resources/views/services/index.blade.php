@@ -4,7 +4,7 @@
       <nav class="container py-4 mb-lg-2 mt-lg-3" aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-center justify-content-md-start mb-0">
           <li class="breadcrumb-item">
-            <a href="{{ route('home') }}"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+            <a href="{{ route('home') }}"><i class="bx bx-home-alt fs-lg me-1"></i>Accueil</a>
           </li>
  
           <li class="breadcrumb-item active" aria-current="page">Services</li>
@@ -151,8 +151,7 @@
         <div class="position-relative pt-md-5 mt-md-n5">
           <div class="position-absolute top-50 start-0 w-100 text-center mt-sm-n5">
             <h3 class="h2 mx-auto mt-n5" style="max-width: 572px;">
-              Approuvé par les plus de 695 clients dans plus de 27 pays differents <span class="text-primary">48+</span> customers in <span class="text-primary">9+</span> countries
-            </h3>
+              Approuvé par les plus de 695 clients dans plus de <span class="text-primary">27</span> pays differents</h3>
           </div>
           <img src="/assets/img/services/single/map.png" alt="Map">
         </div>
