@@ -35,7 +35,7 @@
                     <form action="/ambassador/subscription" method="POST" class="" enctype="multipart/form-data">
                         @csrf
                         <div class="row rounded p-2 mt-2  ">
-                            <div class="col-12 mt-2 text-center  text-mobile">
+                            <div class="col-12 mt-2 text-justify">
                                 Un ambassadeur RFS est toute personne (étudiant ou professionnel), officiellement reconnu par la direction générale de
                                     RFS CONSULTING et la Coordination de RFS ACADEMIA, il/elle a pour rôle de parler et présenter les activités de RFS
                                     ACADEMIA sur le renforcement des capacités, vendre la bonne image de RFS CONSULTING. 
@@ -46,7 +46,7 @@
                                     <div class="col-md-6 my-2">
                                       <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
                                         <div class="card-body ">
-                                          <p class="fs-sm text-body mb-0">Il/elle témoigne sur le professionnalisme de RFS CONSULTING en matière de consultance et formations
+                                          <p class=" text-body mb-0">Il/elle témoigne sur le professionnalisme de RFS CONSULTING en matière de consultance et formations
                                             professionnelles sur la maitrise des outils numériques pour la collecte, analyse et représentation des données géospatiales (Cartographie).
                                             </p>
                                         </div>
@@ -55,7 +55,7 @@
                                     <div class="col-md-6 my-2">
                                         <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
                                           <div class="card-body ">
-                                            <p class="fs-sm text-body mb-0">Il/elle encourage et apporte des candidats clients pour suivre les formations organisées par RFS ACADEMIA et
+                                            <p class=" text-body mb-0">Il/elle encourage et apporte des candidats clients pour suivre les formations organisées par RFS ACADEMIA et
                                                 bénéficie de 5% du montant payer par son candidat pour la formation.
                                             </p>
                                           </div>
@@ -64,7 +64,7 @@
                                     <div class="col-md-6 my-2">
                                         <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
                                           <div class="card-body ">
-                                            <p class="fs-sm text-body mb-0">Il/elle bénéficie de la participation gratuite à toutes les conférences avec certificat organisées par RFS CONSULTING et ses partenaires.</p>
+                                            <p class=" text-body mb-0">Il/elle bénéficie de la participation gratuite à toutes les conférences avec certificat organisées par RFS CONSULTING et ses partenaires.</p>
                                           </div>
                                         </a>
                                     </div>
@@ -72,7 +72,7 @@
                                     <div class="col-md-6 my-2">
                                         <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
                                           <div class="card-body ">
-                                            <p class="fs-sm text-body mb-0">Il/elle bénéficie de l’intervention des consultants-formateurs de RFS ACADEMIA s’il/elle rencontre des difficultés en travaillant sur un projet SIG ou autres cadrant avec les services organisés au sein de RFS CONSULTING.</p>
+                                            <p class=" text-body mb-0">Il/elle bénéficie de l’intervention des consultants-formateurs de RFS ACADEMIA s’il/elle rencontre des difficultés en travaillant sur un projet SIG ou autres cadrant avec les services organisés au sein de RFS CONSULTING.</p>
                                           </div>
                                         </a>
                                     </div>
@@ -390,23 +390,23 @@
                             <hr class="my-4 col-12"/>
                             <div class="col-12 text-justify text-mobile">
                                 <div class="row">
-                                    <span class="">
-                                        1. Collectes et utilisation des renseignements personnels pour les informations et l’authentification
+                                    <span class="mb-4">
+                                        <span class="fw-bold">1</span>. Collectes et utilisation des renseignements personnels pour les informations et l’authentification
                                     </span>
     
-                                    <span>
-                                        2. Les informations sont conservées à partir de la date du remplissage de ce formulaire et jusqu’à l’étude de la
+                                    <span class="mb-4">
+                                        <span class="fw-bold">2</span>. Les informations sont conservées à partir de la date du remplissage de ce formulaire et jusqu’à l’étude de la
                                         candidature et approbation (validation) du candidat comme ambassadeur par le coordonnateur de RFS
                                         ACADEMIA à travers une notification par email.
                                     </span>
-                                    <span>
-                                        3. Les informations sont conservées et utilisées uniquement par les hébergeurs de RFS CONSULTING
+                                    <span class="mb-4">
+                                        <span class="fw-bold">3</span>. Les informations sont conservées et utilisées uniquement par les hébergeurs de RFS CONSULTING
                                     </span>
-                                    <span>
-                                        4. Elles ne sont pas utilisées à d’autres fins que les activités organisées par RFS ACADEMIA.
+                                    <span class="mb-4">
+                                        <span class="fw-bold">4</span>. Elles ne sont pas utilisées à d’autres fins que les activités organisées par RFS ACADEMIA.
                                     </span>
-                                    <span>
-                                        5. En cas de non-respect des règlements intérieurs de RFS ACADEMIA, d’utilisation abusive de la marque RFS ou
+                                    <span class="mb-4">
+                                        <span class="fw-bold">5</span>. En cas de non-respect des règlements intérieurs de RFS ACADEMIA, d’utilisation abusive de la marque RFS ou
                                         manque de respect des responsables, le Coordonnateur de RFS ACADEMIA a l’obligation de vous retirer le
                                         STATUT D’AMBASSADEUR en vous envoyant au préalable une notification et une copie à la Direction générale
                                         de RFS CONSULTING.

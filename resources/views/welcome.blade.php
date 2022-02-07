@@ -151,7 +151,7 @@
       <div class=" row">
         <div class="   text-center text-md-start py-4 py-lg-5 ">
           <h2 class="h1 text-white">Devenez Ambassadeur de RFS ACADEMIA</h2>
-          <p class="mb-4 mb-lg-5 text-white">Un ambassadeur RFS est toute personne (étudiant ou professionnel), officiellement reconnu par la direction générale de RFS CONSULTING et la Coordination de RFS ACADEMIA, il/elle a pour rôle de parler et présenter les activités de RFS ACADEMIA sur le renforcement des capacités, vendre la bonne image de RFS CONSULTING.</p>
+          <p class="mb-4 mb-lg-5 text-white text-justify">Un ambassadeur RFS est toute personne (étudiant ou professionnel), officiellement reconnu par la direction générale de RFS CONSULTING et la Coordination de RFS ACADEMIA, il/elle a pour rôle de parler et présenter les activités de RFS ACADEMIA sur le renforcement des capacités, vendre la bonne image de RFS CONSULTING.</p>
           <a href="{{ route('ambassador')}}" class="btn btn-light text-primary">Postuler maintenant</a>
         </div>
       </div>

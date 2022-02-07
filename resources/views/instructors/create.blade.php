@@ -40,7 +40,7 @@
                     <form action="/formateur/subscription" method="POST" class="" enctype="multipart/form-data">
                         @csrf
                         <div class="row  shadow rounded p-2 mt-2  ">
-                            <div class="col-12 mt-2 text-center text-mobile">
+                            <div class="col-12 mt-2 text-justify text-mobile">
                                 RFS ACADEMIA est une plateforme de prestations et renforcement des capacités via des formations professionnelles notamment la maîtrise des outils numériques des technologies géo-spatiales dont le Système d'Information Géographique (SIG), la programmation web, informatique appliquée. Initié par la société RFS CONSULTING. Notre équipe de consultants/formateurs accompagne les porteurs de projets SIG (cartographie) et assure les formations auprès des établissements, des scientifiques (professionnels ou étudiants) en ligne (zoom, Google Meet et notre site web www.rfs-congo.com) et en présentiel (Kinshasa-Limete/RDC) 
                             </div>
                       
@@ -373,23 +373,23 @@
                             <hr class="my-4 col-12"/>
                             <div class="col-12 text-justify text-mobile">
                                 <div class="row">
-                                    <span class="">
-                                        1. Collectes et utilisation des renseignements personnels pour les informations et l’authentification
+                                    <span class="mb-4">
+                                        <span class="fw-bold">1</span>. Collectes et utilisation des renseignements personnels pour les informations et l’authentification
                                     </span>
     
-                                    <span>
-                                        2. Les informations sont conservées à partir de la date du remplissage de ce formulaire et jusqu’à l’étude de la
+                                    <span class="mb-4">
+                                        <span class="fw-bold">2</span>. Les informations sont conservées à partir de la date du remplissage de ce formulaire et jusqu’à l’étude de la
                                         candidature et approbation (validation) du candidat comme formateur par le coordonnateur de RFS
                                         ACADEMIA à travers une notification par email.
                                     </span>
-                                    <span>
-                                        3. Les informations sont conservées et utilisées uniquement par les hébergeurs de RFS CONSULTING
+                                    <span class="mb-4">
+                                        <span class="fw-bold">3</span>. Les informations sont conservées et utilisées uniquement par les hébergeurs de RFS CONSULTING
                                     </span>
-                                    <span>
-                                        4. Elles ne sont pas utilisées à d’autres fins que les activités organisées par RFS ACADEMIA.
+                                    <span class="mb-4">
+                                        <span class="fw-bold">4</span>. Elles ne sont pas utilisées à d’autres fins que les activités organisées par RFS ACADEMIA.
                                     </span>
-                                    <span>
-                                        5. En cas de non-respect des règlements intérieurs de RFS ACADEMIA, d’utilisation abusive de la marque RFS ou
+                                    <span class="mb-4">
+                                        <span class="fw-bold">5</span>. En cas de non-respect des règlements intérieurs de RFS ACADEMIA, d’utilisation abusive de la marque RFS ou
                                         manque de respect des responsables, le Coordonnateur de RFS ACADEMIA a l’obligation de vous retirer le
                                         STATUT DE FORMATEUR en vous envoyant au préalable une notification et une copie à la Direction générale
                                         de RFS CONSULTING.
