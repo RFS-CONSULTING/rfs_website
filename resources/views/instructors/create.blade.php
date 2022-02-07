@@ -40,7 +40,7 @@
                     <form action="/formateur/subscription" method="POST" class="" enctype="multipart/form-data">
                         @csrf
                         <div class="row  shadow rounded p-2 mt-2  ">
-                            <div class="col-12 mt-2 text-justify text-mobile">
+                            <div class="col-12 mt-2 text-center text-mobile">
                                 RFS ACADEMIA est une plateforme de prestations et renforcement des capacités via des formations professionnelles notamment la maîtrise des outils numériques des technologies géo-spatiales dont le Système d'Information Géographique (SIG), la programmation web, informatique appliquée. Initié par la société RFS CONSULTING. Notre équipe de consultants/formateurs accompagne les porteurs de projets SIG (cartographie) et assure les formations auprès des établissements, des scientifiques (professionnels ou étudiants) en ligne (zoom, Google Meet et notre site web www.rfs-congo.com) et en présentiel (Kinshasa-Limete/RDC) 
                             </div>
                       
@@ -347,12 +347,12 @@
     
                             <div class="col-md-6 mb-2">
                                 <label for="inputZip" class="form-label">Curriculum vitæ <span class="text-danger">*</span></label>
-                                <input type="file" name="cv" class="form-control" id="exampleFormControlInput1" required accept="image/*">
+                                <input type="file" name="cv" class="form-control" id="exampleFormControlInput1" required >
                             </div>
 
                             <div class="col-md-6 mb-2">
                                 <label for="inputZip" class="form-label">Copie de la Carte d'identité <span class="text-danger">*</span></label>
-                                <input type="file" name="card_identity_image" class="form-control" id="exampleFormControlInput1" required accept="image/*">
+                                <input type="file" name="card_identity_image" class="form-control" id="exampleFormControlInput1" required >
                             </div>
                            
     
