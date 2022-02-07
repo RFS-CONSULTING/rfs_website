@@ -187,7 +187,7 @@
                     <img src="/assets/img/logo.png" width="47" alt="Silicon">
                     RFS Consulting
                   </div>
-                  <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.</p>
+                  <p class=" text-light opacity-70 pb-lg-3 mb-4">Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.</p>
               
                 </div>
                 <div class=" col-md-8 ">
