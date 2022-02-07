@@ -10,8 +10,11 @@ class FormateurController extends Controller
     //
     public function store(Request $request){
         if($request->input('g-recaptcha-response')){
-            $imageName = $request->file('image')->getClientOriginalName();
-            $imagePath = $request->file('image')->store('public/formateurs/'.$request->name);
+            $cvName = $request->file('cv')->getClientOriginalName();
+            $cvPath = $request->file('cv')->store('public/formateurs/'.$request->name);
+            
+            $cardName = $request->file('card_identity_image')->getClientOriginalName();
+            $cardPath = $request->file('card_identity_image')->store('public/formateurs/'.$request->name);
             $pdfName = $request->file('plan')->getClientOriginalName();
             $pdfPath = $request->file('plan')->store('public/formateurs/'.$request->name);
             $form = Formateur::create([
@@ -28,7 +31,8 @@ class FormateurController extends Controller
                 "email" => $request->email,
                 "etudes" => $request->etudes,
                 "phone" => $request->phone,
-                "image" => 'formateurs/'.$imagePath . '/' . $imageName,
+                "card_identity_image" => 'formateurs/'.$cardPath . '/' . $cardeName,
+                "cv" => 'formateurs/'.$imagePath . '/' . $imageName,
                 "plan" => 'formateurs/'.$pdfPath . '/' . $pdfName,
 
             ]);

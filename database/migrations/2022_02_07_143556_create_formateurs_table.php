@@ -27,7 +27,9 @@ class CreateFormateursTable extends Migration
             $table->text("nationalite");
             $table->text("country");
             $table->text("email");
-            $table->text("image");
+            $table->text("card_identity_image");
+            $table->text("cv");
+
             $table->text("phone");
             $table->text("plan");
             $table->timestamps();

@@ -346,8 +346,13 @@
                             </div>
     
                             <div class="col-md-6 mb-2">
-                                <label for="inputZip" class="form-label">Photo professionnelle (Portrait)<span class="text-danger">*</span></label>
-                                <input type="file" name="image" class="form-control" id="exampleFormControlInput1" required accept="image/*">
+                                <label for="inputZip" class="form-label">Curriculum vitæ <span class="text-danger">*</span></label>
+                                <input type="file" name="cv" class="form-control" id="exampleFormControlInput1" required accept="image/*">
+                            </div>
+
+                            <div class="col-md-6 mb-2">
+                                <label for="inputZip" class="form-label">Copie de la Carte d'identité <span class="text-danger">*</span></label>
+                                <input type="file" name="card_identity_image" class="form-control" id="exampleFormControlInput1" required accept="image/*">
                             </div>
                            
     
