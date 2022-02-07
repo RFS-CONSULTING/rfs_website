@@ -93,22 +93,27 @@
               </div>
             </div>
 
+           
             <div class="swiper-slide h-auto py-3">
               <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
                 <div class="card-body">
-                  <h3 class="h6">Evaluations environnementales</h3>
+                  <h3 class="h6">Apport des technologies géo-spatiales</h3>
                   <ul class="list-unstyled mb-0 fs-sm">
                     <li class="d-flex  align-items-center mb-2">
                       <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
-                      Nous offrons des Conseils, Expertises en matière d'environnement, Assainissement.
+                      Conception et réalisation des projets SIG (cartographie)
                     </li>
                     <li class="d-flex  align-items-center mb-2">
                       <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
-                      Nous réalisons des Etudes d'Impact Environnemental et Social, Etudes de danger, Etudes de faisabilité, ...
+                      Etudes et analyses des cartes géologiques, topographiques et géographiques
                     </li>
                     <li class="d-flex align-items-center mb-2">
                       <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
-                      Nous élaborons, analysons et évaluons des projets agro-écologiques et agroforestiers
+                      Accompagnement des PME, ONGs et particuliers dans les projets SIG, Collectes et analyses des données sur terrain
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                      <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
+                      Acquisition, analyses et traitement des images satellites
                     </li>
                   </ul>
                 </div>
@@ -118,19 +123,33 @@
             <div class="swiper-slide h-auto py-3">
               <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
                 <div class="card-body">
-                  <h3 class="h6">Evaluations environnementales</h3>
+                  <h3 class="h6">Expertises en aménagement urbain et rural</h3>
                   <ul class="list-unstyled mb-0 fs-sm">
                     <li class="d-flex  align-items-center mb-2">
                       <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
-                      Nous offrons des Conseils, Expertises en matière d'environnement, Assainissement.
+                      Nous réalisons des études, analyses et conceptions des plans d'aménagement urbains et rural
                     </li>
                     <li class="d-flex  align-items-center mb-2">
                       <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
-                      Nous réalisons des Etudes d'Impact Environnemental et Social, Etudes de danger, Etudes de faisabilité, ...
+                      Nous offrons des expertises en aménagement du territoire
                     </li>
-                    <li class="d-flex align-items-center mb-2">
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
+                <div class="card-body">
+                  <h3 class="h6">Expertises en ingénierie forestière</h3>
+                  <ul class="list-unstyled mb-0 fs-sm">
+                    <li class="d-flex  align-items-center mb-2">
                       <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
-                      Nous élaborons, analysons et évaluons des projets agro-écologiques et agroforestiers
+                      Inventaire forestier
+                    </li>
+                    <li class="d-flex  align-items-center mb-2">
+                      <i class="bx bx-check-circle fs-sm text-muted me-2"></i>
+                      Etudes de faisabilité des projets agro-écologique, apicoles et agro-forestiers
                     </li>
                   </ul>
                 </div>
@@ -140,7 +159,7 @@
           </div>
 
           <!-- Pagination (bullets) -->
-          <div class="swiper-pagination position-relative d-lg-none pt-2 pt-sm-3 mt-4"></div>
+          <div class="swiper-pagination position-relative  pt-2 pt-sm-3 mt-4"></div>
         </div>
       </section>
 
