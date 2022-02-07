@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\Sponsor;
+use App\Models\Statistic;
 
 class HomeController extends Controller
 {
@@ -15,11 +16,13 @@ class HomeController extends Controller
         $services = Service::all();
         $testimonials = Testimonial::all();
         $sponsors = Sponsor::all();
+        $statistics = Statistic::all();
 
         return view('welcome',[
             'services'=>$services,
             'testimonials' => $testimonials,
             'sponsors' => $sponsors,
+            'statistics' => $statistics,
         ]);
     }
 

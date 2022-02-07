@@ -147,6 +147,33 @@
     </div>
   </section>
 
+  <!-- Stats -->
+  <section class="container bg-secondary pb-5 mb-2 mb-md-4 mb-lg-5">
+    <div class="  ">
+        <div class="row justify-content-center mb-2 py-md-2 py-lg-4">
+            <div class="">
+                <h1 class="py-3 text-center text-md-start">Nos chiffres</h1>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <!-- Item -->
+                    @foreach ($statistics as $statistic)
+                    <div class="col">
+                        <div class="card  border-0 shadow-sm ">
+                            <div class="card-body">
+                                <div class="">
+                                    <h3 class="display-5 mb-1 text-center">+ {{ $statistic->number}}</h3>
+                                    <p class=" text-center mb-0"><span class="fw-semibold">{{ $statistic->title}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    @endforeach
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
    <!-- Video showcase -->
    <section class="container py-5 ">
     <h2 class="h1 pb-3 text-center text-md-start  ">Qui sommes-nous ?</h2>
