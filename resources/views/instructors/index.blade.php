@@ -41,7 +41,7 @@
 
           <!-- Scroll down btn -->
           <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
-            <a href="#services" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3">
+            <a href="#raison" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3">
               <i class="bx bx-chevron-down"></i>
             </a>
             <span class="fs-sm">Découvrir plus</span>
@@ -52,7 +52,7 @@
   </section>
 
   <!-- Services -->
-  <section class="container bg-secondary pb-md-2 pb-lg-5" id="">
+  <section class="container bg-secondary pb-md-2 pb-lg-5" id="raison">
     <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
     <div class=" pb-4 pt-5">
       <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Pourquoi devenir <span class="bg-primary rounded-lg px-2  text-white">formateur</span> ?</h2>
