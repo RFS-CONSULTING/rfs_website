@@ -78,22 +78,22 @@
             <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100"> {{ __('Log in') }}
             </button>
           </form>
-          <a href="#" class="btn btn-link btn-lg w-100"> {{ __('Forgot your password?') }}</a>
+          {{-- <a href="#" class="btn btn-link btn-lg w-100"> {{ __('Forgot your password?') }}</a> --}}
           <hr class="my-4">
           <h6 class="text-center mb-4">Ou connectez-vous avec votre réseau social</h6>
-          <div class="row row-cols-1 row-cols-sm-2">
+          <div class="row row-cols-1 ">
             <div class="col mb-3">
               <a href="{{ route('socialite.redirect', ['provider' => 'google']) }}" class="btn btn-icon btn-secondary btn-google btn-lg w-100">
                 <i class="bx bxl-google fs-xl me-2"></i>
                 Google
               </a>
             </div>
-            <div class="col mb-3">
+            {{-- <div class="col mb-3">
               <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-lg w-100">
                 <i class="bx bxl-facebook fs-xl me-2"></i>
                 Facebook
               </a>
-            </div>
+            </div> --}}
           </div>
         </div>
       </div>
