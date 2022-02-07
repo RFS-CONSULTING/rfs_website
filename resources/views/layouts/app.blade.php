@@ -171,7 +171,7 @@
           <footer class="footer dark-mode bg-dark  pb-4 pb-lg-5">
             <div class="container pt-lg-4">
               <div class="row pb-5">
-                <div class="col-lg-4 col-md-6">
+                <div class=" col-md-4">
                   <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
                     <img src="/assets/img/logo.png" width="47" alt="Silicon">
                     RFS Consulting
@@ -179,9 +179,9 @@
                   <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.</p>
               
                 </div>
-                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+                <div class=" col-md-8 ">
                   <div id="footer-links" class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-6">
                       <h6 class="mb-2">
                         <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Liens utiles</a>
                       </h6>
@@ -197,15 +197,23 @@
                         </ul>
                     </div>
                   </div>
-                  <div class="col-xl-4 col-lg-3">
+                  <div class="col-md-6">
                     <h6 class="mb-2">
-                      <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                      <a href="#address" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Nos contacts</a>
+                      <p id="address"class="collapse d-lg-block  text-light pb-lg-3 mb-4">
+                        364, avenue MASANO, 1ere Rue Limete<br>
+                        Réf. Dépôt Kin Marché<br>
+                        Limete / Industriel ( Funa )<br>
+                        Republique Democratique du Congo<br>
+                        <strong>Phone:</strong><a href="tel:+243 817663799"> +243 817663799</a><br>
+                        <strong>Email:</strong> <a href="mailto:info@rfs-congo.com">info@rfs-congo.com</a><br>
+                      </p>
                     </h6>
                   </div>
                 </div>
               </div>
             </div>
-            <p class="fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+            <p class="fs-xs text-center pb-2 pb-lg-0 mb-0">
               <span class="text-light opacity-50">RFS Consulting 2022 &copy; Tous droits réservés </span>
             </p>
           </div>
