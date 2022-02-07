@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ContactsResource\Pages;
 use App\Filament\Resources\ContactsResource\RelationManagers;
-use App\Models\Contacts;
+use App\Models\Contact;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,7 +13,7 @@ use Filament\Tables;
 
 class ContactsResource extends Resource
 {
-    protected static ?string $model = Contacts::class;
+    protected static ?string $model = Contact::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 

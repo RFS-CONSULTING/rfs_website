@@ -18,27 +18,37 @@
                   <a href="{{ route('home')}}" class="{{ request()->routeIs('home') ? 'active ' : '' }} nav-link">Accueil</a>
                 </li>
      
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a href="{{ route('formation.index') }}" class="{{ request()->routeIs('formation.index') ? 'active' : '' }} nav-link">Formations</a>
-                </li>
-                <li class="nav-item">
+                </li> --}}
+                {{-- <li class="nav-item">
                   <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
-                </li>
+                </li> --}}
             
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a href=" {{ route('conference.index')}} " class="{{ request()->routeIs('conference.index') ? 'active' : '' }} nav-link"">Conferences</a>
+                </li> --}}
+                {{-- <li class="nav-item">
+                  <a href="{{ route('instructor.index')}}" class="nav-link">Formateur</a>
+                </li> --}}
+
+                <li class="nav-item">
+                  <a href="{{ route('service.index')}}" class="{{ request()->routeIs('service.index') ? 'active ' : '' }} nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Formateur</a>
+                  <a href="{{ route('about')}}" class="{{ request()->routeIs('about') ? 'active ' : '' }} nav-link">Qui sommes-nous</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a href="{{ route('contact')}}" class="{{ request()->routeIs('contact') ? 'active ' : '' }} nav-link">Contactez-nous</a>
+                </li>
+                {{-- <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                   <ul class="dropdown-menu">
                     <li><a href="{{ route('about') }}" class="dropdown-item">Qui sommes-nous ?</a></li>
                     <li><a href="{{ route('contact')}}" class="dropdown-item">Contactez-nous</a></li>
 
                   </ul>
-                </li>
+                </li> --}}
                
               </ul>
             </div>

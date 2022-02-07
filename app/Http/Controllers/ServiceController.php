@@ -16,7 +16,7 @@ class ServiceController extends Controller
     {
         //
         $services = Service::all();
-        return view('Services.index',['services'=>$services]);
+        return view('services.index',['services'=>$services]);
 
     }
 
