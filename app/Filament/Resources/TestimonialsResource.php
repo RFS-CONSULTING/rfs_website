@@ -28,8 +28,7 @@ class TestimonialsResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('message')
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
                 Forms\Components\FileUpload::make('image_url')->image(),
 
             ]);
