@@ -115,6 +115,13 @@
           transform: rotate(360deg);
           }
       }
+      #moonIcon{
+        display: none;
+      }
+
+      #sunIcon{
+        display: none;
+      }
     </style>
 
         <!-- Theme mode -->
@@ -131,6 +138,8 @@
       } else {
           root.classList.remove('dark-mode');
       }
+
+      
     </script>
 
     <!-- Page loading scripts -->
@@ -232,12 +241,15 @@
 
         <!-- Javascript -->   
         @notifyJs
+        
       
       <!-- Back to top button -->
       {{-- <a href="#top" class="btn-scroll-top" data-scroll>
         <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
         <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
       </a> --}}
+      <!-- Main Theme Script -->
+      <script src="/assets/js/theme.min.js"></script>
 
       <script src="https://www.google.com/recaptcha/api.js"></script>
 
@@ -253,11 +265,12 @@
       <script src="/assets/vendor/%40lottiefiles/lottie-player/dist/lottie-player.js"></script>
       <script src="/assets/vendor/cleave.js/dist/cleave.min.js"></script>
       <script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
-      <!-- Main Theme Script -->
-      <script src="/assets/js/theme.min.js"></script>
+
 
       <!-- Messenger Plugin de discussion Code -->
-    <div id="fb-root"></div>
+    
+    
+      <div id="fb-root"></div>
 
     <!-- Your Plugin de discussion code -->
     <div id="fb-customer-chat" class="fb-customerchat">

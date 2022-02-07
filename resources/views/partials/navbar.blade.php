@@ -164,10 +164,6 @@
               &nbsp;Connexion
             </a>
           @endguest
-
-          
-          
-        
-          
         </div>
     </header>
+
