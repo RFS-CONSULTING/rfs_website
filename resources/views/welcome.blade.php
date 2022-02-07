@@ -72,7 +72,7 @@
                     <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique (SIG et Télédetection appliquée), Ingénierie forestière et formations professionnelles. </p>
                   </div>
                   <div class="scale-up delay-1">
-                    <a href="#" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
+                    <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
                   </div>
 
                 </div>
@@ -84,7 +84,7 @@
                     <p class=" text-light opacity-70 pb-2 mb-lg-5">Renforcement des capacités, encadrement scientifique.</p>
                   </div>
                   <div class="scale-up delay-1">
-                    <a href="#" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
+                    <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
                   </div>
                 </div>
 
