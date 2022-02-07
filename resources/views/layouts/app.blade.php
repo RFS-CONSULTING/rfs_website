@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>RFS Consulting</title>
-
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.">
-
+    @if (isset($title))
+        {{ $title }}
+    @endif
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    @notifyCss
 
     <!-- Favicon and Touch Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -40,14 +40,12 @@
   <!-- Scripts -->
 
     @livewireStyles
+
     <!-- Page loading styles -->
     <style>
       .page-loading {
           position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+         
             width: 100%;
             height: 100%;
             -webkit-transition: all .4s .2s ease-in-out;
@@ -125,7 +123,7 @@
      
   </script> 
 
-    {{-- <script>
+    <script>
       let mode = window.localStorage.getItem('mode'),
           root = document.getElementsByTagName('html')[0];
       if (mode !== undefined && mode === 'dark') {
@@ -133,7 +131,7 @@
       } else {
           root.classList.remove('dark-mode');
       }
-    </script> --}}
+    </script>
 
     <!-- Page loading scripts -->
     <script>
@@ -155,13 +153,13 @@
   <body class="font-sans antialiased">
     <!-- Body -->
     <!-- Page loading spinner -->
-    <div class="page-loading active">
+    {{-- <div class="page-loading active">
         <div class="page-loading-inner">
-            {{-- <div class="page-spinner"></div>
-            <span>Loading...</span> --}}
+            <div class="page-spinner"></div>
+            <span>Loading...</span>
             <img src="/assets/img/logo.svg"  />
         </div>
-    </div>
+    </div> --}}
 
 
   <!-- Page wrapper for sticky footer -->
@@ -230,13 +228,21 @@
           </div>
           </footer>
         </section>
+        @include('notify::components.notify')
+
+        <!-- Javascript -->   
+        @notifyJs
+      
       <!-- Back to top button -->
       {{-- <a href="#top" class="btn-scroll-top" data-scroll>
         <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
         <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
       </a> --}}
 
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+
         <!-- Vendor Scripts -->
+
       <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
       <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
       <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>

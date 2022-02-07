@@ -1,4 +1,14 @@
 <x-app-layout>
+
+  <x-slot name="title">
+    <title>Nos services -- RFS CONSULTING</title>
+    <meta name="description" content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets"/>
+    <meta property="og:url"           content="https://rfs-congo.com/services" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Nos services -- RFS CONSULTING" />
+    <meta property="og:description"   content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets" />
+    <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
+  </x-slot>
      <!-- Breadcrumb -->
      <section>
       <nav class="container py-4 mb-lg-2 mt-lg-3" aria-label="breadcrumb">

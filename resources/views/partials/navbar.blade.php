@@ -1,6 +1,6 @@
      <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="px-md-4 header navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
+      <header class="px-md-4 header navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-3">
           <a href="{{ route('home')}}" class="navbar-brand pe-5">
             <img src="/assets/img/logo.png" width="50" alt="Logo RFS Consulting">
@@ -28,9 +28,10 @@
                 {{-- <li class="nav-item">
                   <a href=" {{ route('conference.index')}} " class="{{ request()->routeIs('conference.index') ? 'active' : '' }} nav-link"">Conferences</a>
                 </li> --}}
-                {{-- <li class="nav-item">
-                  <a href="{{ route('instructor.index')}}" class="nav-link">Formateur</a>
-                </li> --}}
+                
+                <li class="nav-item">
+                  <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateur</a>
+                </li>
 
                 <li class="nav-item">
                   <a href="{{ route('service.index')}}" class="{{ request()->routeIs('service.index') ? 'active ' : '' }} nav-link">Services</a>

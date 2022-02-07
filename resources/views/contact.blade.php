@@ -1,8 +1,15 @@
 <x-app-layout>
     
-      <!-- Page content -->
-  
-      
+  <x-slot name="title">
+    <title>Contact -- RFS CONSULTING</title>
+    <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites."/>
+    <meta property="og:url"           content="https://rfs-congo.com/contact" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Contact -- RFS CONSULTING" />
+    <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
+    <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
+  </x-slot>
+
       <div>
         <section class="container">
 

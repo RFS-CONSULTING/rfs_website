@@ -1,4 +1,15 @@
 <x-app-layout>
+
+  <x-slot name="title">
+    <title>RFS  CONSULTING, bureau d'études environnementales et d'ingénierie</title>
+    <meta name="description" content="RFS CONSULTING est un établissement légalement enregistré au CD/KNM/RCCM/21-A-01181, Bureau d’études environnementales et d’ingénierie, mis sur pied pour remonter les défis environnementaux, organisationnels et d’ingénierie qui menacent l’avenir du Congo et d’Afrique. Il s’engage dans la voie du développement durable."/>
+    <meta property="og:url"           content="https://rfs-congo.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="RFS CONSULTING, bureau d'études environnementales et d'ingénierie" />
+    <meta property="og:description"   content="RFS CONSULTING est un établissement légalement enregistré au CD/KNM/RCCM/21-A-01181, Bureau d’études environnementales et d’ingénierie, mis sur pied pour remonter les défis environnementaux, organisationnels et d’ingénierie qui menacent l’avenir du Congo et d’Afrique. Il s’engage dans la voie du développement durable." />
+    <meta property="og:image"         content="/assets/img/logo.png" />
+</x-slot>
+
   <!-- Hero -->
   <section class="container d-none d-lg-block jarallax position-relative d-flex align-items-center py-5 bg-light mb-5 " style="background-image: url(assets/img/landing/hero-bg.png);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
     <div class="position-relative zindex-5 ">
@@ -141,7 +152,7 @@
         <div class="   text-center text-md-start py-4 py-lg-5 ">
           <h2 class="h1 text-white">Devenez Ambassadeur de RFS ACADEMIA</h2>
           <p class="mb-4 mb-lg-5 text-white">Un ambassadeur RFS est toute personne (étudiant ou professionnel), officiellement reconnu par la direction générale de RFS CONSULTING et la Coordination de RFS ACADEMIA, il/elle a pour rôle de parler et présenter les activités de RFS ACADEMIA sur le renforcement des capacités, vendre la bonne image de RFS CONSULTING.</p>
-          <a href="{{ route('contact')}}" class="btn btn-light text-primary">Contactez-nous</a>
+          <a href="{{ route('ambassador')}}" class="btn btn-light text-primary">Postuler maintenant</a>
         </div>
       </div>
     </div>

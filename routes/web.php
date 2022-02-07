@@ -14,6 +14,8 @@ use App\Http\Controllers\ConferenceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\AmbassadorController;
+use App\Http\Controllers\FormateurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,11 @@ use App\Http\Controllers\NewsletterController;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+Route::get('/ambassador',[AmbassadorController::class,'index'])->name('ambassador');
+Route::post('/ambassador/subscription', [AmbassadorController::class, 'store']);
+Route::post('/formateur/subscription', [FormateurController::class, 'store']);
+
 
 // formations
 
@@ -48,7 +55,7 @@ Route::get('/comment/{postId}',[CommentsController::class,'show'])->name('commen
 
 Route::get('/instructors',[InstructorController::class,'index'])->name('instructor.index');
 Route::get('/instructor/{id}',[InstructorController::class,'show'])->name('instructor.show');
-Route::get('/instructor/create',[InstructorController::class,'create'])->name('instructor.create');
+Route::get('/instructor-form',[InstructorController::class,'create'])->name('instructor.create');
 Route::post('/instructor/store',[InstructorController::class,'store'])->name('instructor.store');
 
 // Conference 

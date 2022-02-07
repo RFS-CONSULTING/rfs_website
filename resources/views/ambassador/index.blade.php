@@ -1,18 +1,14 @@
 <x-app-layout>
-
     <x-slot name="title">
-        <title>Devenez formateur chez RFS ACADEMIA</title>
+        <title>Devenez ambassadeurs de RFS ACADEMIA</title>
         <meta property="og:description"   content="Un ambassadeur RFS est toute personne (étudiant ou professionnel), officiellement reconnu par la direction générale de
         RFS CONSULTING et la Coordination de RFS ACADEMIA, il/elle a pour rôle de parler et présenter les activités de RFS
         ACADEMIA sur le renforcement des capacités, vendre la bonne image de RFS CONSULTING. " />
-        <meta name="description" content="RFS ACADEMIA est une plateforme de prestations et renforcement des capacités via des formations professionnelles notamment la maîtrise des outils numériques des technologies géo-spatiales dont le Système d'Information Géographique (SIG), la programmation web, informatique appliquée. Initié par la société RFS CONSULTING. Notre équipe de consultants/formateurs accompagne les porteurs de projets SIG (cartographie) et assure les formations auprès des établissements, des scientifiques (professionnels ou étudiants) en ligne (zoom, Google Meet et notre site web www.rfs-congo.com) et en présentiel (Kinshasa-Limete/RDC).">
-        <meta name="author" content="Chadrack KANZA">
-        <meta property="og:url"           content="https://rfs-congo.com/instructor-form" />
+        <meta property="og:url"           content="https://rfs-congo.com/ambassador" />
         <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="Devenez formateur chez RFS ACADEMIA" />
-        <meta property="og:description"   content="RFS ACADEMIA est une plateforme de prestations et renforcement des capacités via des formations professionnelles notamment la maîtrise des outils numériques des technologies géo-spatiales dont le Système d'Information Géographique (SIG), la programmation web, informatique appliquée. Initié par la société RFS CONSULTING. Notre équipe de consultants/formateurs accompagne les porteurs de projets SIG (cartographie) et assure les formations auprès des établissements, des scientifiques (professionnels ou étudiants) en ligne (zoom, Google Meet et notre site web www.rfs-congo.com) et en présentiel (Kinshasa-Limete/RDC)." />
+        <meta property="og:title"         content="Devenez ambassadeurs de RFS ACADEMIA" /><meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
         <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
-        
+    
     </x-slot>
     <!-- Breadcrumb -->
     <section class="container">
@@ -21,29 +17,68 @@
                 <li class="breadcrumb-item">
                 <a href=" {{ route('home') }}"><i class="bx bx-home-alt fs-lg me-1"></i>Accueil</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Devenez Formateur</li>
+                <li class="breadcrumb-item active" aria-current="page">Devenez Ambassadeur</li>
             </ol>
         </nav>
     </section>
-
     <section class="container">
         <div class="d-flex justify-content-center">
             <div class=" ">
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-8 text-center mt-4">
-                        <h3 class="title-mobile text-success">Devenez Formateur de RFS ACADEMIA</h3>
+                        <h3 class="title-mobile text-success">Devenez Ambassadeur de RFS ACADEMIA</h3>
                         <hr>
                         <span>Tous les champs marqués d'un <span class="text-danger">*</span> sont obligatoires et doivent être remplis </span>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <form action="/formateur/subscription" method="POST" class="" enctype="multipart/form-data">
+                    <form action="/ambassador/subscription" method="POST" class="" enctype="multipart/form-data">
                         @csrf
-                        <div class="row  shadow rounded p-2 mt-2  ">
-                            <div class="col-12 mt-2 text-justify text-mobile">
-                                RFS ACADEMIA est une plateforme de prestations et renforcement des capacités via des formations professionnelles notamment la maîtrise des outils numériques des technologies géo-spatiales dont le Système d'Information Géographique (SIG), la programmation web, informatique appliquée. Initié par la société RFS CONSULTING. Notre équipe de consultants/formateurs accompagne les porteurs de projets SIG (cartographie) et assure les formations auprès des établissements, des scientifiques (professionnels ou étudiants) en ligne (zoom, Google Meet et notre site web www.rfs-congo.com) et en présentiel (Kinshasa-Limete/RDC) 
+                        <div class="row rounded p-2 mt-2  ">
+                            <div class="col-12 mt-2 text-center  text-mobile">
+                                Un ambassadeur RFS est toute personne (étudiant ou professionnel), officiellement reconnu par la direction générale de
+                                    RFS CONSULTING et la Coordination de RFS ACADEMIA, il/elle a pour rôle de parler et présenter les activités de RFS
+                                    ACADEMIA sur le renforcement des capacités, vendre la bonne image de RFS CONSULTING. 
                             </div>
-                      
+                            <div class="col-12 text-justify text-mobile">
+                                <div class="row ">
+                                    <!-- Item -->
+                                    <div class="col-md-6 my-2">
+                                      <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                                        <div class="card-body ">
+                                          <p class="fs-sm text-body mb-0">Il/elle témoigne sur le professionnalisme de RFS CONSULTING en matière de consultance et formations
+                                            professionnelles sur la maitrise des outils numériques pour la collecte, analyse et représentation des données géospatiales (Cartographie).
+                                            </p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div class="col-md-6 my-2">
+                                        <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                                          <div class="card-body ">
+                                            <p class="fs-sm text-body mb-0">Il/elle encourage et apporte des candidats clients pour suivre les formations organisées par RFS ACADEMIA et
+                                                bénéficie de 5% du montant payer par son candidat pour la formation.
+                                            </p>
+                                          </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 my-2">
+                                        <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                                          <div class="card-body ">
+                                            <p class="fs-sm text-body mb-0">Il/elle bénéficie de la participation gratuite à toutes les conférences avec certificat organisées par RFS CONSULTING et ses partenaires.</p>
+                                          </div>
+                                        </a>
+                                    </div>
+    
+                                    <div class="col-md-6 my-2">
+                                        <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+                                          <div class="card-body ">
+                                            <p class="fs-sm text-body mb-0">Il/elle bénéficie de l’intervention des consultants-formateurs de RFS ACADEMIA s’il/elle rencontre des difficultés en travaillant sur un projet SIG ou autres cadrant avec les services organisés au sein de RFS CONSULTING.</p>
+                                          </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
                             <div class="col-12 mt-5 text-center fw-bold text-success">INFORMATIONS PERSONNELLES</div>
                             <hr class="my-4 col-12"/>
     
@@ -350,19 +385,6 @@
                                 <input type="file" name="image" class="form-control" id="exampleFormControlInput1" required accept="image/*">
                             </div>
                            
-    
-                            <div class="col-12 mt-5 text-center fw-bold text-success">INFORMATIONS SUR LA FORMATION</div>
-                            <span class="text-center">
-                                Le fichier doit contenir le plan/contenu du cours/formation ( le titre, la durée, moyens ou matériels utilisés)
-                            </span>
-                            <hr class="my-4 col-12"/>
-    
-                            <label for="exampleFormControlInput1" class="form-label ">Votre fichier <span class="text-danger">*</span> </label>
-                            <div class="col-md-12 mb-2">
-                                <input type="file" name="plan" accept=".doc, .pdf" class="form-control" id="exampleFormControlInput1"  required>
-                            </div>
-    
-    
                             <div class="col-12 mt-5 text-center fw-bold text-success">Politique de confidentialité
                             </div>
                             <hr class="my-4 col-12"/>
@@ -374,7 +396,7 @@
     
                                     <span>
                                         2. Les informations sont conservées à partir de la date du remplissage de ce formulaire et jusqu’à l’étude de la
-                                        candidature et approbation (validation) du candidat comme formateur par le coordonnateur de RFS
+                                        candidature et approbation (validation) du candidat comme ambassadeur par le coordonnateur de RFS
                                         ACADEMIA à travers une notification par email.
                                     </span>
                                     <span>
@@ -386,14 +408,14 @@
                                     <span>
                                         5. En cas de non-respect des règlements intérieurs de RFS ACADEMIA, d’utilisation abusive de la marque RFS ou
                                         manque de respect des responsables, le Coordonnateur de RFS ACADEMIA a l’obligation de vous retirer le
-                                        STATUT DE FORMATEUR en vous envoyant au préalable une notification et une copie à la Direction générale
+                                        STATUT D’AMBASSADEUR en vous envoyant au préalable une notification et une copie à la Direction générale
                                         de RFS CONSULTING.
                                     </span>
                                     <span>
                                         <div class="form-check mt-4">
                                             <input class="form-check-input" type="checkbox" name="available_for_update" value="yes" id="flexCheckDefault" required >
                                             <label class="form-check-label" for="flexCheckDefault">
-                                                J’ai lu la politique de confidentialité, j’ai compris mon rôle de formateur chez RFS, mes responsabilités et
+                                                J’ai lu la politique de confidentialité, j’ai compris mon rôle d’ambassadeur RFS, mes responsabilités et
                                                 récompenses. Je suis d’accord et je jure de respecter cette convention.
                                             </label>
                                         </div>
