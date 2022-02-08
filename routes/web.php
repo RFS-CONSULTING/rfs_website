@@ -16,6 +16,7 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
 use App\Http\Controllers\FormateurController;
+use App\Http\Controllers\UserFormation;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,15 @@ Route::get('/instructors',[InstructorController::class,'index'])->name('instruct
 Route::get('/instructor/{id}',[InstructorController::class,'show'])->name('instructor.show');
 Route::get('/instructor-form',[InstructorController::class,'create'])->name('instructor.create');
 Route::post('/instructor/store',[InstructorController::class,'store'])->name('instructor.store');
+
+// users formations
+
+Route::get('/users_formations',[UserFormation::class,'index'])->name('users_formations.index');
+// Route::get('/users_formations/{id}',[UserFormation::class,'show'])->name('users_formations.show');
+Route::get('/users_formations_form',[UserFormation::class,'create'])->name('users_formations.create');
+Route::post('/users_formations',[UserFormation::class,'store'])->name('users_formations.create');
+
+
 
 // Conference 
 

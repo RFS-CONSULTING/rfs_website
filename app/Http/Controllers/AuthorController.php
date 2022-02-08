@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Author;
+use App\Models\Authors;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
@@ -44,7 +45,7 @@ class AuthorController extends Controller
      * @param  \App\Models\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function show(Author $author)
+    public function show(Authors $author)
     {
         //
     }
@@ -55,7 +56,7 @@ class AuthorController extends Controller
      * @param  \App\Models\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function edit(Author $author)
+    public function edit(Authors $author)
     {
         //
     }
@@ -67,7 +68,7 @@ class AuthorController extends Controller
      * @param  \App\Models\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Author $author)
+    public function update(Request $request, Authors $author)
     {
         //
     }
@@ -78,7 +79,7 @@ class AuthorController extends Controller
      * @param  \App\Models\Author  $author
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Author $author)
+    public function destroy(Authors $author)
     {
         //
     }
