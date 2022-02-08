@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\users_formations;
+use App\Models\Formation;
+use App\Models\UsersFormations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +27,8 @@ class UserFormation extends Controller
     public function create()
     {
         //
-        return view('users_formations.create');
+        $formations = Formation::all();
+        return view('users_formations.create',['formations'=>$formations]);
     }
 
     /**
@@ -39,7 +41,7 @@ class UserFormation extends Controller
     {
         $curentuser = Auth::user();
 
-        $data = users_formations::create([
+        $data = UsersFormations::create([
             'user_id'=>$curentuser->id,
             'formation_id'=>$request->formation_id
         ]);
@@ -50,10 +52,10 @@ class UserFormation extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\users_formations  $users_formations
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function show(users_formations $users_formations)
+    public function show(UsersFormations $UsersFormations)
     {
         //
     }
@@ -61,10 +63,10 @@ class UserFormation extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\users_formations  $users_formations
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function edit(users_formations $users_formations)
+    public function edit(UsersFormations $UsersFormations)
     {
         //
     }
@@ -73,10 +75,10 @@ class UserFormation extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\users_formations  $users_formations
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, users_formations $users_formations)
+    public function update(Request $request, UsersFormations $UsersFormations)
     {
         //
     }
@@ -84,10 +86,10 @@ class UserFormation extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\users_formations  $users_formations
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function destroy(users_formations $users_formations)
+    public function destroy(UsersFormations $UsersFormations)
     {
         //
     }
