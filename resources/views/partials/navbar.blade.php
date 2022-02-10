@@ -32,6 +32,9 @@
                 <li class="nav-item">
                   <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateur</a>
                 </li>
+                <li class="nav-item">
+                  <a href="{{ route('formation.index')}}" class="{{ request()->routeIs('formation.index') ? 'active ' : '' }} nav-link">Formations</a>
+                </li>
 
                 <li class="nav-item">
                   <a href="{{ route('service.index')}}" class="{{ request()->routeIs('service.index') ? 'active ' : '' }} nav-link">Services</a>

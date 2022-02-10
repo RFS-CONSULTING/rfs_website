@@ -27,8 +27,8 @@ class UserFormation extends Controller
     public function create()
     {
         //
-        $formations = Formation::all();
-        return view('users_formations.create',['formations'=>$formations]);
+        //$formations = Formation::all();
+        //return view('users_formations.create',['formations'=>$formations]);
     }
 
     /**
@@ -45,7 +45,6 @@ class UserFormation extends Controller
             'user_id'=>$curentuser->id,
             'formation_id'=>$request->formation_id
         ]);
-
         return back()->with('success','cette formation a été ajouté à votre programme avec sucées');
     }
 

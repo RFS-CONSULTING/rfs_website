@@ -38,7 +38,7 @@ Route::post('/formateur/subscription', [FormateurController::class, 'store']);
 
 // formations
 
-Route::get('/formations',[FormationController::class,'index'])->name('formation.index');
+Route::get('/formations-certifiantes',[FormationController::class,'index'])->name('formation.index');
 Route::get('/formation/{slug}',[FormationController::class,'show'])->name('formation.show');
 Route::get('/all-formations',[FormationController::class,'getAll'])->name('formation.all');
 
@@ -64,7 +64,7 @@ Route::post('/instructor/store',[InstructorController::class,'store'])->name('in
 Route::get('/users_formations',[UserFormation::class,'index'])->name('users_formations.index');
 // Route::get('/users_formations/{id}',[UserFormation::class,'show'])->name('users_formations.show');
 Route::get('/users_formations_form',[UserFormation::class,'create'])->name('users_formations.create');
-Route::post('/users_formations',[UserFormation::class,'store'])->name('users_formations.create');
+Route::get('/users_formations/{formation_id}',[UserFormation::class,'store'])->name('users_formations.store');
 
 
 

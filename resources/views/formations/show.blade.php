@@ -97,7 +97,7 @@
                       </li>
                     </ul>
                     <div class="h2 d-flex align-items-center mb-4">$28.99<del class="text-muted fs-xl fw-normal ms-2">49.99</del></div>
-                    <a href="#" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
+                    <a href="{{ route('users_formations.store',['formation_id'=>1])}}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
                   </div>
                 </div>
               </div>
