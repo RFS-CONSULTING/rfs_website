@@ -38,7 +38,7 @@
     <div class="row pt-2 pt-md-3">
         <div class="col-md-6">
         <p class=" pe-lg-4 mb-1 mb-lg-4">
-            Créée depuis 2016, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
+            Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
             <br/>
             {{-- Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés. --}}
         </p>
