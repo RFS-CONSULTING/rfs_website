@@ -249,7 +249,6 @@
         <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
       </a> --}}
       <!-- Main Theme Script -->
-      <script src="/assets/js/theme.min.js"></script>
 
       <script src="https://www.google.com/recaptcha/api.js"></script>
 
@@ -266,7 +265,8 @@
       <script src="/assets/vendor/cleave.js/dist/cleave.min.js"></script>
       <script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
 
-
+      <script src="/assets/js/theme.min.js"></script>
+      
       <!-- Messenger Plugin de discussion Code -->
     
     
