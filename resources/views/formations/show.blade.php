@@ -2,7 +2,7 @@
     <!-- Hero -->
     <section class="jarallax dark-mode bg-dark pt-2 pt-lg-3 pb-lg-5" data-jarallax data-speed="0.4">
         <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span>
-        <div class="jarallax-img" style="background-image: url(/assets/img/portfolio/courses/single.jpg);"></div>
+        <div class="jarallax-img" style="background-image: {{ 'storage/'.$formation->image_path}};"></div>
         <div class="container position-relative zindex-5 pb-5">
 
           <!-- Breadcrumb -->
@@ -14,7 +14,7 @@
               <li class="breadcrumb-item">
                 <a href="{{ route('formation.all')}}">Formations</a>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">Fullstack Web Developer Course from Scratch</li>
+              <li class="breadcrumb-item active" aria-current="page">{{ $formation->title }}</li>
             </ol>
           </nav>
 
@@ -25,8 +25,8 @@
           </div>
 
           <!-- Title -->
-          <h1>Fullstack Web Developer Course from Scratch</h1>
-          <p class="fs-lg text-light opacity-70">Egestas feugiat lorem eu neque suspendisse ullamcorper scelerisque aliquam mauris.</p>
+          <h1>{{ $formation->title }}</h1>
+          <p class="fs-lg text-light opacity-70">{{ $formation->description }}</p>
 
           <!-- Stats -->
           <div class="d-sm-flex py-3 py-md-4 py-xl-5">
@@ -46,7 +46,7 @@
             </div>
             <div class="d-flex">
               <i class="bx bx-time fs-xl text-light opacity-70 me-1"></i>
-              <span class="text-light opacity-70">220 hours</span>
+              <span class="text-light opacity-70">{{ $formation->nb_hours }}</span>
             </div>
           </div>
 
@@ -55,7 +55,7 @@
             <img src="/assets/img/avatar/17.jpg" class="rounded-circle" width="60" alt="Albert Flores">
             <div class="ps-3">
               <div class="text-light opacity-80 mb-1">Créé par</div>
-              <h6>Albert Flores</h6>
+              <h6>{{ $formation->instructor->name }}</h6>
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@
           <!-- Content -->
           <div class="col-xl-7 col-lg-8 col-md-7 order-md-1 mb-5">
             <h2 class="h1 pb-md-2 pb-lg-3">Description de la formation</h2>
-            <p class="pb-4 mb-3">Suspendisse natoque sagittis, consequat turpis. Sed tristique tellus morbi magna. At vel senectus accumsan, arcu mattis id tempor. Tellus sagittis, euismod porttitor sed tortor est id. Feugiat velit velit, tortor ut. Ut libero cursus nibh lorem urna amet tristique leo. Viverra lorem arcu nam nunc at ipsum quam. A proin id sagittis dignissim mauris condimentum ornare. Tempus mauris sed dictum ultrices.</p>
+            <p class="pb-4 mb-3">{{ $formation->description }}</p>
             <h3 class="mb-4">Ce que vous apprendrez</h3>
             <ul class="list-unstyled mb-5">
               <li class="d-flex align-items-center mb-2">
@@ -201,7 +201,7 @@
           <div class="col-md-7 py-xl-5 px-4">
             <div class="py-5 mx-auto" style="max-width: 530px;">
               <div class="fs-xl text-light opacity-50 mb-2">Learn from the best</div>
-              <h2 class="h1 text-light mb-4">Albert Flores</h2>
+              <h2 class="h1 text-light mb-4">{{ $formation->instructor->name }}</h2>
               <p class="text-light opacity-70 pb-4">Dolor ipsum amet cursus quisque porta adipiscing. Lorem convallis malesuada sed maecenas. Ac dui at vitae mauris cursus in nullam porta sem. Quis pellentesque elementum ac bibendum. Nunc aliquam in tortor facilisis. Vulputate eget risus, metus phasellus. Pellentesque faucibus amet, eleifend diam quam condimentum convallis ultricies placerat. Duis habitasse placerat amet, odio pellentesque rhoncus, feugiat at. Eget pellentesque tristique felis magna fringilla.</p>
               <div class="d-flex flex-column flex-sm-row">
                 <a href="#" class="btn btn-danger me-sm-4 mb-3 mb-sm-0">

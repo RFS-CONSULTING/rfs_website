@@ -56,7 +56,7 @@ class FormationController extends Controller
     public function show($slug)
     {
         //
-        $formation = Formation::where('slug',$slug)->get();
+        $formation = Formation::where('slug',$slug)->firstOrFail();
         // dd($formation);
         return view('formations.show',['formation'=>$formation]);
 
