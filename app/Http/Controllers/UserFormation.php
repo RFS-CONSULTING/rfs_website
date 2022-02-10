@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comments;
+use App\Models\Formation;
+use App\Models\UsersFormations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CommentsController extends Controller
+class UserFormation extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        return view('users_formations.index');
     }
 
     /**
@@ -26,6 +27,8 @@ class CommentsController extends Controller
     public function create()
     {
         //
+        //$formations = Formation::all();
+        return view('users_formations.create');
     }
 
     /**
@@ -36,45 +39,33 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $user = Auth::user();
+        $curentuser = Auth::user();
 
-        $validatedData = $request->validate([
-            'guest_name' => 'required',
-            'email' => 'required|email',
-            'messaage'=>'required'
-        ], [
-            'guest_name.required' => 'Name is required',
-            'email.required' => 'Email is required',
-            'message.required' => 'Message is required'
+        $data = UsersFormations::create([
+            'user_id'=>$curentuser->id,
+            'formation_id'=>$request->formation_id
         ]);
-
-        $comments = Comments::create($validatedData);
-    
-        return back()->with('success', 'Comments created successfully.',['comments'=>$comments]);
+        return back()->with('success','cette formation a été ajouté à votre liste des cours avec sucées');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $postId
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function show($postId)
+    public function show(UsersFormations $UsersFormations)
     {
-        // $postId = intval($postId);
-        // $comments = Comments::where('post_id',$postId)->get();
-
-        // return json
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(UsersFormations $UsersFormations)
     {
         //
     }
@@ -83,10 +74,10 @@ class CommentsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, UsersFormations $UsersFormations)
     {
         //
     }
@@ -94,10 +85,10 @@ class CommentsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\UsersFormations  $UsersFormations
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(UsersFormations $UsersFormations)
     {
         //
     }

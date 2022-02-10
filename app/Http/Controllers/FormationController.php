@@ -16,7 +16,6 @@ class FormationController extends Controller
     {
         //
         $formations = Formation::orderBy('created_at','desc')->limit(5)->get();
-
         return view('formations.index',['formations'=>$formations]);
     }
 
@@ -57,7 +56,8 @@ class FormationController extends Controller
     public function show($slug)
     {
         //
-        $formation = Formation::where('slug',$slug)->get();
+        $formation = Formation::where('slug',$slug)->firstOrFail();
+        // dd($formation);
         return view('formations.show',['formation'=>$formation]);
 
     }
