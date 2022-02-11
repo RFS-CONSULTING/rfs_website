@@ -34,8 +34,7 @@ class SpeakersResource extends Resource
                 Forms\Components\TextInput::make('description')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('profile_photo_path')
-                    ->image(),
+                Forms\Components\FileUpload::make('profile_photo_path'),
                 Forms\Components\TextInput::make('facebook_link')
                     ->required()
                     ->maxLength(255),

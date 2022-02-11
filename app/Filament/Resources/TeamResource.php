@@ -25,8 +25,6 @@ class TeamResource extends Resource
                 Forms\Components\TextInput::make('name'),
                 Forms\Components\TextInput::make('job'),
                 Forms\Components\FileUpload::make('image_path')
-
-
             ]);
     }
 

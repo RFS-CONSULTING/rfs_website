@@ -25,7 +25,7 @@ class SponsorsResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\FileUpload::make('logo')->image(),
+                Forms\Components\FileUpload::make('logo'),
 
             ]);
     }
