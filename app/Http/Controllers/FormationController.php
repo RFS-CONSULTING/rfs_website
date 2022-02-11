@@ -16,14 +16,14 @@ class FormationController extends Controller
     public function index()
     {
         //
-        $formations = Formation::orderBy('created_at','desc')->limit(5)->get();
+        $formations = Formation::orderBy('created_at','desc')->with(['instructor'])->limit(5)->get();
         return view('formations.index',['formations'=>$formations]);
     }
 
     public function getAll()
     {
         //
-        $formations = Formation::paginate(6);
+        $formations = Formation::with(['instructor'])->paginate(6);
         return view('formations.all',['formations'=>$formations]);
     }
 
@@ -57,7 +57,7 @@ class FormationController extends Controller
     public function show($slug)
     {
         //
-        $formation = Formation::where('slug',$slug)->firstOrFail();
+        $formation = Formation::where('slug',$slug)->with(['instructor'])->first();
         // dd($formation);
         return view('formations.show',['formation'=>$formation]);
 
