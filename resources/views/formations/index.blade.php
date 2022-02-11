@@ -142,10 +142,11 @@
           <div class="swiper-wrapper">
 
             <!-- Item -->
+            @foreach ($formations as $formation)
             <div class="swiper-slide h-auto pb-3">
               <article class="card h-100 border-0 shadow-sm mx-2">
                 <div class="position-relative">
-                  <a href="{{ route('formation.show', 'test')}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                  <a href="{{ route('formation.show', $formation->slug)}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
                   <span class="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Best Seller</span>
                   <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
                     <i class="bx bx-bookmark"></i>
@@ -154,144 +155,27 @@
                 </div>
                 <div class="card-body pb-3">
                   <h3 class="h5 mb-2">
-                    <a href="{{ route('formation.show', 'test')}}">Fullstack Web Developer Course from Scratch</a>
+                    <a href="{{ route('formation.show', $formation->slug)}}">{{  $formation->title}}</a>
                   </h3>
-                  <p class="fs-sm mb-2">By Albert Flores</p>
-                  <p class="fs-lg fw-semibold text-primary mb-0">$12.50</p>
+                  <p class="fs-sm mb-2">{{  $formation->instructor->name }}s</p>
+                  <p class="fs-lg fw-semibold text-primary mb-0">{{  $formation->actual_price}}</p>
                 </div>
                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                   <div class="d-flex align-items-center me-4">
                     <i class="bx bx-time fs-xl me-1"></i>
-                    220 hours
+                    {{ $formation->nb_hours}}
                   </div>
-                  <div class="d-flex align-items-center">
+                  {{-- <div class="d-flex align-items-center">
                     <i class="bx bx-like fs-xl me-1"></i>
                     94% (4.2K)
-                  </div>
+                  </div> --}}
                 </div>
               </article>
-            </div>
+            </div>   
+            @endforeach
+            
 
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-              <article class="card h-100 border-0 shadow-sm mx-2">
-                <div class="position-relative">
-                  <a href="{{ route('formation.show', 'test')}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                  <img src="/assets/img/portfolio/courses/02.jpg" class="card-img-top" alt="Image">
-                </div>
-                <div class="card-body pb-3">
-                  <h3 class="h5 mb-2">
-                    <a href="{{ route('formation.show', 'test')}}">HTML, CSS, JavaScript Web Developer</a>
-                  </h3>
-                  <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
-                  <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
-                </div>
-                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                  <div class="d-flex align-items-center me-4">
-                    <i class="bx bx-time fs-xl me-1"></i>
-                    160 hours
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-like fs-xl me-1"></i>
-                    92% (3.1K)
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-              <article class="card h-100 border-0 shadow-sm mx-2">
-                <div class="position-relative">
-                  <a href="{{ route('formation.show', 'test')}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                  <span class="badge bg-danger position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Sale!</span>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                  <img src="/assets/img/portfolio/courses/03.jpg" class="card-img-top" alt="Image">
-                </div>
-                <div class="card-body pb-3">
-                  <h3 class="h5 mb-2">
-                    <a href="{{ route('formation.show', 'test')}}">HTML, CSS, JavaScript Web Developer</a>
-                  </h3>
-                  <p class="fs-sm mb-2">By Robert Fox</p>
-                  <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">$9.99</span><del>$44.99</del></p>
-                </div>
-                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                  <div class="d-flex align-items-center me-4">
-                    <i class="bx bx-time fs-xl me-1"></i>
-                    210 hours
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-like fs-xl me-1"></i>
-                    98% (2.7K)
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-              <article class="card h-100 border-0 shadow-sm mx-2">
-                <div class="position-relative">
-                  <a href="{{ route('formation.show', 'test')}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                  <img src="/assets/img/portfolio/courses/05.jpg" class="card-img-top" alt="Image">
-                </div>
-                <div class="card-body pb-3">
-                  <h3 class="h5 mb-2">
-                    <a href="{{ route('formation.show', 'test')}}">Data Science &amp; Machine Learning with Python</a>
-                  </h3>
-                  <p class="fs-sm mb-2">By Esther Howard</p>
-                  <p class="fs-lg fw-semibold text-primary mb-0">$13.99</p>
-                </div>
-                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                  <div class="d-flex align-items-center me-4">
-                    <i class="bx bx-time fs-xl me-1"></i>
-                    170 hours
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-like fs-xl me-1"></i>
-                    96% (3.8K)
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-              <article class="card h-100 border-0 shadow-sm mx-2">
-                <div class="position-relative">
-                  <a href="{{ route('formation.show', 'test')}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                  <img src="/assets/img/portfolio/courses/08.jpg" class="card-img-top" alt="Image">
-                </div>
-                <div class="card-body pb-3">
-                  <h3 class="h5 mb-2">
-                    <a href="{{ route('formation.show', 'test')}}">The Ultimate Guide to Unity Game Development</a>
-                  </h3>
-                  <p class="fs-sm mb-2">By Albert Flores</p>
-                  <p class="fs-lg fw-semibold text-primary mb-0">$29.99</p>
-                </div>
-                <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                  <div class="d-flex align-items-center me-4">
-                    <i class="bx bx-time fs-xl me-1"></i>
-                    250 hours
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-like fs-xl me-1"></i>
-                    95% (5.4K)
-                  </div>
-                </div>
-              </article>
-            </div>
+            
           </div>
 
           <!-- Pagination (bullets) -->

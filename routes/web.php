@@ -41,6 +41,10 @@ Route::post('/formateur/subscription', [FormateurController::class, 'store']);
 Route::get('/formations-certifiantes',[FormationController::class,'index'])->name('formation.index');
 Route::get('/formation/{slug}',[FormationController::class,'show'])->name('formation.show');
 Route::get('/all-formations',[FormationController::class,'getAll'])->name('formation.all');
+Route::post('/formation/subscribe',[FormationController::class,'subscribe']);
+Route::get('/formation-form',[FormationController::class,'getFormulaire'])->name('formation.form');
+
+
 
 // Posts
 

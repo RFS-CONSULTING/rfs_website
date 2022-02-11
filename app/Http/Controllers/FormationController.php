@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Formation;
 use Illuminate\Http\Request;
+use App\Models\UserFormation;
 
 class FormationController extends Controller
 {
@@ -15,14 +16,14 @@ class FormationController extends Controller
     public function index()
     {
         //
-        $formations = Formation::orderBy('created_at','desc')->limit(5)->get();
+        $formations = Formation::orderBy('created_at','desc')->with(['instructor'])->limit(5)->get();
         return view('formations.index',['formations'=>$formations]);
     }
 
     public function getAll()
     {
         //
-        $formations = Formation::paginate(6);
+        $formations = Formation::with(['instructor'])->paginate(6);
         return view('formations.all',['formations'=>$formations]);
     }
 
@@ -56,7 +57,7 @@ class FormationController extends Controller
     public function show($slug)
     {
         //
-        $formation = Formation::where('slug',$slug)->firstOrFail();
+        $formation = Formation::where('slug',$slug)->with(['instructor'])->first();
         // dd($formation);
         return view('formations.show',['formation'=>$formation]);
 
@@ -94,5 +95,52 @@ class FormationController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function subscribe(Request $request){
+        if($request->input('g-recaptcha-response')){
+            $form = UserFormation::create([
+                "name" => $request->name,
+                "secondname" => $request->secondname,
+                "firstname" => $request->firstname,
+                "statut" => $request->statut,
+                "autreStatut" => $request->autreStatut,
+
+                "compagnie" => $request->compagnie,
+                "domaine" => $request->domaine,
+                "address" => $request->address,
+                "address2" => $request->address2,
+                "city" => $request->city,
+                "country" => $request->country,
+                "code_postal" => $request->code_postal,
+                "email" => $request->email,
+                "phone" => $request->phone,
+                "sig" => $request->sig,
+                "teledetection" => $request->teledetection,
+                "outils-collectes" => $request->outils,
+                "language" => $request->language,
+                "paiement" => $request->payment,
+                "type_formation" => $request->type_formation,
+                "mode_formation" => $request->mode_formation,
+                "available_for_update" => $request->available_for_update
+            ]);
+
+            $from = "info@rfs-congo.com";
+            $to =  $request->email;
+            $subject = "Inscription chez RFS ACADEMIA";
+            $message = "Cher(e) ".$request->name.", votre inscription a abouti avec succès, nous vous contacterons bientôt";
+            $headers = 'From: RFS ACADEMIA <' .$from . ">\r\n" .
+            'Reply-To:'. $from . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+            mail($to,$subject,$message, $headers);
+            notify()->success('Votre enregistrement a reussi');
+        }else{
+            notify()->error('Veuillez confirmer que vous n\'etes pas un robot');
+        }
+        return redirect()->back();
+    }
+
+    public function getFormulaire(){
+        return view('formations.form');
     }
 }
