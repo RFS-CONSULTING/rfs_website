@@ -77,15 +77,15 @@
                     <ul class="list-unstyled pb-3">
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-slideshow fs-xl text-muted me-2 pe-1"></i>
-                        220 hours on-demand video
+                        {{ $formation->nb_hours }} hours on-demand video
                       </li>
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-file fs-xl text-muted me-2 pe-1"></i>
-                        18 articles
+                        {{ $formation->nb_articles }} articles
                       </li>
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-download fs-xl text-muted me-2 pe-1"></i>
-                        25 downloadable resources
+                         downloadable resources
                       </li>
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-infinite fs-xl text-muted me-2 pe-1"></i>
@@ -96,8 +96,8 @@
                         Certificate of completion
                       </li>
                     </ul>
-                    <div class="h2 d-flex align-items-center mb-4">$28.99<del class="text-muted fs-xl fw-normal ms-2">49.99</del></div>
-                    <a href="{{ route('users_formations.create')}}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
+                    <div class="h2 d-flex align-items-center mb-4">{{ $formation->actual_price}}<del class="text-muted fs-xl fw-normal ms-2">{{ $formation->original_price}}</del></div>
+                    <a href="{{ route('formation.form')}}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
                   </div>
                 </div>
               </div>
