@@ -1,8 +1,8 @@
 <x-app-layout>
     <!-- Hero -->
     <section class="jarallax dark-mode bg-dark pt-2 pt-lg-3 pb-lg-5" data-jarallax data-speed="0.4">
-        {{-- <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span> --}}
-        <div class="jarallax-img" style="background-image: url(assets/img/about/cover01.jpeg);"></div>
+        <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span>
+        <div id="formation_jaralax_img" class="jarallax-img" style="background-image: url({{'/storage/'.$formation->image_path}});"></div>
         <div class="container position-relative zindex-5 pb-5">
 
           <!-- Breadcrumb -->

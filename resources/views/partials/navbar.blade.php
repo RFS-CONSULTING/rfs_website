@@ -21,9 +21,6 @@
                 {{-- <li class="nav-item">
                   <a href="{{ route('formation.index') }}" class="{{ request()->routeIs('formation.index') ? 'active' : '' }} nav-link">Formations</a>
                 </li> --}}
-                {{-- <li class="nav-item">
-                  <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
-                </li> --}}
             
                 {{-- <li class="nav-item">
                   <a href=" {{ route('conference.index')}} " class="{{ request()->routeIs('conference.index') ? 'active' : '' }} nav-link"">Conferences</a>
@@ -37,7 +34,9 @@
                 <li class="nav-item">
                   <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateur</a>
                 </li>
-               
+                <li class="nav-item">
+                  <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
+                </li>
                 <li class="nav-item">
                   <a href="{{ route('about')}}" class="{{ request()->routeIs('about') ? 'active ' : '' }} nav-link">Qui sommes-nous</a>
                 </li>

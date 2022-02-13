@@ -13,4 +13,8 @@ class Posts extends Model
 
     protected $fillable = ['id','title','content','slug','author_id','keywords','image_path'];
 
+    public function author()
+    {
+        return $this->belongsTo(Authors::class);
+    }
 }
