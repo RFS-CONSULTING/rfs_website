@@ -23,7 +23,7 @@
             </h1>
             <div class="d-md-flex align-items-md-start">
               <a href="{{ route('contact')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Travailler avec nous</a>
-              <p class="d-lg-block  d-none mb-0 ps-md-3">RFS Consulting offre des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p>
+              <p class="d-lg-block  d-none mb-0 ps-md-3">RFS Consulting offre des services d'expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Géomatique et Ingénierie forestière.</p>
             </div>
           </div>
 
@@ -118,7 +118,9 @@
       <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Nos services</h2>
       <div class="row align-items-center  mb-lg-2">
         <div class="col-md-8 text-center text-md-start">
-          <p class=" text-muted mb-md-0">Nous offrons des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p>
+          <p class=" text-muted mb-md-0">
+              Avec une équipe pluridisciplinaire des consultants nationaux et internationaux, nous vous offrons les services suivants :
+          </p>
         </div>
         {{-- <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
           <a href="{{ route('service.show', 'test')}}" class="btn btn-outline-primary btn-lg">Voir tous nos services</a>
@@ -285,7 +287,7 @@
  <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
   <div class="row  pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
     <div class="">
-      <h2 class="h1 mb-4 text-center text-md-start">Nos partenaires</h2>
+      <h2 class="h1 mb-4 text-center text-md-start">Ils nous ont fait confiance</h2>
       {{-- <p class=" text-muted mb-0 text-center text-md-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p> --}}
     </div>
   </div>

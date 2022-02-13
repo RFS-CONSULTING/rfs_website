@@ -36,10 +36,10 @@
           
         </div>
       </div>
-      <div class="form-check mb-4">
+      {{-- <div class="form-check mb-4">
         <input type="checkbox" id="terms" class="form-check-input" required>
         <label for="terms" class="form-check-label fs-base">J'accepte les <a href="#">Termes &amp; Conditions</a></label>
-      </div>
+      </div> --}}
       <button type="submit" class="btn btn-primary btn-lg shadow-primary">Envoyer le message</button>  
     </div>
   </form>

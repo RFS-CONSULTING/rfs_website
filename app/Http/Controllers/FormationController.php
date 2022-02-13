@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CoursSkill;
 use App\Models\Formation;
+use App\Models\FormationDetail;
 use Illuminate\Http\Request;
 use App\Models\UserFormation;
 
@@ -58,8 +60,12 @@ class FormationController extends Controller
     {
         //
         $formation = Formation::where('slug',$slug)->with(['instructor'])->first();
-        // dd($formation);
-        return view('formations.show',['formation'=>$formation]);
+        $skills = CoursSkill::where('formation_id',$formation->id)->get();
+        $formationDetails = FormationDetail::where('formation_id',$formation->id)->get();
+        $similarFormations = Formation::limit(3)->get();
+        // dd($similarFormations);
+        return view('formations.show',['formation'=>$formation,
+        'skills'=>$skills,'formationDetails'=>$formationDetails,'similarFormations'=>$similarFormations]);
 
     }
 
