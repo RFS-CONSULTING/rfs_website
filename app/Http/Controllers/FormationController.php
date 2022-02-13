@@ -29,6 +29,15 @@ class FormationController extends Controller
         return view('formations.all',['formations'=>$formations]);
     }
 
+    public function search(Request $request)
+    {
+
+        $query = $request->get('searchquery');
+        $formations = Formation::where('title','like',"%$query%")->paginate(5);
+        
+        return view('formations.search',['formations'=>$formations,'searchquery'=>$query]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

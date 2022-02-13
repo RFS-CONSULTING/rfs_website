@@ -43,6 +43,7 @@ Route::get('/formation/{slug}',[FormationController::class,'show'])->name('forma
 Route::get('/all-formations',[FormationController::class,'getAll'])->name('formation.all');
 Route::post('/formation/subscribe',[FormationController::class,'subscribe']);
 Route::get('/formation-form',[FormationController::class,'getFormulaire'])->name('formation.form');
+Route::get('/formation-search',[FormationController::class,'search'])->name('formation.search');
 
 
 

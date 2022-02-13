@@ -13,10 +13,11 @@
           <p class=" mb-5">Apprenez les secrets indispensables qui vous permettrons de mieux manipuler les outils numérique pour la collecte,analyse et representations des données géospatial et formez vous dans la maitrîse des langages informatique. </p>
 
           <!-- Desktop form -->
-          <form class="d-none d-sm-flex mb-5">
+          <form class="d-none d-sm-flex mb-5" action="{{ route('formation.search')}}">
+            @csrf
             <div class="input-group d-block d-sm-flex input-group-lg me-3">
-              <input type="text" class="form-control w-50" placeholder="Rechercher des formations...">
-              <select class="form-select w-50">
+              <input type="text" name="searchquery" class="form-control w-50" placeholder="Rechercher des formations...">
+              {{-- <select class="form-select w-50">
                 <option value="" selected disabled>Categories</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Mobile Development">Mobile Development</option>
@@ -25,7 +26,7 @@
                 <option value="Software Testing">Software Testing</option>
                 <option value="Software Engineering">Software Engineering</option>
                 <option value="Network & Security">Network &amp; Security</option>
-              </select>
+              </select> --}}
             </div>
             <button type="submit" class="btn btn-icon btn-primary btn-lg">
               <i class="bx bx-search"></i>
