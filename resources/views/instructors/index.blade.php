@@ -33,9 +33,7 @@
             <div class="d-md-flex align-items-md-start">
               <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
               <p class="d-lg-block  d-none mb-0 ps-md-3">
-                    Utilisez votre passion afin d’encadrer les étudiants de RFS ACADEMIA.<br>
-                    RFS Consulting offre des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.
-                </p>
+                RFS ACADEMIA est une plateforme de prestations et renforcement des capacités via des formations professionnelles notamment la maîtrise des outils numériques des technologies géo-spatiales dont le Système d'Information Géographique (SIG), la programmation web, informatique appliquée. </p>
             </div>
           </div>
 
@@ -67,29 +65,29 @@
       <div class="row ">
         <!-- Item -->
         <div class="col-md-4  ">
-          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <p class=" text-body mb-0">Développer les compétences des humains, c’est développer le pays.</p>
             </div>
-          </a>
+          </span>
         </div>
         
         <!-- Item -->
         <div class="col-md-4  ">
-          <a href="{{ route('service.index')}}" class="card border-0  card-hover h-100  shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <span class="card border-0  card-hover h-100  shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <p class=" text-body mb-0">Partagez vos connaissances, transmettez votre passion.</p>
             </div>
-          </a>
+          </span>
         </div>
         
         <!-- Item -->
         <div class="col-md-4  ">
-          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <p class=" text-body mb-0">Travaillez d'où vous voulez, quand vous voulez, selon vos horaires.</p>
             </div>
-          </a>
+          </span>
         </div>
 
       </div>
@@ -112,20 +110,20 @@
       <div class="row ">
         <!-- Item -->
         <div class="col-md-6 ">
-          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <p class=" text-body mb-0">Vous avez au moins 5 ans d'expériences dans votre domaine ?</p>
             </div>
-          </a>
+          </span>
         </div>
         
         <!-- Item -->
         <div class="col-md-6  ">
-          <a href="{{ route('service.index')}}" class="card border-0  card-hover h-100  shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <span class="card border-0  card-hover h-100  shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
-              <p class=" text-body mb-0">Vous avez minimum 4h par mois de disponible pour transmettre votre passion ?</p>
+              <p class=" text-body mb-0">Vous avez minimum 8h par semaine de disponible pour transmettre votre passion ?</p>
             </div>
-          </a>
+          </span>
         </div>
         
        
@@ -158,7 +156,7 @@
   <section class="container pt-5 pb-md-2 pb-lg-5" id="">
     <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
     <div class=" pb-4 pt-5">
-      <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Vos avantage en tant que <span class="bg-primary rounded-lg px-2 text-white">formateur</span> ?</h2>
+      <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Vos avantages en tant que <span class="bg-primary rounded-lg px-2 text-white">formateur</span> ?</h2>
       <div class="row align-items-center  mb-lg-2">
         <div class="col-md-8 text-center text-md-start">
           {{-- <p class=" text-muted mb-md-0">Nous offrons des services d' études, expertises, ingénierie et renforcement des capacités dans les domaines de Gestion de l' environnement, Aménagement du territoire, Géomatique, Ingénierie forestière.</p> --}}

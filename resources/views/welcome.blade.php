@@ -130,7 +130,7 @@
         <!-- Item -->
         @foreach ($services as $service)
         <div class="col py-4  ">
-          <a href="{{ route('service.index')}}" class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <h2 class="h4 d-inline-flex align-items-center">
                 {{ $service->name}}
@@ -138,7 +138,7 @@
               </h2>
               <p class="fs-sm text-body mb-0">{{ $service->description }}</p>
             </div>
-          </a>
+          </span>
         </div>
         @endforeach
        
@@ -166,11 +166,11 @@
         <div class="row justify-content-center mb-2 py-md-2 py-lg-4">
             <div class="">
                 <h1 class="py-3 text-center text-md-start">Nos chiffres</h1>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="d-md-flex align-self-stretch">
                     <!-- Item -->
                     @foreach ($statistics as $statistic)
                     <div class="col">
-                        <div class="card  border-0 shadow-sm ">
+                        <div class="card h-40 m-1  border-0 shadow-sm ">
                             <div class="card-body">
                                 <div class="">
                                     <h3 class="display-5 mb-1 text-center">+ {{ $statistic->number}}</h3>

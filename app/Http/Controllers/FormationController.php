@@ -7,6 +7,7 @@ use App\Models\Formation;
 use App\Models\FormationDetail;
 use Illuminate\Http\Request;
 use App\Models\UserFormation;
+use App\Models\Testimonial;
 
 class FormationController extends Controller
 {
@@ -18,8 +19,12 @@ class FormationController extends Controller
     public function index()
     {
         //
+        $testimonials = Testimonial::all();
         $formations = Formation::orderBy('created_at','desc')->with(['instructor'])->limit(5)->get();
-        return view('formations.index',['formations'=>$formations]);
+        return view('formations.index',[
+                            'formations'=>$formations,
+                            'testimonials' => $testimonials,
+        ]);
     }
 
     public function getAll()
@@ -137,7 +142,8 @@ class FormationController extends Controller
                 "paiement" => $request->payment,
                 "type_formation" => $request->type_formation,
                 "mode_formation" => $request->mode_formation,
-                "available_for_update" => $request->available_for_update
+                "available_for_update" => $request->available_for_update,
+                "formation_id" => $request->formation_id,
             ]);
 
             $from = "info@rfs-congo.com";
@@ -155,7 +161,7 @@ class FormationController extends Controller
         return redirect()->back();
     }
 
-    public function getFormulaire(){
-        return view('formations.form');
+    public function getFormulaire($id, $slug){
+        return view('formations.form', ["formation_id" => $id]);
     }
 }

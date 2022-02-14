@@ -348,7 +348,7 @@
                             <div class="col-12 mt-5 text-center fw-bold text-success">TYPE DE FORMATION</div>
                             <hr class="my-4 col-12"/>
     
-                            <div class="col-12 mb-2">
+                            {{-- <div class="col-12 mb-2">
                                 <label for="inputZip" class="form-label ">Veuillez choisir une ou plusieurs formations qui vous conviennent :<span class="text-danger">*</span></label>
                                 <div class="row">
                                     <div class="col-md-3 mb-2">
@@ -415,6 +415,9 @@
                                     </div>
                                     
                                 </div>
+                            </div> --}}
+                            <div>
+                                <input type="hidden" name="formation_id" value={{ $formation_id}}>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <label for="inputZip" class="form-label ">Votre préférence sur le type de formation :<span class="text-danger">*</span></label>

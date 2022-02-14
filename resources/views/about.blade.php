@@ -50,17 +50,17 @@
     </section>
 
 
-    <!-- Stats -->
-    <section class="container bg-secondary pb-5 mb-2 mb-md-4 mb-lg-5">
+  <!-- Stats -->
+  <section class="container bg-secondary pb-5 mb-2 mb-md-4 mb-lg-5">
     <div class="  ">
         <div class="row justify-content-center mb-2 py-md-2 py-lg-4">
             <div class="">
                 <h1 class="py-3 text-center text-md-start">Nos chiffres</h1>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="d-md-flex align-self-stretch">
                     <!-- Item -->
                     @foreach ($statistics as $statistic)
                     <div class="col">
-                        <div class="card  border-0 shadow-sm ">
+                        <div class="card h-40 m-1  border-0 shadow-sm ">
                             <div class="card-body">
                                 <div class="">
                                     <h3 class="display-5 mb-1 text-center">+ {{ $statistic->number}}</h3>
@@ -76,6 +76,39 @@
         </div>
     </div>
     </section>
+
+   <!-- Video showcase -->
+   <section class="container py-5 ">
+    <h2 class="h1 pb-3 text-center text-md-start  ">Qui sommes-nous ?</h2>
+    <div class="row align-items-center pb-2 ">
+      <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
+        <ul class="list-unstyled pb-4 mb-0">
+          <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
+            Créée depuis 2016, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
+
+            Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
+          </li>
+          
+        
+        </ul>
+        <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
+          En savoir plus
+          <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+        </a>
+      </div>
+      <div class="col-md-7 offset-xl-1 order-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-jarallax-element="-20" data-disable-parallax-down="lg">
+        <div class="position-relative rounded-3 overflow-hidden">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
+            <a href="https://www.youtube.com/watch?v=UtV5iQUJ9_I" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+              <i class="bx bx-play"></i>
+            </a>
+          </div>
+          <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+          <img src="assets/img/landing/video-cover.jpg" alt="Cover image">
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <!-- Gallery -->
