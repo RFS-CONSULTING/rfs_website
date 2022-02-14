@@ -37,21 +37,27 @@ class CommentsController extends Controller
     public function store(Request $request)
     {
         //
+        // dd('pk');
         $user = Auth::user();
 
-        $validatedData = $request->validate([
-            'guest_name' => 'required',
-            'email' => 'required|email',
-            'messaage'=>'required'
-        ], [
-            'guest_name.required' => 'Name is required',
-            'email.required' => 'Email is required',
-            'message.required' => 'Message is required'
+        if ($user) {
+           $user_id = $user->id;
+        }else{
+            $user_id = 0;
+        }
+        // dd($user_id);
+        Comments::create([
+            'post_id'=> $request->post_id,
+            'user_id'=>$user_id,
+            'guest_name'=> $request->guest_name,
+            'email'=> $request->email,
+            'message'=> $request->message,
+            
         ]);
 
-        $comments = Comments::create($validatedData);
+       // $comments = Comments::create($validatedData);
     
-        return back()->with('success', 'Comments created successfully.',['comments'=>$comments]);
+        return back()->with('success', 'Comments created successfully.');
     }
 
     /**
