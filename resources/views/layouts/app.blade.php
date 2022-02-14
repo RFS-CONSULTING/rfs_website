@@ -220,7 +220,7 @@
                       <a href="#address" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Nos contacts</a>
                       <p id="address"class="collapse d-lg-block  text-light pb-lg-3 mb-4">
                         364, avenue MASANO, 1ere Rue Limete<br>
-                        Réf. Dépôt Kin Marché<br>
+                        Réf. Derrière Dépôt Kin Marché<br>
                         Limete / Industriel ( Funa )<br>
                         Republique Democratique du Congo<br>
                         <strong>Phone:</strong><a href="tel:+243 817663799"> +243 817663799</a><br>

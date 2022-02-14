@@ -2,7 +2,7 @@
     <!-- Hero -->
     <section class="jarallax dark-mode bg-dark pt-2 pt-lg-3 pb-lg-5" data-jarallax data-speed="0.4">
         <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span>
-        <div class="jarallax-img" style="background-image: {{ 'storage/'.$formation->image_path}};"></div>
+        <div id="formation_jaralax_img" class="jarallax-img" style="background-image: url({{'/storage/'.$formation->image_path}});"></div>
         <div class="container position-relative zindex-5 pb-5">
 
           <!-- Breadcrumb -->
@@ -46,7 +46,7 @@
             </div>
             <div class="d-flex">
               <i class="bx bx-time fs-xl text-light opacity-70 me-1"></i>
-              <span class="text-light opacity-70">{{ $formation->nb_hours }}</span>
+              <span class="text-light opacity-70">{{ $formation->nb_hours }} heures</span>
             </div>
           </div>
 
@@ -96,7 +96,7 @@
                         Certificate of completion
                       </li>
                     </ul>
-                    <div class="h2 d-flex align-items-center mb-4">{{ $formation->actual_price}}<del class="text-muted fs-xl fw-normal ms-2">{{ $formation->original_price}}</del></div>
+                    <div class="h2 d-flex align-items-center mb-4">{{ $formation->actual_price}} $ <del class="text-muted fs-xl fw-normal ms-2">{{ $formation->original_price}} $</del></div>
                     <a href="{{ route('formation.form')}}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
                   </div>
                 </div>
@@ -110,84 +110,27 @@
             <p class="pb-4 mb-3">{{ $formation->description }}</p>
             <h3 class="mb-4">Ce que vous apprendrez</h3>
             <ul class="list-unstyled mb-5">
+              @foreach ($skills as $skill)
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Sed lectus donec amet eu turpis interdum.
+                {{ $skill->description }}
               </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Nulla at consectetur vitae dignissim porttitor.
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Phasellus id vitae dui aliquet mi.
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Integer cursus vitae, odio feugiat iaculis aliquet diam, et purus.
-              </li>
-              <li class="d-flex align-items-center mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                In aenean dolor diam tortor orci eu.
-              </li>
+              @endforeach
             </ul>
 
             <h2 class="h1 pt-md-2 pt-lg-4 pt-xl-5 pb-md-3 pb-lg-4 mb-md-4">Détails du programme</h2>
             <div class="steps steps-sm">
+              @foreach ($formationDetails as $detail)
               <div class="step">
                 <div class="step-number">
                   <div class="step-number-inner">1</div>
                 </div>
                 <div class="step-body">
-                  <h4 class="mb-2">Introduction. Getting started</h4>
-                  <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat.</p>
+                  <h4 class="mb-2">{{ $detail->title }}</h4>
+                  <p class="mb-0">{{$detail->description}}</p>
                 </div>
               </div>
-              <div class="step">
-                <div class="step-number">
-                  <div class="step-number-inner">2</div>
-                </div>
-                <div class="step-body">
-                  <h4 class="mb-2">The ultimate HTML developer: advanced HTML</h4>
-                  <p class="mb-0">Lobortis diam elit id nibh ultrices sed penatibus donec. Nibh iaculis eu sit cras ultricies. Nam eu eget etiam egestas donec scelerisque ut ac enim. Vitae ac nisl, enim nec accumsan vitae est.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">
-                  <div class="step-number-inner">3</div>
-                </div>
-                <div class="step-body">
-                  <h4 class="mb-2">CSS & CSS3: basic</h4>
-                  <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">
-                  <div class="step-number-inner">4</div>
-                </div>
-                <div class="step-body">
-                  <h4 class="mb-2">JavaScript basics for beginners</h4>
-                  <p class="mb-0">Morbi porttitor risus imperdiet a, nisl mattis. Amet, faucibus eget in platea vitae, velit, erat eget velit. At lacus ut proin erat.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">
-                  <div class="step-number-inner">5</div>
-                </div>
-                <div class="step-body">
-                  <h4 class="mb-2">Understanding APIs</h4>
-                  <p class="mb-0">Risus morbi euismod in congue scelerisque fusce pellentesque diam consequat. Nisi mauris nibh sed est morbi amet arcu urna. Malesuada feugiat quisque consectetur elementum diam vitae. Dictumst facilisis odio eu quis maecenas risus odio fames bibendum ullamcorper.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">
-                  <div class="step-number-inner">6</div>
-                </div>
-                <div class="step-body">
-                  <h4 class="mb-2">Python from beginner to advanced</h4>
-                  <p class="mb-0">Quis risus quisque diam diam. Volutpat neque eget eu faucibus sed urna fermentum risus. Est, mauris morbi nibh massa.</p>
-                </div>
-              </div>
+             @endforeach
             </div>
           </div>
         </div>
@@ -195,7 +138,7 @@
 
 
       <!-- Course author -->
-      <section class="container py-lg-4 py-xl-5 mt-3 mb-5">
+      {{-- <section class="container py-lg-4 py-xl-5 mt-3 mb-5">
         <div class="row g-0 bg-dark bg-repeat-0 bg-position-center border rounded-3 overflow-hidden" style="background-image: url(/assets/img/portfolio/courses/author-pattern.svg);">
           <div class="col-md-5 bg-repeat-0 bg-position-top-center bg-size-cover" style="background-image: url(/assets/img/portfolio/courses/author.jpg); min-height: 350px;"></div>
           <div class="col-md-7 py-xl-5 px-4">
@@ -216,11 +159,11 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> --}}
 
 
       <!-- Testimonials -->
-      <section class="pt-2 pb-lg-4 pb-xl-5 mb-5">
+      {{-- <section class="pt-2 pb-lg-4 pb-xl-5 mb-5">
         <h2 class="h1 text-center pb-3 pb-md-4 pb-xl-5">Pourquoi les étudiants aiment cette formation</h2>
         <div class="px-2 px-sm-0">
           <div class="swiper" data-swiper-options='{
@@ -450,7 +393,7 @@
             <div class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5"></div>
           </div>
         </div>
-      </section>
+      </section> --}}
 
 
       <!-- FAQ -->
@@ -463,7 +406,7 @@
                 <p class="fs-xl text-light opacity-70 mb-0">Consultez la FAQ.</p>
               </div>
               <div class="card-footer border-0 w-100 pt-0 p-4 p-lg-2">
-                <div class="h2 d-flex align-items-center text-light mb-4">$28.99<del class="fs-xl fw-normal opacity-70 ms-2">49.99</del></div>
+                <div class="h2 d-flex align-items-center text-light mb-4">{{$formation->actual_price}} $<del class="fs-xl fw-normal opacity-70 ms-2">100</del></div>
                 <a href=" {{ route('users_formations.create') }}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
               </div>
             </div>
@@ -548,97 +491,38 @@
             }
           }'>
             <div class="swiper-wrapper">
-
-              <!-- Item -->
-              <div class="swiper-slide h-auto pb-3">
-                <article class="card h-100 border-0 shadow-sm mx-2">
-                  <div class="position-relative">
-                    <a href="#" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                      <i class="bx bx-bookmark"></i>
-                    </a>
-                    <img src="/assets/img/portfolio/courses/02.jpg" class="card-img-top" alt="Image">
-                  </div>
-                  <div class="card-body pb-3">
-                    <h3 class="h5 mb-2">
-                      <a href="#">HTML, CSS, JavaScript Web Developer</a>
-                    </h3>
-                    <p class="fs-sm mb-2">By Jenny Wilson &amp; Marvin McKinney</p>
-                    <p class="fs-lg fw-semibold text-primary mb-0">$15.99</p>
-                  </div>
-                  <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                    <div class="d-flex align-items-center me-4">
-                      <i class="bx bx-time fs-xl me-1"></i>
-                      160 hours
+              @foreach ($similarFormations as $similarF)
+              @if ($similarF->id != $formation->id)
+                <div class="swiper-slide h-auto pb-3">
+                  <article class="card h-100 border-0 shadow-sm mx-2">
+                    <div class="position-relative">
+                      <a href="{{ route('formation.show',$similarF->slug) }}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
+                      <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
+                        <i class="bx bx-bookmark"></i>
+                      </a>
+                      <img src={{'/storage/'.$similarF->image_path}} class="card-img-top" alt="{{'storage/'.$similarF->image_path}}">
                     </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-like fs-xl me-1"></i>
-                      92% (3.1K)
+                    <div class="card-body pb-3">
+                      <h3 class="h5 mb-2">
+                        <a href="{{ route('formation.show',$similarF->slug) }}">{{ $similarF->title }}</a>
+                      </h3>
+                      <p class="fs-sm mb-2">By {{ $similarF->instructor->name }}</p>
+                      <p class="fs-lg fw-semibold text-primary mb-0">$ {{$similarF->actual_price }}</p>
                     </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Item -->
-              <div class="swiper-slide h-auto pb-3">
-                <article class="card h-100 border-0 shadow-sm mx-2">
-                  <div class="position-relative">
-                    <a href="#" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                    <span class="badge bg-danger position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Sale!</span>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                      <i class="bx bx-bookmark"></i>
-                    </a>
-                    <img src="/assets/img/portfolio/courses/03.jpg" class="card-img-top" alt="Image">
-                  </div>
-                  <div class="card-body pb-3">
-                    <h3 class="h5 mb-2">
-                      <a href="#">HTML, CSS, JavaScript Web Developer</a>
-                    </h3>
-                    <p class="fs-sm mb-2">By Robert Fox</p>
-                    <p class="text-muted mb-0"><span class="fs-lg fw-semibold text-danger me-2">$9.99</span><del>$44.99</del></p>
-                  </div>
-                  <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                    <div class="d-flex align-items-center me-4">
-                      <i class="bx bx-time fs-xl me-1"></i>
-                      210 hours
+                    <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
+                      <div class="d-flex align-items-center me-4">
+                        <i class="bx bx-time fs-xl me-1"></i>
+                        {{ $similarF->nb_hours }} hours
+                      </div>
+                      {{-- <div class="d-flex align-items-center">
+                        <i class="bx bx-like fs-xl me-1"></i>
+                        92% (3.1K)
+                      </div> --}}
                     </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-like fs-xl me-1"></i>
-                      98% (2.7K)
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- Item -->
-              <div class="swiper-slide h-auto pb-3">
-                <article class="card h-100 border-0 shadow-sm mx-2">
-                  <div class="position-relative">
-                    <a href="#" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
-                      <i class="bx bx-bookmark"></i>
-                    </a>
-                    <img src="/assets/img/portfolio/courses/09.jpg" class="card-img-top" alt="Image">
-                  </div>
-                  <div class="card-body pb-3">
-                    <h3 class="h5 mb-2">
-                      <a href="#">Learn JMETER from Scratch on Live Apps-Performance Testing</a>
-                    </h3>
-                    <p class="fs-sm mb-2">By Jenny Wilson</p>
-                    <p class="fs-lg fw-semibold text-primary mb-0">$14.50</p>
-                  </div>
-                  <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
-                    <div class="d-flex align-items-center me-4">
-                      <i class="bx bx-time fs-xl me-1"></i>
-                      120 hours
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-like fs-xl me-1"></i>
-                      92% (3.8K)
-                    </div>
-                  </div>
-                </article>
-              </div>
+                  </article>
+                </div>    
+              @endif
+              @endforeach
             </div>
 
             <!-- Pagination (bullets) -->

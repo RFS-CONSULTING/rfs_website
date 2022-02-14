@@ -24,12 +24,12 @@
         <!-- Blog list + Sidebar -->
         <div class="row">
           <div class="col-xl-9 col-lg-8">
-
-            <!-- Item -->
+            @foreach ($posts as $post)
+                <!-- Item -->
             <article class="card border-0 bg-transparent me-xl-5 mb-4">
               <div class="row g-0">
-                <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3" style="background-image: url(assets/img/blog/05.jpg); min-height: 15rem;">
-                  <a href="{{ route('post.show', 'test')}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3" style="background-image: url({{'/storage/'.$post->image_path}}); min-height: 15rem;">
+                  <a href="{{ route('post.show', $post->slug)}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                   <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
                     <i class="bx bx-bookmark"></i>
                   </a>
@@ -38,11 +38,11 @@
                   <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
                     <a href="#" class="badge fs-sm text-white bg-info shadow-info text-decoration-none mb-3">Digital</a>
                     <h3 class="h4">
-                      <a href="{{ route('post.show', 'test')}}">Inclusive Marketing: Why and How Does it Work?</a>
+                      <a href="{{ route('post.show', $post->slug)}}">{{ $post->title }}</a>
                     </h3>
-                    <p class="mb-4">Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent.</p>
+                    <p class="mb-4">{{ substr($post->content,200) }}</p>
                     <div class="d-flex align-items-center text-muted">
-                      <div class="fs-sm border-end pe-3 me-3">Oct 9, 2021</div>
+                      <div class="fs-sm border-end pe-3 me-3">{{ $post->created_at->diffForHumans()}}</div>
                       <div class="d-flex align-items-center me-3">
                         <i class="bx bx-like fs-lg me-1"></i>
                         <span class="fs-sm">5</span>
@@ -62,9 +62,11 @@
             </article>
 
             <div class="pb-2 pb-lg-3"></div>
+            @endforeach
+            
 
             <!-- Item -->
-            <article class="card me-xl-5 mb-4">
+            {{-- <article class="card me-xl-5 mb-4">
               <div class="card-body">
                 <div class="d-flex justify-content-between mb-3">
                   <a href="#" class="badge fs-sm text-white bg-warning shadow-warning text-decoration-none">Business</a>
@@ -92,10 +94,10 @@
                   </div>
                 </div>
               </div>
-            </article>
+            </article> --}}
 
-            <div class="pb-2 pb-lg-3"></div>
-
+            {{-- <div class="pb-2 pb-lg-3"></div> --}}
+{{-- 
             <!-- Item -->
             <article class="card border-0 bg-transparent me-xl-5 mb-4">
               <div class="row g-0">
@@ -279,7 +281,7 @@
               </div>
             </article>
 
-            <div class="pb-2 pb-lg-3"></div>
+            <div class="pb-2 pb-lg-3"></div> --}}
 
             <!-- Load more button -->
             <button class="btn btn-lg btn-outline-primary w-100 mt-4">

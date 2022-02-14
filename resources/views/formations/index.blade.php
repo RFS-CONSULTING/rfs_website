@@ -13,10 +13,11 @@
           <p class=" mb-5">Apprenez les secrets indispensables qui vous permettrons de mieux manipuler les outils numérique pour la collecte,analyse et representations des données géospatial et formez vous dans la maitrîse des langages informatique. </p>
 
           <!-- Desktop form -->
-          <form class="d-none d-sm-flex mb-5">
+          <form class="d-none d-sm-flex mb-5" action="{{ route('formation.search')}}">
+            @csrf
             <div class="input-group d-block d-sm-flex input-group-lg me-3">
-              <input type="text" class="form-control w-50" placeholder="Rechercher des formations...">
-              <select class="form-select w-50">
+              <input type="text" name="searchquery" class="form-control w-50" placeholder="Rechercher des formations...">
+              {{-- <select class="form-select w-50">
                 <option value="" selected disabled>Categories</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Mobile Development">Mobile Development</option>
@@ -25,7 +26,7 @@
                 <option value="Software Testing">Software Testing</option>
                 <option value="Software Engineering">Software Engineering</option>
                 <option value="Network & Security">Network &amp; Security</option>
-              </select>
+              </select> --}}
             </div>
             <button type="submit" class="btn btn-icon btn-primary btn-lg">
               <i class="bx bx-search"></i>
@@ -151,19 +152,19 @@
                   <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
                     <i class="bx bx-bookmark"></i>
                   </a>
-                  <img src="/assets/img/portfolio/courses/01.jpg" class="card-img-top" alt="Image">
+                  <img src={{ 'storage/'.$formation->image_path}} class="card-img-top" alt="Image">
                 </div>
                 <div class="card-body pb-3">
                   <h3 class="h5 mb-2">
                     <a href="{{ route('formation.show', $formation->slug)}}">{{  $formation->title}}</a>
                   </h3>
-                  <p class="fs-sm mb-2">{{  $formation->instructor->name }}s</p>
-                  <p class="fs-lg fw-semibold text-primary mb-0">{{  $formation->actual_price}}</p>
+                  <p class="fs-sm mb-2">{{  $formation->instructor->name }}</p>
+                  <p class="fs-lg fw-semibold text-primary mb-0">{{  $formation->actual_price}} $</p>
                 </div>
                 <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                   <div class="d-flex align-items-center me-4">
                     <i class="bx bx-time fs-xl me-1"></i>
-                    {{ $formation->nb_hours}}
+                    {{ $formation->nb_hours}} heures
                   </div>
                   {{-- <div class="d-flex align-items-center">
                     <i class="bx bx-like fs-xl me-1"></i>
