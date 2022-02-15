@@ -252,26 +252,26 @@
 
           <!-- Item -->
           @foreach ($testimonials as $testimonial)
-          <div class="swiper-slide h-auto pt-4">
-            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
-              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                  <i class="bx bxs-quote-left"></i>
-                </span>
-                <blockquote class="card-body pb-3 mb-0">
-                  <p class="mb-0">{{ $testimonial->message }}</p>
-                </blockquote>
-             
-              </div>
-              <figcaption class="d-flex align-items-center ps-4 pt-4">
-                <img src="{{ 'storage/'.$testimonial->image_url}}" width="48" class="rounded-circle" alt="{{ $testimonial->witness }}">
-                <div class="ps-3">
-                  <h6 class="fs-sm fw-semibold mb-0">{{ $testimonial->witness }}</h6>
-                  <span class="fs-xs text-muted">{{ $testimonial->job }}</span>
+            <div class="swiper-slide h-auto pt-4">
+              <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                  <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                    <i class="bx bxs-quote-left"></i>
+                  </span>
+                  <blockquote class="card-body pb-3 mb-0">
+                    <p class="mb-0">{{ $testimonial->message }}</p>
+                  </blockquote>
+              
                 </div>
-              </figcaption>
-            </figure>
-          </div> 
+                <figcaption class="d-flex align-items-center ps-4 pt-4">
+                  <img src="{{ 'storage/'.$testimonial->image_url}}" width="48" class="rounded-circle" alt="{{ $testimonial->witness }}">
+                  <div class="ps-3">
+                    <h6 class="fs-sm fw-semibold mb-0">{{ $testimonial->witness }}</h6>
+                    <span class="fs-xs text-muted">{{ $testimonial->job }}</span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div> 
           @endforeach
          
 
