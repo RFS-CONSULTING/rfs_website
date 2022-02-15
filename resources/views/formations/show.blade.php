@@ -21,7 +21,7 @@
           <!-- Badges -->
           <div class="d-flex pt-3 pb-4 py-sm-4 pt-lg-5">
             <span class="badge bg-success fs-sm me-2">Best Seller</span>
-            <a href="#" class="badge bg-white text-nav fs-sm text-decoration-none">Web Development</a>
+            {{-- <a href="#" class="badge bg-white text-nav fs-sm text-decoration-none">Web Development</a> --}}
           </div>
 
           <!-- Title -->
@@ -38,12 +38,12 @@
                 <i class="bx bxs-star text-warning"></i>
                 <i class="bx bx-star text-muted opacity-75"></i>
               </div>
-              <span class="text-light opacity-70">(1.2K reviews)</span>
+              {{-- <span class="text-light opacity-70">(1.2K reviews)</span> --}}
             </div>
-            <div class="d-flex border-sm-end pe-sm-3 me-sm-3 mb-2 mb-sm-0">
+            {{-- <div class="d-flex border-sm-end pe-sm-3 me-sm-3 mb-2 mb-sm-0">
               <i class="bx bx-like fs-xl text-light opacity-70 me-1"></i>
               <span class="text-light opacity-70">4.2K likes</span>
-            </div>
+            </div> --}}
             <div class="d-flex">
               <i class="bx bx-time fs-xl text-light opacity-70 me-1"></i>
               <span class="text-light opacity-70">{{ $formation->nb_hours }} heures</span>
@@ -52,7 +52,7 @@
 
           <!-- Author -->
           <div class="d-flex align-items-center mt-xl-5 pt-2 pt-md-4 pt-lg-5">
-            <img src="/assets/img/avatar/17.jpg" class="rounded-circle" width="60" alt="Albert Flores">
+            {{-- <img src="/assets/img/avatar/17.jpg" class="rounded-circle" width="60" alt="Albert Flores"> --}}
             <div class="ps-3">
               <div class="text-light opacity-80 mb-1">Créé par</div>
               <h6>{{ $formation->instructor->name }}</h6>
@@ -77,7 +77,7 @@
                     <ul class="list-unstyled pb-3">
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-slideshow fs-xl text-muted me-2 pe-1"></i>
-                        {{ $formation->nb_hours }} hours on-demand video
+                        {{ $formation->nb_hours }} heures de vidéo à la demande
                       </li>
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-file fs-xl text-muted me-2 pe-1"></i>
@@ -85,19 +85,19 @@
                       </li>
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-download fs-xl text-muted me-2 pe-1"></i>
-                         downloadable resources
+                        Ressources téléchargeables
                       </li>
-                      <li class="d-flex align-items-center mb-2">
+                      {{-- <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-infinite fs-xl text-muted me-2 pe-1"></i>
-                        Full lifetime access
-                      </li>
+                        Accès à vie complet
+                      </li> --}}
                       <li class="d-flex align-items-center mb-2">
                         <i class="bx bx-trophy fs-xl text-muted me-2 pe-1"></i>
-                        Certificate of completion
+                        Certificat d'achèvement
                       </li>
                     </ul>
                     <div class="h2 d-flex align-items-center mb-4">{{ $formation->actual_price}} $ <del class="text-muted fs-xl fw-normal ms-2">{{ $formation->original_price}} $</del></div>
-                    <a href="{{ route('formation.form')}}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
+                    <a href="{{ route('formation.form', [$formation->id, $formation->slug ]) }}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
                   </div>
                 </div>
               </div>
@@ -406,8 +406,8 @@
                 <p class="fs-xl text-light opacity-70 mb-0">Consultez la FAQ.</p>
               </div>
               <div class="card-footer border-0 w-100 pt-0 p-4 p-lg-2">
-                <div class="h2 d-flex align-items-center text-light mb-4">{{$formation->actual_price}} $<del class="fs-xl fw-normal opacity-70 ms-2">100</del></div>
-                <a href=" {{ route('users_formations.create') }}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
+                <div class="h2 d-flex align-items-center text-light mb-4">{{$formation->actual_price}} $<del class="fs-xl fw-normal opacity-70 ms-2">{{ $formation->original_price}}</del></div>
+                <a href=" {{ route('formation.form', [$formation->id, $formation->slug ]) }}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
               </div>
             </div>
           </div>

@@ -32,10 +32,11 @@
             <option value="Software Engineering">Software Engineering</option>
             <option value="Network & Security">Network &amp; Security</option>
           </select> --}}
-          <div class="position-relative" style="min-width: 300px;">
-            <input type="text" class="form-control pe-5" placeholder="Rechercher des formations">
+          <form class="position-relative" style="min-width: 300px;" action="{{ route('formation.search')}}">
+            @csrf
+            <input type="text" name="searchquery" class="form-control pe-5" placeholder="Rechercher des formations">
             <i class="bx bx-search text-nav fs-lg position-absolute top-50 end-0 translate-middle-y me-3"></i>
-          </div>
+          </form>
         </div>
       </div>
 

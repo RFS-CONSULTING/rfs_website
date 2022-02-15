@@ -9,8 +9,8 @@
     <div class="container position-relative zindex-2 py-lg-4">
       <div class="row">
         <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
-          <h1 class="display-3 mb-4">Developpez votre <span class="text-primary">maitrîse</span><br/>des outils numériques.</h1>
-          <p class=" mb-5">Apprenez les secrets indispensables qui vous permettrons de mieux manipuler les outils numérique pour la collecte,analyse et representations des données géospatial et formez vous dans la maitrîse des langages informatique. </p>
+          <h1 class="display-3 mb-4">Developpez vos <span class="text-primary">connaissances</span><br/>sur les outils numériques.</h1>
+          <p class=" mb-5">Apprenez les secrets indispensables qui vous permettrons de mieux manipuler les outils numérique pour la collecte et analyse des données et formez-vous dans la maitrîse des langages informatique. </p>
 
           <!-- Desktop form -->
           <form class="d-none d-sm-flex mb-5" action="{{ route('formation.search')}}">
@@ -34,9 +34,9 @@
           </form>
           
           <!-- Mobile form -->
-          <form class="d-sm-none mb-5">
-            <input type="text" class="form-control form-control-lg mb-2" placeholder="Rechercher des formations...">
-            <select class="form-select form-select-lg mb-2">
+          <form class="d-sm-none mb-5" action="{{ route('formation.search')}}">
+            <input type="text" name="searchquery" class="form-control form-control-lg mb-2" placeholder="Rechercher des formations...">
+            {{-- <select class="form-select form-select-lg mb-2">
               <option value="" selected disabled>Categories</option>
               <option value="Web Development">Web Development</option>
               <option value="Mobile Development">Mobile Development</option>
@@ -45,7 +45,7 @@
               <option value="Software Testing">Software Testing</option>
               <option value="Software Engineering">Software Engineering</option>
               <option value="Network & Security">Network &amp; Security</option>
-            </select>
+            </select> --}}
             <button type="submit" class="btn btn-icon btn-primary btn-lg w-100 d-sm-none">
               <i class="bx bx-search"></i>
             </button>
@@ -59,10 +59,10 @@
                 <img src="/assets/img/avatar/15.jpg" class="rounded-circle" width="48" alt="Avatar">
               </div>
               <div class="d-flex align-items-center justify-content-center bg-white rounded-circle ms-n3" style="width: 52px; height: 52px;">
-                <img src="/assets/img/avatar/16.jpg" class="rounded-circle" width="48" alt="Avatar">
+                <img src="/assets/img/avatar/49.jpg" class="rounded-circle" width="48" alt="Avatar">
               </div>
             </div>
-            <span class="fs-sm"><span class="text-primary fw-semibold">10K+</span> étudiants sont déjà avec nous</span>
+            <span class="fs-sm"><span class="text-primary fw-semibold">200+</span> étudiants sont déjà avec nous</span>
           </div>
         </div>
         <div class="col-lg-7 d-none d-lg-block">
@@ -210,7 +210,7 @@
          
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-10" data-disable-parallax-down="lg">
             <h3 class="h4">Trouvez ce qui vous passionne et choisissez votre formation</h3>
-            <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit scelerisque tempus placerat.</p>
+            {{-- <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit scelerisque tempus placerat.</p> --}}
           </div>
         </div>
       </div>
@@ -222,7 +222,7 @@
      
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-25" data-disable-parallax-down="lg">
             <h3 class="h4">Apprendre en pratiquant</h3>
-            <p class="mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer ac nunc dapibus.</p>
+            {{-- <p class="mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer ac nunc dapibus.</p> --}}
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@
           
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-10" data-disable-parallax-down="lg">
             <h3 class="h4">Obtenez des commentaires d'experts instantanés</h3>
-            <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor nec volutpat augue.</p>
+            {{-- <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor nec volutpat augue.</p> --}}
           </div>
         </div>
       </div>
@@ -246,7 +246,7 @@
           
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-25" data-disable-parallax-down="lg">
             <h3 class="h4">Put your learning into practice &amp; find your dream job</h3>
-            <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique arcu cursus massa gravida tortor nulla, mollis id pretium.</p>
+            {{-- <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique arcu cursus massa gravida tortor nulla, mollis id pretium.</p> --}}
           </div>
         </div>
       </div>
@@ -284,7 +284,7 @@
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
               <h3 class="h5 pb-1 mb-2">Séance en direct avec le formateur</h3>
-              <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing tristique dictum vitae elementum neque.</p>
+              {{-- <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing tristique dictum vitae elementum neque.</p> --}}
             </div>
           </div>
         </div>
@@ -298,7 +298,7 @@
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
               <h3 class="h5 pb-1 mb-2">Apprentissage basé sur les modules : Tutoriels (vidéo et pdf)</h3>
-              <p class="mb-0">Ac dapibus lacus, malesuada ridiculus donec condimentum nunc vestibulum. Mi feugiat tellus faucibus fermentum mattis ultrices.</p>
+              {{-- <p class="mb-0">Ac dapibus lacus, malesuada ridiculus donec condimentum nunc vestibulum. Mi feugiat tellus faucibus fermentum mattis ultrices.</p> --}}
             </div>
           </div>
         </div>
@@ -312,7 +312,7 @@
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
               <h3 class="h5 pb-1 mb-2">Accès à vie</h3>
-              <p class="mb-0"> 1.Participation gratuite à nos visioconférences sur les SIG et développement durable<br/> 2.Participation gratuite aux moments d'échanges sur les nouvelles versions de logiciels</p>
+              {{-- <p class="mb-0"> 1.Participation gratuite à nos visioconférences sur les SIG et développement durable<br/> 2.Participation gratuite aux moments d'échanges sur les nouvelles versions de logiciels</p> --}}
             </div>
           </div>
         </div>
@@ -367,52 +367,24 @@
             <div class="swiper-wrapper">
 
               <!-- Item -->
+              @foreach ($testimonials as $testimonial)
               <div class="swiper-slide h-auto">
                 <figure class="card h-100 position-relative border-0 bg-transparent">
                   <blockquote class="card-body p-0 mb-0">
-                    <p class="fs-lg mb-0">Vestibulum nunc lectus auctor quis. Natoque lectus tortor lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec facilisis sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim morbi blandit morbi tellus. Arcu ullamcorper quis enim.</p>
+                    <p class="fs-lg mb-0">{{ $testimonial->message }}</p>
                   </blockquote>
                   <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                    <img src="/assets/img/avatar/13.jpg" width="60" class="rounded-circle" alt="Ralph Edwards">
+                    <img src="{{ 'storage/'.$testimonial->image_url}}" width="60" class="rounded-circle" alt="{{ $testimonial->witness }}">
                     <div class="ps-3">
-                      <h6 class="fw-semibold lh-base mb-0">Ralph Edwards</h6>
-                      <span class="fs-sm text-muted">Head of Marketing at Lorem Ltd. </span>
+                      <h6 class="fw-semibold lh-base mb-0">{{ $testimonial->witness }}</h6>
+                      <span class="fs-sm text-muted">{{ $testimonial->job }}</span>
                     </div>
                   </figcaption>
                 </figure>
               </div>
+              @endforeach
 
-              <!-- Item -->
-              <div class="swiper-slide h-auto">
-                <figure class="card h-100 position-relative border-0 bg-transparent">
-                  <blockquote class="card-body p-0 mb-0">
-                    <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci. Quis facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu sapien, senectus libero, amet dapibus cursus quam. Eget pellentesque eu purus volutpat adipiscing malesuada. Purus nisi, tortor vel lacus.</p>
-                  </blockquote>
-                  <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                    <img src="/assets/img/avatar/14.jpg" width="60" class="rounded-circle" alt="Annette Black">
-                    <div class="ps-3">
-                      <h6 class="fw-semibold lh-base mb-0">Annette Black</h6>
-                      <span class="fs-sm text-muted">Strategic Advisor at Company LLC</span>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-
-              <!-- Item -->
-              <div class="swiper-slide h-auto">
-                <figure class="card h-100 position-relative border-0 bg-transparent">
-                  <blockquote class="card-body p-0 mb-0">
-                    <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices magna porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim, vel enim egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam pellentesque sed aliquet integer massa. Orci leo tortor ornare.</p>
-                  </blockquote>
-                  <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                    <img src="/assets/img/avatar/11.jpg" width="60" class="rounded-circle" alt="Darrell Steward">
-                    <div class="ps-3">
-                      <h6 class="fw-semibold lh-base mb-0">Darrell Steward</h6>
-                      <span class="fs-sm text-muted">Project Manager at Ipsum Ltd.</span>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+           
             </div>
 
             <!-- Pagination (bullets) -->

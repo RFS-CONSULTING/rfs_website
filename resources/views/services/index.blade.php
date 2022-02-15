@@ -23,28 +23,29 @@
      </section>
 
       <!-- Page title + Image -->
-      @foreach ($services as $service)
       <section class="container mb-5 ">
         <div class="row ">
-          <div class=" col-md-8 order-md-2 text-center text-md-start mb-4 ">
+          @foreach ($services as $service)
+          <div class=" col-md-4 order-md-2 text-center text-md-start mb-4 ">
             <h2 class="mb-4">{{ $service->name }}</h2>
             <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
             {{-- <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary ">Nous contacter</a> --}}
           </div>
+          @endforeach
+
           <div class="col-md-4 order-md-1">
             <div class="position-relative rounded-3 overflow-hidden">
               <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-                <a href="{{'https://www.youtube.com/watch?v='.$service->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+                <a href="{{'https://www.youtube.com/watch?v='.$services[0]->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
                   <i class="bx bx-play"></i>
                 </a>
               </div>
               <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-              <img src="{{'storage/'.$service->image_path}}" alt="{{ $service->name }}">
+              <img src="{{'storage/'.$services[0]->image_path}}" alt="{{ $services[0]->name }}">
             </div>
           </div>
         </div>
       </section>
-      @endforeach
      
 
 
@@ -175,7 +176,7 @@
 
 
       <!-- Customers -->
-      <section class="container pb-5 mb-md-4 mb-lg-5">
+      {{-- <section class="container pb-5 mb-md-4 mb-lg-5">
         <h2 class="h1 text-center pb-4">Nos clients</h2>
         <div class="position-relative pt-md-5 mt-md-n5">
           <div class="position-absolute top-50 start-0 w-100 text-center mt-sm-n5">
@@ -184,6 +185,6 @@
           </div>
           <img src="/assets/img/services/single/map.png" alt="Map">
         </div>
-      </section>
+      </section> --}}
 
 </x-app-layout>
