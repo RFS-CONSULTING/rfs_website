@@ -148,7 +148,7 @@
   </section>
 
   <!--  banner -->
-  <section class=" bg-primary">
+  {{-- <section class=" bg-primary">
     <div class="container shadow-sm ">
       <div class=" row">
         <div class="   text-center text-md-start py-4 py-lg-5 ">
@@ -158,7 +158,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <!-- Stats -->
   <section class="container bg-secondary pb-5 mb-2 mb-md-4 mb-lg-5">

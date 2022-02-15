@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-sm-7">
                   <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
-                    <a href="#" class="badge fs-sm text-white bg-info shadow-info text-decoration-none mb-3">Digital</a>
+                    {{-- <a href="#" class="badge fs-sm text-white bg-info shadow-info text-decoration-none mb-3">Digital</a> --}}
                     <h3 class="h4">
                       <a href="{{ route('post.show', $post->slug)}}">{{ $post->title }}</a>
                     </h3>
@@ -49,7 +49,7 @@
                       </div>
                       <div class="d-flex align-items-center me-3">
                         <i class="bx bx-comment fs-lg me-1"></i>
-                        <span class="fs-sm">0</span>
+                        <span class="fs-sm">{{ $post->comments()->count() }}</span>
                       </div>
                       <div class="d-flex align-items-center">
                         <i class="bx bx-share-alt fs-lg me-1"></i>
@@ -318,12 +318,13 @@
                   <div class="position-relative zindex-2">
                     <h3 class="h5">Articles populaires</h3>
                     <ul class="list-unstyled mb-0">
+                      @foreach ($popular as $pop)
                       <li class="border-bottom pb-3 mb-3">
                         <h4 class="h6 mb-2">
-                          <a href="#">5 Bad Landing Page Examples &amp; How We Would Fix Them</a>
+                          <a href="{{ route('post.show',$pop->slug) }}">{{ $pop->title }}</a>
                         </h4>
                         <div class="d-flex align-items-center text-muted pt-1">
-                          <div class="fs-xs border-end pe-3 me-3">12 hours ago</div>
+                          <div class="fs-xs border-end pe-3 me-3">{{ $pop->created_at->diffForHumans() }}</div>
                           <div class="d-flex align-items-center me-3">
                             <i class="bx bx-like fs-base me-1"></i>
                             <span class="fs-xs">8</span>
@@ -338,7 +339,9 @@
                           </div>
                         </div>
                       </li>
-                      <li class="border-bottom pb-3 mb-3">
+                      @endforeach
+                     
+                      {{-- <li class="border-bottom pb-3 mb-3">
                         <h4 class="h6 mb-2">
                           <a href="#">How Agile is Your Forecasting Process?</a>
                         </h4>
@@ -377,7 +380,7 @@
                             <span class="fs-xs">4</span>
                           </div>
                         </div>
-                      </li>
+                      </li> --}}
                     </ul>
                   </div>
                 </div>
@@ -386,14 +389,9 @@
                 <div class="card card-body mb-4">
                   <h3 class="h5">Tags</h3>
                   <div class="d-flex flex-wrap">
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#lifestyle</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#ux</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#tech</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#user</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#software</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#it</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#network</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#engineering</a>
+                    @foreach ($tags as $tag)
+                      <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#{{ $tag->name }}</a>  
+                    @endforeach
                   </div>
                 </div>
 
