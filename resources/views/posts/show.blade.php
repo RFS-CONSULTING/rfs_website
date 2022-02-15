@@ -31,7 +31,7 @@
                     </div>
                     <div class="d-flex align-items-center me-3">
                         <i class="bx bx-comment fs-base me-1"></i>
-                        <span class="fs-sm">4</span>
+                        <span class="fs-sm">{{ $comments->count() }}</span>
                     </div>
                     <div class="d-flex align-items-center">
                         <i class="bx bx-share-alt fs-base me-1"></i>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
-                <img src="/assets/img/avatar/39.jpg" class="rounded-circle" width="60" alt="Avatar">
+                <img src="/assets/img/user.png" class="rounded-circle" width="60" alt="Avatar">
                 <div class="ps-3">
                     <h6 class="mb-1">Auteur</h6>
                     <a href="#" class="fw-semibold stretched-link">{{ $post->author->name }}</a>
@@ -132,9 +132,10 @@
                 <div class="d-flex flex-sm-row flex-column pt-2">
                     <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">Related Tags:</h6>
                     <div>
-                        <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#lifestyle</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#tech</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#business</a>
+
+                        @foreach ($posttags as $ptag)
+                            <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">{{ $ptag->tags->name }}</a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -170,7 +171,7 @@
 
     <!-- Post comments -->
     <section class="container mb-4 pt-lg-4 pb-lg-3">
-        <h2 class="h1 text-center text-sm-start">4 commentaires</h2>
+        <h2 class="h1 text-center text-sm-start">{{ $comments->count() }} commentaires</h2>
         <div class="row">
 
             <!-- Comments -->
@@ -181,9 +182,9 @@
                 <div class="py-4">
                     <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
                         <div class="d-flex align-items-center me-3">
-                            <img src="/assets/img/avatar/03.jpg" class="rounded-circle" width="48" alt="Avatar">
+                            <img src="/assets/img/user.png" class="rounded-circle" width="48" alt="Avatar">
                             <div class="ps-3">
-                                <h6 class="fw-semibold mb-0"></h6>
+                                <h6 class="fw-semibold mb-0">{{ $comment->guest_name }}</h6>
                                 <span class="fs-sm text-muted">{{ $comment->created_at->diffForHumans() }}</span>
                             </div>
                         </div>
@@ -346,7 +347,7 @@
     <section class="container mb-5 pt-md-4">
         <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
             <h2 class="h1 mb-sm-0">Articles liés</h2>
-            <a href="blog-list-with-sidebar.html" class="btn btn-lg btn-outline-primary ms-4">
+            <a href="{{ route('post.index')}}" class="btn btn-lg btn-outline-primary ms-4">
             Tous les articles
         <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
         </a>
@@ -370,86 +371,37 @@
     }'>
             <div class="swiper-wrapper">
 
-                <!-- Item -->
+                @foreach ($relatedPosts as $rpost)
+                    <!-- Item -->
                 <div class="swiper-slide h-auto pb-3">
                     <article class="card border-0 shadow-sm h-100 mx-2">
                         <div class="position-relative">
-                            <a href="{{ route('post.show', 'test')}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                            <a href="{{ route('post.show', $rpost->slug)}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                             <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
                                 <i class="bx bx-bookmark"></i>
                             </a>
-                            <img src="/assets/img/blog/01.jpg" class="card-img-top" alt="Image">
+                            <img src={{ '/storage/'.$rpost->image_path }} class="card-img-top" alt="Image">
                         </div>
                         <div class="card-body pb-4">
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
-                                <span class="fs-sm text-muted">May 19, 2021</span>
+                                {{-- <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a> --}}
+                                <span class="fs-sm text-muted">{{ $rpost->created_at->diffForHumans() }}</span>
                             </div>
                             <h3 class="h5 mb-0">
-                                <a href="{{ route('post.show', 'test')}}">5 Bad Landing Page Examples &amp; How We Would Fix Them</a>
+                                <a href="{{ route('post.show', $rpost->slug)}}">{{ $rpost->title }}</a>
                             </h3>
                         </div>
                         <div class="card-footer py-4">
                             <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
-                                <img src="/assets/img/avatar/01.jpg" class="rounded-circle me-3" width="48" alt="Avatar"> Jerome Bell
+                                <img src="/assets/img/user.png" class="rounded-circle me-3" width="48" alt="Avatar"> {{ $rpost->author->name }}
                             </a>
                         </div>
                     </article>
                 </div>
+                @endforeach
+                
 
-                <!-- Item -->
-                <div class="swiper-slide h-auto pb-3">
-                    <article class="card border-0 shadow-sm h-100 mx-2">
-                        <div class="position-relative">
-                            <a href="{{ route('post.show', 'test')}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                            <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src="/assets/img/blog/06.jpg" class="card-img-top" alt="Image">
-                        </div>
-                        <div class="card-body pb-4">
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Marketing</a>
-                                <span class="fs-sm text-muted">Apr 2, 2021</span>
-                            </div>
-                            <h3 class="h5 mb-0">
-                                <a href="{{ route('post.show', 'test')}}">How Agile is Your Forecasting Process?</a>
-                            </h3>
-                        </div>
-                        <div class="card-footer py-4">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
-                                <img src="/assets/img/avatar/05.jpg" class="rounded-circle me-3" width="48" alt="Avatar"> Author name
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide h-auto pb-3">
-                    <article class="card border-0 shadow-sm h-100 mx-2">
-                        <div class="position-relative">
-                            <a href="{{ route('post.show', 'test')}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                            <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src="/assets/img/blog/03.jpg" class="card-img-top" alt="Image">
-                        </div>
-                        <div class="card-body pb-4">
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
-                                <span class="fs-sm text-muted">Sep 16, 2021</span>
-                            </div>
-                            <h3 class="h5 mb-0">
-                                <a href="{{ route('post.show', 'test')}}">This Week in Search: New Limits and Exciting Features</a>
-                            </h3>
-                        </div>
-                        <div class="card-footer py-4">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
-                                <img src="/assets/img/avatar/02.jpg" class="rounded-circle me-3" width="48" alt="Avatar"> Ralph Edwards
-                            </a>
-                        </div>
-                    </article>
-                </div>
+              
             </div>
 
             <!-- Pagination (bullets) -->
