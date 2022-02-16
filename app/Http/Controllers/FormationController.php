@@ -135,10 +135,7 @@ class FormationController extends Controller
                 "code_postal" => $request->code_postal,
                 "email" => $request->email,
                 "phone" => $request->phone,
-                "sig" => $request->sig,
-                "teledetection" => $request->teledetection,
-                "outils-collectes" => $request->outils,
-                "language" => $request->language,
+
                 "paiement" => $request->payment,
                 "type_formation" => $request->type_formation,
                 "mode_formation" => $request->mode_formation,
