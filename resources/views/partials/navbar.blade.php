@@ -46,8 +46,8 @@
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                   <ul class="dropdown-menu">
-                    {{-- <li><a href="{{ route('realisations') }}" class="dropdown-item">Réalisations</a></li> --}}
-                    <li><a href="{{ route('about') }}" class="dropdown-item">Qui sommes-nous ?</a></li>
+                    <li><a href="{{ route('realisations') }}" class="dropdown-item">Réalisations</a></li>
+                    {{-- <li><a href="{{ route('about') }}" class="dropdown-item">Qui sommes-nous ?</a></li> --}}
                     <li><a href="{{ route('contact')}}" class="dropdown-item">Contactez-nous</a></li>
 
                   </ul>

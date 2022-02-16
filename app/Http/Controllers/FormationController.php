@@ -118,7 +118,8 @@ class FormationController extends Controller
     }
 
     public function subscribe(Request $request){
-        if($request->input('g-recaptcha-response')){
+
+        //if($request->input('g-recaptcha-response')){
             $form = UserFormation::create([
                 "name" => $request->name,
                 "secondname" => $request->secondname,
@@ -143,18 +144,36 @@ class FormationController extends Controller
                 "formation_id" => $request->formation_id,
             ]);
 
+            
+            if ($request->payment ==  "Réseau Mobile") {
+                $messageBegin = "Faites votre transfert au numéro +243817663799 ";
+            }elseif($request->payment == "Visa, UBA, Paypal"){
+                $messageBegin = "";
+            }elseif ($request->payment == "RapidTransfert (Ecobank)") {
+                $messageBegin = "";
+            }elseif ($request->payment == "Western Union") {
+                $messageBegin = "Nom: Muyaya Iyuna Christian \n Pays: République démocratique du congo \n";
+            }
+
             $from = "info@rfs-congo.com";
             $to =  $request->email;
             $subject = "Inscription chez RFS ACADEMIA";
-            $message = "Cher(e) ".$request->name.", votre inscription a abouti avec succès, nous vous contacterons bientôt";
+            $messageMiddle = "Cher(e) ".$request->name.", votre inscription a abouti avec succès, vous avez choisi ".$request->payment." comme type de paiements \n";
+            $messageEnd = "Contactez nous via whatsapp au +243817663799 ou par mail rfs-congo@gmail.com pour nous confirmez votre paiement à fin de valider votre inscription \n Merci!";
+
+            $message = $messageBegin.$messageMiddle.$messageEnd;
+            $messageToAdmin = "Un nouvel étudiant viens de s'inscrire à une de vos formations veillez consulter l'administration ";
+            
             $headers = 'From: RFS ACADEMIA <' .$from . ">\r\n" .
             'Reply-To:'. $from . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
+
             mail($to,$subject,$message, $headers);
+            mail('chrismuya02@gmail.com',$subject,$messageToAdmin, $headers);
             notify()->success('Votre enregistrement a reussi');
-        }else{
-            notify()->error('Veuillez confirmer que vous n\'etes pas un robot');
-        }
+        // }else{
+        //     notify()->error('Veuillez confirmer que vous n\'etes pas un robot');
+        // }
         return redirect()->back();
     }
 

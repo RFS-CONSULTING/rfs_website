@@ -2,7 +2,8 @@
     <div class="p-2 max-w-md space-y-8 w-screen">
         <form wire:submit.prevent="authenticate" class="bg-white space-y-8 shadow border border-gray-300 rounded-2xl p-8">
             <div class="w-full flex justify-center">
-                <x-filament::brand />
+                {{-- <x-filament::brand /> --}}
+                <h2>RFS Administration</h2>
             </div>
 
             <h2 class="font-bold tracking-tight text-center text-2xl">
