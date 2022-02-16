@@ -161,7 +161,7 @@ class FormationController extends Controller
             $messageMiddle = "Cher(e) ".$request->name.", votre inscription a abouti avec succès, vous avez choisi ".$request->payment." comme type de paiements \n";
             $messageEnd = "Contactez nous via whatsapp au +243817663799 ou par mail rfs-congo@gmail.com pour nous confirmez votre paiement à fin de valider votre inscription \n Merci!";
 
-            $message = $messageBegin.$messageMiddle.$messageEnd;
+            $message = $messageMiddle.$messageBegin.$messageEnd;
             $messageToAdmin = "Un nouvel étudiant viens de s'inscrire à une de vos formations veillez consulter l'administration ";
             
             $headers = 'From: RFS ACADEMIA <' .$from . ">\r\n" .
