@@ -27,7 +27,7 @@ class TestimonialsResource extends Resource
                 Forms\Components\TextInput::make('job')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('message')
+                Forms\Components\Textarea::make('message')
                     ->required(),
                 Forms\Components\FileUpload::make('image_url'),
 

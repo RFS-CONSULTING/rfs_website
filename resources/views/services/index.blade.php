@@ -33,18 +33,22 @@
           </div>
           @endforeach
 
-          <div class="col-md-4 order-md-1">
-            <div class="position-relative rounded-3 overflow-hidden">
-              <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-                <a href="{{'https://www.youtube.com/watch?v='.$services[0]->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
-                  <i class="bx bx-play"></i>
-                </a>
+          @isset($services)
+              @if (count($services) > 0)
+              <div class="col-md-4 order-md-1">
+                <div class="position-relative rounded-3 overflow-hidden">
+                  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
+                    <a href="{{'https://www.youtube.com/watch?v='.$services[0]->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+                      <i class="bx bx-play"></i>
+                    </a>
+                  </div>
+                  <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+                  <img src="{{'storage/'.$services[0]->image_path}}" alt="{{ $services[0]->name }}">
+                </div>
               </div>
-              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-              <img src="{{'storage/'.$services[0]->image_path}}" alt="{{ $services[0]->name }}">
             </div>
-          </div>
-        </div>
+            @endif
+          @endisset
       </section>
      
 

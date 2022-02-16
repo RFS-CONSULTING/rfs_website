@@ -18,6 +18,7 @@ class HomeController extends Controller
         $sponsors = Sponsor::all();
         $statistics = Statistic::all();
 
+        // dd($testimonials);
         return view('welcome',[
             'services'=>$services,
             'testimonials' => $testimonials,

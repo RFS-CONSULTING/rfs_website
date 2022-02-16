@@ -245,7 +245,7 @@
         <div class="step-body d-flex align-items-center ps-xl-5">
           
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-25" data-disable-parallax-down="lg">
-            <h3 class="h4">Put your learning into practice &amp; find your dream job</h3>
+            <h3 class="h4">Mettez vos compétences en pratique et trouvez un travail!</h3>
             {{-- <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique arcu cursus massa gravida tortor nulla, mollis id pretium.</p> --}}
           </div>
         </div>
@@ -469,51 +469,56 @@
   </section>
 
 
-  <!-- Sign up form -->
-  <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
-    <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
-      <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à démarrer votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
-      <div class="row pb-3">
-        <div class="col-xl-7 col-md-6">
-          <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(/assets/img/landing/signup-img.jpg);"></div>
-        </div>
-        <div class="col-xl-5 col-md-6">
-          <div class="card border-0 p-lg-4">
-            <div class="card-body">
-              <h3 class="pb-3 pb-lg-4">Inscrivez-vous et obtenez une <span class="text-danger">réduction de 20%</span> pour votre premiere formation !</h3>
-              <form class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
-                <div class="position-relative mb-4">
-                  <label for="email" class="form-label fs-base">Adresse e-mail</label>
-                  <input type="email" id="email" class="form-control form-control-lg" required>
-                  <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
-                </div>
-                <div class="mb-4 pt-1 pb-2">
-                  <label for="password" class="form-label fs-base">Mot de passe</label>
-                  <div class="password-toggle">
-                    <input type="password" id="password" class="form-control form-control-lg" required>
-                    <label class="password-toggle-btn" aria-label="Show/hide password">
-                      <input class="password-toggle-check" type="checkbox">
-                      <span class="password-toggle-indicator"></span>
-                    </label>
+  @if (!Auth::user())
+      <!-- Sign up form -->
+    <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
+      <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
+        <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à démarrer votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
+        <div class="row pb-3">
+          <div class="col-xl-7 col-md-6">
+            <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(/assets/img/landing/signup-img.jpg);"></div>
+          </div>
+          <div class="col-xl-5 col-md-6">
+            <div class="card border-0 p-lg-4">
+              <div class="card-body">
+                <h3 class="pb-3 pb-lg-4">Inscrivez-vous et obtenez une <span class="text-danger">réduction de 20%</span> pour votre premiere formation !</h3>
+                <form class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
+                  <div class="position-relative mb-4">
+                    <label for="email" class="form-label fs-base">Adresse e-mail</label>
+                    <input type="email" id="email" class="form-control form-control-lg" required>
                     <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
                   </div>
+                  <div class="mb-4 pt-1 pb-2">
+                    <label for="password" class="form-label fs-base">Mot de passe</label>
+                    <div class="password-toggle">
+                      <input type="password" id="password" class="form-control form-control-lg" required>
+                      <label class="password-toggle-btn" aria-label="Show/hide password">
+                        <input class="password-toggle-check" type="checkbox">
+                        <span class="password-toggle-indicator"></span>
+                      </label>
+                      <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg shadow-primary">Créer un compte gratuitement</button>
+                </form>
+                <h6 class="mb-4">Ou inscrivez-vous en utilisant :</h6>
+                <div class="d-flex">
+                  <a href="#" class="btn btn-icon btn-secondary btn-google me-2">
+                    <i class="bx bxl-google"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
+                    <i class="bx bxl-facebook"></i>
+                  </a>
+                
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg shadow-primary">Créer un compte gratuitement</button>
-              </form>
-              <h6 class="mb-4">Ou inscrivez-vous en utilisant :</h6>
-              <div class="d-flex">
-                <a href="#" class="btn btn-icon btn-secondary btn-google me-2">
-                  <i class="bx bxl-google"></i>
-                </a>
-                <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
-                  <i class="bx bxl-facebook"></i>
-                </a>
-               
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  @endif
+  
+
 </x-app-layout>
