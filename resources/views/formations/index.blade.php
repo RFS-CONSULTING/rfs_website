@@ -9,8 +9,8 @@
     <div class="container position-relative zindex-2 py-lg-4">
       <div class="row">
         <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
-          <h1 class="display-3 mb-4">Developpez vos <span class="text-primary">connaissances</span><br/>sur les outils numériques.</h1>
-          <p class=" mb-5">Apprenez les secrets indispensables qui vous permettrons de mieux manipuler les outils numérique pour la collecte et analyse des données et formez-vous dans la maitrîse des langages informatique. </p>
+          <h1 class="display-3 mb-4">Renforcez vos <span class="text-primary">capacités</span><br/>grâce à nos formations certifiantes.</h1>
+          <p class=" mb-5">Apprenez les secrets indispensables qui vous permettront de mieux manipuler les outils numérique pour la collecte et analyse des données et formez-vous dans la maitrîse des langages informatiques. </p>
 
           <!-- Desktop form -->
           <form class="d-none d-sm-flex mb-5" action="{{ route('formation.search')}}">
@@ -102,7 +102,7 @@
 
         <!-- Title + prev/next buttons -->
         <div class="d-flex align-items-center justify-content-between pb-4 mb-3">
-          <h2 class="h1  mb-0 me-3">Formations populaires</h2>
+          <h2 class="h1  mb-0 me-3">Nos dernières formations</h2>
           <div class="d-flex">
             <button type="button" id="popular-prev" class="btn btn-prev btn-icon btn-sm me-2">
               <i class="bx bx-chevron-left"></i>
@@ -445,7 +445,7 @@
               </h3>
               <div class="accordion-collapse collapse" id="q-3" data-bs-parent="#faq">
                 <div class="accordion-body fs-sm pt-0">
-                  <p>Oui, si vous avez des zones d’ombre après la formation un groupe Facebook est là pour ça.</p>
+                  <p>Oui, le formateur reste à votre disposition après la formation en plus d'un groupe whatsapp et facebook.</p>
                 </div>
               </div>
             </div>
@@ -481,7 +481,7 @@
           <div class="col-xl-5 col-md-6">
             <div class="card border-0 p-lg-4">
               <div class="card-body">
-                <h3 class="pb-3 pb-lg-4">Inscrivez-vous et obtenez une <span class="text-danger">réduction de 20%</span> pour votre premiere formation !</h3>
+                <h3 class="pb-3 pb-lg-4">Inscrivez-vous et béneficiez des plus<span class="text-danger"> d'avantages !</span></h3>
                 <form class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
                   <div class="position-relative mb-4">
                     <label for="email" class="form-label fs-base">Adresse e-mail</label>
@@ -503,12 +503,12 @@
                 </form>
                 <h6 class="mb-4">Ou inscrivez-vous en utilisant :</h6>
                 <div class="d-flex">
-                  <a href="#" class="btn btn-icon btn-secondary btn-google me-2">
-                    <i class="bx bxl-google"></i>
+                  <a href="{{ route('socialite.redirect', ['provider' => 'google']) }}" class="btn btn-icon btn-secondary btn-google btn-lg w-100">
+                    <i class="bx bxl-google btn-lg"></i>
                   </a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
+                  {{-- <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
                     <i class="bx bxl-facebook"></i>
-                  </a>
+                  </a> --}}
                 
                 </div>
               </div>

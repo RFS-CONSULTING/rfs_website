@@ -24,7 +24,7 @@ class ServicesResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('description')
+                Forms\Components\MarkdownEditor::make('description')
                     ->required(),
                 Forms\Components\TextInput::make('keywords')
                     ->required()

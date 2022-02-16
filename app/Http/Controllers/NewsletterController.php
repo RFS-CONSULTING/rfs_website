@@ -35,6 +35,8 @@ class NewsletterController extends Controller
     public function store(Request $request)
     {
         //
+        notify()->success('votre email a été ajouté à notre newsletter');
+        return back();
     }
 
     /**
