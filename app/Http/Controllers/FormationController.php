@@ -119,7 +119,7 @@ class FormationController extends Controller
 
     public function subscribe(Request $request){
 
-        //if($request->input('g-recaptcha-response')){
+        if($request->input('g-recaptcha-response')){
             $form = UserFormation::create([
                 "name" => $request->name,
                 "secondname" => $request->secondname,
@@ -171,9 +171,9 @@ class FormationController extends Controller
             mail($to,$subject,$message, $headers);
             mail('chrismuya02@gmail.com',$subject,$messageToAdmin, $headers);
             notify()->success('Votre enregistrement a reussi');
-        // }else{
-        //     notify()->error('Veuillez confirmer que vous n\'etes pas un robot');
-        // }
+        }else{
+            notify()->error('Veuillez confirmer que vous n\'etes pas un robot');
+        }
         return redirect()->back();
     }
 
