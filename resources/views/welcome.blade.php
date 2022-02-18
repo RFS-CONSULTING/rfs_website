@@ -135,6 +135,9 @@
             <div class="card-body ">
               <h2 class="h4 d-inline-flex align-items-center">
                 <a href="{{ route('service.show',$service->id) }}">{{ $service->name}}</a>
+                {{-- <a href="{{ route('service.show',$service->id) }}">
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>  
+                </a>  --}}
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
               <p class="fs-sm text-body mb-0">{{ $service->description }}</p>

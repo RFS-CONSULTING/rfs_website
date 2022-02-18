@@ -16,6 +16,7 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
 use App\Http\Controllers\FormateurController;
+use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\UserFormation;
 
 /*
@@ -85,7 +86,7 @@ Route::get('/services/{id}',[ServiceController::class,'show'])->name('service.sh
 
 // Realisations 
 
-Route::get('/realisations',[HomeController::class,'realisations'])->name('realisations');
+Route::get('/realisations',[RealisationController::class,'index'])->name('realisation.index');
 
 // about 
 
