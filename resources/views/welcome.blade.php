@@ -110,7 +110,7 @@
     </div>
     
   </section>
-
+    {{-- service - consultance:  notre équipe vous accompagne dans les démarches pour la réussite de vos projets de développement --}}
       <!-- Services -->
   <section class="container bg-secondary pb-md-2 pb-lg-5" id="services">
     <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
@@ -119,7 +119,8 @@
       <div class="row align-items-center  mb-lg-2">
         <div class="col-md-8 text-center text-md-start">
           <p class=" text-muted mb-md-0">
-              Avec une équipe pluridisciplinaire des consultants nationaux et internationaux, nous vous offrons les services suivants :
+              Assurés par des professionnels nous vous offrons les services ci-après:
+              {{-- Avec une équipe pluridisciplinaire des consultants nationaux et internationaux, nous vous offrons les services suivants : --}}
           </p>
         </div>
         {{-- <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
@@ -133,7 +134,7 @@
           <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <h2 class="h4 d-inline-flex align-items-center">
-                {{ $service->name}}
+                <a href="{{ route('service.show',$service->id) }}">{{ $service->name}}</a>
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
               <p class="fs-sm text-body mb-0">{{ $service->description }}</p>
@@ -194,17 +195,17 @@
       <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
         <ul class="list-unstyled pb-4 mb-0">
           <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
-            Créée depuis 2016, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
+            Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181 et id.Nat 01-H5300-N85483Q, RFS CONSULTING offre des services d'expertises en gestion de l'environnement, aménagement du territoire, géomatique, ingénierie forestière et renforcement des capacités.<br/>
 
-            Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
+            Dotée d'une formation solide et expérience de +8ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
           </li>
           
         
         </ul>
-        <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
+        {{-- <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
           En savoir plus
           <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
-        </a>
+        </a> --}}
       </div>
       <div class="col-md-7 offset-xl-1 order-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-jarallax-element="-20" data-disable-parallax-down="lg">
         <div class="position-relative rounded-3 overflow-hidden">

@@ -81,6 +81,7 @@ Route::get('/conference/{slug}',[ConferenceController::class,'show'])->name('con
 // services
 
 Route::get('/services',[ServiceController::class,'index'])->name('service.index');
+Route::get('/services/{id}',[ServiceController::class,'show'])->name('service.show');
 
 // Realisations 
 
