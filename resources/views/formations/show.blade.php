@@ -123,7 +123,7 @@
               @foreach ($formationDetails as $detail)
               <div class="step">
                 <div class="step-number">
-                  <div class="step-number-inner">1</div>
+                  <div class="step-number-inner">{{ $loop->iteration }}</div>
                 </div>
                 <div class="step-body">
                   <h4 class="mb-2">{{ $detail->title }}</h4>
