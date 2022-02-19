@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Newsletters;
 use Illuminate\Http\Request;
 
 class NewsletterController extends Controller
@@ -35,7 +36,8 @@ class NewsletterController extends Controller
     public function store(Request $request)
     {
         //
-        notify()->success('votre email a été ajouté à notre newsletter');
+        $result = Newsletters::create(['email'=>$request->email]);
+        notify('votre mail a été ajouté à notre newsletters');
         return back();
     }
 

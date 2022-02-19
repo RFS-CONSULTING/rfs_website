@@ -363,8 +363,9 @@
         </div>
         <div class="col-xl-5 col-md-6">
           <div class="ps-lg-5 ms-xl-2">
-            <form class="input-group input-group-lg needs-validation" novalidate>
-              <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Votre adresse e-mail" required>
+            <form method="POST" action="{{ route('newsletter.store') }}" class="input-group input-group-lg needs-validation" novalidate>
+             @csrf
+              <input type="email" id="subscr-email" name="email" class="form-control rounded-start ps-5" placeholder="Votre adresse e-mail" required>
               <i class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
               <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
               <button type="submit" class="btn btn-primary px-sm-4">S'abonner</button>
