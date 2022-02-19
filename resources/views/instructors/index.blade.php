@@ -147,7 +147,51 @@
       </div>
       <div class="row ">
     
+        <!-- Item -->
+        <div class="col-md-4 mb-3">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">Animer la formation sous la supervision de RFS Academia</p>
+            </div>
+          </span>
+        </div>
 
+        <!-- Item -->
+        <div class="col-md-4 mb-3">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">Tenir des séances en visioconférence avec les participants</p>
+            </div>
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="col-md-4  mb-3">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">Évaluer les niveaux des participants</p>
+            </div>
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="col-md-4 mb-3 ">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">Faire le rapport sur l'état d'avancement de la formation</p>
+            </div>
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="col-md-4  mb-3">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">Participer au marketing</p>
+            </div>
+          </span>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -166,6 +210,24 @@
         </div> --}}
       </div>
       <div class="row ">
+
+        <!-- Item -->
+        <div class="col-md-4  mb-3">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">35 % du montant total de la formation</p>
+            </div>
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="col-md-4  mb-3">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <p class=" text-body mb-0">Materiels didactiques</p>
+            </div>
+          </span>
+        </div>
 
       </div>
     </div>
