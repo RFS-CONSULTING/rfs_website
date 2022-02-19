@@ -233,6 +233,7 @@
         "centeredSlides": true,
         "spaceBetween": 8,
         "loop": true,
+        "autoplay":{"delay":2500,"delayOnInteraction":false},
         "pagination": {
           "el": ".swiper-pagination",
           "clickable": true
