@@ -16,6 +16,7 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
 use App\Http\Controllers\FormateurController;
+use App\Http\Controllers\InstructorSubscribeController;
 use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\UserFormation;
 
@@ -60,10 +61,10 @@ Route::get('/comment/{postId}',[CommentsController::class,'show'])->name('commen
 
 // Instructor 
 
-Route::get('/instructors',[InstructorController::class,'index'])->name('instructor.index');
+Route::get('/instructors',[InstructorSubscribeController::class,'index'])->name('instructor.index');
 Route::get('/instructor/{id}',[InstructorController::class,'show'])->name('instructor.show');
-Route::get('/instructor-form',[InstructorController::class,'create'])->name('instructor.create');
-Route::post('/instructor/store',[InstructorController::class,'store'])->name('instructor.store');
+Route::get('/instructor-inscription',[InstructorSubscribeController::class,'create'])->name('instructor.create');
+Route::post('/instructor/store',[InstructorSubscribeController::class,'store'])->name('instructor.store');
 
 // users formations
 

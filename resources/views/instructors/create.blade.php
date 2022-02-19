@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <form action="/formateur/subscription" method="POST" class="" enctype="multipart/form-data">
+                    <form action="{{ route('instructor.store') }}" method="POST" class="" enctype="multipart/form-data">
                         @csrf
                         <div class="row  shadow rounded p-2 mt-2  ">
                             <div class="col-12 mt-2 text-justify text-mobile">
@@ -49,19 +49,19 @@
     
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Nom <span class="text-danger">*</span> </label>
-                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre nom" required>
+                                <input type="text" name="nom" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre nom" required>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Post-nom <span class="text-danger">*</span> </label>
     
-                                <input type="text" name="secondname" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre post-nom" required>
+                                <input type="text" name="postnom" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre post-nom" required>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Prenom <span class="text-danger">*</span> </label>
-                                <input type="text" name="firstname" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre prenom" required>
+                                <input type="text" name="prenom" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre prenom" required>
                             </div>
     
-                            <div class="col-md-6 mb-2">
+                            {{-- <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Profession <span class="text-danger">*</span> </label>
                                 <input type="text" name="profession" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre profession" required>
                             </div>
@@ -74,24 +74,24 @@
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Compagnie/Université <span class="text-danger">*</span> </label>
                                 <input type="text" name="compagnie" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre profession" required>
-                            </div>
+                            </div> --}}
                             
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Etat-civil ? <span class="text-danger">*</span> </label>
-                                <select class="form-select " name="statut" aria-label="Default select example" required onchange="changeStatus(this)">
+                                <select class="form-select " name="etat_civile" aria-label="Default select example" required onchange="changeStatus(this)">
                                     <option value="" selected>Choisissez votre statut</option>
                                     <option value="Marié(e)">Marié(e)</option>
                                     <option value="Celibataire">Celibataire</option>
                                     <option value="Veuf(ve)">Veuf(ve)</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 mb-2">
+                            {{-- <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Nationalité <span class="text-danger">*</span> </label>
                                 <input type="text" name="nationalite" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre nationalité" required>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6 mb-2">
                                 <label for="inputState" class="form-label">Pays<span class="text-danger">*</span> </label>
-                                <select id="inputState"  name="country" class="form-select" required>
+                                <select id="inputState"  name="nationalite" class="form-select" required>
                                     <option value="" selected>Choisissez votre pays</option>
                                     <option value="Afghanistan">Afghanistan </option>
                                     <option value="Afrique_Centrale">Afrique_Centrale </option>
@@ -331,10 +331,10 @@
                                 <input type="text" name="address" class="form-control" id="inputAddress" placeholder="2100 avenue Gangi, ..." required>
                             </div>
     
-                            <div class="col-md-6 mb-2">
+                            {{-- <div class="col-md-6 mb-2">
                                 <label for="inputAddress" class="form-label">Niveau d'etudes<span class="text-danger">*</span> </label>
                                 <input type="text" name="etudes" class="form-control" id="inputAddress" placeholder="Votre niveau d'etudes" required>
-                            </div>
+                            </div> --}}
     
                             <div class="col-md-6 mb-2">
                                 <label for="inputZip" class="form-label">Adresse e-mail<span class="text-danger">*</span></label>
