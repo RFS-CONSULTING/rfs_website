@@ -148,9 +148,9 @@ class FormationController extends Controller
             if ($request->payment ==  "Réseau Mobile") {
                 $messageBegin = "Faites votre transfert au numéro +243817663799 ";
             }elseif($request->payment == "Visa, UBA, Paypal"){
-                $messageBegin = "";
+                $messageBegin = " (notre équipe va vous contacter pour vous fournir les détails du paiements) ";
             }elseif ($request->payment == "RapidTransfert (Ecobank)") {
-                $messageBegin = "";
+                $messageBegin = " (notre équipe va vous contacter pour vous fournir les détails du paiements) ";
             }elseif ($request->payment == "Western Union") {
                 $messageBegin = "Nom: Muyaya Iyuna Christian \n Pays: République démocratique du congo \n";
             }
@@ -159,7 +159,7 @@ class FormationController extends Controller
             $to =  $request->email;
             $subject = "Inscription chez RFS ACADEMIA";
             $messageMiddle = "Cher(e) ".$request->name.", votre inscription a abouti avec succès, vous avez choisi ".$request->payment." comme type de paiements \n";
-            $messageEnd = "Contactez nous via whatsapp au +243817663799 ou par mail rfs-congo@gmail.com pour nous confirmez votre paiement à fin de valider votre inscription \n Merci!";
+            $messageEnd = "Contactez nous via whatsapp au +243817663799 ou par mail rfsacademia@gmail.com pour nous confirmez votre paiement à fin de valider votre inscription \n Merci!";
 
             $message = $messageMiddle.$messageBegin.$messageEnd;
             $messageToAdmin = "Un nouvel étudiant viens de s'inscrire à une de vos formations veillez consulter l'administration ";
@@ -169,7 +169,9 @@ class FormationController extends Controller
             'X-Mailer: PHP/' . phpversion();
 
             mail($to,$subject,$message, $headers);
-            mail('chrismuya02@gmail.com',$subject,$messageToAdmin, $headers);
+            mail('rfsacademia@gmail.com',$subject,$messageToAdmin, $headers);
+            mail('rfsconsulting731@gmail.com',$subject,$messageToAdmin, $headers);
+            mail('seleshabani4@gmail.com',$subject,$messageToAdmin, $headers);
             notify()->success('Votre enregistrement a reussi');
         }else{
             notify()->error('Veuillez confirmer que vous n\'etes pas un robot');

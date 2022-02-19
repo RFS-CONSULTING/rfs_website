@@ -61,7 +61,7 @@
                     <p class="pb-1 mb-2">364, avenue MASANO, 1ere Rue Limete, Réf. Dépôt Kin Marché
                       Limete / Industriel ( Funa ), Ville de Kinshasa, RDC</p>
                     <a href="#" class="btn btn-link stretched-link fs-base px-0">
-                      Obtenir des directions
+                      Obtenir l'itinéraire
                       <i class="bx bx-right-arrow-alt fs-4 ms-1"></i>
                     </a>
                   </div>

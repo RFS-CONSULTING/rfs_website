@@ -2,18 +2,18 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServicesResource\Pages;
-use App\Filament\Resources\ServicesResource\RelationManagers;
-use App\Models\Service;
+use App\Filament\Resources\RealisationResource\Pages;
+use App\Filament\Resources\RealisationResource\RelationManagers;
+use App\Models\Realisation;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 
-class ServicesResource extends Resource
+class RealisationResource extends Resource
 {
-    protected static ?string $model = Service::class;
+    protected static ?string $model = Realisation::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -21,20 +21,16 @@ class ServicesResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\MarkdownEditor::make('description')
-                    ->required(),
-                Forms\Components\MarkdownEditor::make('content')
-                    ->required(),
-                Forms\Components\TextInput::make('keywords')
+                Forms\Components\Textarea::make('description')
                     ->required()
+                    ->maxLength(65535),
+                Forms\Components\TextInput::make('link')
+                    ->label('lien (si ce projet n\'a aucun lien, laissez vide)')
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image_path'),
-                Forms\Components\TextInput::make('video_youtube')
-                    ->required()
-                    ->maxLength(255),
             ]);
     }
 
@@ -42,9 +38,9 @@ class ServicesResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('keywords'),
+                Tables\Columns\TextColumn::make('link'),
                 Tables\Columns\TextColumn::make('image_path'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
@@ -66,9 +62,9 @@ class ServicesResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateServices::route('/create'),
-            'edit' => Pages\EditServices::route('/{record}/edit'),
+            'index' => Pages\ListRealisations::route('/'),
+            'create' => Pages\CreateRealisation::route('/create'),
+            'edit' => Pages\EditRealisation::route('/{record}/edit'),
         ];
     }
 }
