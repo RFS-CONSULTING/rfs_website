@@ -6,9 +6,9 @@
     <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-10"></div>
 
     <!-- Content -->
-    <div class="container position-relative zindex-2 py-lg-4">
+    <div class="container position-relative zindex-2 ">
       <div class="row">
-        <div class="col-lg-5 d-flex flex-column pt-lg-4 pt-xl-5">
+        <div class="col-lg-7   d-flex flex-column pt-lg-4 pt-xl-5">
           <h1 class="display-3 mb-4">Renforcez vos <span class="text-primary">capacités</span><br/>grâce à nos formations certifiantes.</h1>
           <p class=" mb-5">Apprenez les secrets indispensables qui vous permettront de mieux manipuler les outils numérique pour la collecte et analyse des données et formez-vous dans la maitrîse des langages informatiques. </p>
 
@@ -65,10 +65,10 @@
             <span class="fs-sm"><span class="text-primary fw-semibold">200+</span> étudiants sont déjà avec nous</span>
           </div>
         </div>
-        <div class="col-lg-7 d-none d-lg-block">
+        <div class="col-lg-5 d-none d-lg-block">
 
           <!-- Parallax gfx -->
-          <div class="parallax mx-auto me-lg-0" style="max-width: 648px;">
+          <div class="parallax mx-auto me-lg-0" style="max-width: 348px;">
             <div class="parallax-layer" data-depth="0.1">
               <img src="/assets/img/hero/layer01.png" alt="Layer">
             </div>
