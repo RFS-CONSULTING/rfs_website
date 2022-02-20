@@ -10,5 +10,5 @@ class InstructorSubscribe extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-    protected $table = 'instructorsubscribe';
+    protected $table = 'instructorSubscribe';
 }
