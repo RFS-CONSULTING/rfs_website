@@ -1,4 +1,19 @@
 <x-app-layout>
+  <x-slot name="title">
+    <title>Masterclass edition 1</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.">
+    <link href="/assets/img/favicon.png" rel="icon">
+    <meta property="og:url"           content="https://rfs-congo.com/masterclass-ed-01" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Masterclass edition 1" />
+    <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites" />
+    <meta property="og:image"         content="/assets/img/hero-academia.jpg" />
+    
+</x-slot>
   <!-- Video + Title split section -->
 <section class="container position-relative px-0 pt-5 mt-3 mt-lg-4">
   <div class="row g-0">
