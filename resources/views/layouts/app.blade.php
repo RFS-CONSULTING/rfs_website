@@ -174,8 +174,7 @@
   <!-- Page wrapper for sticky footer -->
   <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-      <x-jet-banner />
-
+      
       <div class="min-h-screen bg-gray-100">
         {{-- @livewire('navigation-menu') --}}
         @include('partials.navbar')

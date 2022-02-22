@@ -221,7 +221,36 @@
     </div>
   </section> --}}
 
+  <section class="container bg-secondary pb-md-2 pb-lg-5" >
+    <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
+    <div class=" pb-4 pt-5">
+      <div class="row row-cols-1 row-cols-md-2">
+        <!-- Item -->
+        <div class="col-md-6 py-4  ">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <h2 class="h4 d-inline-flex align-items-center">
+                <span >Notre mission</span>
+              </h2>
+              <p class="fs-sm text-body mb-0">Vous accompagner dans les démarches pour la réussite de vos projets nécessitant les évaluations environnementales, apport des technologies géo-spatiales et ingénierie forestière.</p>
+            </div>
+          </span>
+        </div>
 
+        <div class="col-md-6 py-4  ">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <h2 class="h4 d-inline-flex align-items-center">
+                <span >Notre vision</span>
+              </h2>
+              <p class="fs-sm text-body mb-0">Dévenir une référence en Afrique, en évaluations environnementales, acquisition, traitement et mise en place de base des données géo-spatiales et formations professionnelles.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
     <!-- Team (Slider) -->
     <section class="container pt-lg-2 pb-5 mb-2 mb-md-4 mb-lg-5">
