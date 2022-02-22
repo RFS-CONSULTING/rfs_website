@@ -17,6 +17,8 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
 use App\Http\Controllers\FormateurController;
 use App\Http\Controllers\UserFormation;
+use App\Http\Controllers\MasterClassController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -112,6 +114,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
+// MasterClass 
+
+Route::get('/masterclass-ed-01',[MasterClassController::class,'index'])->name('masterclass');
 
 // La redirection vers le provider
 Route::get("redirect/{provider}", [SocialiteController::class, 'redirect'])->name('socialite.redirect');
