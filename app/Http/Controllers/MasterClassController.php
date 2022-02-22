@@ -44,8 +44,8 @@ class MasterClassController extends Controller
     
                 $from = "info@rfs-congo.com";
                 $to =  $request->email;
-                $subject = "Inscription pour la masterclass edition 1";
-                $message = "Cher(e) ".$request->name.", votre inscription à la masterclass édition 1 a abouti, nous vous enverrons d'autres informations supplémentaires bientôt. 
+                $subject = "Inscription pour notre masterclass edition 1";
+                $message = "Cher(e) ".$request->name.", votre inscription à notre masterclass édition 1 a abouti, nous vous enverrons d'autres informations supplémentaires bientôt. 
                 ";
                 $headers = 'From: RFS ACADEMIA <' .$from . ">\r\n" .
                 'Reply-To:'. $from . "\r\n" .
