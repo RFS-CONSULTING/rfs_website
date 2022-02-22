@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Masterclass;
+use App\Models\MasterClass;
 class MasterClassController extends Controller
 {
     //
@@ -19,12 +19,12 @@ class MasterClassController extends Controller
     }
     public function store(Request $request){
         if($request->input('g-recaptcha-response')){
-            $email_exist = Masterclass::where("email",$request->email)->first();
+            $email_exist = MasterClass::where("email",$request->email)->first();
             if($email_exist){
                 notify()->error('Cette adresse e-mail est déjà enregistrée ');
 
             }else{
-                $form = Masterclass::create([
+                $form = MasterClass::create([
                     "name" => $request->name,
                     "secondname" => $request->secondname,
                     "firstname" => $request->firstname,
