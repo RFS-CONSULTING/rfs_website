@@ -19,7 +19,7 @@ class MasterClassController extends Controller
     }
     public function store(Request $request){
         if($request->input('g-recaptcha-response')){
-            $email_exist = Echange::where("email",$request->email)->first();
+            $email_exist = Masterclass::where("email",$request->email)->first();
             if($email_exist){
                 notify()->error('Cette adresse e-mail est déjà enregistrée ');
 
