@@ -47,16 +47,16 @@
     
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Nom <span class="text-danger">*</span> </label>
-                                <input type="text" name="nom" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre nom" required>
+                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre nom" required>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Post-nom <span class="text-danger">*</span> </label>
     
-                                <input type="text" name="postnom" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre post-nom" required>
+                                <input type="text" name="secondname" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre post-nom" required>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <label for="exampleFormControlInput1" class="form-label ">Prenom <span class="text-danger">*</span> </label>
-                                <input type="text" name="prenom" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre prenom" required>
+                                <input type="text" name="firstname" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre prenom" required>
                             </div>
                             
                             <div class="col-md-6 mb-2">
