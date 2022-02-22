@@ -27,8 +27,6 @@ class CreateMasterClassesTable extends Migration
             $table->text("code_postal")->nullable();
             $table->text("email");
             $table->text("suggestion")->nullable();
-            $table->text("maitrise_sig")->nullable();
-            $table->text("suivre_formation")->nullable();
             $table->timestamps();
         });
     }

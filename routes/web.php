@@ -120,6 +120,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 // MasterClass 
 
 Route::get('/masterclass-ed-01',[MasterClassController::class,'index'])->name('masterclass');
+Route::get('/masterclass-ed-01/create',[MasterClassController::class,'create'])->name('masterclass.create');
+
+Route::post('/masterclass-ed-01',[MasterClassController::class,'store'])->name('masterclass.store');
+
 
 // La redirection vers le provider
 Route::get("redirect/{provider}", [SocialiteController::class, 'redirect'])->name('socialite.redirect');
