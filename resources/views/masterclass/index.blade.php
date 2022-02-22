@@ -81,7 +81,7 @@
         </div>
         <div class="card-body text-center p-3">
           <h3 class="fs-lg fw-semibold pt-1 mb-2">TONDILA Jean Tondel</h3>
-          <p class="fs-sm mb-0">Master 2 en Urbanisme<br>Lomé, Togo</p>
+          <p class="fs-sm mb-0">Urbaniste<br>Lomé, Togo</p>
         </div>
       </div>
     </div>
