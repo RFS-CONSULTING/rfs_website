@@ -123,7 +123,7 @@
               @foreach ($formationDetails as $detail)
               <div class="step">
                 <div class="step-number">
-                  <div class="step-number-inner">1</div>
+                  <div class="step-number-inner">{{ $loop->iteration }}</div>
                 </div>
                 <div class="step-body">
                   <h4 class="mb-2">{{ $detail->title }}</h4>
@@ -422,7 +422,7 @@
                   <div class="accordion-collapse collapse show" id="q-1" data-bs-parent="#faq">
                     <div class="accordion-body fs-sm pt-0">
                       <p>
-                        Nous acceptons comme moyen de paiement la carte bancaire, visa et West union.
+                        Nous acceptons comme moyen de paiement la carte bancaire, visa et West union et mobile money.
                       </p>
                       </div>
                   </div>
@@ -447,7 +447,7 @@
                   </h3>
                   <div class="accordion-collapse collapse" id="q-3" data-bs-parent="#faq">
                     <div class="accordion-body fs-sm pt-0">
-                      <p>Oui, si vous avez des zones d’ombre après la formation un groupe Facebook est là pour ça.</p>
+                      <p>Oui, vous pouvez nous contactez pour des questions où vous avez des zones d'ombres et il y a les groupes facebook et whatsapp.</p>
                     </div>
                   </div>
                 </div>
@@ -455,11 +455,11 @@
                 <!-- Item -->
                 <div class="accordion-item bg-white border-0 rounded-3 shadow-sm mb-3">
                   <h3 class="accordion-header">
-                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q-4" aria-expanded="false" aria-controls="q-4">Y a-t-il des opportunités d’emploi dans le domaine du SIG?</button>
+                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q-4" aria-expanded="false" aria-controls="q-4">Y a-t-il des opportunités d’emploi dans le domaine du SIG et du numérique?</button>
                   </h3>
                   <div class="accordion-collapse collapse" id="q-4" data-bs-parent="#faq">
                     <div class="accordion-body fs-sm pt-0">
-                      <p>Oui, le domaine du SIG est en plein expansion et pour tout vous dire c’est le meilleur moment pour vous lancer.</p>
+                      <p>Oui, les domaines du SIG et du numérique? sont en plein expansion et pour tout vous dire c’est le meilleur moment pour vous lancer.</p>
                     </div>
                   </div>
                 </div>

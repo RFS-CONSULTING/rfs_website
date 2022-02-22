@@ -16,3 +16,18 @@
 .text-justify{
     text-align: justify;
 }
+
+.announcement {
+    text-align: center;
+    width: 100%;
+    background: black;
+    color: white;
+  }
+  
+  .announcement a { 
+    color: #ccc; 
+  }
+  
+  .announcement a:hover {
+    color: red;
+  }

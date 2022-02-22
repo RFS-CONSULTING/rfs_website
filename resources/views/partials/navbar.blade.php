@@ -1,5 +1,8 @@
      <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <div class=" text-center bg-white">
+        <p class="p-1 m-0 ">Renforcez vos capacités grâce à nos formations certifiantes.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('formation.index')}}">Voir les formations ></a></p>
+      </div>
       <header class="px-md-4 header navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container px-3">
           <a href="{{ route('home')}}" class="navbar-brand pe-5">
@@ -46,7 +49,7 @@
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                   <ul class="dropdown-menu">
-                    {{-- <li><a href="{{ route('realisations') }}" class="dropdown-item">Réalisations</a></li> --}}
+                    {{-- <li><a href="{{ route('realisation.index') }}" class="dropdown-item">Réalisations</a></li> --}}
                     <li><a href="{{ route('about') }}" class="dropdown-item">Qui sommes-nous ?</a></li>
                     <li><a href="{{ route('contact')}}" class="dropdown-item">Contactez-nous</a></li>
 

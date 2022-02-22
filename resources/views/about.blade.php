@@ -33,21 +33,21 @@
 
 
     <!-- About company -->
-    <section class="container pb-5 mb-md-2 mb-lg-4">
-    <h1 class="border-bottom pb-4 text-center text-md-start">Qui sommes-nous ?</h1>
-    <div class="row pt-2 pt-md-3">
-        <div class="col-md-6">
-        <p class=" pe-lg-4 mb-1 mb-lg-4">
-            Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
-            <br/>
-            {{-- Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés. --}}
-        </p>
-        </div>
-        <div class="col-md-6">
-        <p class=" ps-lg-4 mb-1 mb-lg-4">RFS CONSULTING a à son actif + de 43 projets réalisés, + de 15 consultants parténaires ( nationaux et internationaux), + de 695 certificats de formation livrés aux candidats de différents pays du monde. Nous accompagnons les porteurs des projets publics et privés de la conception jusqu'à la mise en oeuvre.</p>
-        </div>
-    </div>
-    </section>
+    {{-- <section class="container pb-5 mb-md-2 mb-lg-4">
+      <h1 class="border-bottom pb-4 text-center text-md-start">Qui sommes-nous ?</h1>
+      <div class="row pt-2 pt-md-3">
+          <div class="col-md-6">
+          <p class=" pe-lg-4 mb-1 mb-lg-4">
+              Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
+              <br/>
+              Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
+          </p>
+          </div>
+          <div class="col-md-6">
+          <p class=" ps-lg-4 mb-1 mb-lg-4">RFS CONSULTING a à son actif + de 43 projets réalisés, + de 15 consultants parténaires ( nationaux et internationaux), + de 695 certificats de formation livrés aux candidats de différents pays du monde. Nous accompagnons les porteurs des projets publics et privés de la conception jusqu'à la mise en oeuvre.</p>
+          </div>
+      </div>
+    </section> --}}
 
 
   <!-- Stats -->
@@ -84,17 +84,17 @@
       <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
         <ul class="list-unstyled pb-4 mb-0">
           <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
-            Créée depuis 2016, légalement enregistré au CD/KNM/RCCM/21-A-01181, RFS CONSULTING offre des services d'études, expertises et renforcement des capacités dans les domaines de gestion de l'environnement , aménagement du territoire, géomatique et ingénierie forestière.
+            Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181 et id.Nat 01-H5300-N85483Q, RFS CONSULTING offre des services d'expertises en gestion de l'environnement, aménagement du territoire, géomatique, ingénierie forestière et renforcement des capacités.<br/>
 
             Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
           </li>
           
         
         </ul>
-        <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
+        {{-- <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
           En savoir plus
           <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
-        </a>
+        </a> --}}
       </div>
       <div class="col-md-7 offset-xl-1 order-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-jarallax-element="-20" data-disable-parallax-down="lg">
         <div class="position-relative rounded-3 overflow-hidden">
@@ -155,68 +155,11 @@
 
 
      <!-- Partners -->
- <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
-    <div class="row  pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
-      <div class="">
-        <h2 class="h1 mb-4 text-center text-md-start">Nos partenaires</h2>
-        {{-- <p class=" text-muted mb-0 text-center text-md-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p> --}}
-      </div>
-    </div>
-    <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{
-      "slidesPerView": 2,
-      "spaceBetween": 8,
-      "pagination": {
-        "el": ".swiper-pagination",
-        "clickable": true
-      },
-      "breakpoints": {
-        "500": {
-          "slidesPerView": 3
-        },
-        "600": {
-          "slidesPerView": 4
-        },
-        "768": {
-          "slidesPerView": 5
-        },
-        "850": {
-          "slidesPerView": 6
-        },
-        "1000": {
-          "slidesPerView": 7
-        },
-        "1200": {
-          "slidesPerView": 8
-        }
-      }
-    }'>
-      <div class="swiper-wrapper">
-  
-        <!-- Item -->
-        @foreach ($sponsors as $sponsor)
-        <div class="swiper-slide py-3">
-          <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-            <div class="card-body">
-              <img src="{{ 'storage/'.$sponsor->logo}}" class="d-block mx-auto" alt="{{ $sponsor->name}}">
-            </div>
-          </a>
-        </div>
-        @endforeach
-        
-  
-      </div>
-  
-      <!-- Pagination (bullets) -->
-      <div class="swiper-pagination position-relative pt-3 mt-4"></div>
-    </div>
-    {{-- <div class="text-center my-3 mt-xl-n2">
-      <a href="#" class="btn btn-primary">Voir tous nos partenaires</a>
-    </div> --}}
-  </section>
+ 
 
 
       <!-- Testimonials -->
-  <section class="bg-secondary">
+  {{-- <section class="bg-secondary">
     <h2 class="h1 pb-3 container text-center text-md-start  pt-5">Ce qu'ils ont dit sur nous</h2>
     <div class="px-2 px-sm-0">
       <div class="swiper" data-swiper-options='{
@@ -276,9 +219,38 @@
         <div class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5"></div>
       </div>
     </div>
+  </section> --}}
+
+  <section class="container bg-secondary pb-md-2 pb-lg-5" >
+    <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
+    <div class=" pb-4 pt-5">
+      <div class="row row-cols-1 row-cols-md-2">
+        <!-- Item -->
+        <div class="col-md-6 py-4  ">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <h2 class="h4 d-inline-flex align-items-center">
+                <span >Notre mission</span>
+              </h2>
+              <p class="fs-sm text-body mb-0">Vous accompagner dans les démarches pour la réussite de vos projets nécessitant les évaluations environnementales, apport des technologies géo-spatiales et ingénierie forestière.</p>
+            </div>
+          </span>
+        </div>
+
+        <div class="col-md-6 py-4  ">
+          <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+            <div class="card-body ">
+              <h2 class="h4 d-inline-flex align-items-center">
+                <span >Notre vision</span>
+              </h2>
+              <p class="fs-sm text-body mb-0">Dévenir une référence en Afrique, en évaluations environnementales, acquisition, traitement et mise en place de base des données géo-spatiales et formations professionnelles.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+    </div>
   </section>
-
-
 
     <!-- Team (Slider) -->
     <section class="container pt-lg-2 pb-5 mb-2 mb-md-4 mb-lg-5">
@@ -287,6 +259,7 @@
         "slidesPerView": 1,
         "spaceBetween": 8,
         "loop": true,
+        "autoplay":{"delay":2500,"delayOnInteraction":false},
         "pagination": {
         "el": ".swiper-pagination",
         "clickable": true

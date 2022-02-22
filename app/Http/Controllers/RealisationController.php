@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Newsletters;
+use App\Models\Realisation;
 use Illuminate\Http\Request;
 
-class NewsletterController extends Controller
+class RealisationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,8 @@ class NewsletterController extends Controller
     public function index()
     {
         //
+        $realisations = Realisation::paginate(6);
+        return view('realisations.index',['realisations'=>$realisations]);
     }
 
     /**
@@ -36,18 +38,15 @@ class NewsletterController extends Controller
     public function store(Request $request)
     {
         //
-        $result = Newsletters::create(['email'=>$request->email]);
-        notify('votre mail a été ajouté à notre newsletters');
-        return back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Realisation  $realisation
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Realisation $realisation)
     {
         //
     }
@@ -55,10 +54,10 @@ class NewsletterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Realisation  $realisation
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Realisation $realisation)
     {
         //
     }
@@ -67,10 +66,10 @@ class NewsletterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Realisation  $realisation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Realisation $realisation)
     {
         //
     }
@@ -78,10 +77,10 @@ class NewsletterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Realisation  $realisation
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Realisation $realisation)
     {
         //
     }
