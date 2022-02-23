@@ -31,8 +31,8 @@ class FormateurController extends Controller
                 "email" => $request->email,
                 "etudes" => $request->etudes,
                 "phone" => $request->phone,
-                "card_identity_image" => 'formateurs/'.$cardPath . '/' . $cardeName,
-                "cv" => 'formateurs/'.$imagePath . '/' . $imageName,
+                "card_identity_image" => 'formateurs/'.$cardPath . '/' . $cardName,
+                "cv" => 'formateurs/'.$cvPath . '/' . $cvName,
                 "plan" => 'formateurs/'.$pdfPath . '/' . $pdfName,
 
             ]);

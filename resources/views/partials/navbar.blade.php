@@ -44,7 +44,7 @@
                 </li>
                 {{-- <li class="nav-item">
                   <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
-                </li> --}}
+                </li>
                 {{-- <li class="nav-item">
                   <a href="{{ route('about')}}" class="{{ request()->routeIs('about') ? 'active ' : '' }} nav-link">Qui sommes-nous</a>
                 </li>
@@ -140,9 +140,9 @@
                 {{-- <li class="block  py-2 text-xs text-gray-400">
                     {{ __('Manage Account') }}
                 </li> --}}
-                {{-- <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li>
+                {{-- <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li> --}}
                
-                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                {{-- @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                 <li><a href="{{ route('api-tokens.index') }}" class="dropdown-item">{{ __('API Tokens') }}</a></li>
                 @endif --}}
 

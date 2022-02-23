@@ -431,7 +431,7 @@
               <div class="accordion-collapse collapse show" id="q-1" data-bs-parent="#faq">
                 <div class="accordion-body fs-sm pt-0">
                   <p>
-                    Nous acceptons comme moyen de paiement la carte bancaire, visa et West union.
+                    Nous acceptons comme moyen de paiement la carte bancaire, visa, West union et mobile money.
                   </p>
                   </div>
               </div>
