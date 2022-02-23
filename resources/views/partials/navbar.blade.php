@@ -1,7 +1,9 @@
      <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
       <div class=" text-center bg-white">
-        <p class="p-1 m-0 ">Renforcez vos capacités grâce à nos formations certifiantes.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('formation.index')}}">Voir les formations ></a></p>
+        <p class="p-1 m-0 ">Masterclass édition 1 de ce dimanche 27 février 2022 de 14h à 18h sur ZOOM,  <a href="{{ route('masterclass')}}">en savoir plus</a></p>
+
+        {{-- <p class="p-1 m-0 ">Renforcez vos capacités grâce à nos formations certifiantes.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('formation.index')}}">Voir les formations ></a></p> --}}
       </div>
       <header class="px-md-4 header navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container px-3">
@@ -38,6 +40,9 @@
                   <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateur</a>
                 </li>
                 <li class="nav-item">
+                  <a href="{{ route('masterclass')}}" class="{{ request()->routeIs('masterclass') ? 'active ' : '' }} nav-link">Masterclass</a>
+                </li>
+                {{-- <li class="nav-item">
                   <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
                 </li>
                 {{-- <li class="nav-item">

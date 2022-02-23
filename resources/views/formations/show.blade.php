@@ -1,13 +1,15 @@
 <x-app-layout>
+
   <x-slot name="title">
-    <title>formations certifiantes | {{ $formation->title }} -- RFS CONSULTING</title>
-    <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites."/>
-    <meta property="og:url"           content="https://rfs-congo.com/post/{{ $formation->slug }}" />
+    <title>{{ $formation->title }} -- RFS CONSULTING</title>
+    <meta name="description" content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets"/>
+    <meta property="og:url"           content="{{ route('formation.show',$formation->slug) }}s" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Formations -- RFS CONSULTING" />
-    <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
-    <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
+    <meta property="og:title"         content="{{ $formation->title }} -- RFS CONSULTING" />
+    <meta property="og:description"   content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets" />
+    <meta property="og:image"         content="{{'/storage/'.$formation->image_path}}" />
   </x-slot>
+
     <!-- Hero -->
     <section class="jarallax dark-mode bg-dark pt-2 pt-lg-3 pb-lg-5" data-jarallax data-speed="0.4">
         <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70"></span>

@@ -1,13 +1,15 @@
 <x-app-layout>
+
   <x-slot name="title">
-    <title>Formations certifiantes -- RFS CONSULTING</title>
-    <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites."/>
+    <title>Nos Formations -- RFS CONSULTING</title>
+    <meta name="description" content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets"/>
     <meta property="og:url"           content="https://rfs-congo.com/formations-certifiantes" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Formations certifiantes -- RFS CONSULTING" />
-    <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
+    <meta property="og:title"         content="Nos Formations -- RFS CONSULTING" />
+    <meta property="og:description"   content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets" />
     <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
   </x-slot>
+  
  <!-- Hero section with layer parallax gfx -->
  <section class="position-relative py-5">
 

@@ -20,6 +20,8 @@ use App\Http\Controllers\InstructorSubscribeController;
 use App\Http\Controllers\LikePostController;
 use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\UserFormation;
+use App\Http\Controllers\MasterClassController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -119,6 +121,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+
+// MasterClass 
+
+Route::get('/masterclass-ed-01',[MasterClassController::class,'index'])->name('masterclass');
+Route::get('/masterclass-ed-01/create',[MasterClassController::class,'create'])->name('masterclass.create');
+
+Route::post('/masterclass-ed-01',[MasterClassController::class,'store'])->name('masterclass.store');
 
 
 // La redirection vers le provider
