@@ -1,4 +1,15 @@
 <x-app-layout>
+
+  <x-slot name="title">
+    <title>Blog -- RFS CONSULTING</title>
+    <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites."/>
+    <meta property="og:url"           content="https://rfs-congo.com/posts" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Formations -- RFS CONSULTING" />
+    <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
+    <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
+  </x-slot>
+
      <!-- Breadcrumb -->
      <section class="container">
       <nav class="" aria-label="breadcrumb">
@@ -53,7 +64,7 @@
                       </div>
                       <div class="d-flex align-items-center">
                         <i class="bx bx-share-alt fs-lg me-1"></i>
-                        <span class="fs-sm">2</span>
+                        <span class="fs-sm">{{ $post->countshared }}</span>
                       </div>
                     </div>
                   </div>
@@ -331,11 +342,11 @@
                           </div>
                           <div class="d-flex align-items-center me-3">
                             <i class="bx bx-comment fs-base me-1"></i>
-                            <span class="fs-xs">4</span>
+                            <span class="fs-xs">{{ $pop->comments()->count() }}</span>
                           </div>
                           <div class="d-flex align-items-center">
                             <i class="bx bx-share-alt fs-base me-1"></i>
-                            <span class="fs-xs">2</span>
+                            <span class="fs-xs">{{ $pop->countshared }}</span>
                           </div>
                         </div>
                       </li>

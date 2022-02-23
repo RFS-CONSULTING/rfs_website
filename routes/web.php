@@ -107,7 +107,6 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.crea
 
 Route::post('/newsletter',[NewsletterController::class,'store'])->name('newsletter.store');
 
-
 // jetstream|sanctum 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

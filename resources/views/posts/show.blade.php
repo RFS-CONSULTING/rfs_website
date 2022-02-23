@@ -1,4 +1,15 @@
 <x-app-layout>
+
+    <x-slot name="title">
+        <title>Blog | {{ $post->title }} -- RFS CONSULTING</title>
+        <meta name="description" content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites."/>
+        <meta property="og:url"           content="https://rfs-congo.com/post/{{ $post->slug }}" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Formations -- RFS CONSULTING" />
+        <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
+        <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
+    </x-slot>
+
     <!-- Breadcrumb -->
     <section>
         <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
