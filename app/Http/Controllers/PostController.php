@@ -19,7 +19,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Posts::orderBy('created_at','desc')->get();
+        $posts = Posts::orderBy('created_at','desc')->paginate(2);
         $popular = Posts::orderBy('count','desc')->limit(3)->get();
         $tags = Tags::all();
         return view('posts.index',['posts'=>$posts,'tags'=>$tags,'popular'=>$popular]);

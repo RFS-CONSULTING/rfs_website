@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Likepost;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class LikePost extends Controller
+class LikePostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,6 +37,13 @@ class LikePost extends Controller
     public function store(Request $request)
     {
         //
+        if (!Auth::user()) {
+            notify()->error('veillez vous connectez avant d\'ajouter un like à un post');
+        }else{
+            $like = Likepost::create(['user_id'=>Auth::user()->id,'post_id'=>$request->post_id]);
+            notify()->success('vous avez aimé cet article');
+        }
+        return back();
     }
 
     /**

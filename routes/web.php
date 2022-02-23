@@ -17,6 +17,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
 use App\Http\Controllers\FormateurController;
 use App\Http\Controllers\InstructorSubscribeController;
+use App\Http\Controllers\LikePostController;
 use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\UserFormation;
 
@@ -53,6 +54,11 @@ Route::get('/formation-search',[FormationController::class,'search'])->name('for
 
 Route::get('/posts',[PostController::class,'index'])->name('post.index');
 Route::get('/post/{slug}',[PostController::class,'show'])->name('post.show');
+
+// likepost
+
+Route::get('/like/{post_id}',[LikePostController::class,'store'])->name('like.store');
+
 
 // comments 
 

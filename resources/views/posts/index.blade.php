@@ -56,7 +56,7 @@
                       <div class="fs-sm border-end pe-3 me-3">{{ $post->created_at->diffForHumans()}}</div>
                       <div class="d-flex align-items-center me-3">
                         <i class="bx bx-like fs-lg me-1"></i>
-                        <span class="fs-sm">5</span>
+                        <span class="fs-sm">{{ $post->likes()->count() }}</span>
                       </div>
                       <div class="d-flex align-items-center me-3">
                         <i class="bx bx-comment fs-lg me-1"></i>
@@ -293,12 +293,12 @@
             </article>
 
             <div class="pb-2 pb-lg-3"></div> --}}
-
+            {{ $posts->links('vendor.pagination.pagination')}}
             <!-- Load more button -->
-            <button class="btn btn-lg btn-outline-primary w-100 mt-4">
+            {{-- <button class="btn btn-lg btn-outline-primary w-100 mt-4">
               <i class="bx bx-down-arrow-alt fs-xl me-2"></i>
               Show more
-            </button>
+            </button> --}}
           </div>
 
 
@@ -338,7 +338,7 @@
                           <div class="fs-xs border-end pe-3 me-3">{{ $pop->created_at->diffForHumans() }}</div>
                           <div class="d-flex align-items-center me-3">
                             <i class="bx bx-like fs-base me-1"></i>
-                            <span class="fs-xs">8</span>
+                            <span class="fs-xs">{{ $pop->likes()->count() }}</span>
                           </div>
                           <div class="d-flex align-items-center me-3">
                             <i class="bx bx-comment fs-base me-1"></i>
@@ -446,7 +446,7 @@
               </h2>
   
               <!-- Title + checkboxes -->
-              <div class="row gy-4 align-items-center mb-lg-5 mb-4 pb-3">
+              {{-- <div class="row gy-4 align-items-center mb-lg-5 mb-4 pb-3">
                 <div class="col-md-3">
                   <h3 class="h5 mb-0 text-sm-start text-center">Inscrivez-vous aux newsletters</h3>
                 </div>
@@ -490,14 +490,15 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
   
               <!-- Email field -->
-              <form class="d-flex flex-sm-row flex-column mb-3 needs-validation" novalidate>
+              <form method="POST" action="{{ route('newsletter.store') }}" class="d-flex flex-sm-row flex-column mb-3 needs-validation" novalidate>
+                @csrf
                 <div class="input-group me-sm-3 mb-sm-0 mb-3">
                   <i class="bx bx-envelope position-absolute start-0 top-50 translate-middle-y ms-3 zindex-5 fs-5 text-muted"></i>
-                  <input type="email" class="form-control form-control-lg rounded-3 ps-5" placeholder="Your email" required>
-                  <div class="invalid-tooltip position-absolute start-0 top-0 mt-n4">Please provide a valid email address!</div>
+                  <input type="email" class="form-control form-control-lg rounded-3 ps-5" placeholder="Votre email" name="email" required>
+                  <div class="invalid-tooltip position-absolute start-0 top-0 mt-n4">veillez entrer une adresse email valide!</div>
                 </div>
                 <button class="btn btn-lg btn-primary">S'abonner</button>
               </form>
