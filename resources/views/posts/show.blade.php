@@ -1,13 +1,26 @@
 <x-app-layout>
+
+    <x-slot name="title">
+        <title>Blog | {{ $post->title }} -- RFS CONSULTING</title>
+        <meta name="description"
+            content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
+        <meta property="og:url" content="https://rfs-congo.com/post/{{ $post->slug }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Formations -- RFS CONSULTING" />
+        <meta property="og:description"
+            content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
+        <meta property="og:image" content="/assets/img/hero/hero-bg.jpeg" />
+    </x-slot>
+
     <!-- Breadcrumb -->
     <section>
         <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item">
-                    <a href="{{ route('home')}}"><i class="bx bx-home-alt fs-lg me-1"></i>Accueil</a>
+                    <a href="{{ route('home') }}"><i class="bx bx-home-alt fs-lg me-1"></i>Accueil</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('post.index')}}">Blog</a>
+                    <a href="{{ route('post.index') }}">Blog</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">{{ $post->title }}</li>
             </ol>
@@ -20,14 +33,14 @@
         <h1 class="pb-3" style="max-width: 970px;">{{ $post->title }}</h1>
         <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-3">
             <div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-4">
-                <div class="fs-xs border-end pe-3 me-3 mb-2">
+                {{-- <div class="fs-xs border-end pe-3 me-3 mb-2">
                     <span class="badge bg-faded-primary text-primary fs-base">Technology</span>
-                </div>
+                </div> --}}
                 <div class="fs-sm border-end pe-3 me-3 mb-2">{{ $post->created_at->diffForHumans() }}</div>
                 <div class="d-flex mb-2">
                     <div class="d-flex align-items-center me-3">
                         <i class="bx bx-like fs-base me-1"></i>
-                        <span class="fs-sm">8</span>
+                        <span class="fs-sm">{{ $post->likes()->count() }}</span>
                     </div>
                     <div class="d-flex align-items-center me-3">
                         <i class="bx bx-comment fs-base me-1"></i>
@@ -35,7 +48,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <i class="bx bx-share-alt fs-base me-1"></i>
-                        <span class="fs-sm">2</span>
+                        <span class="fs-sm">{{ $post->countshared }}</span>
                     </div>
                 </div>
             </div>
@@ -51,7 +64,7 @@
 
     <!-- Post image (parallax) -->
     <div class="jarallax mb-lg-5 mb-4" data-jarallax data-speed="0.4" style="height: 36.45vw; min-height: 300px;">
-        <div class="jarallax-img" style="background-image: url({{'/storage/'.$post->image_path}});"></div>
+        <div class="jarallax-img" style="background-image: url({{ '/storage/' . $post->image_path }});"></div>
     </div>
 
     <!-- Post content + Sharing -->
@@ -60,8 +73,7 @@
 
             <!-- Content -->
             <div class="col-lg-9">
-                {{--
-                <h3 class="h5 mb-4 pb-2 fw-medium">Est quis sit phasellus proin proin fringilla eu quis. Placerat praesent blandit urna eu pellentesque dictum. Aliquam duis quam interdum quis. Urna, rutrum aenean lacus phasellus. Ipsum, ac porttitor lacus orci, cras lacus, quis leo.</h3>
+                {{-- <h3 class="h5 mb-4 pb-2 fw-medium">Est quis sit phasellus proin proin fringilla eu quis. Placerat praesent blandit urna eu pellentesque dictum. Aliquam duis quam interdum quis. Urna, rutrum aenean lacus phasellus. Ipsum, ac porttitor lacus orci, cras lacus, quis leo.</h3>
                 <h2 class="h4">Paragraph Title</h2>
                 <p class="mb-4 pb-2">Purus ornare nisl est nec. Nunc, enim tellus pretium viverra quisque id in metus volutpat. Urna eget velit venenatis, commodo eget massa. Magna donec dictum cras nullam platea. Diam rhoncus massa lectus pellentesque tristique. Amet commodo,
                     egestas vitae bibendum. Volutpat elit condimentum integer tortor porttitor justo vel lobortis risus. Lacinia pellentesque fermentum tellus orci mauris, velit duis eget. Commodo justo, hac ligula molestie felis, iaculis. Vitae dui at ante
@@ -69,19 +81,16 @@
                     habitant faucibus ornare et vivamus.</p> --}}
 
                 <!-- Video -->
-                {{--
-                <div class="gallery mb-4 pb-2">
+                {{-- <div class="gallery mb-4 pb-2">
                     <a href="https://www.youtube.com/watch?v=LDb-G8y88Sc" class="gallery-item video-item is-hovered rounded-3" data-sub-html='<h6 class="fs-sm text-light">Video inside blog post</h6>'>
                         <img src="/assets/img/blog/single/video-cover.jpg" alt="Video preview">
                     </a>
-                </div> --}} {!! $post->content !!} {{--
-                <p class="mb-4 pb-2">Tempor donec aliquam est, a. Sit arcu tellus pharetra, bibendum hendrerit arcu, sed. Scelerisque dui enim libero sit ac sed lacus lectus. Quam in iaculis scelerisque feugiat nibh mi. Maecenas posuere lobortis praesent iaculis sagittis.
+                </div> --}} {!! $post->content !!} {{-- <p class="mb-4 pb-2">Tempor donec aliquam est, a. Sit arcu tellus pharetra, bibendum hendrerit arcu, sed. Scelerisque dui enim libero sit ac sed lacus lectus. Quam in iaculis scelerisque feugiat nibh mi. Maecenas posuere lobortis praesent iaculis sagittis.
                     Egestas vel at praesent ipsum pretium faucibus adipiscing gravida feugiat. Lacus, rhoncus velit at non nunc, quam urna, phasellus facilisis. Cursus elit posuere amet tortor at. Mi tristique congue vulputate eget in pellentesque tincidunt.
                     In viverra est id nibh. Nunc tellus ultrices magna turpis. Viverra est morbi posuere dapibus nisi habitasse. Id tristique cursus vel metus.</p> --}}
 
                 <!-- Quotation -->
-                {{--
-                <figure class="position-relative mb-4 ps-4">
+                {{-- <figure class="position-relative mb-4 ps-4">
                     <span class="position-absolute top-0 start-0 w-3 h-100 bg-primary"></span>
                     <blockquote class="blockquote fs-xl fw-medium text-dark ps-1 ps-sm-3">
                         <p>Sollicitudin eget massa, elementum, purus nec fermentum vitae, elementum. Tincidunt vulputate lorem cursus id. Dictum tincidunt mi ornare tristique. Id sit elit pulvinar eu. Tempus vel, mauris sed proin aliquet vulputate cras est.
@@ -94,8 +103,7 @@
                             <span class="fs-sm text-muted">CEO of Ipsum Company</span>
                         </div>
                     </figcaption>
-                </figure> --}} {{--
-                <p class="mb-4 pb-2">Pellentesque laoreet neque ut dictumst fames scelerisque. In malesuada orci dapibus risus tellus, amet, ultrices sagittis a. Turpis vel tincidunt tristique maecenas cursus tortor, suscipit ut. Ullamcorper at faucibus dolor tortor suspendisse
+                </figure> --}} {{-- <p class="mb-4 pb-2">Pellentesque laoreet neque ut dictumst fames scelerisque. In malesuada orci dapibus risus tellus, amet, ultrices sagittis a. Turpis vel tincidunt tristique maecenas cursus tortor, suscipit ut. Ullamcorper at faucibus dolor tortor suspendisse
                     suscipit senectus convallis aliquam. At orci amet facilisi nunc mi vitae iaculis diam a. Mauris venenatis sed purus cursus torte.</p>
                 <h2 class="h4">Paragraph Title 2</h2>
                 <p class="mb-4 pb-2">Praesent sed pulvinar posuere nisl tincidunt. Iaculis sit quam magna congue. Amet vel non aliquet habitasse. Egestas erat odio et, eleifend turpis etiam blandit interdum. Nec augue ut senectus quisque diam quis. At augue accumsan, in bibendum.
@@ -111,8 +119,7 @@
                     <li class="mb-1">Accumsan arcu neque, nisl, pellentesque fames justo consequat blandit lacus. Eget odio vel nulla vel.</li>
                     <li class="mb-1">Diam ac phasellus est, eu urna purus blandit aliquam. Vitae accumsan et pellentesque diam in.</li>
                     <li>Tellus arcu, lectus tincidunt neque nunc. Bibendum lacus, molestie ultrices sed arcu.</li>
-                </ul> --}} {{--
-                <h4 class="h6">
+                </ul> --}} {{-- <h4 class="h6">
                     <i class="bx bx-minus-circle me-1 mt-n1 align-middle fs-5 text-primary"></i> CONS
                 </h4>
                 <ul class="mb-4 pb-2 ps-4">
@@ -134,7 +141,8 @@
                     <div>
 
                         @foreach ($posttags as $ptag)
-                            <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">{{ $ptag->tags->name }}</a>
+                            <a href="#"
+                                class="btn btn-sm btn-outline-secondary me-2 mb-2">{{ $ptag->tags->name }}</a>
                         @endforeach
                     </div>
                 </div>
@@ -159,11 +167,11 @@
                             <i class="bx bxl-instagram"></i>
                         </a>
                     </div>
-                    <button class="btn btn-lg btn-outline-secondary">
-            <i class="bx bx-like me-2 lead"></i>
-            J'aime ça
-            <span class="badge bg-primary shadow-primary mt-n1 ms-3">8</span>
-            </button>
+                    <a href={{route('like.store',$post->id)}} class="btn btn-lg btn-outline-secondary">
+                        <i class="bx bx-like me-2 lead"></i>
+                        J'aime ça
+                        <span class="badge bg-primary shadow-primary mt-n1 ms-3"> {{ $post->likes()->count() }} </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -178,30 +186,30 @@
             <div class="col-lg-9">
 
                 @foreach ($comments as $comment)
-                <!-- Comment -->
-                <div class="py-4">
-                    <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
-                        <div class="d-flex align-items-center me-3">
-                            <img src="/assets/img/user.png" class="rounded-circle" width="48" alt="Avatar">
-                            <div class="ps-3">
-                                <h6 class="fw-semibold mb-0">{{ $comment->guest_name }}</h6>
-                                <span class="fs-sm text-muted">{{ $comment->created_at->diffForHumans() }}</span>
+                    <!-- Comment -->
+                    <div class="py-4">
+                        <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
+                            <div class="d-flex align-items-center me-3">
+                                <img src="/assets/img/user.png" class="rounded-circle" width="48" alt="Avatar">
+                                <div class="ps-3">
+                                    <h6 class="fw-semibold mb-0">{{ $comment->guest_name }}</h6>
+                                    <span class="fs-sm text-muted">{{ $comment->created_at->diffForHumans() }}</span>
+                                </div>
                             </div>
+                            <a href="#" class="nav-link fs-sm px-0">
+                                <i class="bx bx-share fs-lg me-2"></i> Reply
+                            </a>
                         </div>
-                        <a href="#" class="nav-link fs-sm px-0">
-                            <i class="bx bx-share fs-lg me-2"></i> Reply
-                        </a>
+                        {{ $comment->message }}
+                        {{-- <p class="mb-0"></p> --}}
                     </div>
-                    {{ $comment->message }}
-                    {{-- <p class="mb-0"></p> --}}
-                </div>
 
-                <hr class="my-2"> @endforeach
+                    <hr class="my-2">
+                @endforeach
 
 
                 <!-- Comment -->
-                {{--
-                <div class="py-4">
+                {{-- <div class="py-4">
                     <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
                         <div class="d-flex align-items-center me-3">
                             <img src="/assets/img/avatar/02.jpg" class="rounded-circle" width="48" alt="Avatar">
@@ -270,32 +278,38 @@
                 <div class="card p-md-5 p-4 border-0 bg-secondary">
                     <div class="card-body w-100 mx-auto px-0" style="max-width: 746px;">
                         <h2 class="mb-4 pb-3">Laissez un commentaire</h2>
-                        <form class="row gy-4 needs-validation" novalidate method="POST" action="{{ route('comment.store') }}">
+                        <form class="row gy-4 needs-validation" novalidate method="POST"
+                            action="{{ route('comment.store') }}">
                             @csrf
                             <div class="col-sm-6 col-12">
                                 <label for="c-name" class="form-label fs-base">Nom</label>
-                                <input name="guest_name" id="c-name" type="text" class="form-control form-control-lg" required>
+                                <input name="guest_name" id="c-name" type="text" class="form-control form-control-lg"
+                                    required>
                                 <span class="invalid-tooltip">Veuillez entrer votre nom.</span>
                             </div>
                             <div class="col-sm-6 col-12">
                                 <label for="c-email" class="form-label fs-base">Email</label>
-                                <input name="email" id="c-email" type="email" class="form-control form-control-lg" required>
+                                <input name="email" id="c-email" type="email" class="form-control form-control-lg"
+                                    required>
                                 <span class="invalid-tooltip">Veuillez fournir une adresse email valide.</span>
                             </div>
                             <div class="col-12">
                                 <label for="c-comment" class="form-label fs-base">Commentaire</label>
-                                <textarea name="message" id="c-comment" class="form-control form-control-lg" rows="3" placeholder="Type your comment here..." required></textarea>
-                                <span class="invalid-tooltip">S'il vous plaît, entrez votre commentaire.    </span>
+                                <textarea name="message" id="c-comment" class="form-control form-control-lg" rows="3"
+                                    placeholder="Type your comment here..." required></textarea>
+                                <span class="invalid-tooltip">S'il vous plaît, entrez votre commentaire. </span>
                             </div>
                             <div class="col-12">
                                 <div class="form-check">
                                     <input id="c-save" type="checkbox" class="form-check-input">
-                                    <label for="c-save" class="form-check-label">Enregistrez mon nom et mon e-mail dans ce navigateur pour la prochaine fois que je commenterai.</label>
+                                    <label for="c-save" class="form-check-label">Enregistrez mon nom et mon e-mail dans
+                                        ce navigateur pour la prochaine fois que je commenterai.</label>
                                 </div>
                             </div>
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Poster un commentaire</button>
+                                <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Poster un
+                                    commentaire</button>
                             </div>
                         </form>
                     </div>
@@ -311,10 +325,12 @@
                         <div class="col-lg-12 col-sm-7 col-11">
                             <h6 class="fs-lg">Vous aimez cet article ? Rejoignez notre newsletter</h6>
                             <form class="needs-validation" novalidate method="POST" action="{{ route('newsletter.store') }}">
-                               @csrf
+                                @csrf
                                 <div class="input-group mb-3">
-                                    <i class="bx bx-envelope position-absolute start-0 top-50 translate-middle-y zindex-5 ms-3 text-muted d-lg-inline-block d-none"></i>
-                                    <input type="email" name="email" placeholder="Your Email" class="form-control ps-lg-5 rounded text-lg-start text-center" required>
+                                    <i
+                                        class="bx bx-envelope position-absolute start-0 top-50 translate-middle-y zindex-5 ms-3 text-muted d-lg-inline-block d-none"></i>
+                                    <input type="email" name="email" placeholder="Your Email"
+                                        class="form-control ps-lg-5 rounded text-lg-start text-center" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">S'abonner</button>
                             </form>
@@ -348,10 +364,10 @@
     <section class="container mb-5 pt-md-4">
         <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
             <h2 class="h1 mb-sm-0">Articles liés</h2>
-            <a href="{{ route('post.index')}}" class="btn btn-lg btn-outline-primary ms-4">
-            Tous les articles
-        <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
-        </a>
+            <a href="{{ route('post.index') }}" class="btn btn-lg btn-outline-primary ms-4">
+                Tous les articles
+                <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
+            </a>
         </div>
 
         <div class="swiper mx-n2" data-swiper-options='{
@@ -374,35 +390,39 @@
 
                 @foreach ($relatedPosts as $rpost)
                     <!-- Item -->
-                <div class="swiper-slide h-auto pb-3">
-                    <article class="card border-0 shadow-sm h-100 mx-2">
-                        <div class="position-relative">
-                            <a href="{{ route('post.show', $rpost->slug)}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                            <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src={{ '/storage/'.$rpost->image_path }} class="card-img-top" alt="Image">
-                        </div>
-                        <div class="card-body pb-4">
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                {{-- <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a> --}}
-                                <span class="fs-sm text-muted">{{ $rpost->created_at->diffForHumans() }}</span>
+                    <div class="swiper-slide h-auto pb-3">
+                        <article class="card border-0 shadow-sm h-100 mx-2">
+                            <div class="position-relative">
+                                <a href="{{ route('post.show', $rpost->slug) }}"
+                                    class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                                <a href="#"
+                                    class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                                    data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                                    <i class="bx bx-bookmark"></i>
+                                </a>
+                                <img src={{ '/storage/' . $rpost->image_path }} class="card-img-top" alt="Image">
                             </div>
-                            <h3 class="h5 mb-0">
-                                <a href="{{ route('post.show', $rpost->slug)}}">{{ $rpost->title }}</a>
-                            </h3>
-                        </div>
-                        <div class="card-footer py-4">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
-                                <img src="/assets/img/user.png" class="rounded-circle me-3" width="48" alt="Avatar"> {{ $rpost->author->name }}
-                            </a>
-                        </div>
-                    </article>
-                </div>
+                            <div class="card-body pb-4">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    {{-- <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a> --}}
+                                    <span class="fs-sm text-muted">{{ $rpost->created_at->diffForHumans() }}</span>
+                                </div>
+                                <h3 class="h5 mb-0">
+                                    <a href="{{ route('post.show', $rpost->slug) }}">{{ $rpost->title }}</a>
+                                </h3>
+                            </div>
+                            <div class="card-footer py-4">
+                                <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                                    <img src="/assets/img/user.png" class="rounded-circle me-3" width="48"
+                                        alt="Avatar"> {{ $rpost->author->name }}
+                                </a>
+                            </div>
+                        </article>
+                    </div>
                 @endforeach
-                
 
-              
+
+
             </div>
 
             <!-- Pagination (bullets) -->

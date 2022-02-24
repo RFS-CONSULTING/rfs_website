@@ -41,8 +41,15 @@ class InstructorSubscribeController extends Controller
         //
         if($request->input('g-recaptcha-response')){
             $cv_path = Storage::putFile('cv_instructors', $request->file('cv'));
-            $indentite_path = Storage::putFile('indentity_instrucors', $request->file('card_identity_image'));
-            $programme_path = Storage::putFile('programme_instructor', $request->file('plan'));
+            // $indentite_path = Storage::putFile('indentity_instrucors', $request->file('card_identity_image'));
+            // $programme_path = Storage::putFile('programme_instructor', $request->file('plan'));
+
+            $identPath = $request->file('card_identity_image')->store('public/formateurs/'.$request->email);
+            
+            $cvPath = $request->file('cv')->store('public/formateurs/'.$request->email);
+           
+            $planPath = $request->file('plan')->store('public/formateurs/'.$request->email);
+
 
             $form = InstructorSubscribe::create([
                 "nom" => $request->nom,
@@ -55,9 +62,9 @@ class InstructorSubscribeController extends Controller
                 "telephone" => $request->phone,
                 "adress" => $request->address,
 
-                "cv_path" => $cv_path,
-                "identite_path" => $indentite_path,
-                "programme_path" => $programme_path,
+                "cv_path" => $cvPath,
+                "identite_path" => $identPath,
+                "programme_path" => $planPath,
             ]);
 
             $from = "info@rfs-congo.com";
