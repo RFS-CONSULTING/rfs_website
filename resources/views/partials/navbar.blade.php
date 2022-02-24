@@ -9,7 +9,7 @@
         <div class="container px-3">
           <a href="{{ route('home')}}" class="navbar-brand pe-5">
             <img src="/assets/img/logo.png" width="50" alt="Logo RFS Consulting">
-            
+            RFS
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
             <div class="offcanvas-header border-bottom">

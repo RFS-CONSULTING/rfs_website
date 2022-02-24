@@ -26,16 +26,24 @@
       <section class="container mb-5 ">
         <div class="row ">
           @foreach ($services as $service)
-          <div class=" col-md-4 order-md-2 text-center text-md-start mb-4 ">
-            <h2 class="mb-4">{{ $service->name }}</h2>
-            <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
-            {{-- <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary ">Nous contacter</a> --}}
+        
+
+          <!-- Item -->
+          <div class="swiper-slide h-auto  col-md-4 order-md-2 text-center text-md-start">
+            <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 ">
+              <div class="card-body">
+                <h2 class="mb-4">{{ $service->name }}</h2>
+                <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
+              </div>
+            </div>
           </div>
+
           @endforeach
+          
 
           @isset($services)
               @if (count($services) > 0)
-              <div class="col-md-4 order-md-1">
+              <div class="col-md-4 order-md-1 h-auto">
                 <div class="position-relative rounded-3 overflow-hidden">
                   <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
                     <a href="{{'https://www.youtube.com/watch?v='.$services[0]->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">

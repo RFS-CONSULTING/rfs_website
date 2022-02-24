@@ -294,7 +294,7 @@
                 <img src="/assets/img/landing/icons/01.svg" class="position-relative zindex-2" width="32" alt="Icon">
                 <span class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-8"></span>
               </div>
-              <h3 class="h5 pb-1 mb-2">Séance en direct avec le formateur</h3>
+              <h3 class="h5 pb-1 mb-2">Séances en direct avec le formateur</h3>
               {{-- <p class="mb-0">Leo condimentum dignissim venenatis sit dignissim vel. Adipiscing tristique dictum vitae elementum neque.</p> --}}
             </div>
           </div>
@@ -484,10 +484,10 @@
       <!-- Sign up form -->
     <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
       <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
-        <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à démarrer votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
+        <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à dé  er votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
         <div class="row pb-3">
           <div class="col-xl-7 col-md-6">
-            <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(/assets/img/landing/signup-img.jpg);"></div>
+            <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(/assets/img/landing/bg-signup.jpeg);"></div>
           </div>
           <div class="col-xl-5 col-md-6">
             <div class="card border-0 p-lg-4">
