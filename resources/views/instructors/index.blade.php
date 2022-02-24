@@ -210,7 +210,7 @@
         <div class="col-md-4  mb-3">
           <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
-              <p class=" text-body mb-0">35 % du montant total de la formation</p>
+              <p class=" text-body mb-0">35% du montant payé par chaque participant</p>
             </div>
           </span>
         </div>
@@ -219,7 +219,7 @@
         <div class="col-md-4  mb-3">
           <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
-              <p class=" text-body mb-0">Certificat de participation</p>
+              <p class=" text-body mb-0">Attestation de service rendu</p>
             </div>
           </span>
         </div>
