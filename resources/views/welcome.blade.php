@@ -174,7 +174,7 @@
                     <!-- Item -->
                     @foreach ($statistics as $statistic)
                     <div class="col">
-                        <div class="card h-40 m-1  border-0 shadow-sm ">
+                        <div class="card h-48 m-1  border-0 shadow-sm ">
                             <div class="card-body">
                                 <div class="">
                                     <h3 class="display-5 mb-1 text-center">+ {{ $statistic->number}}</h3>
