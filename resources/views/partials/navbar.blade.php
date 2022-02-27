@@ -42,7 +42,7 @@
                 <li class="nav-item">
                   <a href="{{ route('masterclass')}}" class="{{ request()->routeIs('masterclass') ? 'active ' : '' }} nav-link">Masterclass</a>
                 </li>
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                   <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
                 </li>
                 {{-- <li class="nav-item">
@@ -50,7 +50,7 @@
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('contact')}}" class="{{ request()->routeIs('contact') ? 'active ' : '' }} nav-link">Contactez-nous</a>
-                </li> --}}
+                </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                   <ul class="dropdown-menu">
