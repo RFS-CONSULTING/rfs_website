@@ -44,6 +44,8 @@ class FormationsResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('original_price')
                     ->required(),
+                Forms\Components\TextInput::make('etudiant_price')
+                    ->required(),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
@@ -67,6 +69,7 @@ class FormationsResource extends Resource
                 Tables\Columns\BooleanColumn::make('is_certified'),
                 Tables\Columns\TextColumn::make('actual_price'),
                 Tables\Columns\TextColumn::make('original_price'),
+                Tables\Columns\TextColumn::make('etudiant_price'),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('keywords'),
                 Tables\Columns\TextColumn::make('image_path'),
