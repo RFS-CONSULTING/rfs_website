@@ -80,7 +80,7 @@
                 <div class="swiper-slide">
                   <h2 class="display-2 from-start mb-lg-4">Nous sommes professionnels</h2>
                   <div class="from-end">
-                    <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique (SIG et Télédetection appliquée), Ingénierie forestière et formations professionnelles. </p>
+                    <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique, Ingénierie forestière et formations professionnelles. </p>
                   </div>
                   <div class="scale-up delay-1">
                     <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
@@ -174,7 +174,7 @@
                     <!-- Item -->
                     @foreach ($statistics as $statistic)
                     <div class="col">
-                        <div class="card h-48 m-1  border-0 shadow-sm ">
+                        <div class="card m-1  border-0 shadow-sm ">
                             <div class="card-body">
                                 <div class="">
                                     <h3 class="display-5 mb-1 text-center">+ {{ $statistic->number}}</h3>
@@ -357,7 +357,7 @@
           <div class="d-flex align-items-center">
             <img src="assets/img/landing/notification-icon.svg" width="78" alt="Bell icon">
             <div class="ps-3 ms-sm-3">
-              <h2 class="h4 mb-0">Abonnez-vous à notre newsletter pour rester informé des dernières mises à jour</h2>
+              <h2 class="h6 mb-0 ">Abonnez-vous à notre newsletter pour rester informé des dernières mises à jour</h2>
             </div>
           </div>
         </div>

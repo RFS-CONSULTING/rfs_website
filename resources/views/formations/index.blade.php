@@ -64,16 +64,16 @@
           <div class="d-flex align-items-center mt-auto mb-3 mb-lg-0 pb-4 pb-lg-0 pb-xl-5">
             <div class="d-flex me-3">
               <div class="d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 52px; height: 52px;">
-                <img src="/assets/img/avatar/49.jpg" class="rounded-circle" width="48" alt="Avatar">
+                <img src="/assets/img/testimonial-1.jpeg" class="rounded-circle" width="48" alt="Client RFS Academia">
               </div>
               <div class="d-flex align-items-center justify-content-center bg-white rounded-circle ms-n3" style="width: 52px; height: 52px;">
-                <img src="/assets/img/avatar/15.jpg" class="rounded-circle" width="48" alt="Avatar">
+                <img src="/assets/img/testimonial-2.jpeg" class="rounded-circle" width="48" alt="Client RFS Academia">
               </div>
               <div class="d-flex align-items-center justify-content-center bg-white rounded-circle ms-n3" style="width: 52px; height: 52px;">
-                <img src="/assets/img/avatar/49.jpg" class="rounded-circle" width="48" alt="Avatar">
+                <img src="/assets/img/testimonial-3.jpeg" class="rounded-circle" width="48" alt="Client RFS Academia">
               </div>
             </div>
-            <span class="fs-sm"><span class="text-primary fw-semibold">200+</span> étudiants sont déjà avec nous</span>
+            <span class="fs-sm"><span class="text-primary fw-semibold">200+</span> participants sont déjà avec nous</span>
           </div>
         </div>
         <div class="col-lg-5 d-none d-lg-block">
@@ -342,7 +342,7 @@
         <div class="card h-100 border-0 overflow-hidden">
           <span class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
           <div class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
-            <h2 class="h1 text-center text-md-start p-lg-4">Ce que nos étudiants disent de nos formations</h2>
+            <h2 class="h1 text-center text-md-start p-lg-4">Ce que nos participants disent de nos formations</h2>
           </div>
         </div>
       </div>
@@ -444,7 +444,7 @@
               </h3>
               <div class="accordion-collapse collapse" id="q-2" data-bs-parent="#faq">
                 <div class="accordion-body fs-sm pt-0">
-                  <p>Oui, vous n’aurez qu’à nous envoyer un mail avec comme objet REMBOURSEMENT. Et l’intégralité de votre investissement vous sera remise.</p>
+                  <p>Oui, vous n'aurez qu'à nous envoyer un mail dans les 3 premières séances avec comme objet REMBOURSEMENT. Et l'intégralité de votre investissement vous sera remise.</p>
                 </div>
               </div>
             </div>
@@ -484,7 +484,7 @@
       <!-- Sign up form -->
     <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
       <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
-        <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à dé  er votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
+        <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à démarrer votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
         <div class="row pb-3">
           <div class="col-xl-7 col-md-6">
             <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(/assets/img/landing/bg-signup.jpeg);"></div>

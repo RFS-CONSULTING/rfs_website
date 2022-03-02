@@ -50,7 +50,7 @@
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('contact')}}" class="{{ request()->routeIs('contact') ? 'active ' : '' }} nav-link">Contactez-nous</a>
-                </li>
+                </li> --}}
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                   <ul class="dropdown-menu">

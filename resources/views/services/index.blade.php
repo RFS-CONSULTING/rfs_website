@@ -22,47 +22,8 @@
       </nav>
      </section>
 
-      <!-- Page title + Image -->
-      <section class="container mb-5 ">
-        <div class="row ">
-          @foreach ($services as $service)
-        
-
-          <!-- Item -->
-          <div class="swiper-slide h-auto  col-md-4 order-md-2 text-center text-md-start">
-            <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 ">
-              <div class="card-body">
-                <h2 class="mb-4">{{ $service->name }}</h2>
-                <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
-              </div>
-            </div>
-          </div>
-
-          @endforeach
-          
-
-          @isset($services)
-              @if (count($services) > 0)
-              <div class="col-md-4 order-md-1 h-auto">
-                <div class="position-relative rounded-3 overflow-hidden">
-                  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-                    <a href="{{'https://www.youtube.com/watch?v='.$services[0]->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
-                      <i class="bx bx-play"></i>
-                    </a>
-                  </div>
-                  <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-                  <img src="{{'storage/'.$services[0]->image_path}}" alt="{{ $services[0]->name }}">
-                </div>
-              </div>
-            </div>
-            @endif
-          @endisset
-      </section>
-     
-
-
-      <!-- Services -->
-      <section class="container ">
+       <!-- Services -->
+       <section class="container ">
         <div class="row justify-content-center text-center">
           <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10">
             <h2 class="h1 mb-4">Ce que nous offrons</h2>
@@ -187,6 +148,47 @@
         </div>
       </section>
 
+
+      <!-- Page title + Image -->
+      <section class="container mb-5 ">
+        <div class="row ">
+          @foreach ($services as $service)
+        
+
+          <!-- Item -->
+          <div class="swiper-slide h-auto  col-md-4 order-md-2 text-center text-md-start">
+            <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 ">
+              <div class="card-body">
+                <h2 class="mb-4">{{ $service->name }}</h2>
+                <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+          
+
+          @isset($services)
+              @if (count($services) > 0)
+              <div class="col-md-4 order-md-1 h-auto">
+                <div class="position-relative rounded-3 overflow-hidden">
+                  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
+                    <a href="{{'https://www.youtube.com/watch?v='.$services[0]->video_youtube}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+                      <i class="bx bx-play"></i>
+                    </a>
+                  </div>
+                  <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+                  <img src="{{'storage/'.$services[0]->image_path}}" alt="{{ $services[0]->name }}">
+                </div>
+              </div>
+            </div>
+            @endif
+          @endisset
+      </section>
+     
+
+
+    
 
       <!-- Customers -->
       {{-- <section class="container pb-5 mb-md-4 mb-lg-5">
