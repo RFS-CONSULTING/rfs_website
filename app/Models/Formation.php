@@ -13,7 +13,7 @@ class Formation extends Model
 
     protected $fillable = ['title','description','instructor_id',
     'nb_hours','nb_articles','downloadable_ressources','is_certified',
-    'actual_price','original_price','slug','keywords','image_path'];
+    'actual_price','original_price','slug','keywords','image_path','etudiant_price'];
 
 
     public function instructor()

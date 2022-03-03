@@ -77,6 +77,9 @@
                 </h3>
                 <p class="fs-sm mb-2"> par {{ $formation->instructor->name }}</p>
                 <p class="fs-lg fw-semibold text-primary mb-0">{{ $formation->actual_price}} $</p>
+                @if (!empty($formation->etudiant_price))
+                      <p class="fs-lg fw-semibold text-primary mb-0">$ {{$formation->etudiant_price }} <span class="text-muted fs-xl fw-normal ms-2">Pour étudiant uniquement</span></p>
+                @endif
               </div>
               <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                 <div class="d-flex align-items-center me-4">

@@ -51,7 +51,9 @@
                     <h3 class="h4">
                       <a href="{{ route('post.show', $post->slug)}}">{{ $post->title }}</a>
                     </h3>
-                    <p class="mb-4">{{ substr($post->content,200) }}</p>
+                    <x-markdown>
+                      {{ substr($post->content,0,200) }}</p>
+                    </x-markdown>
                     <div class="d-flex align-items-center text-muted">
                       <div class="fs-sm border-end pe-3 me-3">{{ $post->created_at->diffForHumans()}}</div>
                       <div class="d-flex align-items-center me-3">

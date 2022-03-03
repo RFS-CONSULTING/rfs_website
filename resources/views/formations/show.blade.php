@@ -108,6 +108,9 @@
                       </li>
                     </ul>
                     <div class="h2 d-flex align-items-center mb-4">{{ $formation->actual_price}} $ <del class="text-muted fs-xl fw-normal ms-2">{{ $formation->original_price}} $</del></div>
+                   @if (!empty($formation->etudiant_price))
+                   <div class="h2 d-flex align-items-center mb-4">{{ $formation->etudiant_price}} $ <span class="text-muted fs-xl fw-normal ms-2">Pour étudiant uniquement</span></div>
+                   @endif
                     <a href="{{ route('formation.form', [$formation->id, $formation->slug ]) }}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
                   </div>
                 </div>
@@ -447,6 +450,7 @@
                   <div class="accordion-collapse collapse" id="q-2" data-bs-parent="#faq">
                     <div class="accordion-body fs-sm pt-0">
                       <p>Oui, vous n’aurez qu’à nous envoyer un mail avec comme objet REMBOURSEMENT. Et l’intégralité de votre investissement vous sera remise.</p>
+                      <p>⚠ Votre demande doit être effectué la première semaine de votre inscription, depassé ce delai le remboursement devient impossible.</p>
                     </div>
                   </div>
                 </div>
@@ -519,6 +523,9 @@
                       </h3>
                       <p class="fs-sm mb-2">By {{ $similarF->instructor->name }}</p>
                       <p class="fs-lg fw-semibold text-primary mb-0">$ {{$similarF->actual_price }}</p>
+                      @if (!empty($similarF->etudiant_price))
+                      <p class="fs-lg fw-semibold text-primary mb-0">$ {{$similarF->etudiant_price }} <span class="text-muted fs-xl fw-normal ms-2">Pour étudiant uniquement</span></p>
+                      @endif
                     </div>
                     <div class="card-footer d-flex align-items-center fs-sm text-muted py-4">
                       <div class="d-flex align-items-center me-4">
