@@ -39,9 +39,18 @@
                 <li class="nav-item">
                   <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateur</a>
                 </li>
-                <li class="nav-item">
-                  <a href="{{ route('masterclass')}}" class="{{ request()->routeIs('masterclass') ? 'active ' : '' }} nav-link">Masterclass</a>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Réalisations</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ route('about') }}" class="dropdown-item">Masterclass</a></li>
+                    <li><a href="{{ route('contact')}}" class="dropdown-item">Conférences</a></li>
+                    <li><a href="{{ route('contact')}}" class="dropdown-item">Projets</a></li>
+                  </ul>
                 </li>
+
+                {{-- <li class="nav-item">
+                  <a href="{{ route('masterclass')}}" class="{{ request()->routeIs('masterclass') ? 'active ' : '' }} nav-link">Masterclass</a>
+                </li> --}}
                 <li class="nav-item">
                   <a href="{{ route('post.index') }}" class="{{ request()->routeIs('post.index') ? 'active' : '' }} nav-link">Blog</a>
                 </li>
