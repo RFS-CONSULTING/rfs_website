@@ -42,9 +42,9 @@
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Réalisations</a>
                   <ul class="dropdown-menu">
-                    <li><a href="{{ route('masterclass') }}" class="dropdown-item">Masterclass</a></li>
-                    {{-- <li><a href="{{ route('contact')}}" class="dropdown-item">Conférences</a></li>
-                    <li><a href="{{ route('contact')}}" class="dropdown-item">Projets</a></li> --}}
+                    <li><a href="{{ route('realisationMasterclass.index') }}" class="dropdown-item">Masterclass</a></li>
+                    <li><a href="{{ route('realisationConference.index')}}" class="dropdown-item">Conférences</a></li>
+                    <li><a href="{{ route('realisationProjet.index')}}" class="dropdown-item">Projets</a></li>
                   </ul>
                 </li>
 

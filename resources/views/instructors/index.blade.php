@@ -77,12 +77,15 @@
         </div>
         
         <!-- Item -->
-        <div class="col-md-4  ">
+        <div class="col-md-4">
           <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <p class=" text-body mb-0">Travaillez d'où vous voulez, quand vous voulez, selon vos horaires.</p>
             </div>
           </span>
+        </div>
+        <div class="col-md-8 mt-4">
+          <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
         </div>
 
       </div>
@@ -121,6 +124,9 @@
           </span>
         </div>
         
+        <div class="col-md-8 mt-4">
+          <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
+        </div>
        
 
       </div>
@@ -223,7 +229,11 @@
             </div>
           </span>
         </div>
-
+        
+        <div class="col-md-8 mt-4">
+          <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
+        </div>
+        
       </div>
     </div>
   </section>

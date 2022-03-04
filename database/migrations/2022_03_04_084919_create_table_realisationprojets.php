@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableRealisationMasterClass extends Migration
+class CreateTableRealisationprojets extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTableRealisationMasterClass extends Migration
      */
     public function up()
     {
-        Schema::create('realisationmasterclass', function (Blueprint $table) {
+        Schema::create('realisationprojets', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('youtube');
-            $table->text('description');
+            $table->string('link')->nullable();
             $table->string('imagepath');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTableRealisationMasterClass extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('realisationmasterclass');
+        Schema::dropIfExists('realisationprojets');
     }
 }
