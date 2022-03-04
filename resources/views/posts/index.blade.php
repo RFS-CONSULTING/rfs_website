@@ -399,17 +399,17 @@
                 </div>
 
                 <!-- Tags -->
-                <div class="card card-body mb-4">
+                {{-- <div class="card card-body mb-4">
                   <h3 class="h5">Tags</h3>
                   <div class="d-flex flex-wrap">
                     @foreach ($tags as $tag)
                       <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#{{ $tag->name }}</a>  
                     @endforeach
                   </div>
-                </div>
+                </div> --}}
 
                 <!-- Follow Us -->
-                <div class="card mb-4">
+                {{-- <div class="card mb-4">
                   <div class="card-body">
                     <h5 class="mb-4">Follow Us</h5>
                     <a href="#" class="btn btn-icon btn-sm btn-secondary btn-linkedin me-2 mb-2">
@@ -425,7 +425,7 @@
                       <i class="bx bxl-instagram"></i>
                     </a>
                   </div>
-                </div>
+                </div> --}}
 
                 
               </div>
@@ -504,9 +504,9 @@
                 </div>
                 <button class="btn btn-lg btn-primary">S'abonner</button>
               </form>
-              <div class="form-text fs-sm text-sm-start text-center">
+              {{-- <div class="form-text fs-sm text-sm-start text-center">
                 * Oui, j'accepte les <a href="#">termes</a> et la<a href="#">politique de confidentialité</a>.
-              </div>
+              </div> --}}
             </div>
           </div>
         </div>
