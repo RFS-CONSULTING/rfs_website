@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Likepost;
+use App\Models\DevisClient;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class LikePostController extends Controller
+class DevisClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,6 +25,7 @@ class LikePostController extends Controller
     public function create()
     {
         //
+        return view('asKdevis');
     }
 
     /**
@@ -37,22 +37,18 @@ class LikePostController extends Controller
     public function store(Request $request)
     {
         //
-        if (!Auth::user()) {
-            notify()->error('veillez vous connectez avant d\'ajouter un like à un post');
-        }else{
-
-
-            // ['column_1', '=', 'value_1']
-            $isLiked = Likepost::where([['user_id', '=', Auth::user()->id], ['post_id', '=', $request->post_id]])->first();
-            
-            // dd(isset($isLiked));
-            if (isset($isLiked)) {
-                notify()->error('vous avez déjà aimé cet article');
-            }else{
-                $like = Likepost::create(['user_id'=>Auth::user()->id,'post_id'=>$request->post_id]);
-                notify()->success('vous avez aimé cet article');
-            }
-        }
+        $instructor = DevisClient::create([
+            "name" => $request->name,
+            "secondname" => $request->secondname,
+            "firstname" => $request->firstname,
+            "compagnie" => $request->compagnie,
+            "address" => $request->address,
+            "country" => $request->country,
+            "email" => $request->email,
+            "phone" => $request->phone,
+            "description" =>$request->description
+        ]);
+        notify()->success('Votre demande de dévis a été effectué');
         return back();
     }
 

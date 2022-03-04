@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <form action="/ambassador/subscription" method="POST" class="" enctype="multipart/form-data">
+                    <form action="{{ route('devis.store')}}" method="POST" class="" enctype="multipart/form-data">
                         @csrf
                         <div class="row rounded p-2 mt-2  ">
                             <div class="col-12 mt-2 text-center">
@@ -315,7 +315,7 @@
                             </div>
                             <div class="col-md-12 mb-2">
                                 <label for="inputZip" class="form-label">Décrivez votre projet<span class="text-danger">*</span></label>
-                                <textarea class="form-control" name="" id=""></textarea>
+                                <textarea class="form-control" name="description" id=""></textarea>
                             </div>
 
                             {{-- <div class="col-12 mt-5 text-center fw-bold text-success">Politique de confidentialité

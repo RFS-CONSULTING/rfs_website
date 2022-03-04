@@ -15,6 +15,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
+use App\Http\Controllers\DevisClientController;
 use App\Http\Controllers\FormateurController;
 use App\Http\Controllers\InstructorSubscribeController;
 use App\Http\Controllers\LikePostController;
@@ -123,7 +124,8 @@ Route::post('/newsletter',[NewsletterController::class,'store'])->name('newslett
 
 
 //Dévis
-Route::get('/devis',[HomeController::class,'devis'])->name('devis');
+Route::get('/devis',[DevisClientController::class,'create'])->name('devis.index');
+Route::post('/devis-store',[DevisClientController::class,'store'])->name('devis.store');
 
 
 // jetstream|sanctum 

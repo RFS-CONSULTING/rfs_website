@@ -16,10 +16,6 @@
                 window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'facebook-share-dialog',
                     "width=626, height=436")
             }
-
-            function share_twitter(url) {
-                window.open('https://twitter.com/share?ref_src=' + url, "twitter share", "width=626, height=436")
-            }
         </script>
         {{-- <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
