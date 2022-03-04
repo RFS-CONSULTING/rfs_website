@@ -13,10 +13,12 @@
         {{-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
         <script defer>
             function share_fb(url) {
-                window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'facebook-share-dialog',
+                    "width=626, height=436")
             }
+
             function share_twitter(url) {
-                window.open('https://twitter.com/share?ref_src='+url,"twitter share","width=626, height=436")
+                window.open('https://twitter.com/share?ref_src=' + url, "twitter share", "width=626, height=436")
             }
         </script>
         {{-- <script>(function(d, s, id) {
@@ -31,7 +33,7 @@
 
     <!-- Breadcrumb -->
     <section>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
         <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item">
@@ -103,7 +105,7 @@
                     <a href="https://www.youtube.com/watch?v=LDb-G8y88Sc" class="gallery-item video-item is-hovered rounded-3" data-sub-html='<h6 class="fs-sm text-light">Video inside blog post</h6>'>
                         <img src="/assets/img/blog/single/video-cover.jpg" alt="Video preview">
                     </a>
-                </div> --}} 
+                </div> --}}
                 <x-markdown>
                     {{ $post->content }}
                 </x-markdown> {{-- <p class="mb-4 pb-2">Tempor donec aliquam est, a. Sit arcu tellus pharetra, bibendum hendrerit arcu, sed. Scelerisque dui enim libero sit ac sed lacus lectus. Quam in iaculis scelerisque feugiat nibh mi. Maecenas posuere lobortis praesent iaculis sagittis.
@@ -181,28 +183,25 @@
                         {{-- <a href="#" > --}}
 
                         <a id="shareBtn" href="#"
-                        onclick="share_fb('{{route('post.show',$post->slug)}}');return false;" 
-                        rel="nofollow"
-                        share_url="{{route('post.show',$post->slug)}}" target="_blank"
-                        class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
+                            onclick="share_fb('{{ route('post.show', $post->slug) }}');return false;" rel="nofollow"
+                            share_url="{{ route('post.show', $post->slug) }}" target="_blank"
+                            class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
                             <i class="bx bxl-facebook"></i>
                         </a>
                         {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
-                           class="twitter-share-button me-2 mb-2"
-                           data-lang="fr"
-                           target="_blank" 
-                           data-show-count="false">Tweeter</a>
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button me-2 mb-2"
+                            data-lang="fr" target="_blank" data-show-count="false">Tweeter</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
                         {{-- <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2">
                             <i class="bx bxl-instagram"></i>
                         </a> --}}
                     </div>
-                    <a href={{route('like.store',$post->id)}} class="btn btn-lg btn-outline-secondary">
+                    <a href={{ route('like.store', $post->id) }} class="btn btn-lg btn-outline-secondary">
                         <i class="bx bx-like me-2 lead"></i>
                         J'aime ça
-                        <span class="badge bg-primary shadow-primary mt-n1 ms-3"> {{ $post->likes()->count() }} </span>
+                        <span class="badge bg-primary shadow-primary mt-n1 ms-3"> {{ $post->likes()->count() }}
+                        </span>
                     </a>
                 </div>
             </div>
@@ -356,7 +355,8 @@
                         <!-- Subscription form -->
                         <div class="col-lg-12 col-sm-7 col-11">
                             <h6 class="fs-lg">Vous aimez cet article ? Rejoignez notre newsletter</h6>
-                            <form class="needs-validation" novalidate method="POST" action="{{ route('newsletter.store') }}">
+                            <form class="needs-validation" novalidate method="POST"
+                                action="{{ route('newsletter.store') }}">
                                 @csrf
                                 <div class="input-group mb-3">
                                     <i
@@ -372,17 +372,16 @@
                         <div class="col-lg-12 col-sm-7 col-11">
                             <h6 class="fs-lg">N'oubliez pas de le partager</h6>
                             <div class="mb-4 pb-lg-3">
-                                <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
+                                <a id="shareBtn" href="#"
+                                    onclick="share_fb('{{ route('post.show', $post->slug) }}');return false;"
+                                    rel="nofollow" share_url="{{ route('post.show', $post->slug) }}" target="_blank"
+                                    class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
                                     <i class="bx bxl-facebook"></i>
                                 </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                                <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2">
-                                    <i class="bx bxl-instagram"></i>
+                                {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                                    class="twitter-share-button me-2 mb-2" data-lang="fr" target="_blank"
+                                    data-show-count="false">Tweeter</a>
                                 </a>
                             </div>
                         </div>
