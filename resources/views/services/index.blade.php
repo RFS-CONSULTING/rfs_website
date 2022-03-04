@@ -31,14 +31,17 @@
           </div>
         </div>
         <div class="row justify-content-center text-center">
-          <div class=" h-auto  col-md-8 order-md-2 text-center text-md-start">
-            <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
-              <div class="card-body">
-                <h2 class="mb-4">{{ $services[0]->name }}</h2>
-                <x-markdown>{{ $services[0]->description}}</x-markdown>
+          @foreach ($services as $service)
+            <div class=" h-auto mt-1  col-md-6 order-md-2 text-center text-md-start">
+              <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
+                <div class="card-body">
+                  <h2 class="mb-4">{{ $service->name }}</h2>
+                  <x-markdown>{{ $service->description}}</x-markdown>
+                </div>
               </div>
             </div>
-          </div>
+          @endforeach
+          
         </div>
         
 
@@ -66,20 +69,6 @@
           <div class="swiper-wrapper">
 
             <!-- Item -->
-
-            <div class="swiper-slide h-auto py-3">
-              <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
-                <div class="card-body">
-                  <h3 class="h6">{{ $services[1]->name }}</h3>
-                  <div>
-                    <x-markdown>
-                      {{ $services[1]->description }}
-                    </x-markdown>
-                  </div>
-                </div>
-              </div>
-            </div>
-
 
             <div class="swiper-slide h-auto py-3">
               <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
@@ -179,14 +168,24 @@
         <div class="row ">
           {{-- @foreach ($services as $service) --}}
         
-
           <!-- Item -->
-          <div class=" h-auto  col-md-8 order-md-2 text-center text-md-start">
+          <div class=" h-auto  col-md-6 mt-1 order-md-2 text-center text-md-start">
             <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
               <div class="card-body">
-                <h2 class="mb-4">Entrez en contact avec nous pour pouvoir profiter de nos offres et services, n'hésitez pas!</h2>
-                <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Démander un dévis</a>
-                <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Télécharger le dépliant</a>
+                <h4 class="mb-4">Entrez en contact avec nous pour pouvoir profiter de nos offres et services, n'hésitez pas!</h4>
+                <a href="{{ route('contact')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Démander un dévis</a>
+                <a href="/assets/pdf/depliant-rfs.pdf" download class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Télécharger le dépliant</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class=" h-auto  col-md-6 mt-1 order-md-2 text-center text-md-start">
+            <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
+              <div class="card-body">
+                <h4 class="mb-4">Renforcez vos capacités grâce à nos formations certifiantes.</h4>
+                <a href="{{ route('formation.index')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Voir nos formations</a>
+                <a href="{{ route('instructor.index')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Devenir formateur</a>
               </div>
             </div>
           </div>
@@ -194,7 +193,7 @@
           {{-- @endforeach --}}
           
 
-          @isset($services)
+          {{-- @isset($services)
               @if (count($services) > 0)
               <div class="col-md-4 order-md-1 h-auto">
                 <div class="position-relative rounded-3 overflow-hidden">
@@ -209,7 +208,7 @@
               </div>
             </div>
             @endif
-          @endisset
+          @endisset --}}
 
       </section>
      
