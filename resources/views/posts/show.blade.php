@@ -10,10 +10,28 @@
         <meta property="og:description"
             content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
         <meta property="og:image" content="/assets/img/hero/hero-bg.jpeg" />
+        {{-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
+        <script defer>
+            function share_fb(url) {
+                window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+            }
+            function share_twitter(url) {
+                window.open('https://twitter.com/share?ref_src='+url,"twitter share","width=626, height=436")
+            }
+        </script>
+        {{-- <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script> --}}
     </x-slot>
 
     <!-- Breadcrumb -->
     <section>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item">
@@ -157,18 +175,29 @@
                     <span class="d-block mb-3">5 min read</span>
                     <h6>Partager cet article:</h6>
                     <div class="mb-4 pb-lg-3">
-                        <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2">
+                        {{-- <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2">
                             <i class="bx bxl-linkedin"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
+                        </a> --}}
+                        {{-- <a href="#" > --}}
+
+                        <a id="shareBtn" href="#"
+                        onclick="share_fb('{{route('post.show',$post->slug)}}');return false;" 
+                        rel="nofollow"
+                        share_url="{{route('post.show',$post->slug)}}" target="_blank"
+                        class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
                             <i class="bx bxl-facebook"></i>
                         </a>
-                        <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2">
-                            <i class="bx bxl-twitter"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2">
+                        {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+                           class="twitter-share-button me-2 mb-2"
+                           data-lang="fr"
+                           target="_blank" 
+                           data-show-count="false">Tweeter</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                        {{-- <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2">
                             <i class="bx bxl-instagram"></i>
-                        </a>
+                        </a> --}}
                     </div>
                     <a href={{route('like.store',$post->id)}} class="btn btn-lg btn-outline-secondary">
                         <i class="bx bx-like me-2 lead"></i>

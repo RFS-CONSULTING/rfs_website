@@ -30,6 +30,16 @@
             <p class="text-muted mb-3 mb-lg-4">Nous apprécions grandement votre confiance. Nos clients nous choisissent, nous et nos services, car ils savent que nous sommes les meilleurs.</p>
           </div>
         </div>
+        <div class="row justify-content-center text-center">
+          <div class=" h-auto  col-md-8 order-md-2 text-center text-md-start">
+            <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
+              <div class="card-body">
+                <h2 class="mb-4">{{ $services[0]->name }}</h2>
+                <x-markdown>{{ $services[0]->description}}</x-markdown>
+              </div>
+            </div>
+          </div>
+        </div>
         
 
         <!-- Swiper slider -->
@@ -56,6 +66,21 @@
           <div class="swiper-wrapper">
 
             <!-- Item -->
+
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
+                <div class="card-body">
+                  <h3 class="h6">{{ $services[1]->name }}</h3>
+                  <div>
+                    <x-markdown>
+                      {{ $services[1]->description }}
+                    </x-markdown>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
             <div class="swiper-slide h-auto py-3">
               <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
                 <div class="card-body">
@@ -152,20 +177,21 @@
       <!-- Page title + Image -->
       <section class="container mb-5 ">
         <div class="row ">
-          @foreach ($services as $service)
+          {{-- @foreach ($services as $service) --}}
         
 
           <!-- Item -->
-          <div class="swiper-slide h-auto  col-md-4 order-md-2 text-center text-md-start">
-            <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 ">
+          <div class=" h-auto  col-md-8 order-md-2 text-center text-md-start">
+            <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
               <div class="card-body">
-                <h2 class="mb-4">{{ $service->name }}</h2>
-                <p class=" d-md-none d-lg-block ">{{ $service->description}}</p>
+                <h2 class="mb-4">Entrez en contact avec nous pour pouvoir profiter de nos offres et services, n'hésitez pas!</h2>
+                <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Démander un dévis</a>
+                <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Télécharger le dépliant</a>
               </div>
             </div>
           </div>
 
-          @endforeach
+          {{-- @endforeach --}}
           
 
           @isset($services)
@@ -184,6 +210,7 @@
             </div>
             @endif
           @endisset
+
       </section>
      
 

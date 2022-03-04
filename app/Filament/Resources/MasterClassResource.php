@@ -21,38 +21,38 @@ class MasterClassResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('name')
+                Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('secondname')
+                Forms\Components\TextInput::make('secondname')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('firstname')
+                Forms\Components\TextInput::make('firstname')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('statut')
+                Forms\Components\TextInput::make('statut')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('autreStatut')
+                Forms\Components\TextInput::make('autreStatut')
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('domaine')
+                Forms\Components\TextInput::make('domaine')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('address')
+                Forms\Components\TextInput::make('address')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('city')
+                Forms\Components\TextInput::make('city')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('country')
+                Forms\Components\TextInput::make('country')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('code_postal')
+                Forms\Components\TextInput::make('code_postal')
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('email')
+                Forms\Components\TextInput::make('email')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\Textarea::make('suggestion')
+                Forms\Components\TextInput::make('suggestion')
                     ->maxLength(65535),
             ]);
     }
