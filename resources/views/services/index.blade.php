@@ -36,7 +36,7 @@
               <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
                 <div class="card-body">
                   <h2 class="mb-4">{{ $service->name }}</h2>
-                  <x-markdown>{{ $service->description}}</x-markdown>
+                  <x-markdown>{!! $service->description!!}</x-markdown>
                 </div>
               </div>
             </div>
