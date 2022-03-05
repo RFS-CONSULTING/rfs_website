@@ -30,7 +30,7 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-3 gx-md-4 mt-n2 mt-sm-0">
             @foreach ($realisations as $realisation)
             <!-- Item -->
-            <div class="col pb-1 pb-lg-3 mb-4">
+            <div class="col pb-1 pb-lg-3 mb-4 col-sm-12 col-xl-4 col-md-12">
               <article class="card h-100 border-0 shadow-sm">
                 <div class="position-relative">
                   <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
