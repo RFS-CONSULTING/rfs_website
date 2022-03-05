@@ -160,7 +160,7 @@
                   <h3 class="h6">{{ $services[1]->name }}</h3>
                   <div>
                     <x-markdown>
-                      {{ $services[1]->description }}
+                      {!! $services[1]->description !!}
                     </x-markdown>
                   </div>
                 </div>
@@ -224,9 +224,6 @@
 
       </section>
      
-
-
-    
 
       <!-- Customers -->
       {{-- <section class="container pb-5 mb-md-4 mb-lg-5">
