@@ -26,11 +26,11 @@
        <section class="container ">
         <div class="row justify-content-center text-center">
           <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10">
-            <h2 class="h1 mb-4">Ce que nous offrons</h2>
-            <p class="text-muted mb-3 mb-lg-4">Nous apprécions grandement votre confiance. Nos clients nous choisissent, nous et nos services, car ils savent que nous sommes les meilleurs.</p>
+            <h2 class="h1 mb-4 text-center">Ce que nous offrons</h2>
+            <p class="text-muted mb-3 mb-lg-4">Nous apprécions grandement votre confiance. Nos clients nous choisissent, nous et nos services, car ils savent que nous sommes professionnels.</p>
           </div>
         </div>
-        <div class="row justify-content-center text-center">
+        {{-- <div class="row justify-content-center text-center">
           @foreach ($services as $service)
             <div class=" h-auto mt-1  col-md-6 order-md-2 text-center text-md-start">
               <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
@@ -41,8 +41,7 @@
               </div>
             </div>
           @endforeach
-          
-        </div>
+        </div> --}}
         
 
         <!-- Swiper slider -->
@@ -155,6 +154,19 @@
               </div>
             </div>
            
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
+                <div class="card-body">
+                  <h3 class="h6">{{ $services[1]->name }}</h3>
+                  <div>
+                    <x-markdown>
+                      {{ $services[1]->description }}
+                    </x-markdown>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <!-- Pagination (bullets) -->
@@ -173,7 +185,7 @@
             <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
               <div class="card-body">
                 <h4 class="mb-4">Entrez en contact avec nous pour pouvoir profiter de nos offres et services, n'hésitez pas!</h4>
-                <a href="{{ route('contact')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Démander un dévis</a>
+                <a href="{{ route('devis.index')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Démander un dévis</a>
                 <a href="/assets/pdf/depliant-rfs.pdf" download class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Télécharger le dépliant</a>
               </div>
             </div>

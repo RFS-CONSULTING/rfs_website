@@ -15,13 +15,16 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\AmbassadorController;
+use App\Http\Controllers\DevisClientController;
 use App\Http\Controllers\FormateurController;
 use App\Http\Controllers\InstructorSubscribeController;
 use App\Http\Controllers\LikePostController;
 use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\UserFormation;
 use App\Http\Controllers\MasterClassController;
-
+use App\Http\Controllers\RealisationConferenceController;
+use App\Http\Controllers\RealisationMasterClassController;
+use App\Http\Controllers\RealisationProjetsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,6 +99,10 @@ Route::get('/services/{id}',[ServiceController::class,'show'])->name('service.sh
 // Realisations 
 
 Route::get('/realisations',[RealisationController::class,'index'])->name('realisation.index');
+Route::get('/realisations-conferences',[RealisationConferenceController::class,'index'])->name('realisationConference.index');
+Route::get('/realisations-projets',[RealisationProjetsController::class,'index'])->name('realisationProjet.index');
+Route::get('/realisations-masterclass',[RealisationMasterClassController::class,'index'])->name('realisationMasterclass.index');
+
 
 // about 
 
@@ -114,6 +121,12 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.crea
 // newsletters
 
 Route::post('/newsletter',[NewsletterController::class,'store'])->name('newsletter.store');
+
+
+//Dévis
+Route::get('/devis',[DevisClientController::class,'create'])->name('devis.index');
+Route::post('/devis-store',[DevisClientController::class,'store'])->name('devis.store');
+
 
 // jetstream|sanctum 
 

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Likepost;
+use App\Models\Realisationmasterclass;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class LikePostController extends Controller
+class RealisationMasterClassController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +15,8 @@ class LikePostController extends Controller
     public function index()
     {
         //
+        $realisations = Realisationmasterclass::paginate();
+        return view('realisations.masterclass.index',['realisations'=>$realisations]);
     }
 
     /**
@@ -37,23 +38,6 @@ class LikePostController extends Controller
     public function store(Request $request)
     {
         //
-        if (!Auth::user()) {
-            notify()->error('veillez vous connectez avant d\'ajouter un like à un post');
-        }else{
-
-
-            // ['column_1', '=', 'value_1']
-            $isLiked = Likepost::where([['user_id', '=', Auth::user()->id], ['post_id', '=', $request->post_id]])->first();
-            
-            // dd(isset($isLiked));
-            if (isset($isLiked)) {
-                notify()->error('vous avez déjà aimé cet article');
-            }else{
-                $like = Likepost::create(['user_id'=>Auth::user()->id,'post_id'=>$request->post_id]);
-                notify()->success('vous avez aimé cet article');
-            }
-        }
-        return back();
     }
 
     /**

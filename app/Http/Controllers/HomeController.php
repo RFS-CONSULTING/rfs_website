@@ -26,7 +26,10 @@ class HomeController extends Controller
             'statistics' => $statistics,
         ]);
     }
-
+    public function devis()
+    {
+        return view('asKdevis');
+    }
     public function aboutus()
     {
         return view('aboutsus');
