@@ -159,9 +159,9 @@
                 <div class="card-body">
                   <h3 class="h6">{{ $services[1]->name }}</h3>
                   <div>
-                    <x-markdown>
-                      {{ $services[1]->description }}
-                    </x-markdown>
+                    {{-- <x-markdown> --}}
+                      {!! $services[1]->description !!}
+                    {{-- </x-markdown> --}}
                   </div>
                 </div>
               </div>

@@ -140,7 +140,9 @@
                 </a>  --}}
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
-              <p class="fs-sm text-body mb-0">{{ $service->description }}</p>
+              {{-- <x-markdown> --}}
+                {!! $service->description !!}
+              {{-- </x-markdown> --}}
             </div>
           </span>
         </div>
