@@ -36,7 +36,7 @@
               <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
                 <div class="card-body">
                   <h2 class="mb-4">{{ $service->name }}</h2>
-                  <x-markdown>{{ $service->description}}</x-markdown>
+                  <x-markdown>{!! $service->description!!}</x-markdown>
                 </div>
               </div>
             </div>
@@ -159,9 +159,9 @@
                 <div class="card-body">
                   <h3 class="h6">{{ $services[1]->name }}</h3>
                   <div>
-                    {{-- <x-markdown> --}}
+                    <x-markdown>
                       {!! $services[1]->description !!}
-                    {{-- </x-markdown> --}}
+                    </x-markdown>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@
           {{-- @foreach ($services as $service) --}}
         
           <!-- Item -->
-          <div class=" h-auto  col-md-6 mt-1 order-md-2 text-center text-md-start">
+          <div class=" h-auto  col-12 mt-1 order-md-2 text-center text-md-start">
             <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
               <div class="card-body">
                 <h4 class="mb-4">Entrez en contact avec nous pour pouvoir profiter de nos offres et services, n'hésitez pas!</h4>
@@ -192,7 +192,7 @@
           </div>
 
           <!-- Item -->
-          <div class=" h-auto  col-md-6 mt-1 order-md-2 text-center text-md-start">
+          {{-- <div class=" h-auto  col-md-6 mt-1 order-md-2 text-center text-md-start">
             <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
               <div class="card-body">
                 <h4 class="mb-4">Renforcez vos capacités grâce à nos formations certifiantes.</h4>
@@ -200,7 +200,7 @@
                 <a href="{{ route('instructor.index')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Devenir formateur</a>
               </div>
             </div>
-          </div>
+          </div> --}}
 
           {{-- @endforeach --}}
           
@@ -224,9 +224,6 @@
 
       </section>
      
-
-
-    
 
       <!-- Customers -->
       {{-- <section class="container pb-5 mb-md-4 mb-lg-5">
