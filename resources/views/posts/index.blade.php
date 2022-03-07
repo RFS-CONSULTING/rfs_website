@@ -307,9 +307,13 @@
           <!-- Sidebar (Offcanvas below lg breakpoint) -->
           <aside class="col-xl-3 col-lg-4 ">
              <!-- Advertising -->
-             <div class="mb-4 card border-0 bg-faded-primary bg-repeat-0 bg-size-cover" style="min-height: 25rem; background-image: url(assets/img/blog/banner.png);">
-              <div class="card-body">
-                <h5 class="h3 mb-4 pb-2 text-center">Ad Banner</h5>
+                 
+              <div class="mb-4 card border-0 bg-faded-primary bg-repeat-0 bg-size-cover" style="min-height: 25rem; background-image: url(assets/img/hero/sig_web.jpg);">
+            
+             <div class="card-body">
+              <a href="{{route('formation.show','Initiation-aux-SIG-web')}}"> 
+                <h5 class="h3 mb-4 pb-2 text-center">Voir la formation</h5>
+              </a>
               </div>
             </div>
             <div class="offcanvas offcanvas-end offcanvas-expand-lg" id="blog-sidebar" tabindex="-1">
