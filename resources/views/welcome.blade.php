@@ -134,7 +134,9 @@
           <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <h2 class="h4 d-inline-flex align-items-center">
-                <a href="{{ route('service.show',$service->id) }}">{{ $service->name}}</a>
+                {{-- <a href="{{ route('service.show',$service->id) }}"> --}}
+                  {{ $service->name}}
+                {{-- </a> --}}
                 {{-- <a href="{{ route('service.show',$service->id) }}">
                   <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>  
                 </a>  --}}

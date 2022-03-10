@@ -9,7 +9,7 @@
         <meta property="og:title" content="{{ $post->title}}" />
         <meta property="og:description"
             content="{{ substr($post->content,0,200) }}" />
-        <meta property="og:image" content="/assets/img/hero/hero-bg.jpeg" />
+        <meta property="og:image" content="{{ '/storage/' . $post->image_path }}" />
         {{-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
         <script defer>
             function share_fb(url) {
