@@ -27,7 +27,6 @@
     <!-- Styles -->
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFTKVHJYFW"></script>
   <script>
@@ -210,6 +209,7 @@
                           <li class="nav-item"><a href="{{ route('contact')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Nous contacter</a></li>
                           <li class="nav-item"><a href="{{ route('service.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
                           <li class="nav-item"><a href="{{ route('ambassador')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Devenir ambassadeur</a></li>
+                          <li class="nav-item"><a href="{{ route('jobs.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Emplois</a></li>
                           <li class="nav-item"><a href="{{ route('about')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">A propos de nous</a></li>
 
                         </ul>
@@ -254,7 +254,9 @@
 
         <!-- Vendor Scripts -->
 
-      <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      {{-- <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script> --}}
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
       <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
       <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>
       <script src="/assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
