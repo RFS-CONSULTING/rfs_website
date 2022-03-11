@@ -36,8 +36,8 @@
                   @if (!empty($realisation->link))
                     <a target="_blank" href="{{ $realisation->link }}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>                   
                   @endif
-                  <a data-bs-toggle="modal" data-bs-target="#modal_project" href="#">
-                    <img  src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
+                  <a data-bs-toggle="modal"  data-img="{{ 'storage/'.$realisation->imagepath}}" data-bs-target="#modal_project" class="modal_local" href="#">
+                    <img src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image"/>
                   </a>
                   </div>
                 <div class="card-body pb-3">
@@ -70,7 +70,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <img  src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
+                  <img id="modalImg"  src="" class="card-img-top" alt="Image"/>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -79,5 +79,15 @@
             </div>
           </div>
         </section>
-        
+
+        <script>
+          var modals = document.querySelectorAll('.modal_local');
+          modals.forEach(modal => {
+            modal.addEventListener('click',(e)=>{
+              var modal_img = document.querySelector('#modalImg');
+              modal_img.src = e.target.src
+            })
+          });
+        </script>
+
   </x-app-layout>

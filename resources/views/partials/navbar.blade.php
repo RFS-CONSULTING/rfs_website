@@ -38,7 +38,7 @@
                   <a href="{{ route('formation.index')}}" class="{{ request()->routeIs('formation.index') ? 'active ' : '' }} nav-link">Formations</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateur</a>
+                  <a href="{{ route('instructor.index')}}" class="{{ request()->routeIs('instructor.index') ? 'active ' : '' }} nav-link">Formateurs</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Réalisations</a>
