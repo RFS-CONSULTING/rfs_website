@@ -22,7 +22,7 @@ class PostController extends Controller
         //
         $posts = Posts::orderBy('created_at','desc')->paginate(2);
         $popular = Posts::orderBy('count','desc')->limit(3)->get();
-        $formations = Formation::orderBy('created_at','desc')->with(['instructor'])->limit(5)->get();
+        $formations = Formation::orderBy('created_at','desc')->get();
         $tags = Tags::all();
         return view('posts.index',['posts'=>$posts,'tags'=>$tags,'popular'=>$popular,'formations'=>$formations]);
 
