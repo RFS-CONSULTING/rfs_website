@@ -6,10 +6,10 @@
             content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
         <meta property="og:url" content="https://rfs-congo.com/post/{{ $post->slug }}" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Formations -- RFS CONSULTING" />
+        <meta property="og:title" content="{{ $post->title}}" />
         <meta property="og:description"
-            content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
-        <meta property="og:image" content="/assets/img/hero/hero-bg.jpeg" />
+            content="{{ substr($post->content,0,200) }}" />
+        <meta property="og:image" content="{{ '/storage/' . $post->image_path }}" />
         {{-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
         <script defer>
             function share_fb(url) {

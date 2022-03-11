@@ -84,7 +84,7 @@
             </div>
           </span>
         </div>
-        <div class="col-md-8 mt-4">
+        <div class="col-md-12 mt-4 text-center">
           <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
         </div>
 
@@ -124,7 +124,7 @@
           </span>
         </div>
         
-        <div class="col-md-8 mt-4">
+        <div class="col-md-12 mt-4 text-center">
           <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
         </div>
        
@@ -230,7 +230,7 @@
           </span>
         </div>
         
-        <div class="col-md-8 mt-4">
+        <div class="col-md-12 mt-4 text-center">
           <a href="{{ route('instructor.create')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Inscrivez-vous</a>
         </div>
         

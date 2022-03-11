@@ -18,6 +18,8 @@ use App\Http\Controllers\AmbassadorController;
 use App\Http\Controllers\DevisClientController;
 use App\Http\Controllers\FormateurController;
 use App\Http\Controllers\InstructorSubscribeController;
+use App\Http\Controllers\JobsController;
+use App\Http\Controllers\JobsOffersController;
 use App\Http\Controllers\LikePostController;
 use App\Http\Controllers\RealisationController;
 use App\Http\Controllers\UserFormation;
@@ -127,6 +129,14 @@ Route::post('/newsletter',[NewsletterController::class,'store'])->name('newslett
 Route::get('/devis',[DevisClientController::class,'create'])->name('devis.index');
 Route::post('/devis-store',[DevisClientController::class,'store'])->name('devis.store');
 
+
+// Jobs
+
+Route::get('/jobs',[JobsOffersController::class,'index'])->name('jobs.index');
+Route::get('/jobs/{id}',[JobsOffersController::class,'show'])->name('jobs.show');
+
+Route::get('/jobs-create/{job_id}',[JobsController::class,'create'])->name('jobs.create');
+Route::post('/jobs-subscribe',[JobsController::class,'store'])->name('jobs.store');
 
 // jetstream|sanctum 
 

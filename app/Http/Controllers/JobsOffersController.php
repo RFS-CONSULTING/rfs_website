@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Posts;
-use App\Models\Comments;
-use App\Models\Formation;
-use App\Models\PostsTag;
-use App\Models\Tags;
+use App\Models\Jobsoffer;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Validator;
 
-class PostController extends Controller
+class JobsOffersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +15,8 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Posts::orderBy('created_at','desc')->paginate(2);
-        $popular = Posts::orderBy('count','desc')->limit(3)->get();
-        $formations = Formation::orderBy('created_at','desc')->with(['instructor'])->limit(5)->get();
-        $tags = Tags::all();
-        return view('posts.index',['posts'=>$posts,'tags'=>$tags,'popular'=>$popular,'formations'=>$formations]);
-
+        $jobs = Jobsoffer::paginate(5);
+        return view('jobs.index',['jobs'=>$jobs]);
     }
 
     /**
@@ -36,6 +27,7 @@ class PostController extends Controller
     public function create()
     {
         //
+       
     }
 
     /**
@@ -52,19 +44,14 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $slug
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug,Request $request)
+    public function show($id)
     {
-        $post = Posts::where('slug',$slug)->firstOrFail();
-        $post->count = $post->count + 1;
-        $post->save();
-        $comments = Comments::where('post_id',$post->id)->get();
-        $posttags = PostsTag::where('post_id',$post->id)->with(['tags'])->get();
-        $relatedPosts = Posts::where('keywords','like',"%$post->keywords%")->limit(3)->get();
-        return view('posts.show', ['post'=>$post,'comments'=>$comments,
-        'posttags'=>$posttags,'relatedPosts'=>$relatedPosts]);
+        //
+        $job = Jobsoffer::where('id',$id)->firstOrFail();
+        return view('jobs.show',['job'=>$job]);
     }
 
     /**

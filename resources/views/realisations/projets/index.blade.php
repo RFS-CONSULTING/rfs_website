@@ -15,7 +15,7 @@
   
   
           <!-- Breadcrumb -->
-          <nav class="pt-4 mt-lg-3" aria-label="breadcrumb">
+          <nav class="pt-4 mt-lg-3 mb-4" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
               <li class="breadcrumb-item">
                 <a href="{{ route('home')}}"><i class="bx bx-home-alt fs-lg me-1"></i>Accueil</a>
@@ -33,11 +33,13 @@
             <div class="col pb-1 pb-lg-3 mb-4 col-sm-12 col-xl-4 col-md-12">
               <article class="card h-100 border-0 shadow-sm">
                 <div class="position-relative">
-                @if (!empty($realisation->link))
-                  <a target="_blank" href="{{ $realisation->link }}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>                   
-                @endif
-                  <img src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
-                </div>
+                  @if (!empty($realisation->link))
+                    <a target="_blank" href="{{ $realisation->link }}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>                   
+                  @endif
+                  <a data-bs-toggle="modal" data-bs-target="#modal_project" href="#">
+                    <img  src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
+                  </a>
+                  </div>
                 <div class="card-body pb-3">
                   <h3 class="h5 mb-2">
                     {{ $realisation->title }}
@@ -60,7 +62,22 @@
           </div>
           {{ $realisations->links('vendor.pagination.pagination')}}
          
-  
+          <div class="modal fade" id="modal_project" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  {{-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> --}}
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img  src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         
   </x-app-layout>
