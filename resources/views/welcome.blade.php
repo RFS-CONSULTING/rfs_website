@@ -19,7 +19,7 @@
 
             <!-- Text -->
             <h1 class="display-2 mb-md-5 mb-3 pb-3 mt-lg-5">
-              <span class="text-gradient-primary">En plus de la science,</span> <span class="text-gradient-primary">maitrisez les outils</span>
+              <span class="text-gradient-primary">Technologies</span> <span class="text-gradient-primary">au service de la science</span>
             </h1>
             <div class="d-md-flex align-items-md-start">
               <a href="{{ route('contact')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Travailler avec nous</a>
