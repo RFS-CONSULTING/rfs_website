@@ -89,8 +89,19 @@
 
             <!-- Content -->
             <div class="col-lg-9">
+                @if (isset($post->video))
+                    <div class="position-relative overflow-hidden rounded mb-4" style="width: 100%;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
+                        <a href="{{$post->video}}" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
+                            <i class="bx bx-play"></i>
+                        </a>
+                        </div>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+                        <img style="width: 100%;" src="{{ '/storage/' . $post->image_path }}" alt="Cover image">
+                    </div>
+                @endif
                 <x-markdown>
-                    {{ $post->content }}
+                    {!! $post->content !!}
                 </x-markdown>
                 <!-- Tags -->
                 <hr class="mb-4">
