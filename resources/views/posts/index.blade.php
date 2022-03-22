@@ -59,7 +59,7 @@
                       <a href="{{ route('post.show', $post->slug)}}">{{ $post->title }}</a>
                     </h3>
                     <x-markdown>
-                      {{ substr($post->content,0,200) }}</p>
+                      {!! substr($post->content,0,200) !!}</p>
                     </x-markdown>
                     <div class="d-flex align-items-center text-muted">
                       <div class="fs-sm border-end pe-3 me-3">{{ $post->created_at->diffForHumans()}}</div>
