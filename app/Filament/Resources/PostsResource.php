@@ -36,7 +36,6 @@ class PostsResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('video')
-                ->required()
                 ->maxLength(255),
                 Forms\Components\FileUpload::make('image_path'),
                 Forms\Components\RichEditor::make('content')
