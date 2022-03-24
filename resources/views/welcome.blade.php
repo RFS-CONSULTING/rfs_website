@@ -19,7 +19,7 @@
 
             <!-- Text -->
             <h1 class="display-2 mb-md-5 mb-3 pb-3 mt-lg-5">
-              <span class="text-gradient-primary">En plus de la science,</span> <span class="text-gradient-primary">maitrisez les outils</span>
+              <span class="text-gradient-primary">Technologies</span> <span class="text-gradient-primary">au service de la science</span>
             </h1>
             <div class="d-md-flex align-items-md-start">
               <a href="{{ route('contact')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Travailler avec nous</a>
@@ -134,13 +134,17 @@
           <span class="card card-hover h-100 border-0 shadow-sm text-decoration-none px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
             <div class="card-body ">
               <h2 class="h4 d-inline-flex align-items-center">
-                <a href="{{ route('service.show',$service->id) }}">{{ $service->name}}</a>
+                {{-- <a href="{{ route('service.show',$service->id) }}"> --}}
+                  {{ $service->name}}
+                {{-- </a> --}}
                 {{-- <a href="{{ route('service.show',$service->id) }}">
                   <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>  
                 </a>  --}}
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
-              <p class="fs-sm text-body mb-0">{{ $service->description }}</p>
+              {{-- <x-markdown> --}}
+                {!! $service->description !!}
+              {{-- </x-markdown> --}}
             </div>
           </span>
         </div>

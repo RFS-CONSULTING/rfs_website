@@ -72,7 +72,7 @@ class FormationsResource extends Resource
                 Tables\Columns\TextColumn::make('etudiant_price'),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('keywords'),
-                Tables\Columns\TextColumn::make('image_path'),
+                Tables\Columns\ImageColumn::make('image_path')->size(40),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')

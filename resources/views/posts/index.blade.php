@@ -8,6 +8,13 @@
     <meta property="og:title"         content="Formations -- RFS CONSULTING" />
     <meta property="og:description"   content="Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites." />
     <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+      .carousel-item{
+        height: 400px;
+      }
+    </style>
   </x-slot>
 
      <!-- Breadcrumb -->
@@ -52,7 +59,7 @@
                       <a href="{{ route('post.show', $post->slug)}}">{{ $post->title }}</a>
                     </h3>
                     <x-markdown>
-                      {{ substr($post->content,0,200) }}</p>
+                      {!! substr($post->content,0,200) !!}</p>
                     </x-markdown>
                     <div class="d-flex align-items-center text-muted">
                       <div class="fs-sm border-end pe-3 me-3">{{ $post->created_at->diffForHumans()}}</div>
@@ -78,223 +85,8 @@
             @endforeach
             
 
-            <!-- Item -->
-            {{-- <article class="card me-xl-5 mb-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between mb-3">
-                  <a href="#" class="badge fs-sm text-white bg-warning shadow-warning text-decoration-none">Business</a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <h3 class="h4">
-                  <a href="{{ route('post.show', 'test')}}">A Study on Smartwatch Design Qualities and People’s Preferences</a>
-                </h3>
-                <p class="mb-4">Sed parturient in faucibus porttitor morbi rutrum in. Amet fermentum, scelerisque suspendisse nisi faucibus quis lacus. Convallis eget pretium leo, egestas nisl, congue quam et ultrices. Pharetra, elementum pulvinar massa mattis sapien, sit. Id sollicitudin viverra morbi vitae ac tempor bibendum pulvinar vel. Integer non mattis ultrices est morbi ullamcorper scelerisque hac mi. Id semper ut dui sit magna.</p>
-                <div class="d-flex align-items-center text-muted">
-                  <div class="fs-sm border-end pe-3 me-3">Sep 3, 2021</div>
-                  <div class="d-flex align-items-center me-3">
-                    <i class="bx bx-like fs-lg me-1"></i>
-                    <span class="fs-sm">8</span>
-                  </div>
-                  <div class="d-flex align-items-center me-3">
-                    <i class="bx bx-comment fs-lg me-1"></i>
-                    <span class="fs-sm">7</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                    <span class="fs-sm">3</span>
-                  </div>
-                </div>
-              </div>
-            </article> --}}
-
-            {{-- <div class="pb-2 pb-lg-3"></div> --}}
-{{-- 
-            <!-- Item -->
-            <article class="card border-0 bg-transparent me-xl-5 mb-4">
-              <div class="row g-0">
-                <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3" style="background-image: url(assets/img/blog/03.jpg); min-height: 15rem;">
-                  <a href="{{ route('post.show', 'test')}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <div class="col-sm-7">
-                  <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
-                    <a href="#" class="badge fs-sm text-white bg-danger shadow-danger text-decoration-none mb-3">Technology</a>
-                    <h3 class="h4">
-                      <a href="{{ route('post.show', 'test')}}">This Week in Search: New Limits and Exciting Features</a>
-                    </h3>
-                    <p class="mb-4">Aliquet donec cras amet orci in in neque. Ut sed diam quis consectetur purus lorem eu, sit. Aliquam eget arcu sed urna feugiat. In integer nisl at dui malesuada. Diam pellentesque lobortis elementum lacus.</p>
-                    <div class="d-flex align-items-center text-muted">
-                      <div class="fs-sm border-end pe-3 me-3">Sep 16, 2021</div>
-                      <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-like fs-lg me-1"></i>
-                        <span class="fs-sm">5</span>
-                      </div>
-                      <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-comment fs-lg me-1"></i>
-                        <span class="fs-sm">7</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <i class="bx bx-share-alt fs-lg me-1"></i>
-                        <span class="fs-sm">4</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
 
             <div class="pb-2 pb-lg-3"></div>
-
-            <!-- Item -->
-            <article class="card me-xl-5 mb-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between mb-3">
-                  <a href="#" class="badge fs-sm text-white bg-success shadow-success text-decoration-none">Startups</a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <h3 class="h4">
-                  <a href="{{ route('post.show', 'test')}}">How Agile is Your Forecasting Process?</a>
-                </h3>
-                <p class="mb-4">Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent. Varius aliquet pharetra adipiscing tincidunt orci nec neque.</p>
-                <div class="d-flex align-items-center text-muted">
-                  <div class="fs-sm border-end pe-3 me-3">Sep 10, 2021</div>
-                  <div class="d-flex align-items-center me-3">
-                    <i class="bx bx-like fs-lg me-1"></i>
-                    <span class="fs-sm">3</span>
-                  </div>
-                  <div class="d-flex align-items-center me-3">
-                    <i class="bx bx-comment fs-lg me-1"></i>
-                    <span class="fs-sm">6</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                    <span class="fs-sm">0</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="pb-2 pb-lg-3"></div>
-
-            <!-- Item -->
-            <article class="card border-0 bg-transparent me-xl-5 mb-4">
-              <div class="row g-0">
-                <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3" style="background-image: url(assets/img/blog/02.jpg); min-height: 15rem;">
-                  <a href="{{ route('post.show', 'test')}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <div class="col-sm-7">
-                  <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
-                    <a href="#" class="badge fs-sm text-white bg-warning shadow-warning text-decoration-none mb-3">Business</a>
-                    <h3 class="h4">
-                      <a href="{{ route('post.show', 'test')}}">Why UX Design Matters and How it Affects Ranking</a>
-                    </h3>
-                    <p class="mb-4">In mauris porttitor tincidunt mauris massa sit lorem sed scelerisque. Fringilla pharetra vel massa enim sollicitudin cras. At pulvinar eget sociis adipiscing eget donec ultricies nibh tristique.</p>
-                    <div class="d-flex align-items-center text-muted">
-                      <div class="fs-sm border-end pe-3 me-3">Aug 19, 2021</div>
-                      <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-like fs-lg me-1"></i>
-                        <span class="fs-sm">5</span>
-                      </div>
-                      <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-comment fs-lg me-1"></i>
-                        <span class="fs-sm">3</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <i class="bx bx-share-alt fs-lg me-1"></i>
-                        <span class="fs-sm">9</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="pb-2 pb-lg-3"></div>
-
-            <!-- Item -->
-            <article class="card me-xl-5 mb-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between mb-3">
-                  <a href="#" class="badge fs-sm text-white bg-info shadow-info text-decoration-none">Digital</a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <h3 class="h4">
-                  <a href="{{ route('post.show', 'test')}}">This Long-Awaited Technology May Finally Change the World</a>
-                </h3>
-                <p class="mb-4">Nunc, enim donec venenatis quis amet, magna vulputate rhoncus. Interdum lacus, nam elementum, cursus felis cras eros vel tincidunt. Felis nunc rhoncus quis curabitur facilisi. Odio cursus in vel et pretium. Ornare interdum in cras nibh lectus fusce. Neque, donec nunc, tellus, bibendum. Id euismod urna diam dolor lobortis consectetu.</p>
-                <div class="d-flex align-items-center text-muted">
-                  <div class="fs-sm border-end pe-3 me-3">Sep 3, 2021</div>
-                  <div class="d-flex align-items-center me-3">
-                    <i class="bx bx-like fs-lg me-1"></i>
-                    <span class="fs-sm">0</span>
-                  </div>
-                  <div class="d-flex align-items-center me-3">
-                    <i class="bx bx-comment fs-lg me-1"></i>
-                    <span class="fs-sm">1</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                    <span class="fs-sm">2</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="pb-2 pb-lg-3"></div>
-
-            <!-- Item -->
-            <article class="card border-0 bg-transparent me-xl-5">
-              <div class="row g-0">
-                <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover rounded-3 overflow-hidden" style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem;">
-                  <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-                  <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 zindex-2">
-                    <a href="https://vimeo.com/198067805" class="btn btn-video btn-icon btn-lg bg-white stretched-link" data-bs-toggle="video">
-                      <i class="bx bx-play"></i>
-                    </a>
-                  </div>
-                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                    <i class="bx bx-bookmark"></i>
-                  </a>
-                </div>
-                <div class="col-sm-7">
-                  <div class="card-body px-0 pt-sm-0 ps-sm-4 pb-0 pb-sm-4">
-                    <a href="#" class="badge fs-sm text-white bg-success shadow-success text-decoration-none mb-3">Startups</a>
-                    <h3 class="h4">
-                      <a href="{{ route('post.show', 'test')}}">5 Bad Landing Page Examples & How We Would Fix Them</a>
-                    </h3>
-                    <p class="mb-4">Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent.</p>
-                    <div class="d-flex align-items-center text-muted">
-                      <div class="fs-sm border-end pe-3 me-3">Sep 3, 2021</div>
-                      <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-like fs-lg me-1"></i>
-                        <span class="fs-sm">8</span>
-                      </div>
-                      <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-comment fs-lg me-1"></i>
-                        <span class="fs-sm">7</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <i class="bx bx-share-alt fs-lg me-1"></i>
-                        <span class="fs-sm">3</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="pb-2 pb-lg-3"></div> --}}
             {{ $posts->links('vendor.pagination.pagination')}}
             <!-- Load more button -->
             {{-- <button class="btn btn-lg btn-outline-primary w-100 mt-4">
@@ -307,11 +99,27 @@
           <!-- Sidebar (Offcanvas below lg breakpoint) -->
           <aside class="col-xl-3 col-lg-4 ">
              <!-- Advertising -->
-             <div class="mb-4 card border-0 bg-faded-primary bg-repeat-0 bg-size-cover" style="min-height: 25rem; background-image: url(assets/img/blog/banner.png);">
-              <div class="card-body">
-                <h5 class="h3 mb-4 pb-2 text-center">Ad Banner</h5>
+                 
+            <div class="carousel slide mb-4" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                @foreach ($formations as $formation)
+                    @if ($loop->index == 1)
+                      <div class="carousel-item active">
+                        <a href="{{route('formation.show',$formation->slug)}}"> 
+                          <img src="{{'storage/'.$formation->image_path}}" alt="" class="w-100 h-100 rounded">
+                        </a>
+                      </div>
+                    @else
+                      <div class="carousel-item">
+                        <a href="{{route('formation.show',$formation->slug)}}"> 
+                          <img src="{{ 'storage/'.$formation->image_path}}" alt="" class="w-100 h-100 rounded">
+                        </a>
+                      </div>
+                    @endif
+                @endforeach
               </div>
             </div>
+
             <div class="offcanvas offcanvas-end offcanvas-expand-lg" id="blog-sidebar" tabindex="-1">
 
               <!-- Header -->
@@ -354,59 +162,10 @@
                       </li>
                       @endforeach
                      
-                      {{-- <li class="border-bottom pb-3 mb-3">
-                        <h4 class="h6 mb-2">
-                          <a href="#">How Agile is Your Forecasting Process?</a>
-                        </h4>
-                        <div class="d-flex align-items-center text-muted pt-1">
-                          <div class="fs-xs border-end pe-3 me-3">Oct 9, 2021</div>
-                          <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-base me-1"></i>
-                            <span class="fs-xs">4</span>
-                          </div>
-                          <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-base me-1"></i>
-                            <span class="fs-xs">1</span>
-                          </div>
-                          <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-base me-1"></i>
-                            <span class="fs-xs">0</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <h4 class="h6 mb-2">
-                          <a href="#">Inclusive Marketing: Why and How Does it Work?</a>
-                        </h4>
-                        <div class="d-flex align-items-center text-muted pt-1">
-                          <div class="fs-xs border-end pe-3 me-3">Sep 13, 2021</div>
-                          <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-base me-1"></i>
-                            <span class="fs-xs">5</span>
-                          </div>
-                          <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-base me-1"></i>
-                            <span class="fs-xs">2</span>
-                          </div>
-                          <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-base me-1"></i>
-                            <span class="fs-xs">4</span>
-                          </div>
-                        </div>
-                      </li> --}}
+                      
                     </ul>
                   </div>
                 </div>
-
-                <!-- Tags -->
-                {{-- <div class="card card-body mb-4">
-                  <h3 class="h5">Tags</h3>
-                  <div class="d-flex flex-wrap">
-                    @foreach ($tags as $tag)
-                      <a href="#" class="btn btn-outline-secondary btn-sm px-3 my-1 me-2">#{{ $tag->name }}</a>  
-                    @endforeach
-                  </div>
-                </div> --}}
 
                 <!-- Follow Us -->
                 {{-- <div class="card mb-4">

@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Realisationmasterclass extends Model
+class Tutopdf extends Model
 {
     use HasFactory;
 
+    protected $table = 'table_tutopdfs';
     protected $guarded = ['id'];
-    protected $table = 'realisationmasterclass';
-    protected $fillable = ['title','youtube','description','imagepath']; 
 }

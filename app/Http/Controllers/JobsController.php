@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Posts;
-use App\Models\Comments;
-use App\Models\Formation;
-use App\Models\PostsTag;
-use App\Models\Tags;
+use App\Models\Job;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Validator;
 
-class PostController extends Controller
+class JobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +15,6 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Posts::orderBy('created_at','desc')->paginate(5);
-        $popular = Posts::orderBy('count','desc')->limit(3)->get();
-        $formations = Formation::orderBy('created_at','desc')->get();
-        $tags = Tags::all();
-        return view('posts.index',['posts'=>$posts,'tags'=>$tags,'popular'=>$popular,'formations'=>$formations]);
-
     }
 
     /**
@@ -33,9 +22,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($job_id)
     {
         //
+        return view('jobs.create',['job_id'=>$job_id]);
     }
 
     /**
@@ -47,24 +37,33 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $cvPath = $request->file('cv')->store('public/jobs'.$request->nom.'/');
+        $motivationPath = $request->file('motivation')->store('public/jobs'.$request->nom.'/');
+        $job_id = $request->job_id;
+
+        $form = Job::create([
+            "nom" => $request->nom,
+            "postnom" => $request->postnom,
+            "prenom" => $request->prenom,
+            "telephone" => $request->phone,
+            "email" => $request->email,
+            "cv_path" => $cvPath,
+            "motivation_path" => $motivationPath,
+            "jobsoffers" => $job_id,
+        ]);
+        notify()->success('Candidature envoyé');
+        return back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $slug
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug,Request $request)
+    public function show($id)
     {
-        $post = Posts::where('slug',$slug)->firstOrFail();
-        $post->count = $post->count + 1;
-        $post->save();
-        $comments = Comments::where('post_id',$post->id)->get();
-        $posttags = PostsTag::where('post_id',$post->id)->with(['tags'])->get();
-        $relatedPosts = Posts::where('keywords','like',"%$post->keywords%")->limit(3)->get();
-        return view('posts.show', ['post'=>$post,'comments'=>$comments,
-        'posttags'=>$posttags,'relatedPosts'=>$relatedPosts]);
+        //
     }
 
     /**
