@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Posts;
 use App\Models\Comments;
+use App\Models\Formation;
 use App\Models\PostsTag;
 use App\Models\Tags;
 use Illuminate\Http\Request;
@@ -19,10 +20,11 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Posts::orderBy('created_at','desc')->paginate(2);
+        $posts = Posts::orderBy('created_at','desc')->paginate(5);
         $popular = Posts::orderBy('count','desc')->limit(3)->get();
+        $formations = Formation::orderBy('created_at','desc')->get();
         $tags = Tags::all();
-        return view('posts.index',['posts'=>$posts,'tags'=>$tags,'popular'=>$popular]);
+        return view('posts.index',['posts'=>$posts,'tags'=>$tags,'popular'=>$popular,'formations'=>$formations]);
 
     }
 

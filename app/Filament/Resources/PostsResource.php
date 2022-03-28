@@ -35,8 +35,10 @@ class PostsResource extends Resource
                 Forms\Components\TextInput::make('keywords')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('video')
+                ->maxLength(255),
                 Forms\Components\FileUpload::make('image_path'),
-                Forms\Components\MarkdownEditor::make('content')
+                Forms\Components\RichEditor::make('content')
                     ->required(),
             ]);
     }

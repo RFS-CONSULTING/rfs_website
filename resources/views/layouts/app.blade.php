@@ -27,7 +27,10 @@
     <!-- Styles -->
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6f446fc9362f42fd5ce5ecfaf14eda673aba3e0
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFTKVHJYFW"></script>
   <script>
@@ -158,6 +161,10 @@
 
       <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+     crossorigin="anonymous"></script>
   </head>
   <body class="font-sans antialiased">
     <!-- Body -->
@@ -193,6 +200,7 @@
                     <img src="/assets/img/logo.png" width="47" alt="Silicon">
                     RFS Consulting
                   </div>
+
                   <p class=" text-justify text-light opacity-70 pb-lg-3 mb-4">Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.</p>
                   <div>
                     <a href="https://twitter.com/rfs_consulting" target="_blank" class="me-2" ><i class="bx bxl-twitter bx-sm"></i></a>
@@ -202,14 +210,15 @@
                     <a href="https://www.linkedin.com/in/rfs-consulting-6671671a7/" target="_blank" class="me-2"    ><i class="bx bxl-linkedin bx-sm"></i></a>
 
                   </div>
+                  
                 </div>
                 <div class=" col-md-8 ">
                   <div id="footer-links" class="row">
                     <div class="col-md-6">
                       <h6 class="mb-2">
-                        <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Liens utiles</a>
+                        <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2 text-sm" data-bs-toggle="collapse">Liens utiles</a>
                       </h6>
-                      <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                      <div id="useful-links" class="collapse d-lg-block text-sm" data-bs-parent="#footer-links">
                         <ul class="nav flex-column pb-lg-1 mb-lg-3">
                           <li class="nav-item"><a href="{{ route('home')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Accueil</a></li>
                           {{-- <li class="nav-item"><a href="{{ route('formation.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Formations</a></li> --}}
@@ -217,15 +226,16 @@
                           <li class="nav-item"><a href="{{ route('contact')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Nous contacter</a></li>
                           <li class="nav-item"><a href="{{ route('service.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
                           <li class="nav-item"><a href="{{ route('ambassador')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Devenir ambassadeur</a></li>
+                          <li class="nav-item"><a href="{{ route('jobs.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Emplois</a></li>
                           <li class="nav-item"><a href="{{ route('about')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">A propos de nous</a></li>
 
                         </ul>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 ">
                     <h6 class="mb-2">
-                      <a href="#address" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Nos contacts</a>
-                      <p id="address"class="collapse d-lg-block  text-light pb-lg-3 mb-4">
+                      <a href="#address" class="d-block text-dark dropdown-toggle d-lg-none py-2 text-sm" data-bs-toggle="collapse">Nos contacts</a>
+                      <p id="address"class="collapse d-lg-block  text-light pb-lg-3 mb-4 text-sm">
                         364, avenue MASANO, 1ere Rue Limete<br>
                         Réf. Derrière Dépôt Kin Marché<br>
                         Limete / Industriel ( Funa )<br>
@@ -263,6 +273,8 @@
         <!-- Vendor Scripts -->
 
       <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script> --}}
+      {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script> --}}
       <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
       <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>
       <script src="/assets/vendor/jarallax/dist/jarallax-element.min.js"></script>

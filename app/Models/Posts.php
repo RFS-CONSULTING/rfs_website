@@ -11,7 +11,7 @@ class Posts extends Model
 
     protected $table = "posts";
 
-    protected $fillable = ['id','title','content','slug','author_id','keywords','image_path'];
+    protected $fillable = ['id','title','content','slug','author_id','keywords','image_path','video'];
 
     public function author()
     {

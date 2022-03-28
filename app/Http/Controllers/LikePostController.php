@@ -40,8 +40,18 @@ class LikePostController extends Controller
         if (!Auth::user()) {
             notify()->error('veillez vous connectez avant d\'ajouter un like à un post');
         }else{
-            $like = Likepost::create(['user_id'=>Auth::user()->id,'post_id'=>$request->post_id]);
-            notify()->success('vous avez aimé cet article');
+
+
+            // ['column_1', '=', 'value_1']
+            $isLiked = Likepost::where([['user_id', '=', Auth::user()->id], ['post_id', '=', $request->post_id]])->first();
+            
+            // dd(isset($isLiked));
+            if (isset($isLiked)) {
+                notify()->error('vous avez déjà aimé cet article');
+            }else{
+                $like = Likepost::create(['user_id'=>Auth::user()->id,'post_id'=>$request->post_id]);
+                notify()->success('vous avez aimé cet article');
+            }
         }
         return back();
     }
