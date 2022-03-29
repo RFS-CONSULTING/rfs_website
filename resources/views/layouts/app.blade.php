@@ -27,10 +27,6 @@
     <!-- Styles -->
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
-<<<<<<< HEAD
-
-=======
->>>>>>> c6f446fc9362f42fd5ce5ecfaf14eda673aba3e0
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFTKVHJYFW"></script>
   <script>
@@ -210,7 +206,7 @@
                     <a href="https://www.linkedin.com/in/rfs-consulting-6671671a7/" target="_blank" class="me-2"    ><i class="bx bxl-linkedin bx-sm"></i></a>
 
                   </div>
-                  
+
                 </div>
                 <div class=" col-md-8 ">
                   <div id="footer-links" class="row">
