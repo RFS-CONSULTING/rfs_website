@@ -26,6 +26,7 @@ use App\Http\Controllers\UserFormation;
 use App\Http\Controllers\MasterClassController;
 use App\Http\Controllers\RealisationConferenceController;
 use App\Http\Controllers\RealisationMasterClassController;
+use App\Http\Controllers\RealisationProcessController;
 use App\Http\Controllers\RealisationProjetsController;
 
 /*
@@ -104,6 +105,7 @@ Route::get('/realisations',[RealisationController::class,'index'])->name('realis
 Route::get('/realisations-conferences',[RealisationConferenceController::class,'index'])->name('realisationConference.index');
 Route::get('/realisations-projets',[RealisationProjetsController::class,'index'])->name('realisationProjet.index');
 Route::get('/realisations-masterclass',[RealisationMasterClassController::class,'index'])->name('realisationMasterclass.index');
+Route::get('/realisations-encours',[RealisationProcessController::class,'index'])->name('realisationInProcess.index');
 
 
 // about 
