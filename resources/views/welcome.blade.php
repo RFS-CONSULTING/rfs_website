@@ -78,9 +78,11 @@
                 <!-- Item -->
                 <div class="swiper-slide">
                   <h2 class="display-2 from-start mb-lg-4">Technologies au service de la science</h2>
+
                   <div class="from-end">
                     <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique, Ingénierie forestière et formations professionnelles. </p>
                   </div>
+                  
                   <div class="scale-up delay-1">
                     <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
                   </div>
