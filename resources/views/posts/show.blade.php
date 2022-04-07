@@ -89,6 +89,19 @@
 
             <!-- Content -->
             <div class="col-lg-9">
+                <div>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+                            crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-fb+5w+4e-db+86"
+                            data-ad-client="ca-pub-3049305000513750"
+                            data-ad-slot="1408898943"></ins>
+                    <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
                 @if (isset($post->video))
                     <div class="position-relative overflow-hidden rounded mb-4" style="width: 100%;">
                         <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
@@ -119,6 +132,19 @@
 
             <!-- Sharing -->
             <div class="col-lg-3 position-relative">
+                <div>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+                        crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-4d+cr+1p-c8+e2"
+                        data-ad-client="ca-pub-3049305000513750"
+                        data-ad-slot="9288137390"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
                 <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
                     <span class="d-block mb-3">5 min read</span>
                     <h6>Partager cet article:</h6>

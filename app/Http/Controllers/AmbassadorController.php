@@ -30,7 +30,7 @@ class AmbassadorController extends Controller
                 "email" => $request->email,
                 "etudes" => $request->etudes,
                 "phone" => $request->phone,
-                "image" => 'ambassadors/'.$imagePath . '/' . $imageName,
+                "image" => $imagePath . '/' . $imageName,
             ]);
 
             $from = "info@rfs-congo.com";

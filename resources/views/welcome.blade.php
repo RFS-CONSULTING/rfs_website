@@ -10,14 +10,14 @@
     <meta property="og:image"         content="/assets/img/logo.png" />
 </x-slot>
 
-  <!-- Hero -->
+  <!-- Hero
   <section class="container d-none d-lg-block jarallax position-relative d-flex align-items-center py-5 bg-light mb-5 " style="background-image: url(assets/img/landing/hero-bg.png);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
     <div class="position-relative zindex-5 ">
       <div class="row justify-content-md-start justify-content-center pt-0">
         <div class="col-md-8 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
           <div class="">
 
-            <!-- Text -->
+
             <h1 class="display-2 mb-md-5 mb-3 pb-3 mt-lg-5">
               <span class="text-gradient-primary">Technologies</span> <span class="text-gradient-primary">au service de la science</span>
             </h1>
@@ -27,7 +27,6 @@
             </div>
           </div>
 
-          <!-- Scroll down btn -->
           <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
             <a href="#services" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3">
               <i class="bx bx-chevron-down"></i>
@@ -39,9 +38,9 @@
     </div>
   </section>
 
-
+-->
   <!-- Hero slider + BG parallax -->
-  <section class="container d-lg-none jarallax dark-mode bg-dark py-xxl-5 mb-4" data-jarallax data-speed="0.4">
+  <section class="container jarallax dark-mode bg-dark py-xxl-5 mb-4" data-jarallax data-speed="0.4">
     <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
     <div class="jarallax-img" style="background-image: url(assets/img/hero/hero-bg.jpeg);"></div>
     <div class="position-relative text-center zindex-5 overflow-hidden pt-4 py-md-5">
@@ -78,10 +77,12 @@
 
                 <!-- Item -->
                 <div class="swiper-slide">
-                  <h2 class="display-2 from-start mb-lg-4">Nous sommes professionnels</h2>
+                  <h2 class="display-2 from-start mb-lg-4">Technologies au service de la science</h2>
+
                   <div class="from-end">
                     <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique, Ingénierie forestière et formations professionnelles. </p>
                   </div>
+                  
                   <div class="scale-up delay-1">
                     <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
                   </div>
@@ -108,7 +109,7 @@
         </div>
       </div>
     </div>
-    
+
   </section>
     {{-- service - consultance:  notre équipe vous accompagne dans les démarches pour la réussite de vos projets de développement --}}
       <!-- Services -->
@@ -138,7 +139,7 @@
                   {{ $service->name}}
                 {{-- </a> --}}
                 {{-- <a href="{{ route('service.show',$service->id) }}">
-                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>  
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
                 </a>  --}}
                 <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
               </h2>
@@ -149,7 +150,7 @@
           </span>
         </div>
         @endforeach
-       
+
 
       </div>
     </div>
@@ -186,9 +187,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                     @endforeach
-                    
+
                 </div>
             </div>
         </div>
@@ -206,8 +207,8 @@
 
             Dotée d'une formation solide et expérience de +8ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
           </li>
-          
-        
+
+
         </ul>
         {{-- <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
           En savoir plus
@@ -270,7 +271,7 @@
                   <blockquote class="card-body pb-3 mb-0">
                     <p class="mb-0">{{ $testimonial->message }}</p>
                   </blockquote>
-              
+
                 </div>
                 <figcaption class="d-flex align-items-center ps-4 pt-4">
                   <img src="{{ 'storage/'.$testimonial->image_url}}" width="48" class="rounded-circle" alt="{{ $testimonial->witness }}">
@@ -280,9 +281,9 @@
                   </div>
                 </figcaption>
               </figure>
-            </div> 
+            </div>
           @endforeach
-         
+
 
         </div>
 
@@ -340,7 +341,7 @@
         </a>
       </div>
       @endforeach
-      
+
 
     </div>
 
@@ -387,6 +388,6 @@
 
 
 
- 
 
-     
+
+

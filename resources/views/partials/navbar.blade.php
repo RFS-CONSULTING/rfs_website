@@ -3,8 +3,8 @@
       <div class=" text-center bg-white">
         {{-- <p class="p-1 m-0 ">Masterclass édition 1 de ce dimanche 27 février 2022 de 14h à 18h sur ZOOM,  <a href="{{ route('masterclass')}}">en savoir plus</a></p> --}}
 
-        {{-- <p class="p-1 m-0 ">Renforcez vos capacités grâce à nos formations certifiantes.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('formation.index')}}">Voir les formations ></a></p> --}}
-        <p class="p-1 m-0 text-sm">RFS Consulting récrute pour le poste d'assistante de direction.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('jobs.index')}}">Voir l'offre d'emploi ></a></p>
+        <p class="p-1 m-0 ">Renforcez vos capacités grâce à nos formations certifiantes.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('formation.index')}}">Voir les formations ></a></p>
+        {{-- <p class="p-1 m-0 text-sm">RFS Consulting récrute pour le poste d'assistante de direction.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ route('jobs.index')}}">Voir l'offre d'emploi ></a></p>--}}
       </div>
       <header class="px-md-4 header navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container px-3">
@@ -19,15 +19,15 @@
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-               
+
                 <li class="nav-item">
                   <a href="{{ route('home')}}" class="{{ request()->routeIs('home') ? 'active ' : '' }} nav-link">Accueil</a>
                 </li>
-     
+
                 {{-- <li class="nav-item">
                   <a href="{{ route('formation.index') }}" class="{{ request()->routeIs('formation.index') ? 'active' : '' }} nav-link">Formations</a>
                 </li> --}}
-            
+
                 {{-- <li class="nav-item">
                   <a href=" {{ route('conference.index')}} " class="{{ request()->routeIs('conference.index') ? 'active' : '' }} nav-link"">Conferences</a>
                 </li> --}}
@@ -46,6 +46,7 @@
                     <li><a href="{{ route('realisationMasterclass.index') }}" class="dropdown-item">Masterclass</a></li>
                     <li><a href="{{ route('realisationConference.index')}}" class="dropdown-item">Conférences</a></li>
                     <li><a href="{{ route('realisationProjet.index')}}" class="dropdown-item">Projets</a></li>
+                    <li><a href="{{ route('realisationInProcess.index')}}" class="dropdown-item">Projets en cours</a></li>
                   </ul>
                 </li>
 
@@ -70,16 +71,16 @@
 
                   </ul>
                 </li>
-               
+
               </ul>
             </div>
           @guest
             <div class="offcanvas-footer border-top">
               <a href="{{ route('login')}}" class="btn btn-primary w-100" >
                 <i class="bx bx-user fs-5 lh-1 me-1"></i>
-                &nbsp;Connexion 
+                &nbsp;Connexion
               </a>
-            </div>  
+            </div>
           @endguest
           @auth
           <ul class="navbar-nav  d-lg-none m-2">
@@ -108,14 +109,14 @@
                     {{ __('Manage Account') }}
                 </li> --}}
                 {{-- <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li>
-               
+
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                 <li><a href="{{ route('api-tokens.index') }}" class="dropdown-item">{{ __('API Tokens') }}</a></li>
                 @endif --}}
 
                 {{-- <li>
                   <form method="POST" action="{{ route('logout') }}">
-                    @csrf 
+                    @csrf
                   <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
                   this.closest('form').submit();">{{ __('Log Out') }}</a></li>
                 </form>
@@ -125,7 +126,7 @@
           </ul>
           @endauth
           </div>
-          
+
           @auth
           <ul class="navbar-nav  m-2 d-none d-lg-inline-flex">
             <li class="nav-item dropdown ">
@@ -151,14 +152,14 @@
                     {{ __('Manage Account') }}
                 </li> --}}
                 {{-- <li><a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('Profile') }}</a></li> --}}
-               
+
                 {{-- @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                 <li><a href="{{ route('api-tokens.index') }}" class="dropdown-item">{{ __('API Tokens') }}</a></li>
                 @endif --}}
 
                 <li>
                   <form method="POST" action="{{ route('logout') }}">
-                    @csrf 
+                    @csrf
                   <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
                   this.closest('form').submit();">{{ __('Log Out') }}</a></li>
                 </form>
@@ -169,7 +170,7 @@
           @endauth
 
           <div class="form-check  pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-          
+
             <svg onclick="toggleMode()" id="moonIcon"   xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 238, 0);transform: ;msFilter:;"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>
             <svg onclick="toggleMode()" id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: scaleX(-1);msFilter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"></path></svg>
            {{-- <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label> --}}
