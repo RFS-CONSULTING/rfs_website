@@ -6,7 +6,7 @@
     <meta property="og:url"           content="{{ route('formation.show',$formation->slug) }}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ $formation->title }} -- RFS CONSULTING" />
-    <meta property="og:description"   content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets" />
+    <meta property="og:description"   content="{{ $formation->description }}" />
     <meta property="og:image"         content="{{'/storage/'.$formation->image_path}}" />
   </x-slot>
 
