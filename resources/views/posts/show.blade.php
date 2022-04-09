@@ -157,12 +157,13 @@
                         </a> --}}
                         {{-- <a href="#" > --}}
 
-                        <a id="shareBtn" href="#"
-                            onclick="share_fb('{{ route('post.show', $post->slug) }}');return false;" rel="nofollow"
-                            share_url="{{ route('post.show', $post->slug) }}" target="_blank"
-                            class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
-                            <i class="bx bxl-facebook"></i>
-                        </a>
+                        
+                        <div class="fb-share-button" 
+                        data-href="https://rfs-congo.com/post/{{ $post->slug }}" 
+                        data-layout="button_count"
+                        data-size="large"
+                        >
+                        </div>
                         {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
                         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button me-2 mb-2"
                             data-lang="fr" target="_blank" data-show-count="false">Tweeter</a>
