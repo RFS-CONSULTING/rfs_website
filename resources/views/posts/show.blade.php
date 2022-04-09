@@ -158,7 +158,7 @@
                         {{-- <a href="#" > --}}
 
                         
-                        <div class="fb-share-button mt-2" 
+                        <div class="fb-share-button my-2" 
                         data-href="https://rfs-congo.com/post/{{ $post->slug }}" 
                         data-layout="button_count"
                         data-size="large"
