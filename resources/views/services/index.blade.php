@@ -16,7 +16,7 @@
           <li class="breadcrumb-item">
             <a href="{{ route('home') }}"><i class="bx bx-home-alt fs-lg me-1"></i>Accueil</a>
           </li>
- 
+
           <li class="breadcrumb-item active" aria-current="page">Services</li>
         </ol>
       </nav>
@@ -42,7 +42,7 @@
             </div>
           @endforeach
         </div> --}}
-        
+
 
         <!-- Swiper slider -->
         <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{
@@ -91,7 +91,7 @@
               </div>
             </div>
 
-           
+
             <div class="swiper-slide h-auto py-3">
               <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
                 <div class="card-body">
@@ -153,7 +153,7 @@
                 </div>
               </div>
             </div>
-           
+
             <div class="swiper-slide h-auto py-3">
               <div class="card border-0 shadow-sm card-hover card-hover-primary h-100 mx-2">
                 <div class="card-body">
@@ -179,7 +179,7 @@
       <section class="container mb-5 ">
         <div class="row ">
           {{-- @foreach ($services as $service) --}}
-        
+
           <!-- Item -->
           <div class=" h-auto  col-12 mt-1 order-md-2 text-center text-md-start">
             <div class="card card card-hover h-100 border-0 shadow-sm text-decoration-none">
@@ -187,7 +187,12 @@
                 <h4 class="mb-4">Entrez en contact avec nous pour pouvoir profiter de nos offres et services, n'hésitez pas!</h4>
                 <a href="{{ route('devis.index')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Démander un dévis</a>
                 <a href="/assets/pdf/depliant-rfs.pdf" download class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Télécharger le dépliant</a>
-              </div>
+                <a href="{{ route('formation.all')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Voir nos formations</a>
+                <a href="{{ route('instructor.index')}}" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Dévenir formateur</a>
+
+
+
+            </div>
             </div>
           </div>
 
@@ -203,7 +208,7 @@
           </div> --}}
 
           {{-- @endforeach --}}
-          
+
 
           {{-- @isset($services)
               @if (count($services) > 0)
@@ -223,7 +228,7 @@
           @endisset --}}
 
       </section>
-     
+
 
       <!-- Customers -->
       {{-- <section class="container pb-5 mb-md-4 mb-lg-5">
