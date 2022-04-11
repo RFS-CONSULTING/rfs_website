@@ -44,7 +44,7 @@
     <style>
       .page-loading {
           position: fixed;
-         
+
             width: 100%;
             height: 100%;
             -webkit-transition: all .4s .2s ease-in-out;
@@ -126,8 +126,8 @@
         <!-- Theme mode -->
         <!-- Scripts -->
     <script>
-     
-  </script> 
+
+  </script>
 
     <script>
       let mode = window.localStorage.getItem('mode'),
@@ -138,7 +138,7 @@
           root.classList.remove('dark-mode');
       }
 
-      
+
     </script>
 
     <!-- Page loading scripts -->
@@ -153,10 +153,11 @@
           };
       })();
     </script>
-        
+
 
       <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3044893998577598"
+      crossorigin="anonymous"></script>
   </head>
   <body class="font-sans antialiased">
     <!-- Body -->
@@ -173,7 +174,7 @@
   <!-- Page wrapper for sticky footer -->
   <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
     <main class="page-wrapper">
-      
+
       <div class="min-h-screen bg-gray-100">
         {{-- @livewire('navigation-menu') --}}
         @include('partials.navbar')
@@ -192,16 +193,25 @@
                     <img src="/assets/img/logo.png" width="47" alt="Silicon">
                     RFS Consulting
                   </div>
+
                   <p class=" text-justify text-light opacity-70 pb-lg-3 mb-4">Nous sommes missionnés pour nos études précises, nos conseils avisés, nos expertises et évaluations justes, et nos réalisations réussites.</p>
-              
+                  <div>
+                    <a href="https://twitter.com/rfs_consulting" target="_blank" class="me-2" ><i class="bx bxl-twitter bx-sm"></i></a>
+                    <a href="https://fb.me/RFS.CONSULTING" target="_blank" class="me-2" ><i class="bx bxl-facebook bx-sm"></i></a>
+                    <a href="https://www.instagram.com/rfs_consulting/" target="_blank" class="me-2" ><i class="bx bxl-instagram bx-sm"></i></a>
+                    <a href="https://www.youtube.com/c/RFSACADEMIA" target="_blank" class="me-2" ><i class="bx bxl-youtube bx-sm"></i></a>
+                    <a href="https://www.linkedin.com/in/rfs-consulting-6671671a7/" target="_blank" class="me-2"    ><i class="bx bxl-linkedin bx-sm"></i></a>
+
+                  </div>
+
                 </div>
                 <div class=" col-md-8 ">
                   <div id="footer-links" class="row">
                     <div class="col-md-6">
                       <h6 class="mb-2">
-                        <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Liens utiles</a>
+                        <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2 text-sm" data-bs-toggle="collapse">Liens utiles</a>
                       </h6>
-                      <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                      <div id="useful-links" class="collapse d-lg-block text-sm" data-bs-parent="#footer-links">
                         <ul class="nav flex-column pb-lg-1 mb-lg-3">
                           <li class="nav-item"><a href="{{ route('home')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Accueil</a></li>
                           {{-- <li class="nav-item"><a href="{{ route('formation.index')}}" class="nav-link d-inline-block px-0 pt-1 pb-2">Formations</a></li> --}}
@@ -215,10 +225,10 @@
                         </ul>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 ">
                     <h6 class="mb-2">
-                      <a href="#address" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Nos contacts</a>
-                      <p id="address"class="collapse d-lg-block  text-light pb-lg-3 mb-4">
+                      <a href="#address" class="d-block text-dark dropdown-toggle d-lg-none py-2 text-sm" data-bs-toggle="collapse">Nos contacts</a>
+                      <p id="address"class="collapse d-lg-block  text-light pb-lg-3 mb-4 text-sm">
                         364, avenue MASANO, 1ere Rue Limete<br>
                         Réf. Derrière Dépôt Kin Marché<br>
                         Limete / Industriel ( Funa )<br>
@@ -226,6 +236,7 @@
                         <strong>Phone:</strong><a href="tel:+243 817663799"> +243 817663799</a><br>
                         <strong>Email:</strong> <a href="mailto:info@rfs-congo.com">info@rfs-congo.com</a><br>
                       </p>
+
                     </h6>
                   </div>
                 </div>
@@ -239,10 +250,10 @@
         </section>
         @include('notify::components.notify')
 
-        <!-- Javascript -->   
+        <!-- Javascript -->
         @notifyJs
-        
-      
+
+
       <!-- Back to top button -->
       {{-- <a href="#top" class="btn-scroll-top" data-scroll>
         <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
@@ -268,10 +279,10 @@
       <script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
 
       <script src="/assets/js/theme.min.js"></script>
-      
+
       <!-- Messenger Plugin de discussion Code -->
-    
-    
+
+
       <div id="fb-root"></div>
 
     <!-- Your Plugin de discussion code -->
