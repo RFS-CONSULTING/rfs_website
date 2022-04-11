@@ -160,6 +160,8 @@
       crossorigin="anonymous"></script>
   </head>
   <body class="font-sans antialiased">
+    
+   
     <!-- Body -->
     <!-- Page loading spinner -->
     {{-- <div class="page-loading active">
@@ -310,6 +312,9 @@
     }(document, 'script', 'facebook-jssdk'));
     </script>
     </div>
+
+    <div id="fb-root"></div>
+
 
     @stack('modals')
     @livewireScripts

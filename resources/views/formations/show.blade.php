@@ -3,10 +3,10 @@
   <x-slot name="title">
     <title>{{ $formation->title }} -- RFS CONSULTING</title>
     <meta name="description" content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets"/>
-    <meta property="og:url"           content="{{ route('formation.show',$formation->slug) }}s" />
+    <meta property="og:url"           content="{{ route('formation.show',$formation->slug) }}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ $formation->title }} -- RFS CONSULTING" />
-    <meta property="og:description"   content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets" />
+    <meta property="og:description"   content="{{ $formation->description }}" />
     <meta property="og:image"         content="{{'/storage/'.$formation->image_path}}" />
   </x-slot>
 
@@ -112,6 +112,12 @@
                    <div class="h2 d-flex align-items-center mb-4">{{ $formation->etudiant_price}} $ <span class="text-muted fs-xl fw-normal ms-2">Pour étudiant uniquement</span></div>
                    @endif
                     <a href="{{ route('formation.form', [$formation->id, $formation->slug ]) }}" class="btn btn-primary btn-lg shadow-primary">Rejoignez la formation</a>
+                    <div class="fb-share-button my-2" 
+                        data-href="{{ route('formation.show',$formation->slug) }}" 
+                        data-layout="button_count"
+                        data-size="large"
+                        >
+                        </div>
                   </div>
                 </div>
               </div>

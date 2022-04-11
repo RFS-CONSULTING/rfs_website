@@ -79,9 +79,9 @@
     </section>
 
     <!-- Post image (parallax) -->
-    <div class="jarallax mb-lg-5 mb-4" data-jarallax data-speed="0.4" style="height: 36.45vw; min-height: 300px;">
+    {{-- <div class="jarallax mb-lg-5 mb-4" data-jarallax data-speed="0.4" style="height: 36.45vw; min-height: 300px;">
         <div class="jarallax-img" style="background-image: url({{ '/storage/' . $post->image_path }});"></div>
-    </div>
+    </div> --}}
 
     <!-- Post content + Sharing -->
     <section class="container mb-5 pt-4 pb-2 py-mg-4">
@@ -90,7 +90,10 @@
             <!-- Content -->
             <div class="col-lg-9">
                 <div>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+                    <img src="{{ '/storage/' . $post->image_path }}" alt="{{  $post->title }}" srcset="">
+                </div>
+                <div>
+                    {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
                             crossorigin="anonymous"></script>
                     <ins class="adsbygoogle"
                             style="display:block"
@@ -100,7 +103,7 @@
                             data-ad-slot="1408898943"></ins>
                     <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> --}}
                 </div>
                 @if (isset($post->video))
                     <div class="position-relative overflow-hidden rounded mb-4" style="width: 100%;">
@@ -133,7 +136,7 @@
             <!-- Sharing -->
             <div class="col-lg-3 position-relative">
                 <div>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+                    {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
                         crossorigin="anonymous"></script>
                     <ins class="adsbygoogle"
                         style="display:block"
@@ -143,7 +146,7 @@
                         data-ad-slot="9288137390"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    </script> --}}
                 </div>
                 <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
                     <span class="d-block mb-3">5 min read</span>
@@ -154,12 +157,13 @@
                         </a> --}}
                         {{-- <a href="#" > --}}
 
-                        <a id="shareBtn" href="#"
-                            onclick="share_fb('{{ route('post.show', $post->slug) }}');return false;" rel="nofollow"
-                            share_url="{{ route('post.show', $post->slug) }}" target="_blank"
-                            class="btn btn-icon btn-secondary btn-facebook me-2 mb-2">
-                            <i class="bx bxl-facebook"></i>
-                        </a>
+                        
+                        <div class="fb-share-button my-2" 
+                        data-href="https://rfs-congo.com/post/{{ $post->slug }}" 
+                        data-layout="button_count"
+                        data-size="large"
+                        >
+                        </div>
                         {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="fr" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
                         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button me-2 mb-2"
                             data-lang="fr" target="_blank" data-show-count="false">Tweeter</a>

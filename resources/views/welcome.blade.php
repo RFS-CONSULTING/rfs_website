@@ -82,7 +82,7 @@
                   <div class="from-end">
                     <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique, Ingénierie forestière et formations professionnelles. </p>
                   </div>
-                  
+
                   <div class="scale-up delay-1">
                     <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
                   </div>
@@ -335,7 +335,7 @@
       @foreach ($sponsors as $sponsor)
       <div class="swiper-slide py-3">
         <a href="#" class="card card-hover border-0 shadow-sm py-3 mx-2">
-          <div class="card-body">
+          <div class="card-body p-0">
             <img src="{{ 'storage/'.$sponsor->logo}}" class="d-block mx-auto" alt="{{ $sponsor->name}}">
           </div>
         </a>
