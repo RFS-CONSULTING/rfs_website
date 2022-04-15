@@ -521,7 +521,7 @@
                       <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
                         <i class="bx bx-bookmark"></i>
                       </a>
-                      <img src={{'/storage/'.$similarF->image_path}} class="card-img-top" alt="{{'storage/'.$similarF->image_path}}">
+                      <img style="height: 350px;" src={{'/storage/'.$similarF->image_path}} class="card-img-top" alt="{{'storage/'.$similarF->image_path}}">
                     </div>
                     <div class="card-body pb-3">
                       <h3 class="h5 mb-2">

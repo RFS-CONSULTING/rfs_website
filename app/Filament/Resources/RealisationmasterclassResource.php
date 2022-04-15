@@ -27,6 +27,9 @@ class RealisationmasterclassResource extends Resource
                 Forms\Components\TextInput::make('youtube')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('youtube_embeded')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->maxLength(65535),

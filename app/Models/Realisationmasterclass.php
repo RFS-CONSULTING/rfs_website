@@ -11,5 +11,5 @@ class Realisationmasterclass extends Model
 
     protected $guarded = ['id'];
     protected $table = 'realisationmasterclass';
-    protected $fillable = ['title','youtube','description','imagepath']; 
+    protected $fillable = ['title','youtube','description','imagepath','youtube_embeded']; 
 }
