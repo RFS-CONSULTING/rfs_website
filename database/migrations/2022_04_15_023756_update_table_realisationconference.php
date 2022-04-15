@@ -15,7 +15,7 @@ class UpdateTableRealisationconference extends Migration
     {
         Schema::table('realisationconferences', function (Blueprint $table) {
             //
-            $table->string('youtube_embed');
+            $table->string('youtube_embeded');
         });
     }
 
@@ -28,7 +28,7 @@ class UpdateTableRealisationconference extends Migration
     {
         Schema::table('realisationconferences', function (Blueprint $table) {
             //
-            $table->dropColumn('youtube_embed');
+            $table->dropColumn('youtube_embeded');
         });
     }
 }

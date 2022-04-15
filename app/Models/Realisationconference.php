@@ -9,4 +9,5 @@ class Realisationconference extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $fillable = ['title','youtube','description','imagepath','youtube_embeded']; 
 }
