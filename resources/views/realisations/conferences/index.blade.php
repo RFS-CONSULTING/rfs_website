@@ -38,8 +38,11 @@
                       <i class="bx bx-play"></i>
                     </a>
                   </div>
+                  @if (!empty($realisation->youtube_embeded))
                   <iframe src="{{$realisation->youtube_embeded}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  {{-- <img src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image"> --}}
+                  @else
+                  <img src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
+                  @endif
                 </div>
                 <div class="card-body pb-3">
                   <h3 class="h5 mb-2">
