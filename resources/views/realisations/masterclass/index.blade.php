@@ -39,7 +39,8 @@
                         <i class="bx bx-play"></i>
                       </a>
                     </div>
-                    <img src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image">
+                    <iframe src="https://www.youtube.com/embed/PQlxgFrketk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {{-- <img src={{ 'storage/'.$realisation->imagepath}} class="card-img-top" alt="Image"> --}}
                   </div>
                   <div class="card-body pb-3">
                     <h3 class="h5 mb-2">
