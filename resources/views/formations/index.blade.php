@@ -158,14 +158,14 @@
             <!-- Item -->
             @foreach ($formations as $formation)
             <div class="swiper-slide h-auto pb-3">
-              <article class="card h-100 border-0 shadow-sm mx-2">
+              <article class="card h-100 border-0 shadow-sm mx-2" style="height: 200px;">
                 <div class="position-relative">
                   <a href="{{ route('formation.show', $formation->slug)}}" class="d-block position-absolute w-100 h-100 top-0 start-0"></a>
                   <span class="badge bg-success position-absolute top-0 start-0 zindex-2 mt-3 ms-3">Best Seller</span>
                   <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-2 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Save to Favorites">
                     <i class="bx bx-bookmark"></i>
                   </a>
-                  <img src={{ 'storage/'.$formation->image_path}} class="card-img-top" alt="Image">
+                  <img style="height: 350px;" src={{ 'storage/'.$formation->image_path}} class="card-img-top" alt="Image">
                 </div>
                 <div class="card-body pb-3">
                   <h3 class="h5 mb-2">
@@ -487,7 +487,7 @@
 
   @if (!Auth::user())
       <!-- Sign up form -->
-    <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
+    {{-- <section class="bg-secondary pb-lg-5" style="margin-top: -240px; padding-top: 300px;">
       <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
         <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">Prêt à démarrer votre carrière ? <br>Commencez à apprendre aujourd'hui</h2>
         <div class="row pb-3">
@@ -498,7 +498,7 @@
             <div class="card border-0 p-lg-4">
               <div class="card-body">
                 <h3 class="pb-3 pb-lg-4">Inscrivez-vous et béneficiez des plus<span class="text-danger"> d'avantages !</span></h3>
-                <form class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
+                <form action="" class="needs-validation mb-4 pb-2 pb-lg-0 mb-lg-5" novalidate>
                   <div class="position-relative mb-4">
                     <label for="email" class="form-label fs-base">Adresse e-mail</label>
                     <input type="email" id="email" class="form-control form-control-lg" required>
@@ -522,9 +522,9 @@
                   <a href="{{ route('socialite.redirect', ['provider' => 'google']) }}" class="btn btn-icon btn-secondary btn-google btn-lg w-100">
                     <i class="bx bxl-google btn-lg"></i>
                   </a>
-                  {{-- <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
+                  <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
                     <i class="bx bxl-facebook"></i>
-                  </a> --}}
+                  </a> 
 
                 </div>
               </div>
@@ -532,7 +532,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
   @endif
 

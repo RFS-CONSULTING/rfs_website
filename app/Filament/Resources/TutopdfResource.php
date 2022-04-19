@@ -33,8 +33,7 @@ class TutopdfResource extends Resource
                 ->label('formation')
                 ->options(Formation::all()->pluck('title', 'id'))
                 ->searchable(),
-            Forms\Components\TextInput::make('pdf_path')
-                ->maxLength(255),
+            Forms\Components\FileUpload::make('pdf_path'),
             Forms\Components\RichEditor::make('content'),
             ]);
     }

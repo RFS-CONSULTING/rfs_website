@@ -396,7 +396,8 @@
           <div class="d-flex align-items-center">
             <img src="assets/img/landing/notification-icon.svg" width="78" alt="Bell icon">
             <div class="ps-3 ms-sm-3">
-              <h2 class="h6 mb-0 ">Abonnez-vous à notre newsletter pour rester informé des dernières mises à jour</h2>
+              <h2 class="h6 mb-0 ">Obtenez une participation gratuite à nos évènements Visio-conférence tout en étant au courant de nos dernières actualités<br/>
+                en vous inscrivant à notre newsletter.</h2>
             </div>
           </div>
         </div>

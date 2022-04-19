@@ -21,14 +21,16 @@ return [
 
     'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['http://127.0.0.1:8001'],
 
     'allowed_headers' => ['*'],
 
     'exposed_headers' => [],
+    // 'Access-Control-Allow-Origin'=>['http://127.0.0.1:8001'],
 
     'max_age' => 0,
 
     'supports_credentials' => false,
 
+    'Access-Control-Allow-Origin'=> ['*'],
 ];
