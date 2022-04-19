@@ -13,7 +13,6 @@
 
 <x-slot name="popup">
     <!-- Newsletter Popup Start -->
-    @if(session()->has("newsletter"))
        <div id="max-popup" class="max-popup-section section " >
            <div class="max-popup-dialog animated fadeInUp">
                <button id="max-popup-close" class="max-popup-close">Fermer</button>
@@ -39,7 +38,6 @@
                </div>
            </div>
        </div>
-    @endif
    <!-- Newsletter Popup End -->
 
 </x-slot>
