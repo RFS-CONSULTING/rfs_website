@@ -21,7 +21,7 @@
 
                        <div class="col-12 align-self-center">
                            <div class="">
-                               <h6 class="sub-title ">Vous souhaitez être informé des nouveaux tutoriels ? Être au courant des évènements en lien avec les SIG, télédétection, environnement ? Bénéficier des offres spéciales de formations certifiantes et Masterclass ?</h6>
+                               <h6 class="sub-title text-white">Vous souhaitez être informé des nouveaux tutoriels ? Être au courant des évènements en lien avec les SIG, télédétection, environnement ? Bénéficier des offres spéciales de formations certifiantes et Masterclass ?</h6>
                                <div class="freecourse-download-form">
                                    {{-- @livewire('pending-book') --}}
                                    <form method="POST" action="{{ route('newsletter.store') }}" class="input-group input-group-lg needs-validation" novalidate>
