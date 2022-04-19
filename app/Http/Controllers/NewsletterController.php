@@ -38,6 +38,8 @@ class NewsletterController extends Controller
         //
         $result = Newsletters::create(['email'=>$request->email]);
         notify('votre mail a été ajouté à notre newsletters');
+        session()->put('newsletter', true);
+
         return back();
     }
 

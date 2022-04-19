@@ -10,6 +10,40 @@
     <meta property="og:image"         content="/assets/img/logo.png" />
 </x-slot>
 
+
+<x-slot name="popup">
+    <!-- Newsletter Popup Start -->
+    @if(session()->has("newsletter"))
+       <div id="max-popup" class="max-popup-section section " >
+           <div class="max-popup-dialog animated fadeInUp">
+               <button id="max-popup-close" class="max-popup-close">Fermer</button>
+               <div class="max-popup-dialog-inner">
+                   <div class="row">
+
+                       <div class="col-12 align-self-center">
+                           <div class="">
+                               <h6 class="sub-title ">Vous souhaitez être informé des nouveaux tutoriels ? Être au courant des évènements en lien avec les SIG, télédétection, environnement ? Bénéficier des offres spéciales de formations certifiantes et Masterclass ?</h6>
+                               <div class="freecourse-download-form">
+                                   {{-- @livewire('pending-book') --}}
+                                   <form method="POST" action="{{ route('newsletter.store') }}" class="input-group input-group-lg needs-validation" novalidate>
+                                    @csrf
+                                     <input type="email" id="subscr-email" name="email" class="form-control rounded-start ps-5" placeholder="Votre adresse e-mail" required>
+                                     <i class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                                     <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
+                                     <button type="submit" class="btn btn-primary px-sm-4">S'abonner</button>
+                                   </form>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    @endif
+   <!-- Newsletter Popup End -->
+
+</x-slot>
+
   <!-- Hero
   <section class="container d-none d-lg-block jarallax position-relative d-flex align-items-center py-5 bg-light mb-5 " style="background-image: url(assets/img/landing/hero-bg.png);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
     <div class="position-relative zindex-5 ">
@@ -40,24 +74,14 @@
 
 -->
   <!-- Hero slider + BG parallax -->
-  <section class="container jarallax dark-mode bg-dark py-xxl-5 mb-4" data-jarallax data-speed="0.4">
-    <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
-    <div class="jarallax-img" style="background-image: url(assets/img/hero/hero-bg.jpeg);"></div>
-    <div class="position-relative text-center zindex-5 overflow-hidden pt-4 py-md-5">
-
-      <!-- Slider controls (Prev / next) -->
-      <button type="button" id="hero-prev" class="btn btn-prev btn-icon btn-xl bg-transparent shadow-none position-absolute top-50 start-0 translate-middle-y d-none d-md-inline-flex ms-n3 ms-lg-2">
-        <i class="bx bx-chevron-left fs-1"></i>
-      </button>
-      <button type="button" id="hero-next" class="btn btn-next btn-icon btn-xl bg-transparent shadow-none position-absolute top-50 end-0 translate-middle-y d-none d-md-inline-flex me-n3 me-lg-2">
-        <i class="bx bx-chevron-right fs-1"></i>
-      </button>
+  <section class="w-full m-0 p-0 container jarallax dark-mode bg-primary  " data-jarallax data-speed="0.4">
+    <div class=" position-relative text-center zindex-5 overflow-hidden">
 
       <!-- Slider -->
-      <div class="container text-center py-xl-5">
-        <div class="row justify-content-center pt-lg-5">
-          <div class="col-xl-8 col-lg-9 col-md-10 col-11">
-            <div class="swiper pt-5 pb-4 py-md-5" data-swiper-options='{
+      <div class=" text-center  ">
+        <div class=" ">
+          <div class="">
+            <div class="swiper " data-swiper-options='{
               "effect": "fade",
               "speed": 500,
               "autoplay": {
@@ -73,37 +97,47 @@
                 "nextEl": "#hero-next"
               }
             }'>
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper ">
 
                 <!-- Item -->
-                <div class="swiper-slide">
-                  <h2 class="display-2 from-start mb-lg-4">Technologies au service de la science</h2>
+                <div class="swiper-slide  py-12 max-h-screen" style="background: url(assets/img/hero/10.jpeg); background-size:cover">
+                  <div class="py-12 ">
+                      <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
 
-                  <div class="from-end">
-                    <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique, Ingénierie forestière et formations professionnelles. </p>
-                  </div>
+                    <h2 class="display-2 from-start mb-lg-4 mt-6">Technologies au service de la science</h2>
 
-                  <div class="scale-up delay-1">
-                    <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
+                    <div class="from-end">
+
+
+                      <p class=" text-light opacity-70 pb-2 mb-lg-5">RFS CONSULTING regroupe des ingenieurs et experts dans les domaines de gestion de l' environnement, Géomatique, Ingénierie forestière et formations professionnelles. </p>
+                    </div>
+
+                    <div class="scale-up delay-1">
+                      <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
+                    </div>
                   </div>
 
                 </div>
 
                 <!-- Item -->
-                <div class="swiper-slide">
-                  <h2 class="display-2 from-start mb-lg-4">RFS ACADEMIA</h2>
-                  <div class="from-end">
-                    <p class=" text-light opacity-70 pb-2 mb-lg-5">Renforcement des capacités, encadrement scientifique.</p>
-                  </div>
-                  <div class="scale-up delay-1">
-                    <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
-                  </div>
-                </div>
+                <div class="swiper-slide py-12 max-h-screen d-none d-md-block"  style="background: url(assets/img/hero/11.jpeg); background-size:cover">
+                    <div class="py-12">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
 
+                      <h2 class="display-2 from-start mb-lg-4 mt-6">RFS ACADEMIA</h2>
+
+                      <div class="from-end">
+
+
+                        <p class=" text-light opacity-70 pb-2 mb-lg-5">Renforcement des capacités, encadrement scientifique.</p>
+                      </div>
+
+                      <div class="scale-up delay-1">
+                        <a href="{{ route('contact')}}" class="btn btn-primary shadow-primary btn-lg">Contactez-nous</a>
+                      </div>
+                    </div>
+                </div>
               </div>
-
-              <!-- Pagination (bullets) -->
-              <div class="swiper-pagination position-relative d-md-none pt-2 mt-5"></div>
             </div>
           </div>
         </div>
@@ -113,7 +147,7 @@
   </section>
     {{-- service - consultance:  notre équipe vous accompagne dans les démarches pour la réussite de vos projets de développement --}}
       <!-- Services -->
-  <section class="container bg-secondary pb-md-2 pb-lg-5" id="services">
+  <section class="container bg-secondary pb-md-2 pb-lg-5 pt-4" id="services">
     <div class="" style="margin-top: -60px; padding-top: 0px;"></div>
     <div class=" pb-4 pt-5">
       <h2 class="h1 text-center text-md-start mb-lg-4 pt-1 pt-md-4">Nos services</h2>

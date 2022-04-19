@@ -48,7 +48,7 @@
         <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{
           "slidesPerView": 1,
           "spaceBetween": 8,
-          "autoplay":{"delay":2500,"delayOnInteraction":false},
+          "autoplay":{"delay":5000,"delayOnInteraction":false},
           "pagination": {
             "el": ".swiper-pagination",
             "clickable": true

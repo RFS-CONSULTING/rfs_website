@@ -9,7 +9,7 @@
     <meta property="og:description"   content="Notre équipe de consultants nationaux et internationaux vous accompagne dans les démarches pour la réussite de vos projets" />
     <meta property="og:image"         content="/assets/img/hero/hero-bg.jpeg" />
   </x-slot>
-  
+
  <!-- Hero section with layer parallax gfx -->
  <section class="position-relative py-5">
 
@@ -43,7 +43,7 @@
               <i class="bx bx-search"></i>
             </button>
           </form>
-          
+
           <!-- Mobile form -->
           <form class="d-sm-none mb-5" action="{{ route('formation.search')}}">
             <input type="text" name="searchquery" class="form-control form-control-lg mb-2" placeholder="Rechercher des formations...">
@@ -87,16 +87,18 @@
               <img src="/assets/img/hero/layer02.png" alt="Layer">
             </div>
             <div class="parallax-layer zindex-5" data-depth="-0.12">
-              <img src="/assets/img/hero/layer03.png" alt="Layer">
+              <img src="/assets/img/hero/layer01.png" alt="Layer">
+
             </div>
             <div class="parallax-layer zindex-3" data-depth="0.27">
               <img src="/assets/img/hero/layer04.png" alt="Layer">
             </div>
-            <div class="parallax-layer zindex-1" data-depth="-0.18">
-              <img src="/assets/img/hero/layer05.png" alt="Layer">
+            <div class="parallax-layer zindex-1" data-depth="-0.1">
+              <img src="/assets/img/hero/layer01.png" alt="Layer">
+
             </div>
-            <div class="parallax-layer zindex-1" data-depth="0.1">
-              <img src="/assets/img/hero/layer06.png" alt="Layer">
+            <div class="parallax-layer zindex-1" data-depth="0.14">
+              <img src="/assets/img/hero/layer01.png" alt="Layer">
             </div>
           </div>
         </div>
@@ -108,7 +110,7 @@
   <!-- Popular courses -->
   <section class="container mt-2 mt-sm-3 ">
     <div class="row py-5">
-     
+
       <div class=" col-12">
 
         <!-- Title + prev/next buttons -->
@@ -186,11 +188,11 @@
                   </div> --}}
                 </div>
               </article>
-            </div>   
+            </div>
             @endforeach
-            
 
-            
+
+
           </div>
 
           <!-- Pagination (bullets) -->
@@ -221,7 +223,7 @@
           <div class="step-number-inner">1</div>
         </div>
         <div class="step-body d-flex align-items-center ps-xl-5">
-         
+
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-10" data-disable-parallax-down="lg">
             <h3 class="h4">Trouvez ce qui vous passionne et choisissez votre formation</h3>
             {{-- <p class="mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit scelerisque tempus placerat.</p> --}}
@@ -233,7 +235,7 @@
           <div class="step-number-inner">2</div>
         </div>
         <div class="step-body d-flex align-items-center ps-xl-5">
-     
+
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-25" data-disable-parallax-down="lg">
             <h3 class="h4">Apprendre en pratiquant</h3>
             {{-- <p class="mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer ac nunc dapibus.</p> --}}
@@ -245,7 +247,7 @@
           <div class="step-number-inner">3</div>
         </div>
         <div class="step-body d-flex align-items-center ps-xl-5">
-          
+
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-10" data-disable-parallax-down="lg">
             <h3 class="h4">Obtenez des commentaires d'experts instantanés</h3>
             {{-- <p class="mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum ultricies auctor nec volutpat augue.</p> --}}
@@ -257,7 +259,7 @@
           <div class="step-number-inner">4</div>
         </div>
         <div class="step-body d-flex align-items-center ps-xl-5">
-          
+
           <div class="ps-md-4 ps-xl-5" data-jarallax-element="-25" data-disable-parallax-down="lg">
             <h3 class="h4">Mettez vos compétences en pratique et trouvez un travail!</h3>
             {{-- <p class="mb-0">Sed fermentum ut nibh duis. Dolor pretium arcu, tincidunt ultrices tristique arcu cursus massa gravida tortor nulla, mollis id pretium.</p> --}}
@@ -364,7 +366,7 @@
               </button>
             </div>
           </div>
-          
+
           <!-- Slider -->
           <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
             "spaceBetween": 24,
@@ -398,12 +400,12 @@
               </div>
               @endforeach
 
-           
+
             </div>
 
             <!-- Pagination (bullets) -->
             <div class="swiper-pagination position-relative mt-5"></div>
-          </div>        
+          </div>
         </div>
       </div>
     </div>
@@ -475,7 +477,7 @@
                 </div>
               </div>
             </div>
-          
+
           </div>
         </div>
       </div>
@@ -523,7 +525,7 @@
                   {{-- <a href="#" class="btn btn-icon btn-secondary btn-facebook ms-1 me-2">
                     <i class="bx bxl-facebook"></i>
                   </a> --}}
-                
+
                 </div>
               </div>
             </div>
@@ -533,6 +535,6 @@
     </section>
 
   @endif
-  
+
 
 </x-app-layout>

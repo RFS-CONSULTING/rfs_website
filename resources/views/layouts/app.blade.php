@@ -36,6 +36,10 @@
 
     gtag('config', 'G-CFTKVHJYFW');
   </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3044893998577598"
+     crossorigin="anonymous"></script>
+
   <!-- Scripts -->
 
     @livewireStyles
@@ -155,13 +159,10 @@
     </script>
 
 
-      <!-- Scripts -->
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3044893998577598"
-      crossorigin="anonymous"></script>
   </head>
   <body class="font-sans antialiased">
-    
-   
+
+
     <!-- Body -->
     <!-- Page loading spinner -->
     {{-- <div class="page-loading active">
@@ -180,6 +181,9 @@
       <div class="min-h-screen bg-gray-100">
         {{-- @livewire('navigation-menu') --}}
         @include('partials.navbar')
+        @if(isset($popup))
+            {{ $popup }}
+        @endif
 
         <!-- Page Content -->
         <main>
@@ -266,6 +270,7 @@
       <script src="https://www.google.com/recaptcha/api.js"></script>
 
         <!-- Vendor Scripts -->
+    <script async src="/assets/js/jquery.js"></script>
 
       <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
       {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script> --}}
