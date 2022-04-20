@@ -50,67 +50,6 @@
     </section> --}}
 
 
-  <!-- Stats -->
-  <section class="container bg-secondary pb-5 mb-2 mb-md-4 mb-lg-5">
-    <div class="  ">
-        <div class="row justify-content-center mb-2 py-md-2 py-lg-4">
-            <div class="">
-                <h1 class="py-3 text-center text-md-start">Nos chiffres</h1>
-                <div class="d-md-flex align-self-stretch">
-                    <!-- Item -->
-                    @foreach ($statistics as $statistic)
-                    <div class="col">
-                        <div class="card h-40 m-1  border-0 shadow-sm ">
-                            <div class="card-body">
-                                <div class="">
-                                    <h3 class="display-5 mb-1 text-center">+ {{ $statistic->number}}</h3>
-                                    <p class=" text-center mb-0"><span class="fw-semibold">{{ $statistic->title}}</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    @endforeach
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-   <!-- Video showcase -->
-   <section class="container py-5 ">
-    <h2 class="h1 pb-3 text-center text-md-start  ">Qui sommes-nous ?</h2>
-    <div class="row align-items-center pb-2 ">
-      <div class="col-xl-4 col-md-5 order-2 order-md-1" data-jarallax-element="20" data-disable-parallax-down="lg">
-        <ul class="list-unstyled pb-4 mb-0">
-          <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
-            Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181 et id.Nat 01-H5300-N85483Q, RFS CONSULTING offre des services d'expertises en gestion de l'environnement, aménagement du territoire, géomatique, ingénierie forestière et renforcement des capacités.<br/>
-
-            Dotée d'une formation solide et expérience de + 8 ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
-          </li>
-          
-        
-        </ul>
-        {{-- <a href="{{ route('about') }}" class="btn btn-primary w-100 w-md-auto">
-          En savoir plus
-          <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
-        </a> --}}
-      </div>
-      <div class="col-md-7 offset-xl-1 order-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-jarallax-element="-20" data-disable-parallax-down="lg">
-        <div class="position-relative rounded-3 overflow-hidden">
-          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-            <a href="https://www.youtube.com/watch?v=UtV5iQUJ9_I" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
-              <i class="bx bx-play"></i>
-            </a>
-          </div>
-          <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-          <img src="assets/img/landing/video-cover.jpg" alt="Cover image">
-        </div>
-      </div>
-    </div>
-  </section>
-
-
     <!-- Gallery -->
     {{-- <section class="container pb-5 mb-2 mb-md-4 mb-lg-5 mt-n2">
     <div class="d-flex align-items-center justify-content-between pb-4 mb-2">
@@ -118,7 +57,7 @@
         <a href="#" class="btn btn-outline-primary btn-lg">
         <i class="bx bx-images fs-4 lh-1 me-2"></i>
         See all photos
-        </a>  
+        </a>
     </div>
     <div class="gallery row g-4" data-thumbnails="true">
         <div class="col-md-5">
@@ -155,7 +94,7 @@
 
 
      <!-- Partners -->
- 
+
 
 
       <!-- Testimonials -->
@@ -199,7 +138,7 @@
                 <blockquote class="card-body pb-3 mb-0">
                   <p class="mb-0">{{ $testimonial->message }}</p>
                 </blockquote>
-             
+
               </div>
               <figcaption class="d-flex align-items-center ps-4 pt-4">
                 <img src="{{ 'storage/'.$testimonial->image_url}}" width="48" class="rounded-circle" alt="{{ $testimonial->witness }}">
@@ -209,9 +148,9 @@
                 </div>
               </figcaption>
             </figure>
-          </div> 
+          </div>
           @endforeach
-         
+
 
         </div>
 
@@ -300,9 +239,9 @@
                 </a>
             </div> --}}
             </div>
-        </div>  
+        </div>
         @endforeach
-        
+
 
         </div>
 
