@@ -181,9 +181,35 @@
       <div class="min-h-screen bg-gray-100">
         {{-- @livewire('navigation-menu') --}}
         @include('partials.navbar')
-        @if(isset($popup))
-            {{ $popup }}
-        @endif
+    <!-- Newsletter Popup Start -->
+    <div id="max-popup" class="max-popup-section section " >
+        <div class="max-popup-dialog animated fadeInUp">
+            <button id="max-popup-close" class="max-popup-close">Fermer</button>
+            <div class="max-popup-dialog-inner">
+                <div class="row">
+
+                    <div class="col-12 align-self-center">
+                        <div class="">
+                             <h3 class=" text-white">Newsletter</h3>
+
+                            <h6 class="sub-title text-white">Vous souhaitez être informé des nouveaux tutoriels ? Être au courant des évènements en lien avec les SIG, télédétection, environnement ? Bénéficier des offres spéciales de formations certifiantes et Masterclass ?</h6>
+                            <div class="freecourse-download-form">
+                                {{-- @livewire('pending-book') --}}
+                                <form method="POST" action="{{ route('newsletter.store') }}" class="input-group input-group-lg needs-validation" novalidate>
+                                 @csrf
+                                  <input type="email" id="subscr-email" name="email" class="form-control rounded-start ps-5" placeholder="Votre adresse e-mail" required>
+                                  <i class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                                  <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
+                                  <button type="submit" class="btn btn-primary px-sm-4" id="newsletter">S'abonner</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Newsletter Popup End -->
 
         <!-- Page Content -->
         <main>

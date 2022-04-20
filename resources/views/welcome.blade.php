@@ -11,36 +11,6 @@
 </x-slot>
 
 
-<x-slot name="popup">
-    <!-- Newsletter Popup Start -->
-       <div id="max-popup" class="max-popup-section section " >
-           <div class="max-popup-dialog animated fadeInUp">
-               <button id="max-popup-close" class="max-popup-close">Fermer</button>
-               <div class="max-popup-dialog-inner">
-                   <div class="row">
-
-                       <div class="col-12 align-self-center">
-                           <div class="">
-                               <h6 class="sub-title text-white">Vous souhaitez être informé des nouveaux tutoriels ? Être au courant des évènements en lien avec les SIG, télédétection, environnement ? Bénéficier des offres spéciales de formations certifiantes et Masterclass ?</h6>
-                               <div class="freecourse-download-form">
-                                   {{-- @livewire('pending-book') --}}
-                                   <form method="POST" action="{{ route('newsletter.store') }}" class="input-group input-group-lg needs-validation" novalidate>
-                                    @csrf
-                                     <input type="email" id="subscr-email" name="email" class="form-control rounded-start ps-5" placeholder="Votre adresse e-mail" required>
-                                     <i class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                                     <div class="invalid-tooltip position-absolute top-100 start-0">Veuillez fournir une adresse email valide.</div>
-                                     <button type="submit" class="btn btn-primary px-sm-4">S'abonner</button>
-                                   </form>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   <!-- Newsletter Popup End -->
-
-</x-slot>
 
   <!-- Hero
   <section class="container d-none d-lg-block jarallax position-relative d-flex align-items-center py-5 bg-light mb-5 " style="background-image: url(assets/img/landing/hero-bg.png);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
@@ -237,7 +207,6 @@
           <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
             Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181 et id.Nat 01-H5300-N85483Q, RFS CONSULTING offre des services d'expertises en gestion de l'environnement, aménagement du territoire, géomatique, ingénierie forestière et renforcement des capacités.<br/>
 
-            Dotée d'une formation solide et expérience de +8ans dans ces domaines, RFS met à votre disposition une équipe indépendante et pluridisciplinaire pour vous accompagner lors de la conception et mise en oeuvre de vos projets publics et privés.
           </li>
 
 
