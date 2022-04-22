@@ -206,7 +206,6 @@
         <ul class="list-unstyled pb-4 mb-0">
           <li class="d-flex align-items-center  pb-1 mb-2" style="text-align: justify">
             Créée depuis 2018, légalement enregistré au CD/KNM/RCCM/21-A-01181 et id.Nat 01-H5300-N85483Q, RFS CONSULTING offre des services d'expertises en gestion de l'environnement, aménagement du territoire, géomatique, ingénierie forestière et renforcement des capacités.<br/>
-
           </li>
 
 
