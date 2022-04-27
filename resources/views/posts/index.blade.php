@@ -15,6 +15,9 @@
         height: 400px;
       }
     </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3044893998577598"
+    crossorigin="anonymous"></script>
+
   </x-slot>
 
      <!-- Breadcrumb -->
@@ -134,7 +137,7 @@
             </div>
 
             <div>
-                {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
                     crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
                     style="display:block"
@@ -144,7 +147,7 @@
                     data-ad-slot="9288137390"></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script> --}}
+                </script> 
             </div>
 
             <div class="offcanvas offcanvas-end offcanvas-expand-lg" id="blog-sidebar" tabindex="-1">

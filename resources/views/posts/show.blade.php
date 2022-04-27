@@ -17,6 +17,8 @@
                     "width=626, height=436")
             }
         </script>
+           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3044893998577598"
+           crossorigin="anonymous"></script>
         {{-- <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -93,7 +95,7 @@
                     <img src="{{ '/storage/' . $post->image_path }}" alt="{{  $post->title }}" srcset="">
                 </div>
                 <div>
-                    {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3049305000513750"
                             crossorigin="anonymous"></script>
                     <ins class="adsbygoogle"
                             style="display:block"
@@ -103,7 +105,7 @@
                             data-ad-slot="1408898943"></ins>
                     <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script> --}}
+                    </script>
                 </div>
                 @if (isset($post->video))
                     <div class="position-relative overflow-hidden rounded mb-4" style="width: 100%;">
@@ -157,9 +159,9 @@
                         </a> --}}
                         {{-- <a href="#" > --}}
 
-                        
-                        <div class="fb-share-button my-2" 
-                        data-href="https://rfs-congo.com/post/{{ $post->slug }}" 
+
+                        <div class="fb-share-button my-2"
+                        data-href="https://rfs-congo.com/post/{{ $post->slug }}"
                         data-layout="button_count"
                         data-size="large"
                         >

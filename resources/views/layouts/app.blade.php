@@ -37,9 +37,7 @@
     gtag('config', 'G-CFTKVHJYFW');
   </script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3044893998577598"
-     crossorigin="anonymous"></script>
-
+  
   <!-- Scripts -->
 
     @livewireStyles
