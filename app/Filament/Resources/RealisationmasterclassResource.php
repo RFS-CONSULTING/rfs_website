@@ -33,7 +33,7 @@ class RealisationmasterclassResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->maxLength(65535),
-                Forms\Components\FileUpload::make('imagepath'),
+                Forms\Components\FileUpload::make('imagepath')->required(),
             ]);
     }
 
