@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- Item -->
-                <div class="swiper-slide py-12 max-h-screen d-none d-md-block"  style="background: url(assets/img/hero/11.jpeg); background-size:cover">
+                <div class="swiper-slide py-12 max-h-screen d-none d-md-block"  style="background: url(assets/img/hero/1.jpg); background-size:cover">
                     <div class="py-12">
                         <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-dark-translucent"></span>
 
