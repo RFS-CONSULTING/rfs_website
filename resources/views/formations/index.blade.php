@@ -80,25 +80,25 @@
 
           <!-- Parallax gfx -->
           <div class="parallax mx-auto me-lg-0" style="max-width: 348px;">
-            <div class="parallax-layer" data-depth="0.1">
-              <img src="/assets/img/hero/layer01.png" alt="Layer">
-            </div>
+            {{-- <div class="parallax-layer" data-depth="0.1">
+              <img src="/assets/img/hero/layer1.png" alt="Layer">
+            </div> --}}
             <div class="parallax-layer" data-depth="0.13">
-              <img src="/assets/img/hero/layer02.png" alt="Layer">
+              <img src="/assets/img/hero/layer01.png" alt="Layer">
             </div>
             <div class="parallax-layer zindex-5" data-depth="-0.12">
-              <img src="/assets/img/hero/layer01.png" alt="Layer">
+              <img src="/assets/img/hero/layer02.png" alt="Layer">
 
             </div>
             <div class="parallax-layer zindex-3" data-depth="0.27">
               <img src="/assets/img/hero/layer04.png" alt="Layer">
             </div>
             <div class="parallax-layer zindex-1" data-depth="-0.1">
-              <img src="/assets/img/hero/layer01.png" alt="Layer">
+              <img src="/assets/img/hero/layer05.png" alt="Layer">
 
             </div>
             <div class="parallax-layer zindex-1" data-depth="0.14">
-              <img src="/assets/img/hero/layer01.png" alt="Layer">
+              <img src="/assets/img/hero/layer06.png" alt="Layer">
             </div>
           </div>
         </div>
